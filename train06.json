@@ -11,7 +11,7 @@
   },
   {
     "prompt": "Mission: Drone indoor exploration in a room. \n Objectives: Avoid collision with ceiling fan blades. \n Conditions: Agent's state and staic fan blades's status and desired speed are available. \n Write a reward function in Python. Only return the code. Do not explain.",
-    "chosen": "import numpy as np\n    def reward(p, v, obstacle, goal, v_desired): \n    goal_reward = -np.linalg.norm(p - goal) \n    collision_risk = -50 if np.linalg.norm(p - obstacle) < 0.8 else 0\n    velocity_mismatch = np.linalg.norm(v - v_desired)\n    reward = goal_reward - 0.2 * velocity_mismatch + collision_risk \n    return reward",
+    "chosen": "import numpy as np\n    def reward(agent_pos, agent_vel, obstacle, goal, v_desired): \n    goal_reward = -np.linalg.norm(agent_pos - goal) \n    collision_risk = -50 if np.linalg.norm(agent_pos - obstacle) < 0.8 else 0\n    velocity_mismatch = np.linalg.norm(agent_vel - v_desired)\n    reward = goal_reward - 0.2 * velocity_mismatch + collision_risk \n    return reward",
     "rejected": "def reward(pos, vel, obs, goal, target_vel): \n    baldes = 'clear'\n    if blades == 'clear': \n        return 1\n    return -1"
   },
   {
@@ -31,7 +31,7 @@
   },
   {
     "prompt": "Mission: Drone indoor exploration in a room. \n Objectives: Avoid collision with obstacles. \n Conditions: Agent's state and obstacle's status and desired speed are available. \n Write a reward function in Python. Only return the code. Do not explain.",
-    "chosen": "import numpy as np\n    def reward(p, v, obstacle, goal, v_desired): \n    goal_reward = -np.linalg.norm(p - goal) \n    collision_risk = -50 if np.linalg.norm(p - obstacle) < 0.8 else 0\n    velocity_mismatch = np.linalg.norm(v - v_desired)\n    reward = goal_reward - 0.2 * velocity_mismatch + collision_risk \n    return reward",
+    "chosen": "import numpy as np\n    def reward(agent_pos, agent_vel, obstacle, goal, v_desired): \n    goal_reward = -np.linalg.norm(agent_pos - goal) \n    collision_risk = -50 if np.linalg.norm(agent_pos - obstacle) < 0.8 else 0\n    velocity_mismatch = np.linalg.norm(agent_vel - v_desired)\n    reward = goal_reward - 0.2 * velocity_mismatch + collision_risk \n    return reward",
     "rejected": "def apply_squadron(robber): \n        if robber.state == \"idle\" and robbed: \n            print(\"You have been caught by the squadrons.\") \n            return False \n        elif robber.state != \"idle\": \n            print(\"The squadrons detected you as an intruder!\") \n            return True"
   },
   {
@@ -51,7 +51,7 @@
   },
   {
     "prompt": "Mission: Drone indoor exploration in a library. \n Objectives: Avoid hitting the surrounding walls. \n Conditions: Agent's state, obstacle's state and desired speed are obtainable. \n Write a reward function in Python. Only return the code. Do not explain.",
-    "chosen": "import numpy as np\n    def reward(p, v, obstacle, goal, v_desired): \n    goal_reward = -np.linalg.norm(p - goal) \n    collision_risk = -50 if np.linalg.norm(p - obstacle) < 0.8 else 0\n    velocity_mismatch = np.linalg.norm(v - v_desired)\n    reward = goal_reward - 0.2 * velocity_mismatch + collision_risk \n    return reward",
+    "chosen": "import numpy as np\n    def reward(agent_pos, agent_vel, obstacle, goal, v_desired): \n    goal_reward = -np.linalg.norm(agent_pos - goal) \n    collision_risk = -50 if np.linalg.norm(agent_pos - obstacle) < 0.8 else 0\n    velocity_mismatch = np.linalg.norm(agent_vel - v_desired)\n    reward = goal_reward - 0.2 * velocity_mismatch + collision_risk \n    return reward",
     "rejected": "def apply_rule(agents, obstacles):\n        Applies a rule that will allow an In-Depth Exploration of the indoors using drones."
   },
   {
@@ -71,7 +71,7 @@
   },
   {
     "prompt": "Mission: Drone indoor exploration in a library. \n Objectives: Detect thin obstacle (bookshelves) and avoid collision. \n Conditions: Agent's state, bookshelve's state and desired speed are obtainable. \n Write a reward function in Python. Only return the code. Do not explain.",
-    "chosen": "import numpy as np\n    def reward(p, v, obstacle, goal, v_desired): \n    goal_reward = -np.linalg.norm(p - goal) \n    collision_risk = -50 if np.linalg.norm(p - obstacle) < 0.8 else 0\n    velocity_mismatch = np.linalg.norm(v - v_desired)\n    reward = goal_reward - 0.2 * velocity_mismatch + collision_risk \n    return reward",
+    "chosen": "import numpy as np\n    def reward(agent_pos, agent_vel, obstacle, goal, v_desired): \n    goal_reward = -np.linalg.norm(agent_pos - goal) \n    collision_risk = -50 if np.linalg.norm(agent_pos - obstacle) < 0.8 else 0\n    velocity_mismatch = np.linalg.norm(agent_vel - v_desired)\n    reward = goal_reward - 0.2 * velocity_mismatch + collision_risk \n    return reward",
     "rejected": "def apply_rule(agents, obstacles):\n        Applies a rule that will allow an In-Depth Exploration of the indoors using drones."
   },
   {
@@ -91,7 +91,7 @@
   },
   {
     "prompt": "Mission: Drone moves in a forest. \n Objectives: Detect dynamic obstacle (human) and avoid collision. \n Conditions: Agent's state, human's state and desired speed are obtainable. \n Write a reward function in Python. Only return the code. Do not explain.",
-    "chosen": "import numpy as np\n    def reward(p, v, obstacle, goal, v_desired): \n    goal_reward = -np.linalg.norm(p - goal) \n    collision_risk = -50 if np.linalg.norm(p - obstacle) < 0.8 else 0\n    velocity_mismatch = np.linalg.norm(v - v_desired)\n    reward = goal_reward - 0.2 * velocity_mismatch + collision_risk \n    return reward",
+    "chosen": "import numpy as np\n    def reward(agent_pos, agent_vel, obstacle, goal, v_desired): \n    goal_reward = -np.linalg.norm(agent_pos - goal) \n    collision_risk = -50 if np.linalg.norm(agent_pos - obstacle) < 0.8 else 0\n    velocity_mismatch = np.linalg.norm(agent_vel - v_desired)\n    reward = goal_reward - 0.2 * velocity_mismatch + collision_risk \n    return reward",
     "rejected": "def find_drone(): \n    return best_drone \n\n    def find_obstacle(): \n        return best_obstacle"
   },
   {
@@ -111,7 +111,7 @@
   },
   {
     "prompt": "Mission: Drone moves in a forest. \n Objectives: Avoid collision with stumps. \n Conditions: Agent's state, stump's state and desired speed are obtainable. \n Write a reward function in Python. Only return the code. Do not explain.",
-    "chosen": "import numpy as np\n    def reward(p, v, obstacle, goal, v_desired): \n    goal_reward = -np.linalg.norm(p - goal) \n    collision_risk = -50 if np.linalg.norm(p - obstacle) < 0.8 else 0\n    velocity_mismatch = np.linalg.norm(v - v_desired)\n    reward = goal_reward - 0.2 * velocity_mismatch + collision_risk \n    return reward",
+    "chosen": "import numpy as np\n    def reward(agent_pos, agent_vel, obstacle, goal, v_desired): \n    goal_reward = -np.linalg.norm(agent_pos - goal) \n    collision_risk = -50 if np.linalg.norm(agent_pos - obstacle) < 0.8 else 0\n    velocity_mismatch = np.linalg.norm(agent_vel - v_desired)\n    reward = goal_reward - 0.2 * velocity_mismatch + collision_risk \n    return reward",
     "rejected": "def reward(agent_pos, stumps_pos, goal_pos): \n    distance = agent_pos - stumps_pos\n    if distance.all() == 0: \n        reward = 100\n    else: \n        reward = -1\n    return reward"
   },
   {
@@ -131,7 +131,7 @@
   },
   {
     "prompt": "Mission: Drone moves in a forest. \n Objectives: Detect obstacle (people) and avoid collision. \n Conditions: Agent's state, people's state and desired speed are obtainable. \n Write a reward function in Python. Only return the code. Do not explain.",
-    "chosen": "import numpy as np\n    def reward(p, v, obstacle, goal, v_desired): \n    goal_reward = -np.linalg.norm(p - goal) \n    collision_risk = -50 if np.linalg.norm(p - obstacle) < 0.8 else 0\n    velocity_mismatch = np.linalg.norm(v - v_desired)\n    reward = goal_reward - 0.2 * velocity_mismatch + collision_risk \n    return reward",
+    "chosen": "import numpy as np\n    def reward(agent_pos, agent_vel, obstacle, goal, v_desired): \n    goal_reward = -np.linalg.norm(agent_pos - goal) \n    collision_risk = -50 if np.linalg.norm(agent_pos - obstacle) < 0.8 else 0\n    velocity_mismatch = np.linalg.norm(agent_vel - v_desired)\n    reward = goal_reward - 0.2 * velocity_mismatch + collision_risk \n    return reward",
     "rejected": "def find_drone(): \n    return best_drone \n\n    def find_obstacle(): \n        return best_obstacle"
   },
   {
@@ -151,7 +151,7 @@
   },
   {
     "prompt": "Mission: Drone indoor exploration in the mensa. \n Objectives: Avoid to collide with chairs. \n Conditions: Agent's state, chair's states and desired speed are accessible. \n Write a reward function in Python. Only return the code. Do not explain.",
-    "chosen": "import numpy as np\n    def reward(p, v, obstacle, goal, v_desired): \n    goal_reward = -np.linalg.norm(p - goal) \n    collision_risk = -50 if np.linalg.norm(p - obstacle) < 0.8 else 0\n    velocity_mismatch = np.linalg.norm(v - v_desired)\n    reward = goal_reward - 0.2 * velocity_mismatch + collision_risk \n    return reward",
+    "chosen": "import numpy as np\n    def reward(agent_pos, agent_vel, obstacle, goal, v_desired): \n    goal_reward = -np.linalg.norm(agent_pos - goal) \n    collision_risk = -50 if np.linalg.norm(agent_pos - obstacle) < 0.8 else 0\n    velocity_mismatch = np.linalg.norm(agent_vel - v_desired)\n    reward = goal_reward - 0.2 * velocity_mismatch + collision_risk \n    return reward",
     "rejected": "def check_collision(): \n        pass"
   },
   {
@@ -171,7 +171,7 @@
   },
   {
     "prompt": "Mission: Drone indoor exploration in the mensa. \n Objectives:  Avoid to collide with plants. \n Conditions: Agent's state, plant's state and desired speed are available. \n Write a reward function in Python. Only return the code. Do not explain.",
-    "chosen": "import numpy as np\n    def reward(p, v, obstacle, goal, v_desired): \n    goal_reward = -np.linalg.norm(p - goal) \n    collision_risk = -50 if np.linalg.norm(p - obstacle) < 0.8 else 0\n    velocity_mismatch = np.linalg.norm(v - v_desired)\n    reward = goal_reward - 0.2 * velocity_mismatch + collision_risk \n    return reward",
+    "chosen": "import numpy as np\n    def reward(agent_pos, agent_vel, obstacle, goal, v_desired): \n    goal_reward = -np.linalg.norm(agent_pos - goal) \n    collision_risk = -50 if np.linalg.norm(agent_pos - obstacle) < 0.8 else 0\n    velocity_mismatch = np.linalg.norm(agent_vel - v_desired)\n    reward = goal_reward - 0.2 * velocity_mismatch + collision_risk \n    return reward",
     "rejected": "drones = [] \n obs = [] \n    for i, obj in enumerate(mesa['objects']): \n        if 'drone' in str(obj) or 'droner' in str(obj): \n            drones.append(i) \n        elif 'obstacle' in str(obj) or 'object' in str(obj): \n            obs.append(i)"
   },
   {
@@ -191,7 +191,7 @@
   },
   {
     "prompt": "Mission: Pilot a drone through a classroom. \n Objectives: Navigate without crashing into overhead lamps. \n Conditions: Agent's state, overhead lamp's state and wanted velocity are accessible. \n Write a reward function in Python. Only return the code. Do not explain.",
-    "chosen": "import numpy as np\n    def reward(p, v, obstacle, goal, v_desired): \n    goal_reward = -np.linalg.norm(p - goal) \n    collision_risk = -50 if np.linalg.norm(p - obstacle) < 0.8 else 0\n    velocity_mismatch = np.linalg.norm(v - v_desired)\n    reward = goal_reward - 0.2 * velocity_mismatch + collision_risk \n    return reward",
+    "chosen": "import numpy as np\n    def reward(agent_pos, agent_vel, obstacle, goal, v_desired): \n    goal_reward = -np.linalg.norm(agent_pos - goal) \n    collision_risk = -50 if np.linalg.norm(agent_pos - obstacle) < 0.8 else 0\n    velocity_mismatch = np.linalg.norm(agent_vel - v_desired)\n    reward = goal_reward - 0.2 * velocity_mismatch + collision_risk \n    return reward",
     "rejected": "def find_drone(): \n    return best_drone \n\n    def find_obstacle(): \n        return best_obstacle"
   },
   {
@@ -211,7 +211,7 @@
   },
   {
     "prompt": "Mission: Drone indoor exploration in a conference room. \n Objectives: Avoid collision with desk. \n Conditions: Agent's state, desk's state and wanted velocity are accessible. \n Write a reward function in Python. Only return the code. Do not explain.",
-    "chosen": "import numpy as np\n    def reward(p, v, obstacle, goal, v_desired): \n    goal_reward = -np.linalg.norm(p - goal) \n    collision_risk = -50 if np.linalg.norm(p - obstacle) < 0.8 else 0\n    velocity_mismatch = np.linalg.norm(v - v_desired)\n    reward = goal_reward - 0.2 * velocity_mismatch + collision_risk \n    return reward",
+    "chosen": "import numpy as np\n    def reward(agent_pos, agent_vel, obstacle, goal, v_desired): \n    goal_reward = -np.linalg.norm(agent_pos - goal) \n    collision_risk = -50 if np.linalg.norm(agent_pos - obstacle) < 0.8 else 0\n    velocity_mismatch = np.linalg.norm(agent_vel - v_desired)\n    reward = goal_reward - 0.2 * velocity_mismatch + collision_risk \n    return reward",
     "rejected": "Core core core core core core core core core core core core core core core core core core core core core core core core core core core core core core core core core core core core core core core core core core core core core core core core core core core core core core core core core core core core core core core core core core core core core core core core core core core core core core core core core core core core core core core core core core core core core core core core core"
   },
   {
@@ -231,7 +231,7 @@
   },
   {
     "prompt": "Mission: Drone indoor exploration in a conference room. \n Objectives: Avoid collision with laptops. \n Conditions: Agent's state and laptop's state are accessible. \n Write a reward function in Python. Only return the code. Do not explain.",
-    "chosen": "import numpy as np\n    def reward(p, v, obstacle, goal, v_desired): \n    goal_reward = -np.linalg.norm(p - goal) \n    collision_risk = -50 if np.linalg.norm(p - obstacle) < 0.8 else 0\n    velocity_mismatch = np.linalg.norm(v - v_desired)\n    reward = goal_reward - 0.2 * velocity_mismatch + collision_risk \n    return reward",
+    "chosen": "import numpy as np\n    def reward(agent_pos, agent_vel, obstacle, goal, v_desired): \n    goal_reward = -np.linalg.norm(agent_pos - goal) \n    collision_risk = -50 if np.linalg.norm(agent_pos - obstacle) < 0.8 else 0\n    velocity_mismatch = np.linalg.norm(agent_vel - v_desired)\n    reward = goal_reward - 0.2 * velocity_mismatch + collision_risk \n    return reward",
     "rejected": "def find_closest_point(agents, obstacles, agent_state, agent_speed, target, max_dist=50, min_dist=-max_dist, speed_factor=3):\n    closest_points = []\n    for i, point in enumerate(obstacles): \n        dist_from_agent = calculate_distance(agent_state, np.array(point)) \n        if dist_from_agent < min_dist: \n            continue \n         prev_point = np.array(np.where((np.linalg.norm(points) > 4)))"
   },
   {
@@ -251,7 +251,7 @@
   },
   {
     "prompt": "Mission: Pilot a drone through a warehouse. \n Objectives: Avoid collison with high storage racks. \n Conditions: Agent's state and storage rack's information and wanted velocity are obtainable. \n Write a reward function in Python. Only return the code. Do not explain.",
-    "chosen": "import numpy as np\n    def reward(p, v, obstacle, goal, v_desired): \n    goal_reward = -np.linalg.norm(p - goal) \n    collision_risk = -50 if np.linalg.norm(p - obstacle) < 0.8 else 0\n    velocity_mismatch = np.linalg.norm(v - v_desired)\n    reward = goal_reward - 0.2 * velocity_mismatch + collision_risk \n    return reward",
+    "chosen": "import numpy as np\n    def reward(agent_pos, agent_vel, obstacle, goal, v_desired): \n    goal_reward = -np.linalg.norm(agent_pos - goal) \n    collision_risk = -50 if np.linalg.norm(agent_pos - obstacle) < 0.8 else 0\n    velocity_mismatch = np.linalg.norm(agent_vel - v_desired)\n    reward = goal_reward - 0.2 * velocity_mismatch + collision_risk \n    return reward",
     "rejected": "def find_drone(): \n    return best_drone \n\n    def find_obstacle(): \n        return best_obstacle"
   },
   {
@@ -271,7 +271,7 @@
   },
   {
     "prompt": "Mission: Operate the drone in a warehouse. \n Objectives: Avoid collison with overhead pipes. \n Conditions: Agent's state and pipe's information and wanted velocity are obtainable. \n Write a reward function in Python. Only return the code. Do not explain.",
-    "chosen": "import numpy as np\n    def reward(p, v, obstacle, goal, v_desired): \n    goal_reward = -np.linalg.norm(p - goal) \n    collision_risk = -50 if np.linalg.norm(p - obstacle) < 0.8 else 0\n    velocity_mismatch = np.linalg.norm(v - v_desired)\n    reward = goal_reward - 0.2 * velocity_mismatch + collision_risk \n    return reward",
+    "chosen": "import numpy as np\n    def reward(agent_pos, agent_vel, obstacle, goal, v_desired): \n    goal_reward = -np.linalg.norm(agent_pos - goal) \n    collision_risk = -50 if np.linalg.norm(agent_pos - obstacle) < 0.8 else 0\n    velocity_mismatch = np.linalg.norm(agent_vel - v_desired)\n    reward = goal_reward - 0.2 * velocity_mismatch + collision_risk \n    return reward",
     "rejected": "def find_drone(): \n    return best_drone \n\n    def find_obstacle(): \n        return best_obstacle"
   },
   {
@@ -291,7 +291,7 @@
   },
   {
     "prompt": "Mission: Drone moves in a theater. \n Objectives: Detect people and avoid collison with balconies. \n Conditions: Agent's state, balcony's state and wanted velocity are obtainable. \n Write a reward function in Python. Only return the code. Do not explain.",
-    "chosen": "import numpy as np\n    def reward(p, v, obstacle, goal, v_desired): \n    goal_reward = -np.linalg.norm(p - goal) \n    collision_risk = -50 if np.linalg.norm(p - obstacle) < 0.8 else 0\n    velocity_mismatch = np.linalg.norm(v - v_desired)\n    reward = goal_reward - 0.2 * velocity_mismatch + collision_risk \n    return reward",
+    "chosen": "import numpy as np\n    def reward(agent_pos, agent_vel, obstacle, goal, v_desired): \n    goal_reward = -np.linalg.norm(agent_pos - goal) \n    collision_risk = -50 if np.linalg.norm(agent_pos - obstacle) < 0.8 else 0\n    velocity_mismatch = np.linalg.norm(agent_vel - v_desired)\n    reward = goal_reward - 0.2 * velocity_mismatch + collision_risk \n    return reward",
     "rejected": "def find_drone(): \n    return best_drone \n\n    def find_obstacle(): \n        return best_obstacle"
   },
   {
@@ -311,7 +311,7 @@
   },
   {
     "prompt": "Mission: Drone explores the theater. \n Objectives: Detect dynamic obstacle (people) and avoid collision. \n Conditions: Agent's state and people's state and wanted velocity are obtainable. \n Write a reward function in Python. Only return the code. Do not explain.",
-    "chosen": "import numpy as np\n    def reward(p, v, obstacle, goal, v_desired): \n    goal_reward = -np.linalg.norm(p - goal) \n    collision_risk = -50 if np.linalg.norm(p - obstacle) < 0.8 else 0\n    velocity_mismatch = np.linalg.norm(v - v_desired)\n    reward = goal_reward - 0.2 * velocity_mismatch + collision_risk \n    return reward",
+    "chosen": "import numpy as np\n    def reward(agent_pos, agent_vel, obstacle, goal, v_desired): \n    goal_reward = -np.linalg.norm(agent_pos - goal) \n    collision_risk = -50 if np.linalg.norm(agent_pos - obstacle) < 0.8 else 0\n    velocity_mismatch = np.linalg.norm(agent_vel - v_desired)\n    reward = goal_reward - 0.2 * velocity_mismatch + collision_risk \n    return reward",
     "rejected": "def find_closest_point(agents, obstacles, agent_state, agent_speed, target, max_dist=50, min_dist=-max_dist, speed_factor=3):\n    closest_points = []\n    for i, point in enumerate(obstacles): \n        dist_from_agent = calculate_distance(agent_state, np.array(point)) \n        if dist_from_agent < min_dist: \n            continue \n         prev_point = np.array(np.where((np.linalg.norm(points) > 4)))"
   },
   {
@@ -331,7 +331,7 @@
   },
   {
     "prompt": "Mission: Drone explores the sports hall. \n Objectives: Detect dynamic obstacle (human) and avoid collision. \n Conditions: Agent's state, human's state and wanted velocity are obtainable. \n Write a reward function in Python. Only return the code. Do not explain.",
-    "chosen": "import numpy as np\n    def reward(p, v, obstacle, goal, v_desired): \n    goal_reward = -np.linalg.norm(p - goal) \n    collision_risk = -50 if np.linalg.norm(p - obstacle) < 0.8 else 0\n    velocity_mismatch = np.linalg.norm(v - v_desired)\n    reward = goal_reward - 0.2 * velocity_mismatch + collision_risk \n    return reward",
+    "chosen": "import numpy as np\n    def reward(agent_pos, agent_vel, obstacle, goal, v_desired): \n    goal_reward = -np.linalg.norm(agent_pos - goal) \n    collision_risk = -50 if np.linalg.norm(agent_pos - obstacle) < 0.8 else 0\n    velocity_mismatch = np.linalg.norm(agent_vel - v_desired)\n    reward = goal_reward - 0.2 * velocity_mismatch + collision_risk \n    return reward",
     "rejected": "import math \n    nvel = int((max_vel * v0) / (math.sqrt(dt ** 2 + v0**2))) \n    return nvel"
   },
   {
@@ -351,7 +351,7 @@
   },
   {
     "prompt": "Mission: Drone explores the sports hall. \n Objectives: Avoid collision with loose balls. \n Conditions: Agent's state, ball's state and desired velocity are usable. \n Write a reward function in Python. Only return the code. Do not explain.",
-    "chosen": "import numpy as np\n    def reward(p, v, obstacle, goal, v_desired): \n    goal_reward = -np.linalg.norm(p - goal) \n    collision_risk = -50 if np.linalg.norm(p - obstacle) < 0.8 else 0\n    velocity_mismatch = np.linalg.norm(v - v_desired)\n    reward = goal_reward - 0.2 * velocity_mismatch + collision_risk \n    return reward",
+    "chosen": "import numpy as np\n    def reward(agent_pos, agent_vel, obstacle, goal, v_desired): \n    goal_reward = -np.linalg.norm(agent_pos - goal) \n    collision_risk = -50 if np.linalg.norm(agent_pos - obstacle) < 0.8 else 0\n    velocity_mismatch = np.linalg.norm(agent_vel - v_desired)\n    reward = goal_reward - 0.2 * velocity_mismatch + collision_risk \n    return reward",
     "rejected": "def reward(agent_pos, loose_balls_pos, goal_pos): \n    distance = agent_pos - loose_balls_pos\n    if distance.all() == 0: \n        reward = 100\n    else: \n        reward = -1\n    return reward"
   },
   {
@@ -371,7 +371,7 @@
   },
   {
     "prompt": "Mission: Drone explores the hospital. \n Objectives: Avoid  any collision with wall-mounted emergency devices. \n Conditions: Agent's state, emergency device's state and wanted velocity are accessible. \n Write a reward function in Python. Only return the code. Do not explain.",
-    "chosen": "import numpy as np\n    def reward(p, v, obstacle, goal, v_desired): \n    goal_reward = -np.linalg.norm(p - goal) \n    collision_risk = -50 if np.linalg.norm(p - obstacle) < 0.8 else 0\n    velocity_mismatch = np.linalg.norm(v - v_desired)\n    reward = goal_reward - 0.2 * velocity_mismatch + collision_risk \n    return reward",
+    "chosen": "import numpy as np\n    def reward(agent_pos, agent_vel, obstacle, goal, v_desired): \n    goal_reward = -np.linalg.norm(agent_pos - goal) \n    collision_risk = -50 if np.linalg.norm(agent_pos - obstacle) < 0.8 else 0\n    velocity_mismatch = np.linalg.norm(agent_vel - v_desired)\n    reward = goal_reward - 0.2 * velocity_mismatch + collision_risk \n    return reward",
     "rejected": "def find_drone(): \n    return best_drone \n\n    def find_obstacle(): \n        return best_obstacle"
   },
   {
@@ -391,7 +391,7 @@
   },
   {
     "prompt": "Mission: Drone indoor exploration in a room. \n Objectives: Avoid collision with ceiling fan blades. \n Conditions: Agent's state and staic fan blades's status are available. \n Write a reward function in Python. Only return the code. Do not explain.",
-    "chosen": "import numpy as np\n    def reward(p, v, obstacle, goal, v_desired): \n    goal_reward = -np.linalg.norm(p - goal) \n    collision_risk = -50 if np.linalg.norm(p - obstacle) < 0.8 else 0\n    velocity_mismatch = np.linalg.norm(v - v_desired)\n    reward = goal_reward - 0.2 * velocity_mismatch + collision_risk \n    return reward",
+    "chosen": "import numpy as np\n    def reward(agent_pos, agent_vel, obstacle, goal, v_desired): \n    goal_reward = -np.linalg.norm(agent_pos - goal) \n    collision_risk = -50 if np.linalg.norm(agent_pos - obstacle) < 0.8 else 0\n    velocity_mismatch = np.linalg.norm(agent_vel - v_desired)\n    reward = goal_reward - 0.2 * velocity_mismatch + collision_risk \n    return reward",
     "rejected": "def reward(pos, vel, obs, goal, target_vel): \n    baldes = 'clear'\n    if blades == 'clear': \n        return 1\n    return -1"
   },
   {
@@ -411,7 +411,7 @@
   },
   {
     "prompt": "Mission: Drone indoor exploration in a room. \n Objectives: Avoid collision with obstacles. \n Conditions: Agent's state and obstacle's status are available. \n Write a reward function in Python. Only return the code. Do not explain.",
-    "chosen": "import numpy as np\n    def reward(p, v, obstacle, goal, v_desired): \n    goal_reward = -np.linalg.norm(p - goal) \n    collision_risk = -50 if np.linalg.norm(p - obstacle) < 0.8 else 0\n    velocity_mismatch = np.linalg.norm(v - v_desired)\n    reward = goal_reward - 0.2 * velocity_mismatch + collision_risk \n    return reward",
+    "chosen": "import numpy as np\n    def reward(agent_pos, agent_vel, obstacle, goal, v_desired): \n    goal_reward = -np.linalg.norm(agent_pos - goal) \n    collision_risk = -50 if np.linalg.norm(agent_pos - obstacle) < 0.8 else 0\n    velocity_mismatch = np.linalg.norm(agent_vel - v_desired)\n    reward = goal_reward - 0.2 * velocity_mismatch + collision_risk \n    return reward",
     "rejected": "def apply_squadron(robber): \n        if robber.state == \"idle\" and robbed: \n            print(\"You have been caught by the squadrons.\") \n            return False \n        elif robber.state != \"idle\": \n            print(\"The squadrons detected you as an intruder!\") \n            return True"
   },
   {
@@ -431,7 +431,7 @@
   },
   {
     "prompt": "Mission: Drone indoor exploration in a library. \n Objectives: Avoid hitting the surrounding walls. \n Conditions: Agent's state, obstacle's state are obtainable. \n Write a reward function in Python. Only return the code. Do not explain.",
-    "chosen": "import numpy as np\n    def reward(p, v, obstacle, goal, v_desired): \n    goal_reward = -np.linalg.norm(p - goal) \n    collision_risk = -50 if np.linalg.norm(p - obstacle) < 0.8 else 0\n    velocity_mismatch = np.linalg.norm(v - v_desired)\n    reward = goal_reward - 0.2 * velocity_mismatch + collision_risk \n    return reward",
+    "chosen": "import numpy as np\n    def reward(agent_pos, agent_vel, obstacle, goal, v_desired): \n    goal_reward = -np.linalg.norm(agent_pos - goal) \n    collision_risk = -50 if np.linalg.norm(agent_pos - obstacle) < 0.8 else 0\n    velocity_mismatch = np.linalg.norm(agent_vel - v_desired)\n    reward = goal_reward - 0.2 * velocity_mismatch + collision_risk \n    return reward",
     "rejected": "def apply_squadron(robber): \n        if robber.state == \"idle\" and robbed: \n            print(\"You have been caught by the squadrons.\") \n            return False \n        elif robber.state != \"idle\": \n            print(\"The squadrons detected you as an intruder!\") \n            return True"
   },
   {
@@ -451,7 +451,7 @@
   },
   {
     "prompt": "Mission: Drone indoor exploration in a library. \n Objectives: Detect thin obstacle (table) and avoid collision. \n Conditions: Agent's state, table's state are accessible. \n Write a reward function in Python. Only return the code. Do not explain.",
-    "chosen": "import numpy as np\n    def reward(p, v, obstacle, goal, v_desired): \n    goal_reward = -np.linalg.norm(p - goal) \n    collision_risk = -50 if np.linalg.norm(p - obstacle) < 0.8 else 0\n    velocity_mismatch = np.linalg.norm(v - v_desired)\n    reward = goal_reward - 0.2 * velocity_mismatch + collision_risk \n    return reward",
+    "chosen": "import numpy as np\n    def reward(agent_pos, agent_vel, obstacle, goal, v_desired): \n    goal_reward = -np.linalg.norm(agent_pos - goal) \n    collision_risk = -50 if np.linalg.norm(agent_pos - obstacle) < 0.8 else 0\n    velocity_mismatch = np.linalg.norm(agent_vel - v_desired)\n    reward = goal_reward - 0.2 * velocity_mismatch + collision_risk \n    return reward",
     "rejected": "def find_drone(): \n    return best_drone \n\n    def find_obstacle(): \n        return best_obstacle"
   },
   {
@@ -471,7 +471,7 @@
   },
   {
     "prompt": "Mission: Drone indoor exploration in a library. \n Objectives: Detect dynamic obstacle (human) and avoid collision. \n Conditions: Agent's state, human's state are accessible. \n Write a reward function in Python. Only return the code. Do not explain.",
-    "chosen": "import numpy as np\n    def reward(p, v, obstacle, goal, v_desired): \n    goal_reward = -np.linalg.norm(p - goal) \n    collision_risk = -50 if np.linalg.norm(p - obstacle) < 0.8 else 0\n    velocity_mismatch = np.linalg.norm(v - v_desired)\n    reward = goal_reward - 0.2 * velocity_mismatch + collision_risk \n    return reward",
+    "chosen": "import numpy as np\n    def reward(agent_pos, agent_vel, obstacle, goal, v_desired): \n    goal_reward = -np.linalg.norm(agent_pos - goal) \n    collision_risk = -50 if np.linalg.norm(agent_pos - obstacle) < 0.8 else 0\n    velocity_mismatch = np.linalg.norm(agent_vel - v_desired)\n    reward = goal_reward - 0.2 * velocity_mismatch + collision_risk \n    return reward",
     "rejected": "def rules(): \n   return 0"
   },
   {
@@ -491,7 +491,7 @@
   },
   {
     "prompt": "Mission: Drone moves in a forest. \n Objectives: Avoid collision with stumps. \n Conditions: Agent's state, stump's state are obtainable. \n Write a reward function in Python. Only return the code. Do not explain.",
-    "chosen": "import numpy as np\n    def reward(p, v, obstacle, goal, v_desired): \n    goal_reward = -np.linalg.norm(p - goal) \n    collision_risk = -50 if np.linalg.norm(p - obstacle) < 0.8 else 0\n    velocity_mismatch = np.linalg.norm(v - v_desired)\n    reward = goal_reward - 0.2 * velocity_mismatch + collision_risk \n    return reward",
+    "chosen": "import numpy as np\n    def reward(agent_pos, agent_vel, obstacle, goal, v_desired): \n    goal_reward = -np.linalg.norm(agent_pos - goal) \n    collision_risk = -50 if np.linalg.norm(agent_pos - obstacle) < 0.8 else 0\n    velocity_mismatch = np.linalg.norm(agent_vel - v_desired)\n    reward = goal_reward - 0.2 * velocity_mismatch + collision_risk \n    return reward",
     "rejected": "def reward(agent_pos, stumps_pos, goal_pos): \n    distance = agent_pos - stumps_pos\n    if distance.all() == 0: \n        reward = 100\n    else: \n        reward = -1\n    return reward"
   },
   {
@@ -511,7 +511,7 @@
   },
   {
     "prompt": "Mission: Drone moves in a forest. \n Objectives: Detect cliffs and avoid collision. \n Conditions: Agent's state, cliff's state are obtainable. \n Write a reward function in Python. Only return the code. Do not explain.",
-    "chosen": "import numpy as np\n    def reward(p, v, obstacle, goal, v_desired): \n    goal_reward = -np.linalg.norm(p - goal) \n    collision_risk = -50 if np.linalg.norm(p - obstacle) < 0.8 else 0\n    velocity_mismatch = np.linalg.norm(v - v_desired)\n    reward = goal_reward - 0.2 * velocity_mismatch + collision_risk \n    return reward",
+    "chosen": "import numpy as np\n    def reward(agent_pos, agent_vel, obstacle, goal, v_desired): \n    goal_reward = -np.linalg.norm(agent_pos - goal) \n    collision_risk = -50 if np.linalg.norm(agent_pos - obstacle) < 0.8 else 0\n    velocity_mismatch = np.linalg.norm(agent_vel - v_desired)\n    reward = goal_reward - 0.2 * velocity_mismatch + collision_risk \n    return reward",
     "rejected": "class MazeNode (`object`): \n    def __init__ (self, x, y, parent, action, visited=False, dist=-1, cost=0, heuristic=0, **kwargs ): \n        super().__init__(*kwargs) \n        self.x = x \n        self.y = y \n        self.parent = parent \n        self.action = action"
   },
   {
@@ -531,7 +531,7 @@
   },
   {
     "prompt": "Mission: Drone indoor exploration in the mensa. \n Objectives: Avoid to collide with chairs. \n Conditions: Agent's state, chair's states are accessible. \n Write a reward function in Python. Only return the code. Do not explain.",
-    "chosen": "import numpy as np\n    def reward(p, v, obstacle, goal, v_desired): \n    goal_reward = -np.linalg.norm(p - goal) \n    collision_risk = -50 if np.linalg.norm(p - obstacle) < 0.8 else 0\n    velocity_mismatch = np.linalg.norm(v - v_desired)\n    reward = goal_reward - 0.2 * velocity_mismatch + collision_risk \n    return reward",
+    "chosen": "import numpy as np\n    def reward(agent_pos, agent_vel, obstacle, goal, v_desired): \n    goal_reward = -np.linalg.norm(agent_pos - goal) \n    collision_risk = -50 if np.linalg.norm(agent_pos - obstacle) < 0.8 else 0\n    velocity_mismatch = np.linalg.norm(agent_vel - v_desired)\n    reward = goal_reward - 0.2 * velocity_mismatch + collision_risk \n    return reward",
     "rejected": "self.grid[self.current_node.x][self.current_node.y-1][current_node.action] = self.current_node \n self.grid[self.current_node.x+1][self.current_node.y-1][current_node.action] = self.current_node \n self.grid[self.current_node.x-1][self.current_node.y-1][current_node.action] = self.current_node \n self.grid[self.current_node.x][self.current_node.y][current_node.action] = self.current_node"
   },
   {
@@ -551,7 +551,7 @@
   },
   {
     "prompt": "Mission: Drone indoor exploration in the mensa. \n Objectives:  Avoid to collide with cameras. \n Conditions: Agent's state, camera's state are available. \n Write a reward function in Python. Only return the code. Do not explain.",
-    "chosen": "import numpy as np\n    def reward(p, v, obstacle, goal, v_desired): \n    goal_reward = -np.linalg.norm(p - goal) \n    collision_risk = -50 if np.linalg.norm(p - obstacle) < 0.8 else 0\n    velocity_mismatch = np.linalg.norm(v - v_desired)\n    reward = goal_reward - 0.2 * velocity_mismatch + collision_risk \n    return reward",
+    "chosen": "import numpy as np\n    def reward(agent_pos, agent_vel, obstacle, goal, v_desired): \n    goal_reward = -np.linalg.norm(agent_pos - goal) \n    collision_risk = -50 if np.linalg.norm(agent_pos - obstacle) < 0.8 else 0\n    velocity_mismatch = np.linalg.norm(agent_vel - v_desired)\n    reward = goal_reward - 0.2 * velocity_mismatch + collision_risk \n    return reward",
     "rejected": "def find_drone(): \n    return best_drone \n\n    def find_obstacle(): \n        return best_obstacle"
   },
   {
@@ -571,7 +571,7 @@
   },
   {
     "prompt": "Mission: Drone indoor exploration in a classroom. \n Objectives: Detect obstacle (backpacks) and avoid collision. \n Conditions: Agent's state, backpack's state are accessible. \n Write a reward function in Python. Only return the code. Do not explain.",
-    "chosen": "import numpy as np\n    def reward(p, v, obstacle, goal, v_desired): \n    goal_reward = -np.linalg.norm(p - goal) \n    collision_risk = -50 if np.linalg.norm(p - obstacle) < 0.8 else 0\n    velocity_mismatch = np.linalg.norm(v - v_desired)\n    reward = goal_reward - 0.2 * velocity_mismatch + collision_risk \n    return reward",
+    "chosen": "import numpy as np\n    def reward(agent_pos, agent_vel, obstacle, goal, v_desired): \n    goal_reward = -np.linalg.norm(agent_pos - goal) \n    collision_risk = -50 if np.linalg.norm(agent_pos - obstacle) < 0.8 else 0\n    velocity_mismatch = np.linalg.norm(agent_vel - v_desired)\n    reward = goal_reward - 0.2 * velocity_mismatch + collision_risk \n    return reward",
     "rejected": "def find_drone(): \n    return best_drone \n\n    def find_obstacle(): \n        return best_obstacle"
   },
   {
@@ -591,7 +591,7 @@
   },
   {
     "prompt": "Mission: Drone indoor exploration in a conference room. \n Objectives: Detect bench and avoid collision. \n Conditions: Agent's state, bench's state are accessible. \n Write a reward function in Python. Only return the code. Do not explain.",
-    "chosen": "import numpy as np\n    def reward(p, v, obstacle, goal, v_desired): \n    goal_reward = -np.linalg.norm(p - goal) \n    collision_risk = -50 if np.linalg.norm(p - obstacle) < 0.8 else 0\n    velocity_mismatch = np.linalg.norm(v - v_desired)\n    reward = goal_reward - 0.2 * velocity_mismatch + collision_risk \n    return reward",
+    "chosen": "import numpy as np\n    def reward(agent_pos, agent_vel, obstacle, goal, v_desired): \n    goal_reward = -np.linalg.norm(agent_pos - goal) \n    collision_risk = -50 if np.linalg.norm(agent_pos - obstacle) < 0.8 else 0\n    velocity_mismatch = np.linalg.norm(agent_vel - v_desired)\n    reward = goal_reward - 0.2 * velocity_mismatch + collision_risk \n    return reward",
     "rejected": "self.grid[self.current_node.x][self.current_node.y-1][current_node.action] = self.current_node \n self.grid[self.current_node.x+1][self.current_node.y-1][current_node.action] = self.current_node \n self.grid[self.current_node.x-1][self.current_node.y-1][current_node.action] = self.current_node \n self.grid[self.current_node.x][self.current_node.y][current_node.action] = self.current_node"
   },
   {
@@ -611,7 +611,7 @@
   },
   {
     "prompt": "Mission: Pilot a drone through a warehouse. \n Objectives: Detect dynamic obstacle (workers) and avoid collision. \n Conditions: Agent's state, workers's state are obtainable. \n Write a reward function in Python. Only return the code. Do not explain.",
-    "chosen": "import numpy as np\n    def reward(p, v, obstacle, goal, v_desired): \n    goal_reward = -np.linalg.norm(p - goal) \n    collision_risk = -50 if np.linalg.norm(p - obstacle) < 0.8 else 0\n    velocity_mismatch = np.linalg.norm(v - v_desired)\n    reward = goal_reward - 0.2 * velocity_mismatch + collision_risk \n    return reward",
+    "chosen": "import numpy as np\n    def reward(agent_pos, agent_vel, obstacle, goal, v_desired): \n    goal_reward = -np.linalg.norm(agent_pos - goal) \n    collision_risk = -50 if np.linalg.norm(agent_pos - obstacle) < 0.8 else 0\n    velocity_mismatch = np.linalg.norm(agent_vel - v_desired)\n    reward = goal_reward - 0.2 * velocity_mismatch + collision_risk \n    return reward",
     "rejected": "def rules(): \n   return 0"
   },
   {
@@ -631,7 +631,7 @@
   },
   {
     "prompt": "Mission: Drone moves in a theater. \n Objectives: Detect people and avoid collison with people. \n Conditions: Agent's state, people's state are obtainable. \n Write a reward function in Python. Only return the code. Do not explain.",
-    "chosen": "import numpy as np\n    def reward(p, v, obstacle, goal, v_desired): \n    goal_reward = -np.linalg.norm(p - goal) \n    collision_risk = -50 if np.linalg.norm(p - obstacle) < 0.8 else 0\n    velocity_mismatch = np.linalg.norm(v - v_desired)\n    reward = goal_reward - 0.2 * velocity_mismatch + collision_risk \n    return reward",
+    "chosen": "import numpy as np\n    def reward(agent_pos, agent_vel, obstacle, goal, v_desired): \n    goal_reward = -np.linalg.norm(agent_pos - goal) \n    collision_risk = -50 if np.linalg.norm(agent_pos - obstacle) < 0.8 else 0\n    velocity_mismatch = np.linalg.norm(agent_vel - v_desired)\n    reward = goal_reward - 0.2 * velocity_mismatch + collision_risk \n    return reward",
     "rejected": "class MazeNode (`object`): \n    def __init__ (self, x, y, parent, action, visited=False, dist=-1, cost=0, heuristic=0, **kwargs ): \n        super().__init__(*kwargs) \n        self.x = x \n        self.y = y \n        self.parent = parent \n        self.action = action"
   },
   {
@@ -651,7 +651,7 @@
   },
   {
     "prompt": "Mission: Drone explores the theater. \n Objectives: Detect dynamic obstacle (people) and avoid collision. \n Conditions: Agent's state and people's state are obtainable. \n Write a reward function in Python. Only return the code. Do not explain.",
-    "chosen": "import numpy as np\n    def reward(p, v, obstacle, goal, v_desired): \n    goal_reward = -np.linalg.norm(p - goal) \n    collision_risk = -50 if np.linalg.norm(p - obstacle) < 0.8 else 0\n    velocity_mismatch = np.linalg.norm(v - v_desired)\n    reward = goal_reward - 0.2 * velocity_mismatch + collision_risk \n    return reward",
+    "chosen": "import numpy as np\n    def reward(agent_pos, agent_vel, obstacle, goal, v_desired): \n    goal_reward = -np.linalg.norm(agent_pos - goal) \n    collision_risk = -50 if np.linalg.norm(agent_pos - obstacle) < 0.8 else 0\n    velocity_mismatch = np.linalg.norm(agent_vel - v_desired)\n    reward = goal_reward - 0.2 * velocity_mismatch + collision_risk \n    return reward",
     "rejected": "def find_drone(): \n    return best_drone \n\n    def find_obstacle(): \n        return best_obstacle"
   },
   {
@@ -671,7 +671,7 @@
   },
   {
     "prompt": "Mission: Drone explores the sports hall. \n Objectives: Detect dynamic obstacle (human) and avoid collision. \n Conditions: Agent's state, human's state are obtainable. \n Write a reward function in Python. Only return the code. Do not explain.",
-    "chosen": "import numpy as np\n    def reward(p, v, obstacle, goal, v_desired): \n    goal_reward = -np.linalg.norm(p - goal) \n    collision_risk = -50 if np.linalg.norm(p - obstacle) < 0.8 else 0\n    velocity_mismatch = np.linalg.norm(v - v_desired)\n    reward = goal_reward - 0.2 * velocity_mismatch + collision_risk \n    return reward",
+    "chosen": "import numpy as np\n    def reward(agent_pos, agent_vel, obstacle, goal, v_desired): \n    goal_reward = -np.linalg.norm(agent_pos - goal) \n    collision_risk = -50 if np.linalg.norm(agent_pos - obstacle) < 0.8 else 0\n    velocity_mismatch = np.linalg.norm(agent_vel - v_desired)\n    reward = goal_reward - 0.2 * velocity_mismatch + collision_risk \n    return reward",
     "rejected": "class MazeNode (`object`): \n    def __init__ (self, x, y, parent, action, visited=False, dist=-1, cost=0, heuristic=0, **kwargs ): \n        super().__init__(*kwargs) \n        self.x = x \n        self.y = y \n        self.parent = parent \n        self.action = action"
   },
   {
@@ -691,7 +691,7 @@
   },
   {
     "prompt": "Mission: Drone explores the sports hall. \n Objectives: Avoid collision with loose balls. \n Conditions: Agent's state, ball's state are usable. \n Write a reward function in Python. Only return the code. Do not explain.",
-    "chosen": "import numpy as np\n    def reward(p, v, obstacle, goal, v_desired): \n    goal_reward = -np.linalg.norm(p - goal) \n    collision_risk = -50 if np.linalg.norm(p - obstacle) < 0.8 else 0\n    velocity_mismatch = np.linalg.norm(v - v_desired)\n    reward = goal_reward - 0.2 * velocity_mismatch + collision_risk \n    return reward",
+    "chosen": "import numpy as np\n    def reward(agent_pos, agent_vel, obstacle, goal, v_desired): \n    goal_reward = -np.linalg.norm(agent_pos - goal) \n    collision_risk = -50 if np.linalg.norm(agent_pos - obstacle) < 0.8 else 0\n    velocity_mismatch = np.linalg.norm(agent_vel - v_desired)\n    reward = goal_reward - 0.2 * velocity_mismatch + collision_risk \n    return reward",
     "rejected": "def check_collision(current_state, action, target, max_speed, min_speed, dt): \n        pass\n    return check_collision"
   },
   {
@@ -711,7 +711,7 @@
   },
   {
     "prompt": "Mission: Pilot a drone through a hospital. \n Objectives: Detect static obstacle (staff) and avoid collision. \n Conditions: Agent's state, staff's state are accessible. \n Write a reward function in Python. Only return the code. Do not explain.",
-    "chosen": "import numpy as np\n    def reward(p, v, obstacle, goal, v_desired): \n    goal_reward = -np.linalg.norm(p - goal) \n    collision_risk = -50 if np.linalg.norm(p - obstacle) < 0.8 else 0\n    velocity_mismatch = np.linalg.norm(v - v_desired)\n    reward = goal_reward - 0.2 * velocity_mismatch + collision_risk \n    return reward",
+    "chosen": "import numpy as np\n    def reward(agent_pos, agent_vel, obstacle, goal, v_desired): \n    goal_reward = -np.linalg.norm(agent_pos - goal) \n    collision_risk = -50 if np.linalg.norm(agent_pos - obstacle) < 0.8 else 0\n    velocity_mismatch = np.linalg.norm(agent_vel - v_desired)\n    reward = goal_reward - 0.2 * velocity_mismatch + collision_risk \n    return reward",
     "rejected": "def find_drone(): \n    return best_drone \n\n    def find_obstacle(): \n        return best_obstacle"
   },
   {
@@ -731,7 +731,7 @@
   },
   {
     "prompt": "Mission: Drone indoor exploration in a hospital. \n Objectives: Avoid to collide with static obstacle such as beds. \n Conditions: Agent's state, bed's state are accessible. \n Write a reward function in Python. Only return the code. Do not explain.",
-    "chosen": "import numpy as np\n    def reward(p, v, obstacle, goal, v_desired): \n    goal_reward = -np.linalg.norm(p - goal) \n    collision_risk = -50 if np.linalg.norm(p - obstacle) < 0.8 else 0\n    velocity_mismatch = np.linalg.norm(v - v_desired)\n    reward = goal_reward - 0.2 * velocity_mismatch + collision_risk \n    return reward",
+    "chosen": "import numpy as np\n    def reward(agent_pos, agent_vel, obstacle, goal, v_desired): \n    goal_reward = -np.linalg.norm(agent_pos - goal) \n    collision_risk = -50 if np.linalg.norm(agent_pos - obstacle) < 0.8 else 0\n    velocity_mismatch = np.linalg.norm(agent_vel - v_desired)\n    reward = goal_reward - 0.2 * velocity_mismatch + collision_risk \n    return reward",
     "rejected": "def find_drones(mesa):\n    drones = []\n    obs = []\n    for i, (x, y) in enumerate(np.where(mesa)):\n        if mesa[x][y] < 5:\n            continue"
   },
   {
@@ -751,7 +751,7 @@
   },
   {
     "prompt": "Mission: Drone indoor exploration in a room. \n Objectives:Avoid collision such as hanging lamps. \n Conditions: Agent's state and lamp's status are available. \n Write a reward function in Python. Only return the code. Do not explain.",
-    "chosen": "import numpy as np\n    def reward(p, v, obstacle, goal, v_desired): \n    goal_reward = -np.linalg.norm(p - goal) \n    collision_risk = -50 if np.linalg.norm(p - obstacle) < 0.8 else 0\n    velocity_mismatch = np.linalg.norm(v - v_desired)\n    reward = goal_reward - 0.2 * velocity_mismatch + collision_risk \n    return reward",
+    "chosen": "import numpy as np\n    def reward(agent_pos, agent_vel, obstacle, goal, v_desired): \n    goal_reward = -np.linalg.norm(agent_pos - goal) \n    collision_risk = -50 if np.linalg.norm(agent_pos - obstacle) < 0.8 else 0\n    velocity_mismatch = np.linalg.norm(agent_vel - v_desired)\n    reward = goal_reward - 0.2 * velocity_mismatch + collision_risk \n    return reward",
     "rejected": "def reward(agent_pos, hanging_lamps_pos, goal_pos): \n    distance = agent_pos - hanging_lamps_pos\n    if distance.all() == 0: \n        reward = 100\n    else: \n        reward = -1\n    return reward"
   },
   {
@@ -771,7 +771,7 @@
   },
   {
     "prompt": "Mission: Drone indoor exploration in a room. \n Objectives: Avoid collision with static obstacle (wardrobes). \n Conditions: Agent's state, wardrobe's state are available. \n Write a reward function in Python. Only return the code. Do not explain.",
-    "chosen": "import numpy as np\n    def reward(p, v, obstacle, goal, v_desired): \n    goal_reward = -np.linalg.norm(p - goal) \n    collision_risk = -50 if np.linalg.norm(p - obstacle) < 0.8 else 0\n    velocity_mismatch = np.linalg.norm(v - v_desired)\n    reward = goal_reward - 0.2 * velocity_mismatch + collision_risk \n    return reward",
+    "chosen": "import numpy as np\n    def reward(agent_pos, agent_vel, obstacle, goal, v_desired): \n    goal_reward = -np.linalg.norm(agent_pos - goal) \n    collision_risk = -50 if np.linalg.norm(agent_pos - obstacle) < 0.8 else 0\n    velocity_mismatch = np.linalg.norm(agent_vel - v_desired)\n    reward = goal_reward - 0.2 * velocity_mismatch + collision_risk \n    return reward",
     "rejected": "self.grid[self.current_node.x][self.current_node.y-1][current_node.action] = self.current_node \n self.grid[self.current_node.x+1][self.current_node.y-1][current_node.action] = self.current_node \n self.grid[self.current_node.x-1][self.current_node.y-1][current_node.action] = self.current_node \n self.grid[self.current_node.x][self.current_node.y][current_node.action] = self.current_node"
   },
   {
@@ -791,7 +791,7 @@
   },
   {
     "prompt": "Mission: Drone indoor exploration in a library. \n Objectives: Navigate without crashing into walls. \n Conditions: Agent's state, obstacle's state are obtainable. \n Write a reward function in Python. Only return the code. Do not explain.",
-    "chosen": "import numpy as np\n    def reward(p, v, obstacle, goal, v_desired): \n    goal_reward = -np.linalg.norm(p - goal) \n    collision_risk = -50 if np.linalg.norm(p - obstacle) < 0.8 else 0\n    velocity_mismatch = np.linalg.norm(v - v_desired)\n    reward = goal_reward - 0.2 * velocity_mismatch + collision_risk \n    return reward",
+    "chosen": "import numpy as np\n    def reward(agent_pos, agent_vel, obstacle, goal, v_desired): \n    goal_reward = -np.linalg.norm(agent_pos - goal) \n    collision_risk = -50 if np.linalg.norm(agent_pos - obstacle) < 0.8 else 0\n    velocity_mismatch = np.linalg.norm(agent_vel - v_desired)\n    reward = goal_reward - 0.2 * velocity_mismatch + collision_risk \n    return reward",
     "rejected": "def check_collision(current_state, action, target, max_speed, min_speed, dt): \n        pass\n    return check_collision"
   },
   {
@@ -811,7 +811,7 @@
   },
   {
     "prompt": "Mission: Drone indoor exploration in a library. \n Objectives: Detect thin obstacle (bookshelves) and avoid collision. \n Conditions: Agent's state, bookshelve's state are obtainable. \n Write a reward function in Python. Only return the code. Do not explain.",
-    "chosen": "import numpy as np\n    def reward(p, v, obstacle, goal, v_desired): \n    goal_reward = -np.linalg.norm(p - goal) \n    collision_risk = -50 if np.linalg.norm(p - obstacle) < 0.8 else 0\n    velocity_mismatch = np.linalg.norm(v - v_desired)\n    reward = goal_reward - 0.2 * velocity_mismatch + collision_risk \n    return reward",
+    "chosen": "import numpy as np\n    def reward(agent_pos, agent_vel, obstacle, goal, v_desired): \n    goal_reward = -np.linalg.norm(agent_pos - goal) \n    collision_risk = -50 if np.linalg.norm(agent_pos - obstacle) < 0.8 else 0\n    velocity_mismatch = np.linalg.norm(agent_vel - v_desired)\n    reward = goal_reward - 0.2 * velocity_mismatch + collision_risk \n    return reward",
     "rejected": "class MazeNode (`object`): \n    def __init__ (self, x, y, parent, action, visited=False, dist=-1, cost=0, heuristic=0, **kwargs ): \n        super().__init__(*kwargs) \n        self.x = x \n        self.y = y \n        self.parent = parent \n        self.action = action"
   },
   {
@@ -831,7 +831,7 @@
   },
   {
     "prompt": "Mission: Drone indoor exploration in a library. \n Objectives: Detect dynamic obstacle (shelves) and avoid collision. \n Conditions: Agent's state, shelve's state are obtainable. \n Write a reward function in Python. Only return the code. Do not explain.",
-    "chosen": "import numpy as np\n    def reward(p, v, obstacle, goal, v_desired): \n    goal_reward = -np.linalg.norm(p - goal) \n    collision_risk = -50 if np.linalg.norm(p - obstacle) < 0.8 else 0\n    velocity_mismatch = np.linalg.norm(v - v_desired)\n    reward = goal_reward - 0.2 * velocity_mismatch + collision_risk \n    return reward",
+    "chosen": "import numpy as np\n    def reward(agent_pos, agent_vel, obstacle, goal, v_desired): \n    goal_reward = -np.linalg.norm(agent_pos - goal) \n    collision_risk = -50 if np.linalg.norm(agent_pos - obstacle) < 0.8 else 0\n    velocity_mismatch = np.linalg.norm(agent_vel - v_desired)\n    reward = goal_reward - 0.2 * velocity_mismatch + collision_risk \n    return reward",
     "rejected": "class MazeNode (`object`): \n    def __init__ (self, x, y, parent, action, visited=False, dist=-1, cost=0, heuristic=0, **kwargs ): \n        super().__init__(*kwargs) \n        self.x = x \n        self.y = y \n        self.parent = parent \n        self.action = action"
   },
   {
@@ -851,7 +851,7 @@
   },
   {
     "prompt": "Mission: Drone moves in a forest. \n Objectives: Detect obstacle (rocks) and avoid collision. \n Conditions: Agent's state, rock's state are obtainable. \n Write a reward function in Python. Only return the code. Do not explain.",
-    "chosen": "import numpy as np\n    def reward(p, v, obstacle, goal, v_desired): \n    goal_reward = -np.linalg.norm(p - goal) \n    collision_risk = -50 if np.linalg.norm(p - obstacle) < 0.8 else 0\n    velocity_mismatch = np.linalg.norm(v - v_desired)\n    reward = goal_reward - 0.2 * velocity_mismatch + collision_risk \n    return reward",
+    "chosen": "import numpy as np\n    def reward(agent_pos, agent_vel, obstacle, goal, v_desired): \n    goal_reward = -np.linalg.norm(agent_pos - goal) \n    collision_risk = -50 if np.linalg.norm(agent_pos - obstacle) < 0.8 else 0\n    velocity_mismatch = np.linalg.norm(agent_vel - v_desired)\n    reward = goal_reward - 0.2 * velocity_mismatch + collision_risk \n    return reward",
     "rejected": "def find_drone(): \n    return best_drone \n\n    def find_obstacle(): \n        return best_obstacle"
   },
   {
@@ -871,7 +871,7 @@
   },
   {
     "prompt": "Mission: Drone indoor exploration in the mensa. \n Objectives: Detect dynamic obstacle (human) and avoid collision. \n Conditions: Agent's state, human's state are obtainable. \n Write a reward function in Python. Only return the code. Do not explain.",
-    "chosen": "import numpy as np\n    def reward(p, v, obstacle, goal, v_desired): \n    goal_reward = -np.linalg.norm(p - goal) \n    collision_risk = -50 if np.linalg.norm(p - obstacle) < 0.8 else 0\n    velocity_mismatch = np.linalg.norm(v - v_desired)\n    reward = goal_reward - 0.2 * velocity_mismatch + collision_risk \n    return reward",
+    "chosen": "import numpy as np\n    def reward(agent_pos, agent_vel, obstacle, goal, v_desired): \n    goal_reward = -np.linalg.norm(agent_pos - goal) \n    collision_risk = -50 if np.linalg.norm(agent_pos - obstacle) < 0.8 else 0\n    velocity_mismatch = np.linalg.norm(agent_vel - v_desired)\n    reward = goal_reward - 0.2 * velocity_mismatch + collision_risk \n    return reward",
     "rejected": "def apply_rule (state, action):\n        if 'Collision' in state:\n            print(\"You collided with\", end=\" \")\n            print(action)\n        else:\n            print('In your turn!')"
   },
   {
@@ -891,7 +891,7 @@
   },
   {
     "prompt": "Mission: Drone indoor exploration in the mensa. \n Objectives:  Avoid to collide with low-hanging decorations. \n Conditions: Agent's state, hanging decoration's state are accessible. \n Write a reward function in Python. Only return the code. Do not explain.",
-    "chosen": "import numpy as np\n    def reward(p, v, obstacle, goal, v_desired): \n    goal_reward = -np.linalg.norm(p - goal) \n    collision_risk = -50 if np.linalg.norm(p - obstacle) < 0.8 else 0\n    velocity_mismatch = np.linalg.norm(v - v_desired)\n    reward = goal_reward - 0.2 * velocity_mismatch + collision_risk \n    return reward",
+    "chosen": "import numpy as np\n    def reward(agent_pos, agent_vel, obstacle, goal, v_desired): \n    goal_reward = -np.linalg.norm(agent_pos - goal) \n    collision_risk = -50 if np.linalg.norm(agent_pos - obstacle) < 0.8 else 0\n    velocity_mismatch = np.linalg.norm(agent_vel - v_desired)\n    reward = goal_reward - 0.2 * velocity_mismatch + collision_risk \n    return reward",
     "rejected": "def find_drone(): \n    return best_drone \n\n    def find_obstacle(): \n        return best_obstacle"
   },
   {
@@ -911,7 +911,7 @@
   },
   {
     "prompt": "Mission: Drone in-door navigation in a classroom. \n Objectives: Prevent contact with the people. \n Conditions: Agent's state, people's state are obtainable. \n Write a reward function in Python. Only return the code. Do not explain.",
-    "chosen": "import numpy as np\n    def reward(p, v, obstacle, goal, v_desired): \n    goal_reward = -np.linalg.norm(p - goal) \n    collision_risk = -50 if np.linalg.norm(p - obstacle) < 0.8 else 0\n    velocity_mismatch = np.linalg.norm(v - v_desired)\n    reward = goal_reward - 0.2 * velocity_mismatch + collision_risk \n    return reward",
+    "chosen": "import numpy as np\n    def reward(agent_pos, agent_vel, obstacle, goal, v_desired): \n    goal_reward = -np.linalg.norm(agent_pos - goal) \n    collision_risk = -50 if np.linalg.norm(agent_pos - obstacle) < 0.8 else 0\n    velocity_mismatch = np.linalg.norm(agent_vel - v_desired)\n    reward = goal_reward - 0.2 * velocity_mismatch + collision_risk \n    return reward",
     "rejected": "def check_collision(current_state, action, target, max_speed, min_speed, dt): \n        pass\n    return check_collision"
   },
   {
@@ -931,7 +931,7 @@
   },
   {
     "prompt": "Mission: Drone indoor exploration in a conference room. \n Objectives: Detect dynamic obstacle (people) and avoid collision. \n Conditions: Agent's state, people's state are accessible. \n Write a reward function in Python. Only return the code. Do not explain.",
-    "chosen": "import numpy as np\n    def reward(p, v, obstacle, goal, v_desired): \n    goal_reward = -np.linalg.norm(p - goal) \n    collision_risk = -50 if np.linalg.norm(p - obstacle) < 0.8 else 0\n    velocity_mismatch = np.linalg.norm(v - v_desired)\n    reward = goal_reward - 0.2 * velocity_mismatch + collision_risk \n    return reward",
+    "chosen": "import numpy as np\n    def reward(agent_pos, agent_vel, obstacle, goal, v_desired): \n    goal_reward = -np.linalg.norm(agent_pos - goal) \n    collision_risk = -50 if np.linalg.norm(agent_pos - obstacle) < 0.8 else 0\n    velocity_mismatch = np.linalg.norm(agent_vel - v_desired)\n    reward = goal_reward - 0.2 * velocity_mismatch + collision_risk \n    return reward",
     "rejected": "def check_collision(): \n        pass"
   },
   {
@@ -951,7 +951,7 @@
   },
   {
     "prompt": "Mission: Pilot a drone through a conference room. \n Objectives: There are hanging equipments do not collied with it. \n Write a reward function in Python. Only return the code. Do not explain.",
-    "chosen": "import numpy as np\n    def reward(p, v, obstacle, goal, v_desired): \n    goal_reward = -np.linalg.norm(p - goal) \n    collision_risk = -50 if np.linalg.norm(p - obstacle) < 0.8 else 0\n    velocity_mismatch = np.linalg.norm(v - v_desired)\n    reward = goal_reward - 0.2 * velocity_mismatch + collision_risk \n    return reward",
+    "chosen": "import numpy as np\n    def reward(agent_pos, agent_vel, obstacle, goal, v_desired): \n    goal_reward = -np.linalg.norm(agent_pos - goal) \n    collision_risk = -50 if np.linalg.norm(agent_pos - obstacle) < 0.8 else 0\n    velocity_mismatch = np.linalg.norm(agent_vel - v_desired)\n    reward = goal_reward - 0.2 * velocity_mismatch + collision_risk \n    return reward",
     "rejected": "def find_drone(): \n    return best_drone \n\n    def find_obstacle(): \n        return best_obstacle"
   },
   {
@@ -971,7 +971,7 @@
   },
   {
     "prompt": "Mission: Pilot a drone through a warehouse. \n Objectives: Avoid collison with forklifts. \n Conditions: Agent's state and forklift's information are available. \n Write a reward function in Python. Only return the code. Do not explain.",
-    "chosen": "import numpy as np\n    def reward(p, v, obstacle, goal, v_desired): \n    goal_reward = -np.linalg.norm(p - goal) \n    collision_risk = -50 if np.linalg.norm(p - obstacle) < 0.8 else 0\n    velocity_mismatch = np.linalg.norm(v - v_desired)\n    reward = goal_reward - 0.2 * velocity_mismatch + collision_risk \n    return reward",
+    "chosen": "import numpy as np\n    def reward(agent_pos, agent_vel, obstacle, goal, v_desired): \n    goal_reward = -np.linalg.norm(agent_pos - goal) \n    collision_risk = -50 if np.linalg.norm(agent_pos - obstacle) < 0.8 else 0\n    velocity_mismatch = np.linalg.norm(agent_vel - v_desired)\n    reward = goal_reward - 0.2 * velocity_mismatch + collision_risk \n    return reward",
     "rejected": "def find_drone(): \n    return best_drone \n\n    def find_obstacle(): \n        return best_obstacle"
   },
   {
@@ -991,7 +991,7 @@
   },
   {
     "prompt": "Mission: Pilot a drone through a theater. \n Objectives: Detect people and avoid collison with audience seating. \n Conditions: Agent's states and audience seating information are available. \n Write a reward function in Python. Only return the code. Do not explain.",
-    "chosen": "import numpy as np\n    def reward(p, v, obstacle, goal, v_desired): \n    goal_reward = -np.linalg.norm(p - goal) \n    collision_risk = -50 if np.linalg.norm(p - obstacle) < 0.8 else 0\n    velocity_mismatch = np.linalg.norm(v - v_desired)\n    reward = goal_reward - 0.2 * velocity_mismatch + collision_risk \n    return reward",
+    "chosen": "import numpy as np\n    def reward(agent_pos, agent_vel, obstacle, goal, v_desired): \n    goal_reward = -np.linalg.norm(agent_pos - goal) \n    collision_risk = -50 if np.linalg.norm(agent_pos - obstacle) < 0.8 else 0\n    velocity_mismatch = np.linalg.norm(agent_vel - v_desired)\n    reward = goal_reward - 0.2 * velocity_mismatch + collision_risk \n    return reward",
     "rejected": "def find_drones(mesa):\n    drones = []\n    obs = []\n    for i, (x, y) in enumerate(np.where(mesa)):\n        if mesa[x][y] < 5:\n            continue"
   },
   {
@@ -1011,7 +1011,7 @@
   },
   {
     "prompt": "Mission: Pilot a drone through a theater. \n Objectives: Detect static obstacle (overhead platforms) and avoid collision. \n Conditions: Agent's state, platform's state are obtainable. \n Write a reward function in Python. Only return the code. Do not explain.",
-    "chosen": "import numpy as np\n    def reward(p, v, obstacle, goal, v_desired): \n    goal_reward = -np.linalg.norm(p - goal) \n    collision_risk = -50 if np.linalg.norm(p - obstacle) < 0.8 else 0\n    velocity_mismatch = np.linalg.norm(v - v_desired)\n    reward = goal_reward - 0.2 * velocity_mismatch + collision_risk \n    return reward",
+    "chosen": "import numpy as np\n    def reward(agent_pos, agent_vel, obstacle, goal, v_desired): \n    goal_reward = -np.linalg.norm(agent_pos - goal) \n    collision_risk = -50 if np.linalg.norm(agent_pos - obstacle) < 0.8 else 0\n    velocity_mismatch = np.linalg.norm(agent_vel - v_desired)\n    reward = goal_reward - 0.2 * velocity_mismatch + collision_risk \n    return reward",
     "rejected": "def find_drone(): \n    return best_drone \n\n    def find_obstacle(): \n        return best_obstacle"
   },
   {
@@ -1031,7 +1031,7 @@
   },
   {
     "prompt": "Mission: Drone explores the sports hall. \n Objectives: Detect  dynamic obstacle (people) and avoid collision. \n Conditions: Agent's state, people's state are obtainable. \n Write a reward function in Python. Only return the code. Do not explain.",
-    "chosen": "import numpy as np\n    def reward(p, v, obstacle, goal, v_desired): \n    goal_reward = -np.linalg.norm(p - goal) \n    collision_risk = -50 if np.linalg.norm(p - obstacle) < 0.8 else 0\n    velocity_mismatch = np.linalg.norm(v - v_desired)\n    reward = goal_reward - 0.2 * velocity_mismatch + collision_risk \n    return reward",
+    "chosen": "import numpy as np\n    def reward(agent_pos, agent_vel, obstacle, goal, v_desired): \n    goal_reward = -np.linalg.norm(agent_pos - goal) \n    collision_risk = -50 if np.linalg.norm(agent_pos - obstacle) < 0.8 else 0\n    velocity_mismatch = np.linalg.norm(agent_vel - v_desired)\n    reward = goal_reward - 0.2 * velocity_mismatch + collision_risk \n    return reward",
     "rejected": "def rules(): \n   return 0"
   },
   {
@@ -1051,7 +1051,7 @@
   },
   {
     "prompt": "Mission: Operate the drone in a hospital. \n Objectives: Detect dynamic obstacle (patients) and avoid collision. \n Conditions: Agent's state, patient's state are accessible. \n Write a reward function in Python. Only return the code. Do not explain.",
-    "chosen": "import numpy as np\n    def reward(p, v, obstacle, goal, v_desired): \n    goal_reward = -np.linalg.norm(p - goal) \n    collision_risk = -50 if np.linalg.norm(p - obstacle) < 0.8 else 0\n    velocity_mismatch = np.linalg.norm(v - v_desired)\n    reward = goal_reward - 0.2 * velocity_mismatch + collision_risk \n    return reward",
+    "chosen": "import numpy as np\n    def reward(agent_pos, agent_vel, obstacle, goal, v_desired): \n    goal_reward = -np.linalg.norm(agent_pos - goal) \n    collision_risk = -50 if np.linalg.norm(agent_pos - obstacle) < 0.8 else 0\n    velocity_mismatch = np.linalg.norm(agent_vel - v_desired)\n    reward = goal_reward - 0.2 * velocity_mismatch + collision_risk \n    return reward",
     "rejected": "def check_collision(current_state, action, target, max_speed, min_speed, dt): \n        pass\n    return check_collision"
   },
   {
@@ -1071,7 +1071,7 @@
   },
   {
     "prompt": "Mission: Operate the drone in a hospital. \n Objectives: Avoid collision with defibrillators. \n Conditions: Agent's state, obstacle's state are usable. \n Write a reward function in Python. Only return the code. Do not explain.",
-    "chosen": "import numpy as np\n    def reward(p, v, obstacle, goal, v_desired): \n    goal_reward = -np.linalg.norm(p - goal) \n    collision_risk = -50 if np.linalg.norm(p - obstacle) < 0.8 else 0\n    velocity_mismatch = np.linalg.norm(v - v_desired)\n    reward = goal_reward - 0.2 * velocity_mismatch + collision_risk \n    return reward",
+    "chosen": "import numpy as np\n    def reward(agent_pos, agent_vel, obstacle, goal, v_desired): \n    goal_reward = -np.linalg.norm(agent_pos - goal) \n    collision_risk = -50 if np.linalg.norm(agent_pos - obstacle) < 0.8 else 0\n    velocity_mismatch = np.linalg.norm(agent_vel - v_desired)\n    reward = goal_reward - 0.2 * velocity_mismatch + collision_risk \n    return reward",
     "rejected": "self.grid[self.current_node.x][self.current_node.y-1][current_node.action] = self.current_node \n self.grid[self.current_node.x+1][self.current_node.y-1][current_node.action] = self.current_node \n self.grid[self.current_node.x-1][self.current_node.y-1][current_node.action] = self.current_node \n self.grid[self.current_node.x][self.current_node.y][current_node.action] = self.current_node"
   },
   {
@@ -1091,7 +1091,7 @@
   },
   {
     "prompt": "Mission: Drone indoor exploration in a room. \n Objectives: Avoid collision with chairs. \n Conditions: Agent's state and chair's status. \n Write a reward function in Python. Only return the code. Do not explain.",
-    "chosen": "import numpy as np\n    def reward(p, v, obstacle, goal, v_desired): \n    goal_reward = -np.linalg.norm(p - goal) \n    collision_risk = -50 if np.linalg.norm(p - obstacle) < 0.8 else 0\n    velocity_mismatch = np.linalg.norm(v - v_desired)\n    reward = goal_reward - 0.2 * velocity_mismatch + collision_risk \n    return reward",
+    "chosen": "import numpy as np\n    def reward(agent_pos, agent_vel, obstacle, goal, v_desired): \n    goal_reward = -np.linalg.norm(agent_pos - goal) \n    collision_risk = -50 if np.linalg.norm(agent_pos - obstacle) < 0.8 else 0\n    velocity_mismatch = np.linalg.norm(agent_vel - v_desired)\n    reward = goal_reward - 0.2 * velocity_mismatch + collision_risk \n    return reward",
     "rejected": "def find_drones(mesa):\n    drones = []\n    obs = []\n    for i, (x, y) in enumerate(np.where(mesa)):\n        if mesa[x][y] < 5:\n            continue"
   },
   {
@@ -1111,7 +1111,7 @@
   },
   {
     "prompt": "Mission: Drone indoor exploration in a room. \n Objectives: Avoid collision with curtain. \n Conditions: Agent's state and static curtain's status are available. \n Write a reward function in Python. Only return the code. Do not explain.",
-    "chosen": "import numpy as np\n    def reward(p, v, obstacle, goal, v_desired): \n    goal_reward = -np.linalg.norm(p - goal) \n    collision_risk = -50 if np.linalg.norm(p - obstacle) < 0.8 else 0\n    velocity_mismatch = np.linalg.norm(v - v_desired)\n    reward = goal_reward - 0.2 * velocity_mismatch + collision_risk \n    return reward",
+    "chosen": "import numpy as np\n    def reward(agent_pos, agent_vel, obstacle, goal, v_desired): \n    goal_reward = -np.linalg.norm(agent_pos - goal) \n    collision_risk = -50 if np.linalg.norm(agent_pos - obstacle) < 0.8 else 0\n    velocity_mismatch = np.linalg.norm(agent_vel - v_desired)\n    reward = goal_reward - 0.2 * velocity_mismatch + collision_risk \n    return reward",
     "rejected": "class MazeNode (`object`): \n    def __init__ (self, x, y, parent, action, visited=False, dist=-1, cost=0, heuristic=0, **kwargs ): \n        super().__init__(*kwargs) \n        self.x = x \n        self.y = y \n        self.parent = parent \n        self.action = action"
   },
   {
@@ -1131,7 +1131,7 @@
   },
   {
     "prompt": "Mission: Drone in-door navigation and reach other side of the small room. \n Objectives: Do not collide with the walls of the room. \n Conditions: Agent's state, obstacle's state are accessible. \n Write a reward function in Python. Only return the code. Do not explain.",
-    "chosen": "import numpy as np\n    def reward(p, v, obstacle, goal, v_desired): \n    goal_reward = -np.linalg.norm(p - goal) \n    collision_risk = -50 if np.linalg.norm(p - obstacle) < 0.8 else 0\n    velocity_mismatch = np.linalg.norm(v - v_desired)\n    reward = goal_reward - 0.2 * velocity_mismatch + collision_risk \n    return reward",
+    "chosen": "import numpy as np\n    def reward(agent_pos, agent_vel, obstacle, goal, v_desired): \n    goal_reward = -np.linalg.norm(agent_pos - goal) \n    collision_risk = -50 if np.linalg.norm(agent_pos - obstacle) < 0.8 else 0\n    velocity_mismatch = np.linalg.norm(agent_vel - v_desired)\n    reward = goal_reward - 0.2 * velocity_mismatch + collision_risk \n    return reward",
     "rejected": "def find_drones(agents, obstacles): \n    drone_states = [d[2] for d in agents] \n    found_items = [] \n    return found items"
   },
   {
@@ -1151,7 +1151,7 @@
   },
   {
     "prompt": "Mission: Drone indoor exploration in a library. \n Objectives: Detect thin obstacle (cables) and avoid collision. \n Conditions: Agent's state, cable's state are accessible. \n Write a reward function in Python. Only return the code. Do not explain.",
-    "chosen": "import numpy as np\n    def reward(p, v, obstacle, goal, v_desired): \n    goal_reward = -np.linalg.norm(p - goal) \n    collision_risk = -50 if np.linalg.norm(p - obstacle) < 0.8 else 0\n    velocity_mismatch = np.linalg.norm(v - v_desired)\n    reward = goal_reward - 0.2 * velocity_mismatch + collision_risk \n    return reward",
+    "chosen": "import numpy as np\n    def reward(agent_pos, agent_vel, obstacle, goal, v_desired): \n    goal_reward = -np.linalg.norm(agent_pos - goal) \n    collision_risk = -50 if np.linalg.norm(agent_pos - obstacle) < 0.8 else 0\n    velocity_mismatch = np.linalg.norm(agent_vel - v_desired)\n    reward = goal_reward - 0.2 * velocity_mismatch + collision_risk \n    return reward",
     "rejected": "def rules(): \n   return 0"
   },
   {
@@ -1171,7 +1171,7 @@
   },
   {
     "prompt": "Mission: Drone indoor exploration in a library. \n Objectives: Detect thin obstacle (smoke detectors) and avoid collision. \n Conditions: Agent's state, smoke detector's state are accessible. \n Write a reward function in Python. Only return the code. Do not explain.",
-    "chosen": "import numpy as np\n    def reward(p, v, obstacle, goal, v_desired): \n    goal_reward = -np.linalg.norm(p - goal) \n    collision_risk = -50 if np.linalg.norm(p - obstacle) < 0.8 else 0\n    velocity_mismatch = np.linalg.norm(v - v_desired)\n    reward = goal_reward - 0.2 * velocity_mismatch + collision_risk \n    return reward",
+    "chosen": "import numpy as np\n    def reward(agent_pos, agent_vel, obstacle, goal, v_desired): \n    goal_reward = -np.linalg.norm(agent_pos - goal) \n    collision_risk = -50 if np.linalg.norm(agent_pos - obstacle) < 0.8 else 0\n    velocity_mismatch = np.linalg.norm(agent_vel - v_desired)\n    reward = goal_reward - 0.2 * velocity_mismatch + collision_risk \n    return reward",
     "rejected": "def check_collision(): \n        pass"
   },
   {
@@ -1191,7 +1191,7 @@
   },
   {
     "prompt": "Mission: Drone moves in a forest. \n Objectives: Detect static obstacle (trees) and avoid collision. \n Conditions: Agent's state, tree's state are obtainable. \n Write a reward function in Python. Only return the code. Do not explain.",
-    "chosen": "import numpy as np\n    def reward(p, v, obstacle, goal, v_desired): \n    goal_reward = -np.linalg.norm(p - goal) \n    collision_risk = -50 if np.linalg.norm(p - obstacle) < 0.8 else 0\n    velocity_mismatch = np.linalg.norm(v - v_desired)\n    reward = goal_reward - 0.2 * velocity_mismatch + collision_risk \n    return reward",
+    "chosen": "import numpy as np\n    def reward(agent_pos, agent_vel, obstacle, goal, v_desired): \n    goal_reward = -np.linalg.norm(agent_pos - goal) \n    collision_risk = -50 if np.linalg.norm(agent_pos - obstacle) < 0.8 else 0\n    velocity_mismatch = np.linalg.norm(agent_vel - v_desired)\n    reward = goal_reward - 0.2 * velocity_mismatch + collision_risk \n    return reward",
     "rejected": "def find_drones(agents, obstacles): \n    drone_states = [d[2] for d in agents] \n    found_items = [] \n    return found items"
   },
   {
@@ -1211,7 +1211,7 @@
   },
   {
     "prompt": "Mission: Drone moves in a forest. \n Objectives: Detect thin branches and avoid collision. \n Conditions: Agent's state, branche's state are obtainable. \n Write a reward function in Python. Only return the code. Do not explain.",
-    "chosen": "import numpy as np\n    def reward(p, v, obstacle, goal, v_desired): \n    goal_reward = -np.linalg.norm(p - goal) \n    collision_risk = -50 if np.linalg.norm(p - obstacle) < 0.8 else 0\n    velocity_mismatch = np.linalg.norm(v - v_desired)\n    reward = goal_reward - 0.2 * velocity_mismatch + collision_risk \n    return reward",
+    "chosen": "import numpy as np\n    def reward(agent_pos, agent_vel, obstacle, goal, v_desired): \n    goal_reward = -np.linalg.norm(agent_pos - goal) \n    collision_risk = -50 if np.linalg.norm(agent_pos - obstacle) < 0.8 else 0\n    velocity_mismatch = np.linalg.norm(agent_vel - v_desired)\n    reward = goal_reward - 0.2 * velocity_mismatch + collision_risk \n    return reward",
     "rejected": "def find_drones(mesa):\n    drones = []\n    obs = []\n    for i, (x, y) in enumerate(np.where(mesa)):\n        if mesa[x][y] < 5:\n            continue"
   },
   {
@@ -1231,7 +1231,7 @@
   },
   {
     "prompt": "Mission: Drone indoor exploration in the mensa. \n Objectives: Avoid any obstacle such as hanging lamps. \n Conditions: Agent's information and lamp's information are available \n Write a reward in Python.",
-    "chosen": "import numpy as np\n    def reward(p, v, obstacle, goal, v_desired): \n    goal_reward = -np.linalg.norm(p - goal) \n    collision_risk = -50 if np.linalg.norm(p - obstacle) < 0.8 else 0\n    velocity_mismatch = np.linalg.norm(v - v_desired)\n    reward = goal_reward - 0.2 * velocity_mismatch + collision_risk \n    return reward",
+    "chosen": "import numpy as np\n    def reward(agent_pos, agent_vel, obstacle, goal, v_desired): \n    goal_reward = -np.linalg.norm(agent_pos - goal) \n    collision_risk = -50 if np.linalg.norm(agent_pos - obstacle) < 0.8 else 0\n    velocity_mismatch = np.linalg.norm(agent_vel - v_desired)\n    reward = goal_reward - 0.2 * velocity_mismatch + collision_risk \n    return reward",
     "rejected": "def find_drone(): \n    return best_drone \n\n    def find_obstacle(): \n        return best_obstacle"
   },
   {
@@ -1251,7 +1251,7 @@
   },
   {
     "prompt": "Mission: Drone indoor exploration in the mensa. \n Objectives:  Avoid to collide with plants. \n Conditions: Agent's state, plant's state are available. \n Write a reward function in Python. Only return the code. Do not explain.",
-    "chosen": "import numpy as np\n    def reward(p, v, obstacle, goal, v_desired): \n    goal_reward = -np.linalg.norm(p - goal) \n    collision_risk = -50 if np.linalg.norm(p - obstacle) < 0.8 else 0\n    velocity_mismatch = np.linalg.norm(v - v_desired)\n    reward = goal_reward - 0.2 * velocity_mismatch + collision_risk \n    return reward",
+    "chosen": "import numpy as np\n    def reward(agent_pos, agent_vel, obstacle, goal, v_desired): \n    goal_reward = -np.linalg.norm(agent_pos - goal) \n    collision_risk = -50 if np.linalg.norm(agent_pos - obstacle) < 0.8 else 0\n    velocity_mismatch = np.linalg.norm(agent_vel - v_desired)\n    reward = goal_reward - 0.2 * velocity_mismatch + collision_risk \n    return reward",
     "rejected": "def find_drone(): \n    return best_drone \n\n    def find_obstacle(): \n        return best_obstacle"
   },
   {
@@ -1271,7 +1271,7 @@
   },
   {
     "prompt": "Mission: Pilot a drone through a classroom. \n Objectives: Navigate without crashing into overhead lamps. \n Conditions: Agent's state, overhead lamp's state are accessible. \n Write a reward function in Python. Only return the code. Do not explain.",
-    "chosen": "import numpy as np\n    def reward(p, v, obstacle, goal, v_desired): \n    goal_reward = -np.linalg.norm(p - goal) \n    collision_risk = -50 if np.linalg.norm(p - obstacle) < 0.8 else 0\n    velocity_mismatch = np.linalg.norm(v - v_desired)\n    reward = goal_reward - 0.2 * velocity_mismatch + collision_risk \n    return reward",
+    "chosen": "import numpy as np\n    def reward(agent_pos, agent_vel, obstacle, goal, v_desired): \n    goal_reward = -np.linalg.norm(agent_pos - goal) \n    collision_risk = -50 if np.linalg.norm(agent_pos - obstacle) < 0.8 else 0\n    velocity_mismatch = np.linalg.norm(agent_vel - v_desired)\n    reward = goal_reward - 0.2 * velocity_mismatch + collision_risk \n    return reward",
     "rejected": "def find_drone(): \n    return best_drone \n\n    def find_obstacle(): \n        return best_obstacle"
   },
   {
@@ -1291,7 +1291,7 @@
   },
   {
     "prompt": "Mission: Drone indoor exploration in a conference room. \n Objectives: Avoid collision with desk. \n Conditions: Agent's state, desk's state are accessible. \n Write a reward function in Python. Only return the code. Do not explain.",
-    "chosen": "import numpy as np\n    def reward(p, v, obstacle, goal, v_desired): \n    goal_reward = -np.linalg.norm(p - goal) \n    collision_risk = -50 if np.linalg.norm(p - obstacle) < 0.8 else 0\n    velocity_mismatch = np.linalg.norm(v - v_desired)\n    reward = goal_reward - 0.2 * velocity_mismatch + collision_risk \n    return reward",
+    "chosen": "import numpy as np\n    def reward(agent_pos, agent_vel, obstacle, goal, v_desired): \n    goal_reward = -np.linalg.norm(agent_pos - goal) \n    collision_risk = -50 if np.linalg.norm(agent_pos - obstacle) < 0.8 else 0\n    velocity_mismatch = np.linalg.norm(agent_vel - v_desired)\n    reward = goal_reward - 0.2 * velocity_mismatch + collision_risk \n    return reward",
     "rejected": "def reward(agent_pos, desk_pos, goal_pos): \n    distance = agent_pos - desk_pos\n    if distance.all() == 0: \n        reward = 100\n    else: \n        reward = -1\n    return reward"
   },
   {
@@ -1311,7 +1311,7 @@
   },
   {
     "prompt": "Mission: Drone indoor exploration in a conference room. \n Objectives: Avoid collision with laptops. \n Conditions: Agent's state and laptop's state are accessible. \n Write a reward function in Python. Only return the code. Do not explain.",
-    "chosen": "import numpy as np\n    def reward(p, v, obstacle, goal, v_desired): \n    goal_reward = -np.linalg.norm(p - goal) \n    collision_risk = -50 if np.linalg.norm(p - obstacle) < 0.8 else 0\n    velocity_mismatch = np.linalg.norm(v - v_desired)\n    reward = goal_reward - 0.2 * velocity_mismatch + collision_risk \n    return reward",
+    "chosen": "import numpy as np\n    def reward(agent_pos, agent_vel, obstacle, goal, v_desired): \n    goal_reward = -np.linalg.norm(agent_pos - goal) \n    collision_risk = -50 if np.linalg.norm(agent_pos - obstacle) < 0.8 else 0\n    velocity_mismatch = np.linalg.norm(agent_vel - v_desired)\n    reward = goal_reward - 0.2 * velocity_mismatch + collision_risk \n    return reward",
     "rejected": "def find_drones(agents, obstacles): \n    min_distance = np.inf \n    closest_drone = None \n    for i, (agent, target) in enumerate(zip(agents, targets)): \n        dists = np.linalg.norm(np.array(agent.position) - np.array(target), axis=1)"
   },
   {
@@ -1331,7 +1331,7 @@
   },
   {
     "prompt": "Mission: Operate the drone in a warehouse. \n Objectives: Avoid collison with overhead pipes. \n Conditions: Agent's state and pipe's information are obtainable. \n Write a reward function in Python. Only return the code. Do not explain.",
-    "chosen": "import numpy as np\n    def reward(p, v, obstacle, goal, v_desired): \n    goal_reward = -np.linalg.norm(p - goal) \n    collision_risk = -50 if np.linalg.norm(p - obstacle) < 0.8 else 0\n    velocity_mismatch = np.linalg.norm(v - v_desired)\n    reward = goal_reward - 0.2 * velocity_mismatch + collision_risk \n    return reward",
+    "chosen": "import numpy as np\n    def reward(agent_pos, agent_vel, obstacle, goal, v_desired): \n    goal_reward = -np.linalg.norm(agent_pos - goal) \n    collision_risk = -50 if np.linalg.norm(agent_pos - obstacle) < 0.8 else 0\n    velocity_mismatch = np.linalg.norm(agent_vel - v_desired)\n    reward = goal_reward - 0.2 * velocity_mismatch + collision_risk \n    return reward",
     "rejected": "reward reward reward reward reward reward reward reward reward reward reward reward reward reward reward reward reward reward reward reward reward reward reward reward reward reward reward reward reward reward reward reward reward reward reward reward reward reward reward reward reward reward"
   },
   {
@@ -1351,7 +1351,7 @@
   },
   {
     "prompt": "Mission: Drone moves in a theater. \n Objectives: Detect people and avoid collison with projectors. \n Conditions: Agent's state, projectors's state are obtainable. \n Write a reward function in Python. Only return the code. Do not explain.",
-    "chosen": "import numpy as np\n    def reward(p, v, obstacle, goal, v_desired): \n    goal_reward = -np.linalg.norm(p - goal) \n    collision_risk = -50 if np.linalg.norm(p - obstacle) < 0.8 else 0\n    velocity_mismatch = np.linalg.norm(v - v_desired)\n    reward = goal_reward - 0.2 * velocity_mismatch + collision_risk \n    return reward",
+    "chosen": "import numpy as np\n    def reward(agent_pos, agent_vel, obstacle, goal, v_desired): \n    goal_reward = -np.linalg.norm(agent_pos - goal) \n    collision_risk = -50 if np.linalg.norm(agent_pos - obstacle) < 0.8 else 0\n    velocity_mismatch = np.linalg.norm(agent_vel - v_desired)\n    reward = goal_reward - 0.2 * velocity_mismatch + collision_risk \n    return reward",
     "rejected": "def find_drones(mesa):\n    drones = []\n    obs = []\n    for i, (x, y) in enumerate(np.where(mesa)):\n        if mesa[x][y] < 5:\n            continue"
   },
   {
@@ -1371,7 +1371,7 @@
   },
   {
     "prompt": "Mission: Drone explores the theater. \n Objectives: Detect static obstacle (drapes) and avoid collision. \n Conditions: Agent's state, drape's state are obtainable. \n Write a reward function in Python. Only return the code. Do not explain.",
-    "chosen": "import numpy as np\n    def reward(p, v, obstacle, goal, v_desired): \n    goal_reward = -np.linalg.norm(p - goal) \n    collision_risk = -50 if np.linalg.norm(p - obstacle) < 0.8 else 0\n    velocity_mismatch = np.linalg.norm(v - v_desired)\n    reward = goal_reward - 0.2 * velocity_mismatch + collision_risk \n    return reward",
+    "chosen": "import numpy as np\n    def reward(agent_pos, agent_vel, obstacle, goal, v_desired): \n    goal_reward = -np.linalg.norm(agent_pos - goal) \n    collision_risk = -50 if np.linalg.norm(agent_pos - obstacle) < 0.8 else 0\n    velocity_mismatch = np.linalg.norm(agent_vel - v_desired)\n    reward = goal_reward - 0.2 * velocity_mismatch + collision_risk \n    return reward",
     "rejected": "find_drones([[0, 0, 1]], [[-1, 0, 0], [-1, 0, 0], [-1, 0, 0], [0, 0, 1], [0, 0, 1], [0, 0, 1], [0, 0, 1], [0, 0, 1], [0, 0, 1], [0, 0, 1], [0, 0, 1], [0, 0, 1], [0, 0, 1], [0, 0, 1], [0, 0, 1], [0, 0, 1], [0, 0, 1], [0, 0, 1], [0, 0, 1], [0, 0, 1], [0, 0, 1], [0, 0, 1], [0, 0, 1], [0, 0, 1], [0, 0, 1])"
   },
   {
@@ -1391,7 +1391,7 @@
   },
   {
     "prompt": "Mission: Drone explores the sports hall. \n Objectives: Detect dynamic obstacle (climbing ropes) and avoid collision. \n Conditions: Agent's state, climbing rope's state are usable. \n Write a reward function in Python. Only return the code. Do not explain.",
-    "chosen": "import numpy as np\n    def reward(p, v, obstacle, goal, v_desired): \n    goal_reward = -np.linalg.norm(p - goal) \n    collision_risk = -50 if np.linalg.norm(p - obstacle) < 0.8 else 0\n    velocity_mismatch = np.linalg.norm(v - v_desired)\n    reward = goal_reward - 0.2 * velocity_mismatch + collision_risk \n    return reward",
+    "chosen": "import numpy as np\n    def reward(agent_pos, agent_vel, obstacle, goal, v_desired): \n    goal_reward = -np.linalg.norm(agent_pos - goal) \n    collision_risk = -50 if np.linalg.norm(agent_pos - obstacle) < 0.8 else 0\n    velocity_mismatch = np.linalg.norm(agent_vel - v_desired)\n    reward = goal_reward - 0.2 * velocity_mismatch + collision_risk \n    return reward",
     "rejected": "def find_drone(): \n    return best_drone \n\n    def find_obstacle(): \n        return best_obstacle"
   },
   {
@@ -1411,7 +1411,7 @@
   },
   {
     "prompt": "Mission: Pilot a drone through a hospital. \n Objectives: Detect dynamic obstacle (doctors) and avoid collision. \n Conditions: Agent's state, doctor's state are usable. \n Write a reward function in Python. Only return the code. Do not explain.",
-    "chosen": "import numpy as np\n    def reward(p, v, obstacle, goal, v_desired): \n    goal_reward = -np.linalg.norm(p - goal) \n    collision_risk = -50 if np.linalg.norm(p - obstacle) < 0.8 else 0\n    velocity_mismatch = np.linalg.norm(v - v_desired)\n    reward = goal_reward - 0.2 * velocity_mismatch + collision_risk \n    return reward",
+    "chosen": "import numpy as np\n    def reward(agent_pos, agent_vel, obstacle, goal, v_desired): \n    goal_reward = -np.linalg.norm(agent_pos - goal) \n    collision_risk = -50 if np.linalg.norm(agent_pos - obstacle) < 0.8 else 0\n    velocity_mismatch = np.linalg.norm(agent_vel - v_desired)\n    reward = goal_reward - 0.2 * velocity_mismatch + collision_risk \n    return reward",
     "rejected": "def find_drones(mesa):\n    drones = []\n    obs = []\n    for i, (x, y) in enumerate(np.where(mesa)):\n        if mesa[x][y] < 5:\n            continue"
   },
   {
@@ -1431,7 +1431,7 @@
   },
   {
     "prompt": "Mission: Drone explores the hospital. \n Objectives: Avoid  any collision with wall-mounted emergency devices. \n Conditions: Agent's state, emergency device's state are accessible. \n Write a reward function in Python. Only return the code. Do not explain.",
-    "chosen": "import numpy as np\n    def reward(p, v, obstacle, goal, v_desired): \n    goal_reward = -np.linalg.norm(p - goal) \n    collision_risk = -50 if np.linalg.norm(p - obstacle) < 0.8 else 0\n    velocity_mismatch = np.linalg.norm(v - v_desired)\n    reward = goal_reward - 0.2 * velocity_mismatch + collision_risk \n    return reward",
+    "chosen": "import numpy as np\n    def reward(agent_pos, agent_vel, obstacle, goal, v_desired): \n    goal_reward = -np.linalg.norm(agent_pos - goal) \n    collision_risk = -50 if np.linalg.norm(agent_pos - obstacle) < 0.8 else 0\n    velocity_mismatch = np.linalg.norm(agent_vel - v_desired)\n    reward = goal_reward - 0.2 * velocity_mismatch + collision_risk \n    return reward",
     "rejected": "def find_drone(): \n    return best_drone \n\n    def find_obstacle(): \n        return best_obstacle"
   },
   {
@@ -1457,7 +1457,7 @@
   },
   {
     "prompt": "Mission: Drone indoor exploration in a room. \n Objectives: Avoid collision with ceiling fan blades. \n Conditions: Agent's state and staic fan blades's status are available. \n Write a reward function in Python. Only return the code. Do not explain.",
-    "chosen": "import numpy as np\n    def reward(p, obstacle, goal): \n    goal_reward = -np.linalg.norm(p - goal) \n    collision_risk = -50 if np.linalg.norm(p - obstacle) < 0.8 else 0\n    reward = goal_reward  + collision_risk \n    return reward",
+    "chosen": "import numpy as np\n    def reward(agent_pos, obstacle, goal): \n    goal_reward = -np.linalg.norm(agent_pos - goal) \n    collision_risk = -50 if np.linalg.norm(agent_pos - obstacle) < 0.8 else 0\n    reward = goal_reward  + collision_risk \n    return reward",
     "rejected": "def reward(pos, obs, goal): \n    baldes = 'clear'\n    if blades == 'clear': \n        return 1\n    return -1"
   },
   {
@@ -1477,7 +1477,7 @@
   },
   {
     "prompt": "Mission: Drone indoor exploration in a room. \n Objectives: Avoid collision with obstacles. \n Conditions: Agent's state and obstacle's status are available. \n Write a reward function in Python. Only return the code. Do not explain.",
-    "chosen": "import numpy as np\n    def reward(p, obstacle, goal): \n    goal_reward = -np.linalg.norm(p - goal) \n    collision_risk = -50 if np.linalg.norm(p - obstacle) < 0.8 else 0\n    reward = goal_reward  + collision_risk \n    return reward",
+    "chosen": "import numpy as np\n    def reward(agent_pos, obstacle, goal): \n    goal_reward = -np.linalg.norm(agent_pos - goal) \n    collision_risk = -50 if np.linalg.norm(agent_pos - obstacle) < 0.8 else 0\n    reward = goal_reward  + collision_risk \n    return reward",
     "rejected": "def apply_squadron(robber): \n        if robber.state == \"idle\" and robbed: \n            print(\"You have been caught by the squadrons.\") \n            return False \n        elif robber.state != \"idle\": \n            print(\"The squadrons detected you as an intruder!\") \n            return True"
   },
   {
@@ -1497,7 +1497,7 @@
   },
   {
     "prompt": "Mission: Drone indoor exploration in a library. \n Objectives: Avoid hitting the surrounding walls. \n Conditions: Agent's state, obstacle's state are obtainable. \n Write a reward function in Python. Only return the code. Do not explain.",
-    "chosen": "import numpy as np\n    def reward(p, obstacle, goal): \n    goal_reward = -np.linalg.norm(p - goal) \n    collision_risk = -50 if np.linalg.norm(p - obstacle) < 0.8 else 0\n    reward = goal_reward  + collision_risk \n    return reward",
+    "chosen": "import numpy as np\n    def reward(agent_pos, obstacle, goal): \n    goal_reward = -np.linalg.norm(agent_pos - goal) \n    collision_risk = -50 if np.linalg.norm(agent_pos - obstacle) < 0.8 else 0\n    reward = goal_reward  + collision_risk \n    return reward",
     "rejected": "def apply_rule(agents, obstacles):\n        Applies a rule that will allow an In-Depth Exploration of the indoors using drones."
   },
   {
@@ -1517,7 +1517,7 @@
   },
   {
     "prompt": "Mission: Drone indoor exploration in a library. \n Objectives: Detect thin obstacle (bookshelves) and avoid collision. \n Conditions: Agent's state, bookshelve's state are obtainable. \n Write a reward function in Python. Only return the code. Do not explain.",
-    "chosen": "import numpy as np\n    def reward(p, obstacle, goal): \n    goal_reward = -np.linalg.norm(p - goal) \n    collision_risk = -50 if np.linalg.norm(p - obstacle) < 0.8 else 0\n    reward = goal_reward  + collision_risk \n    return reward",
+    "chosen": "import numpy as np\n    def reward(agent_pos, obstacle, goal): \n    goal_reward = -np.linalg.norm(agent_pos - goal) \n    collision_risk = -50 if np.linalg.norm(agent_pos - obstacle) < 0.8 else 0\n    reward = goal_reward  + collision_risk \n    return reward",
     "rejected": "def apply_rule(agents, obstacles):\n        Applies a rule that will allow an In-Depth Exploration of the indoors using drones."
   },
   {
@@ -1537,7 +1537,7 @@
   },
   {
     "prompt": "Mission: Drone moves in a forest. \n Objectives: Detect dynamic obstacle (human) and avoid collision. \n Conditions: Agent's state, human's state are obtainable. \n Write a reward function in Python. Only return the code. Do not explain.",
-    "chosen": "import numpy as np\n    def reward(p, obstacle, goal): \n    goal_reward = -np.linalg.norm(p - goal) \n    collision_risk = -50 if np.linalg.norm(p - obstacle) < 0.8 else 0\n    reward = goal_reward  + collision_risk \n    return reward",
+    "chosen": "import numpy as np\n    def reward(agent_pos, obstacle, goal): \n    goal_reward = -np.linalg.norm(agent_pos - goal) \n    collision_risk = -50 if np.linalg.norm(agent_pos - obstacle) < 0.8 else 0\n    reward = goal_reward  + collision_risk \n    return reward",
     "rejected": "def find_drone(): \n    return best_drone \n\n    def find_obstacle(): \n        return best_obstacle"
   },
   {
@@ -1557,7 +1557,7 @@
   },
   {
     "prompt": "Mission: Drone moves in a forest. \n Objectives: Avoid collision with stumps. \n Conditions: Agent's state, stump's state are obtainable. \n Write a reward function in Python. Only return the code. Do not explain.",
-    "chosen": "import numpy as np\n    def reward(p, obstacle, goal): \n    goal_reward = -np.linalg.norm(p - goal) \n    collision_risk = -50 if np.linalg.norm(p - obstacle) < 0.8 else 0\n    reward = goal_reward  + collision_risk \n    return reward",
+    "chosen": "import numpy as np\n    def reward(agent_pos, obstacle, goal): \n    goal_reward = -np.linalg.norm(agent_pos - goal) \n    collision_risk = -50 if np.linalg.norm(agent_pos - obstacle) < 0.8 else 0\n    reward = goal_reward  + collision_risk \n    return reward",
     "rejected": "The challenge here isn’t about finding the shortest route; rather, it’s about ensuring that no two robots ever meet due to collisions. This may seem like a simple problem, but applying rules such as avoiding collisions could lead to very complex scenarios when applied across multiple groups of robots. "
   },
   {
@@ -1577,7 +1577,7 @@
   },
   {
     "prompt": "Mission: Drone moves in a forest. \n Objectives: Detect obstacle (people) and avoid collision. \n Conditions: Agent's state, people's state are obtainable. \n Write a reward function in Python. Only return the code. Do not explain.",
-    "chosen": "import numpy as np\n    def reward(p, obstacle, goal): \n    goal_reward = -np.linalg.norm(p - goal) \n    collision_risk = -50 if np.linalg.norm(p - obstacle) < 0.8 else 0\n    reward = goal_reward  + collision_risk \n    return reward",
+    "chosen": "import numpy as np\n    def reward(agent_pos, obstacle, goal): \n    goal_reward = -np.linalg.norm(agent_pos - goal) \n    collision_risk = -50 if np.linalg.norm(agent_pos - obstacle) < 0.8 else 0\n    reward = goal_reward  + collision_risk \n    return reward",
     "rejected": "def find_drone(): \n    return best_drone \n\n    def find_obstacle(): \n        return best_obstacle"
   },
   {
@@ -1597,7 +1597,7 @@
   },
   {
     "prompt": "Mission: Drone indoor exploration in the mensa. \n Objectives: Avoid to collide with chairs. \n Conditions: Agent's state, chair's states are accessible. \n Write a reward function in Python. Only return the code. Do not explain.",
-    "chosen": "import numpy as np\n    def reward(p, obstacle, goal): \n    goal_reward = -np.linalg.norm(p - goal) \n    collision_risk = -50 if np.linalg.norm(p - obstacle) < 0.8 else 0\n    reward = goal_reward  + collision_risk \n    return reward",
+    "chosen": "import numpy as np\n    def reward(agent_pos, obstacle, goal): \n    goal_reward = -np.linalg.norm(agent_pos - goal) \n    collision_risk = -50 if np.linalg.norm(agent_pos - obstacle) < 0.8 else 0\n    reward = goal_reward  + collision_risk \n    return reward",
     "rejected": "def check_collision(): \n        pass"
   },
   {
@@ -1617,7 +1617,7 @@
   },
   {
     "prompt": "Mission: Drone indoor exploration in the mensa. \n Objectives:  Avoid to collide with plants. \n Conditions: Agent's state, plant's state are available. \n Write a reward function in Python. Only return the code. Do not explain.",
-    "chosen": "import numpy as np\n    def reward(p, obstacle, goal): \n    goal_reward = -np.linalg.norm(p - goal) \n    collision_risk = -50 if np.linalg.norm(p - obstacle) < 0.8 else 0\n    reward = goal_reward  + collision_risk \n    return reward",
+    "chosen": "import numpy as np\n    def reward(agent_pos, obstacle, goal): \n    goal_reward = -np.linalg.norm(agent_pos - goal) \n    collision_risk = -50 if np.linalg.norm(agent_pos - obstacle) < 0.8 else 0\n    reward = goal_reward  + collision_risk \n    return reward",
     "rejected": "drones = [] \n obs = [] \n    for i, obj in enumerate(mesa['objects']): \n        if 'drone' in str(obj) or 'droner' in str(obj): \n            drones.append(i) \n        elif 'obstacle' in str(obj) or 'object' in str(obj): \n            obs.append(i)"
   },
   {
@@ -1637,7 +1637,7 @@
   },
   {
     "prompt": "Mission: Pilot a drone through a classroom. \n Objectives: Navigate without crashing into overhead lamps. \n Conditions: Agent's state, overhead lamp's state and wanted velocity are accessible. \n Write a reward function in Python. Only return the code. Do not explain.",
-    "chosen": "import numpy as np\n    def reward(p, obstacle, goal): \n    goal_reward = -np.linalg.norm(p - goal) \n    collision_risk = -50 if np.linalg.norm(p - obstacle) < 0.8 else 0\n    reward = goal_reward  + collision_risk \n    return reward",
+    "chosen": "import numpy as np\n    def reward(agent_pos, obstacle, goal): \n    goal_reward = -np.linalg.norm(agent_pos - goal) \n    collision_risk = -50 if np.linalg.norm(agent_pos - obstacle) < 0.8 else 0\n    reward = goal_reward  + collision_risk \n    return reward",
     "rejected": "def find_drone(): \n    return best_drone \n\n    def find_obstacle(): \n        return best_obstacle"
   },
   {
@@ -1657,7 +1657,7 @@
   },
   {
     "prompt": "Mission: Drone indoor exploration in a conference room. \n Objectives: Avoid collision with desk. \n Conditions: Agent's state, desk's state and wanted velocity are accessible. \n Write a reward function in Python. Only return the code. Do not explain.",
-    "chosen": "import numpy as np\n    def reward(p, obstacle, goal): \n    goal_reward = -np.linalg.norm(p - goal) \n    collision_risk = -50 if np.linalg.norm(p - obstacle) < 0.8 else 0\n    reward = goal_reward  + collision_risk \n    return reward",
+    "chosen": "import numpy as np\n    def reward(agent_pos, obstacle, goal): \n    goal_reward = -np.linalg.norm(agent_pos - goal) \n    collision_risk = -50 if np.linalg.norm(agent_pos - obstacle) < 0.8 else 0\n    reward = goal_reward  + collision_risk \n    return reward",
     "rejected": "Core core core core core core core core core core core core core core core core core core core core core core core core core core core core core core core core core core core core core core core core core core core core core core core core core core core core core core core core core core core core core core core core core core core core core core core core core core core core core core core core core core core core core core core core core core core core core core core core core"
   },
   {
@@ -1677,7 +1677,7 @@
   },
   {
     "prompt": "Mission: Drone indoor exploration in a conference room. \n Objectives: Avoid collision with laptops. \n Conditions: Agent's state and laptop's state are accessible. \n Write a reward function in Python. Only return the code. Do not explain.",
-    "chosen": "import numpy as np\n    def reward(p, obstacle, goal): \n    goal_reward = -np.linalg.norm(p - goal) \n    collision_risk = -50 if np.linalg.norm(p - obstacle) < 0.8 else 0\n    reward = goal_reward  + collision_risk \n    return reward",
+    "chosen": "import numpy as np\n    def reward(agent_pos, obstacle, goal): \n    goal_reward = -np.linalg.norm(agent_pos - goal) \n    collision_risk = -50 if np.linalg.norm(agent_pos - obstacle) < 0.8 else 0\n    reward = goal_reward  + collision_risk \n    return reward",
     "rejected": "def find_closest_point(agents, obstacles, agent_state, agent_speed, target, max_dist=50, min_dist=-max_dist, speed_factor=3):\n    closest_points = []\n    for i, point in enumerate(obstacles): \n        dist_from_agent = calculate_distance(agent_state, np.array(point)) \n        if dist_from_agent < min_dist: \n            continue \n         prev_point = np.array(np.where((np.linalg.norm(points) > 4)))"
   },
   {
@@ -1697,7 +1697,7 @@
   },
   {
     "prompt": "Mission: Pilot a drone through a warehouse. \n Objectives: Avoid collison with high storage racks. \n Conditions: Agent's state and storage rack's information and wanted velocity are obtainable. \n Write a reward function in Python. Only return the code. Do not explain.",
-    "chosen": "import numpy as np\n    def reward(p, obstacle, goal): \n    goal_reward = -np.linalg.norm(p - goal) \n    collision_risk = -50 if np.linalg.norm(p - obstacle) < 0.8 else 0\n    reward = goal_reward  + collision_risk \n    return reward",
+    "chosen": "import numpy as np\n    def reward(agent_pos, obstacle, goal): \n    goal_reward = -np.linalg.norm(agent_pos - goal) \n    collision_risk = -50 if np.linalg.norm(agent_pos - obstacle) < 0.8 else 0\n    reward = goal_reward  + collision_risk \n    return reward",
     "rejected": "def find_drone(): \n    return best_drone \n\n    def find_obstacle(): \n        return best_obstacle"
   },
   {
@@ -1717,7 +1717,7 @@
   },
   {
     "prompt": "Mission: Operate the drone in a warehouse. \n Objectives: Avoid collison with overhead pipes. \n Conditions: Agent's state and pipe's information and wanted velocity are obtainable. \n Write a reward function in Python. Only return the code. Do not explain.",
-    "chosen": "import numpy as np\n    def reward(p, obstacle, goal): \n    goal_reward = -np.linalg.norm(p - goal) \n    collision_risk = -50 if np.linalg.norm(p - obstacle) < 0.8 else 0\n    reward = goal_reward  + collision_risk \n    return reward",
+    "chosen": "import numpy as np\n    def reward(agent_pos, obstacle, goal): \n    goal_reward = -np.linalg.norm(agent_pos - goal) \n    collision_risk = -50 if np.linalg.norm(agent_pos - obstacle) < 0.8 else 0\n    reward = goal_reward  + collision_risk \n    return reward",
     "rejected": "def find_drone(): \n    return best_drone \n\n    def find_obstacle(): \n        return best_obstacle"
   },
   {
@@ -1737,7 +1737,7 @@
   },
   {
     "prompt": "Mission: Drone moves in a theater. \n Objectives: Detect people and avoid collison with balconies. \n Conditions: Agent's state, balcony's state and wanted velocity are obtainable. \n Write a reward function in Python. Only return the code. Do not explain.",
-    "chosen": "import numpy as np\n    def reward(p, obstacle, goal): \n    goal_reward = -np.linalg.norm(p - goal) \n    collision_risk = -50 if np.linalg.norm(p - obstacle) < 0.8 else 0\n    reward = goal_reward  + collision_risk \n    return reward",
+    "chosen": "import numpy as np\n    def reward(agent_pos, obstacle, goal): \n    goal_reward = -np.linalg.norm(agent_pos - goal) \n    collision_risk = -50 if np.linalg.norm(agent_pos - obstacle) < 0.8 else 0\n    reward = goal_reward  + collision_risk \n    return reward",
     "rejected": "def find_drone(): \n    return best_drone \n\n    def find_obstacle(): \n        return best_obstacle"
   },
   {
@@ -1757,7 +1757,7 @@
   },
   {
     "prompt": "Mission: Drone explores the theater. \n Objectives: Detect dynamic obstacle (people) and avoid collision. \n Conditions: Agent's state and people's state and wanted velocity are obtainable. \n Write a reward function in Python. Only return the code. Do not explain.",
-    "chosen": "import numpy as np\n    def reward(p, obstacle, goal): \n    goal_reward = -np.linalg.norm(p - goal) \n    collision_risk = -50 if np.linalg.norm(p - obstacle) < 0.8 else 0\n    reward = goal_reward  + collision_risk \n    return reward",
+    "chosen": "import numpy as np\n    def reward(agent_pos, obstacle, goal): \n    goal_reward = -np.linalg.norm(agent_pos - goal) \n    collision_risk = -50 if np.linalg.norm(agent_pos - obstacle) < 0.8 else 0\n    reward = goal_reward  + collision_risk \n    return reward",
     "rejected": "def find_closest_point(agents, obstacles, agent_state, agent_speed, target, max_dist=50, min_dist=-max_dist, speed_factor=3):\n    closest_points = []\n    for i, point in enumerate(obstacles): \n        dist_from_agent = calculate_distance(agent_state, np.array(point)) \n        if dist_from_agent < min_dist: \n            continue \n         prev_point = np.array(np.where((np.linalg.norm(points) > 4)))"
   },
   {
@@ -1777,7 +1777,7 @@
   },
   {
     "prompt": "Mission: Drone explores the sports hall. \n Objectives: Detect dynamic obstacle (human) and avoid collision. \n Conditions: Agent's state, human's state and wanted velocity are obtainable. \n Write a reward function in Python. Only return the code. Do not explain.",
-    "chosen": "import numpy as np\n    def reward(p, obstacle, goal): \n    goal_reward = -np.linalg.norm(p - goal) \n    collision_risk = -50 if np.linalg.norm(p - obstacle) < 0.8 else 0\n    reward = goal_reward  + collision_risk \n    return reward",
+    "chosen": "import numpy as np\n    def reward(agent_pos, obstacle, goal): \n    goal_reward = -np.linalg.norm(agent_pos - goal) \n    collision_risk = -50 if np.linalg.norm(agent_pos - obstacle) < 0.8 else 0\n    reward = goal_reward  + collision_risk \n    return reward",
     "rejected": "import math \n    nvel = int((max_vel * v0) / (math.sqrt(dt ** 2 + v0**2))) \n    return nvel"
   },
   {
@@ -1797,7 +1797,7 @@
   },
   {
     "prompt": "Mission: Drone explores the sports hall. \n Objectives: Avoid collision with loose balls. \n Conditions: Agent's state, ball's state and desired velocity are usable. \n Write a reward function in Python. Only return the code. Do not explain.",
-    "chosen": "import numpy as np\n    def reward(p, obstacle, goal): \n    goal_reward = -np.linalg.norm(p - goal) \n    collision_risk = -50 if np.linalg.norm(p - obstacle) < 0.8 else 0\n    reward = goal_reward  + collision_risk \n    return reward",
+    "chosen": "import numpy as np\n    def reward(agent_pos, obstacle, goal): \n    goal_reward = -np.linalg.norm(agent_pos - goal) \n    collision_risk = -50 if np.linalg.norm(agent_pos - obstacle) < 0.8 else 0\n    reward = goal_reward  + collision_risk \n    return reward",
     "rejected": "def reward(agent_pos, loose_balls_pos, goal_pos): \n    distance = agent_pos - loose_balls_pos\n    if distance.all() == 0: \n        reward = 100\n    else: \n        reward = -1\n    return reward"
   },
   {
@@ -1817,7 +1817,7 @@
   },
   {
     "prompt": "Mission: Drone explores the hospital. \n Objectives: Avoid  any collision with wall-mounted emergency devices. \n Conditions: Agent's state, emergency device's state and wanted velocity are accessible. \n Write a reward function in Python. Only return the code. Do not explain.",
-    "chosen": "import numpy as np\n    def reward(p, obstacle, goal): \n    goal_reward = -np.linalg.norm(p - goal) \n    collision_risk = -50 if np.linalg.norm(p - obstacle) < 0.8 else 0\n    reward = goal_reward  + collision_risk \n    return reward",
+    "chosen": "import numpy as np\n    def reward(agent_pos, obstacle, goal): \n    goal_reward = -np.linalg.norm(agent_pos - goal) \n    collision_risk = -50 if np.linalg.norm(agent_pos - obstacle) < 0.8 else 0\n    reward = goal_reward  + collision_risk \n    return reward",
     "rejected": "def find_drone(): \n    return best_drone \n\n    def find_obstacle(): \n        return best_obstacle"
   },
   {
@@ -1837,7 +1837,7 @@
   },
   {
     "prompt": "Mission: Drone indoor exploration in a room. \n Objectives: Avoid collision with ceiling fan blades. \n Conditions: Agent's state and staic fan blades's status are available. \n Write a reward function in Python. Only return the code. Do not explain.",
-    "chosen": "import numpy as np\n    def reward(p, obstacle, goal): \n    goal_reward = -np.linalg.norm(p - goal) \n    collision_risk = -50 if np.linalg.norm(p - obstacle) < 0.8 else 0\n    reward = goal_reward  + collision_risk \n    return reward",
+    "chosen": "import numpy as np\n    def reward(agent_pos, obstacle, goal): \n    goal_reward = -np.linalg.norm(agent_pos - goal) \n    collision_risk = -50 if np.linalg.norm(agent_pos - obstacle) < 0.8 else 0\n    reward = goal_reward  + collision_risk \n    return reward",
     "rejected": "def reward(pos, obs, goal): \n    baldes = 'clear'\n    if blades == 'clear': \n        return 1\n    return -1"
   },
   {
@@ -1857,7 +1857,7 @@
   },
   {
     "prompt": "Mission: Drone indoor exploration in a room. \n Objectives: Avoid collision with obstacles. \n Conditions: Agent's state and obstacle's status are available. \n Write a reward function in Python. Only return the code. Do not explain.",
-    "chosen": "import numpy as np\n    def reward(p, obstacle, goal): \n    goal_reward = -np.linalg.norm(p - goal) \n    collision_risk = -50 if np.linalg.norm(p - obstacle) < 0.8 else 0\n    reward = goal_reward  + collision_risk \n    return reward",
+    "chosen": "import numpy as np\n    def reward(agent_pos, obstacle, goal): \n    goal_reward = -np.linalg.norm(agent_pos - goal) \n    collision_risk = -50 if np.linalg.norm(agent_pos - obstacle) < 0.8 else 0\n    reward = goal_reward  + collision_risk \n    return reward",
     "rejected": "def apply_squadron(robber): \n        if robber.state == \"idle\" and robbed: \n            print(\"You have been caught by the squadrons.\") \n            return False \n        elif robber.state != \"idle\": \n            print(\"The squadrons detected you as an intruder!\") \n            return True"
   },
   {
@@ -1877,7 +1877,7 @@
   },
   {
     "prompt": "Mission: Drone indoor exploration in a library. \n Objectives: Avoid hitting the surrounding walls. \n Conditions: Agent's state, obstacle's state are obtainable. \n Write a reward function in Python. Only return the code. Do not explain.",
-    "chosen": "import numpy as np\n    def reward(p, obstacle, goal): \n    goal_reward = -np.linalg.norm(p - goal) \n    collision_risk = -50 if np.linalg.norm(p - obstacle) < 0.8 else 0\n    reward = goal_reward  + collision_risk \n    return reward",
+    "chosen": "import numpy as np\n    def reward(agent_pos, obstacle, goal): \n    goal_reward = -np.linalg.norm(agent_pos - goal) \n    collision_risk = -50 if np.linalg.norm(agent_pos - obstacle) < 0.8 else 0\n    reward = goal_reward  + collision_risk \n    return reward",
     "rejected": "def apply_rule(agents, obstacles):\n        Applies a rule that will allow an In-Depth Exploration of the indoors using drones."
   },
   {
@@ -1897,7 +1897,7 @@
   },
   {
     "prompt": "Mission: Drone indoor exploration in a library. \n Objectives: Detect thin obstacle (bookshelves) and avoid collision. \n Conditions: Agent's state, bookshelve's state are obtainable. \n Write a reward function in Python. Only return the code. Do not explain.",
-    "chosen": "import numpy as np\n    def reward(p, obstacle, goal): \n    goal_reward = -np.linalg.norm(p - goal) \n    collision_risk = -50 if np.linalg.norm(p - obstacle) < 0.8 else 0\n    reward = goal_reward  + collision_risk \n    return reward",
+    "chosen": "import numpy as np\n    def reward(agent_pos, obstacle, goal): \n    goal_reward = -np.linalg.norm(agent_pos - goal) \n    collision_risk = -50 if np.linalg.norm(agent_pos - obstacle) < 0.8 else 0\n    reward = goal_reward  + collision_risk \n    return reward",
     "rejected": "def apply_rule(agents, obstacles):\n        Applies a rule that will allow an In-Depth Exploration of the indoors using drones."
   },
   {
@@ -1917,7 +1917,7 @@
   },
   {
     "prompt": "Mission: Drone moves in a forest. \n Objectives: Detect dynamic obstacle (human) and avoid collision. \n Conditions: Agent's state, human's state are obtainable. \n Write a reward function in Python. Only return the code. Do not explain.",
-    "chosen": "import numpy as np\n    def reward(p, obstacle, goal): \n    goal_reward = -np.linalg.norm(p - goal) \n    collision_risk = -50 if np.linalg.norm(p - obstacle) < 0.8 else 0\n    reward = goal_reward  + collision_risk \n    return reward",
+    "chosen": "import numpy as np\n    def reward(agent_pos, obstacle, goal): \n    goal_reward = -np.linalg.norm(agent_pos - goal) \n    collision_risk = -50 if np.linalg.norm(agent_pos - obstacle) < 0.8 else 0\n    reward = goal_reward  + collision_risk \n    return reward",
     "rejected": "def find_drone(): \n    return best_drone \n\n    def find_obstacle(): \n        return best_obstacle"
   },
   {
@@ -1937,7 +1937,7 @@
   },
   {
     "prompt": "Mission: Drone moves in a forest. \n Objectives: Avoid collision with stumps. \n Conditions: Agent's state, stump's state are obtainable. \n Write a reward function in Python. Only return the code. Do not explain.",
-    "chosen": "import numpy as np\n    def reward(p, obstacle, goal): \n    goal_reward = -np.linalg.norm(p - goal) \n    collision_risk = -50 if np.linalg.norm(p - obstacle) < 0.8 else 0\n    reward = goal_reward  + collision_risk \n    return reward",
+    "chosen": "import numpy as np\n    def reward(agent_pos, obstacle, goal): \n    goal_reward = -np.linalg.norm(agent_pos - goal) \n    collision_risk = -50 if np.linalg.norm(agent_pos - obstacle) < 0.8 else 0\n    reward = goal_reward  + collision_risk \n    return reward",
     "rejected": "def reward(agent_pos, stumps_pos, goal_pos): \n    distance = agent_pos - stumps_pos\n    if distance.all() == 0: \n        reward = 100\n    else: \n        reward = -1\n    return reward"
   },
   {
@@ -1957,7 +1957,7 @@
   },
   {
     "prompt": "Mission: Drone moves in a forest. \n Objectives: Detect obstacle (people) and avoid collision. \n Conditions: Agent's state, people's state are obtainable. \n Write a reward function in Python. Only return the code. Do not explain.",
-    "chosen": "import numpy as np\n    def reward(p, obstacle, goal): \n    goal_reward = -np.linalg.norm(p - goal) \n    collision_risk = -50 if np.linalg.norm(p - obstacle) < 0.8 else 0\n    reward = goal_reward  + collision_risk \n    return reward",
+    "chosen": "import numpy as np\n    def reward(agent_pos, obstacle, goal): \n    goal_reward = -np.linalg.norm(agent_pos - goal) \n    collision_risk = -50 if np.linalg.norm(agent_pos - obstacle) < 0.8 else 0\n    reward = goal_reward  + collision_risk \n    return reward",
     "rejected": "def find_drone(): \n    return best_drone \n\n    def find_obstacle(): \n        return best_obstacle"
   },
   {
@@ -1977,7 +1977,7 @@
   },
   {
     "prompt": "Mission: Drone indoor exploration in the mensa. \n Objectives: Avoid to collide with chairs. \n Conditions: Agent's state, chair's states are accessible. \n Write a reward function in Python. Only return the code. Do not explain.",
-    "chosen": "import numpy as np\n    def reward(p, obstacle, goal): \n    goal_reward = -np.linalg.norm(p - goal) \n    collision_risk = -50 if np.linalg.norm(p - obstacle) < 0.8 else 0\n    reward = goal_reward  + collision_risk \n    return reward",
+    "chosen": "import numpy as np\n    def reward(agent_pos, obstacle, goal): \n    goal_reward = -np.linalg.norm(agent_pos - goal) \n    collision_risk = -50 if np.linalg.norm(agent_pos - obstacle) < 0.8 else 0\n    reward = goal_reward  + collision_risk \n    return reward",
     "rejected": "def check_collision(): \n        pass"
   },
   {
@@ -1997,7 +1997,7 @@
   },
   {
     "prompt": "Mission: Drone indoor exploration in the mensa. \n Objectives:  Avoid to collide with plants. \n Conditions: Agent's state, plant's state are available. \n Write a reward function in Python. Only return the code. Do not explain.",
-    "chosen": "import numpy as np\n    def reward(p, obstacle, goal): \n    goal_reward = -np.linalg.norm(p - goal) \n    collision_risk = -50 if np.linalg.norm(p - obstacle) < 0.8 else 0\n    reward = goal_reward  + collision_risk \n    return reward",
+    "chosen": "import numpy as np\n    def reward(agent_pos, obstacle, goal): \n    goal_reward = -np.linalg.norm(agent_pos - goal) \n    collision_risk = -50 if np.linalg.norm(agent_pos - obstacle) < 0.8 else 0\n    reward = goal_reward  + collision_risk \n    return reward",
     "rejected": "drones = [] \n obs = [] \n    for i, obj in enumerate(mesa['objects']): \n        if 'drone' in str(obj) or 'droner' in str(obj): \n            drones.append(i) \n        elif 'obstacle' in str(obj) or 'object' in str(obj): \n            obs.append(i)"
   },
   {
@@ -2017,7 +2017,7 @@
   },
   {
     "prompt": "Mission: Pilot a drone through a classroom. \n Objectives: Navigate without crashing into overhead lamps. \n Conditions: Agent's state, overhead lamp's state and wanted velocity are accessible. \n Write a reward function in Python. Only return the code. Do not explain.",
-    "chosen": "import numpy as np\n    def reward(p, obstacle, goal): \n    goal_reward = -np.linalg.norm(p - goal) \n    collision_risk = -50 if np.linalg.norm(p - obstacle) < 0.8 else 0\n    reward = goal_reward  + collision_risk \n    return reward",
+    "chosen": "import numpy as np\n    def reward(agent_pos, obstacle, goal): \n    goal_reward = -np.linalg.norm(agent_pos - goal) \n    collision_risk = -50 if np.linalg.norm(agent_pos - obstacle) < 0.8 else 0\n    reward = goal_reward  + collision_risk \n    return reward",
     "rejected": "def find_drone(): \n    return best_drone \n\n    def find_obstacle(): \n        return best_obstacle"
   },
   {
@@ -2037,7 +2037,7 @@
   },
   {
     "prompt": "Mission: Drone indoor exploration in a conference room. \n Objectives: Avoid collision with desk. \n Conditions: Agent's state, desk's state and wanted velocity are accessible. \n Write a reward function in Python. Only return the code. Do not explain.",
-    "chosen": "import numpy as np\n    def reward(p, obstacle, goal): \n    goal_reward = -np.linalg.norm(p - goal) \n    collision_risk = -50 if np.linalg.norm(p - obstacle) < 0.8 else 0\n    reward = goal_reward  + collision_risk \n    return reward",
+    "chosen": "import numpy as np\n    def reward(agent_pos, obstacle, goal): \n    goal_reward = -np.linalg.norm(agent_pos - goal) \n    collision_risk = -50 if np.linalg.norm(agent_pos - obstacle) < 0.8 else 0\n    reward = goal_reward  + collision_risk \n    return reward",
     "rejected": "Core core core core core core core core core core core core core core core core core core core core core core core core core core core core core core core core core core core core core core core core core core core core core core core core core core core core core core core core core core core core core core core core core core core core core core core core core core core core core core core core core core core core core core core core core core core core core core core core core"
   },
   {
@@ -2057,7 +2057,7 @@
   },
   {
     "prompt": "Mission: Drone indoor exploration in a conference room. \n Objectives: Avoid collision with laptops. \n Conditions: Agent's state and laptop's state are accessible. \n Write a reward function in Python. Only return the code. Do not explain.",
-    "chosen": "import numpy as np\n    def reward(p, obstacle, goal): \n    goal_reward = -np.linalg.norm(p - goal) \n    collision_risk = -50 if np.linalg.norm(p - obstacle) < 0.8 else 0\n    reward = goal_reward  + collision_risk \n    return reward",
+    "chosen": "import numpy as np\n    def reward(agent_pos, obstacle, goal): \n    goal_reward = -np.linalg.norm(agent_pos - goal) \n    collision_risk = -50 if np.linalg.norm(agent_pos - obstacle) < 0.8 else 0\n    reward = goal_reward  + collision_risk \n    return reward",
     "rejected": "def find_closest_point(agents, obstacles, agent_state, agent_speed, target, max_dist=50, min_dist=-max_dist, speed_factor=3):\n    closest_points = []\n    for i, point in enumerate(obstacles): \n        dist_from_agent = calculate_distance(agent_state, np.array(point)) \n        if dist_from_agent < min_dist: \n            continue \n         prev_point = np.array(np.where((np.linalg.norm(points) > 4)))"
   },
   {
@@ -2077,7 +2077,7 @@
   },
   {
     "prompt": "Mission: Pilot a drone through a warehouse. \n Objectives: Avoid collison with high storage racks. \n Conditions: Agent's state and storage rack's information and wanted velocity are obtainable. \n Write a reward function in Python. Only return the code. Do not explain.",
-    "chosen": "import numpy as np\n    def reward(p, obstacle, goal): \n    goal_reward = -np.linalg.norm(p - goal) \n    collision_risk = -50 if np.linalg.norm(p - obstacle) < 0.8 else 0\n    reward = goal_reward  + collision_risk \n    return reward",
+    "chosen": "import numpy as np\n    def reward(agent_pos, obstacle, goal): \n    goal_reward = -np.linalg.norm(agent_pos - goal) \n    collision_risk = -50 if np.linalg.norm(agent_pos - obstacle) < 0.8 else 0\n    reward = goal_reward  + collision_risk \n    return reward",
     "rejected": "def find_drone(): \n    return best_drone \n\n    def find_obstacle(): \n        return best_obstacle"
   },
   {
@@ -2097,7 +2097,7 @@
   },
   {
     "prompt": "Mission: Operate the drone in a warehouse. \n Objectives: Avoid collison with overhead pipes. \n Conditions: Agent's state and pipe's information and wanted velocity are obtainable. \n Write a reward function in Python. Only return the code. Do not explain.",
-    "chosen": "import numpy as np\n    def reward(p, obstacle, goal): \n    goal_reward = -np.linalg.norm(p - goal) \n    collision_risk = -50 if np.linalg.norm(p - obstacle) < 0.8 else 0\n    reward = goal_reward  + collision_risk \n    return reward",
+    "chosen": "import numpy as np\n    def reward(agent_pos, obstacle, goal): \n    goal_reward = -np.linalg.norm(agent_pos - goal) \n    collision_risk = -50 if np.linalg.norm(agent_pos - obstacle) < 0.8 else 0\n    reward = goal_reward  + collision_risk \n    return reward",
     "rejected": "def find_drone(): \n    return best_drone \n\n    def find_obstacle(): \n        return best_obstacle"
   },
   {
@@ -2117,7 +2117,7 @@
   },
   {
     "prompt": "Mission: Drone moves in a theater. \n Objectives: Detect people and avoid collison with balconies. \n Conditions: Agent's state, balcony's state and wanted velocity are obtainable. \n Write a reward function in Python. Only return the code. Do not explain.",
-    "chosen": "import numpy as np\n    def reward(p, obstacle, goal): \n    goal_reward = -np.linalg.norm(p - goal) \n    collision_risk = -50 if np.linalg.norm(p - obstacle) < 0.8 else 0\n    reward = goal_reward  + collision_risk \n    return reward",
+    "chosen": "import numpy as np\n    def reward(agent_pos, obstacle, goal): \n    goal_reward = -np.linalg.norm(agent_pos - goal) \n    collision_risk = -50 if np.linalg.norm(agent_pos - obstacle) < 0.8 else 0\n    reward = goal_reward  + collision_risk \n    return reward",
     "rejected": "def find_drone(): \n    return best_drone \n\n    def find_obstacle(): \n        return best_obstacle"
   },
   {
@@ -2137,7 +2137,7 @@
   },
   {
     "prompt": "Mission: Drone explores the theater. \n Objectives: Detect dynamic obstacle (people) and avoid collision. \n Conditions: Agent's state and people's state and wanted velocity are obtainable. \n Write a reward function in Python. Only return the code. Do not explain.",
-    "chosen": "import numpy as np\n    def reward(p, obstacle, goal): \n    goal_reward = -np.linalg.norm(p - goal) \n    collision_risk = -50 if np.linalg.norm(p - obstacle) < 0.8 else 0\n    reward = goal_reward  + collision_risk \n    return reward",
+    "chosen": "import numpy as np\n    def reward(agent_pos, obstacle, goal): \n    goal_reward = -np.linalg.norm(agent_pos - goal) \n    collision_risk = -50 if np.linalg.norm(agent_pos - obstacle) < 0.8 else 0\n    reward = goal_reward  + collision_risk \n    return reward",
     "rejected": "def find_closest_point(agents, obstacles, agent_state, agent_speed, target, max_dist=50, min_dist=-max_dist, speed_factor=3):\n    closest_points = []\n    for i, point in enumerate(obstacles): \n        dist_from_agent = calculate_distance(agent_state, np.array(point)) \n        if dist_from_agent < min_dist: \n            continue \n         prev_point = np.array(np.where((np.linalg.norm(points) > 4)))"
   },
   {
@@ -2157,7 +2157,7 @@
   },
   {
     "prompt": "Mission: Drone explores the sports hall. \n Objectives: Detect dynamic obstacle (human) and avoid collision. \n Conditions: Agent's state, human's state and wanted velocity are obtainable. \n Write a reward function in Python. Only return the code. Do not explain.",
-    "chosen": "import numpy as np\n    def reward(p, obstacle, goal): \n    goal_reward = -np.linalg.norm(p - goal) \n    collision_risk = -50 if np.linalg.norm(p - obstacle) < 0.8 else 0\n    reward = goal_reward  + collision_risk \n    return reward",
+    "chosen": "import numpy as np\n    def reward(agent_pos, obstacle, goal): \n    goal_reward = -np.linalg.norm(agent_pos - goal) \n    collision_risk = -50 if np.linalg.norm(agent_pos - obstacle) < 0.8 else 0\n    reward = goal_reward  + collision_risk \n    return reward",
     "rejected": "The challenge here isn’t about finding the shortest route; rather, it’s about ensuring that no two robots ever meet due to collisions. This may seem like a simple problem, but applying rules such as avoiding collisions could lead to very complex scenarios when applied across multiple groups of robots. "
   },
   {
@@ -2177,7 +2177,7 @@
   },
   {
     "prompt": "Mission: Drone explores the sports hall. \n Objectives: Avoid collision with loose balls. \n Conditions: Agent's state, ball's state and desired velocity are usable. \n Write a reward function in Python. Only return the code. Do not explain.",
-    "chosen": "import numpy as np\n    def reward(p, obstacle, goal): \n    goal_reward = -np.linalg.norm(p - goal) \n    collision_risk = -50 if np.linalg.norm(p - obstacle) < 0.8 else 0\n    reward = goal_reward  + collision_risk \n    return reward",
+    "chosen": "import numpy as np\n    def reward(agent_pos, obstacle, goal): \n    goal_reward = -np.linalg.norm(agent_pos - goal) \n    collision_risk = -50 if np.linalg.norm(agent_pos - obstacle) < 0.8 else 0\n    reward = goal_reward  + collision_risk \n    return reward",
     "rejected": "def reward(agent_pos, loose_balls_pos, goal_pos): \n    distance = agent_pos - loose_balls_pos\n    if distance.all() == 0: \n        reward = 100\n    else: \n        reward = -1\n    return reward"
   },
   {
@@ -2197,7 +2197,7 @@
   },
   {
     "prompt": "Mission: Drone explores the hospital. \n Objectives: Avoid  any collision with wall-mounted emergency devices. \n Conditions: Agent's state, emergency device's state and wanted velocity are accessible. \n Write a reward function in Python. Only return the code. Do not explain.",
-    "chosen": "import numpy as np\n    def reward(p, obstacle, goal): \n    goal_reward = -np.linalg.norm(p - goal) \n    collision_risk = -50 if np.linalg.norm(p - obstacle) < 0.8 else 0\n    reward = goal_reward  + collision_risk \n    return reward",
+    "chosen": "import numpy as np\n    def reward(agent_pos, obstacle, goal): \n    goal_reward = -np.linalg.norm(agent_pos - goal) \n    collision_risk = -50 if np.linalg.norm(agent_pos - obstacle) < 0.8 else 0\n    reward = goal_reward  + collision_risk \n    return reward",
     "rejected": "def find_drone(): \n    return best_drone \n\n    def find_obstacle(): \n        return best_obstacle"
   },
   {
@@ -2219,7 +2219,7 @@
   },
   {
     "prompt": "Mission: Drone indoor exploration in a room. \n Objectives: Avoid collision with ceiling fan blades. \n Conditions: Agent's state and staic fan blades's status are available. \n Write a reward function in Python. Only return the code. Do not explain.",
-    "chosen": "import numpy as np\n    def reward(p, obstacle, goal): \n    goal_reward = -np.linalg.norm(p - goal) \n    collision_risk = -50 if np.linalg.norm(p - obstacle) < 0.8 else 0\n    reward = goal_reward  + collision_risk \n    return reward",
+    "chosen": "import numpy as np\n    def reward(agent_pos, obstacle, goal): \n    goal_reward = -np.linalg.norm(agent_pos - goal) \n    collision_risk = -50 if np.linalg.norm(agent_pos - obstacle) < 0.8 else 0\n    reward = goal_reward  + collision_risk \n    return reward",
     "rejected": "def reward(pos, obs, goal): \n    baldes = 'clear'\n    if blades == 'clear': \n        return 1\n    return -1"
   },
   {
@@ -2239,7 +2239,7 @@
   },
   {
     "prompt": "Mission: Drone indoor exploration in a room. \n Objectives: Avoid collision with obstacles. \n Conditions: Agent's state and obstacle's status are available. \n Write a reward function in Python. Only return the code. Do not explain.",
-    "chosen": "import numpy as np\n    def reward(p, obstacle, goal): \n    goal_reward = -np.linalg.norm(p - goal) \n    collision_risk = -50 if np.linalg.norm(p - obstacle) < 0.8 else 0\n    reward = goal_reward  + collision_risk \n    return reward",
+    "chosen": "import numpy as np\n    def reward(agent_pos, obstacle, goal): \n    goal_reward = -np.linalg.norm(agent_pos - goal) \n    collision_risk = -50 if np.linalg.norm(agent_pos - obstacle) < 0.8 else 0\n    reward = goal_reward  + collision_risk \n    return reward",
     "rejected": "def apply_squadron(robber): \n        if robber.state == \"idle\" and robbed: \n            print(\"You have been caught by the squadrons.\") \n            return False \n        elif robber.state != \"idle\": \n            print(\"The squadrons detected you as an intruder!\") \n            return True"
   },
   {
@@ -2259,7 +2259,7 @@
   },
   {
     "prompt": "Mission: Drone indoor exploration in a library. \n Objectives: Avoid hitting the surrounding walls. \n Conditions: Agent's state, obstacle's state are obtainable. \n Write a reward function in Python. Only return the code. Do not explain.",
-    "chosen": "import numpy as np\n    def reward(p, obstacle, goal): \n    goal_reward = -np.linalg.norm(p - goal) \n    collision_risk = -50 if np.linalg.norm(p - obstacle) < 0.8 else 0\n    reward = goal_reward  + collision_risk \n    return reward",
+    "chosen": "import numpy as np\n    def reward(agent_pos, obstacle, goal): \n    goal_reward = -np.linalg.norm(agent_pos - goal) \n    collision_risk = -50 if np.linalg.norm(agent_pos - obstacle) < 0.8 else 0\n    reward = goal_reward  + collision_risk \n    return reward",
     "rejected": "def apply_rule(agents, obstacles):\n        Applies a rule that will allow an In-Depth Exploration of the indoors using drones."
   },
   {
@@ -2279,7 +2279,7 @@
   },
   {
     "prompt": "Mission: Drone indoor exploration in a library. \n Objectives: Detect thin obstacle (bookshelves) and avoid collision. \n Conditions: Agent's state, bookshelve's state are obtainable. \n Write a reward function in Python. Only return the code. Do not explain.",
-    "chosen": "import numpy as np\n    def reward(p, obstacle, goal): \n    goal_reward = -np.linalg.norm(p - goal) \n    collision_risk = -50 if np.linalg.norm(p - obstacle) < 0.8 else 0\n    reward = goal_reward  + collision_risk \n    return reward",
+    "chosen": "import numpy as np\n    def reward(agent_pos, obstacle, goal): \n    goal_reward = -np.linalg.norm(agent_pos - goal) \n    collision_risk = -50 if np.linalg.norm(agent_pos - obstacle) < 0.8 else 0\n    reward = goal_reward  + collision_risk \n    return reward",
     "rejected": "def apply_rule(agents, obstacles):\n        Applies a rule that will allow an In-Depth Exploration of the indoors using drones."
   },
   {
@@ -2299,7 +2299,7 @@
   },
   {
     "prompt": "Mission: Drone moves in a forest. \n Objectives: Detect dynamic obstacle (human) and avoid collision. \n Conditions: Agent's state, human's state are obtainable. \n Write a reward function in Python. Only return the code. Do not explain.",
-    "chosen": "import numpy as np\n    def reward(p, obstacle, goal): \n    goal_reward = -np.linalg.norm(p - goal) \n    collision_risk = -50 if np.linalg.norm(p - obstacle) < 0.8 else 0\n    reward = goal_reward  + collision_risk \n    return reward",
+    "chosen": "import numpy as np\n    def reward(agent_pos, obstacle, goal): \n    goal_reward = -np.linalg.norm(agent_pos - goal) \n    collision_risk = -50 if np.linalg.norm(agent_pos - obstacle) < 0.8 else 0\n    reward = goal_reward  + collision_risk \n    return reward",
     "rejected": "def enumerate(): \n    return best_drone \n\n    def find_obstacle(): \n        return best_obstacle"
   },
   {
@@ -2319,7 +2319,7 @@
   },
   {
     "prompt": "Mission: Drone moves in a forest. \n Objectives: Avoid collision with stumps. \n Conditions: Agent's state, stump's state are obtainable. \n Write a reward function in Python. Only return the code. Do not explain.",
-    "chosen": "import numpy as np\n    def reward(p, obstacle, goal): \n    goal_reward = -np.linalg.norm(p - goal) \n    collision_risk = -50 if np.linalg.norm(p - obstacle) < 0.8 else 0\n    reward = goal_reward  + collision_risk \n    return reward",
+    "chosen": "import numpy as np\n    def reward(agent_pos, obstacle, goal): \n    goal_reward = -np.linalg.norm(agent_pos - goal) \n    collision_risk = -50 if np.linalg.norm(agent_pos - obstacle) < 0.8 else 0\n    reward = goal_reward  + collision_risk \n    return reward",
     "rejected": "def reward(agent_pos, stumps_pos, goal_pos): \n    distance = agent_pos - stumps_pos\n    if distance.all() == 0: \n        reward = 100\n    else: \n        reward = -1\n    return reward"
   },
   {
@@ -2339,7 +2339,7 @@
   },
   {
     "prompt": "Mission: Drone moves in a forest. \n Objectives: Detect obstacle (people) and avoid collision. \n Conditions: Agent's state, people's state are obtainable. \n Write a reward function in Python. Only return the code. Do not explain.",
-    "chosen": "import numpy as np\n    def reward(p, obstacle, goal): \n    goal_reward = -np.linalg.norm(p - goal) \n    collision_risk = -50 if np.linalg.norm(p - obstacle) < 0.8 else 0\n    reward = goal_reward  + collision_risk \n    return reward",
+    "chosen": "import numpy as np\n    def reward(agent_pos, obstacle, goal): \n    goal_reward = -np.linalg.norm(agent_pos - goal) \n    collision_risk = -50 if np.linalg.norm(agent_pos - obstacle) < 0.8 else 0\n    reward = goal_reward  + collision_risk \n    return reward",
     "rejected": "def enumerate(): \n    return best_drone \n\n    def find_obstacle(): \n        return best_obstacle"
   },
   {
@@ -2359,7 +2359,7 @@
   },
   {
     "prompt": "Mission: Drone indoor exploration in the mensa. \n Objectives: Avoid to collide with chairs. \n Conditions: Agent's state, chair's states are accessible. \n Write a reward function in Python. Only return the code. Do not explain.",
-    "chosen": "import numpy as np\n    def reward(p, obstacle, goal): \n    goal_reward = -np.linalg.norm(p - goal) \n    collision_risk = -50 if np.linalg.norm(p - obstacle) < 0.8 else 0\n    reward = goal_reward  + collision_risk \n    return reward",
+    "chosen": "import numpy as np\n    def reward(agent_pos, obstacle, goal): \n    goal_reward = -np.linalg.norm(agent_pos - goal) \n    collision_risk = -50 if np.linalg.norm(agent_pos - obstacle) < 0.8 else 0\n    reward = goal_reward  + collision_risk \n    return reward",
     "rejected": "def check_collision(): \n        pass"
   },
   {
@@ -2379,7 +2379,7 @@
   },
   {
     "prompt": "Mission: Drone indoor exploration in the mensa. \n Objectives:  Avoid to collide with plants. \n Conditions: Agent's state, plant's state are available. \n Write a reward function in Python. Only return the code. Do not explain.",
-    "chosen": "import numpy as np\n    def reward(p, obstacle, goal): \n    goal_reward = -np.linalg.norm(p - goal) \n    collision_risk = -50 if np.linalg.norm(p - obstacle) < 0.8 else 0\n    reward = goal_reward  + collision_risk \n    return reward",
+    "chosen": "import numpy as np\n    def reward(agent_pos, obstacle, goal): \n    goal_reward = -np.linalg.norm(agent_pos - goal) \n    collision_risk = -50 if np.linalg.norm(agent_pos - obstacle) < 0.8 else 0\n    reward = goal_reward  + collision_risk \n    return reward",
     "rejected": "drones = [] \n obs = [] \n    for i, obj in enumerate(mesa['objects']): \n        if 'drone' in str(obj) or 'droner' in str(obj): \n            drones.append(i) \n        elif 'obstacle' in str(obj) or 'object' in str(obj): \n            obs.append(i)"
   },
   {
@@ -2399,7 +2399,7 @@
   },
   {
     "prompt": "Mission: Pilot a drone through a classroom. \n Objectives: Navigate without crashing into overhead lamps. \n Conditions: Agent's state, overhead lamp's state and wanted velocity are accessible. \n Write a reward function in Python. Only return the code. Do not explain.",
-    "chosen": "import numpy as np\n    def reward(p, obstacle, goal): \n    goal_reward = -np.linalg.norm(p - goal) \n    collision_risk = -50 if np.linalg.norm(p - obstacle) < 0.8 else 0\n    reward = goal_reward  + collision_risk \n    return reward",
+    "chosen": "import numpy as np\n    def reward(agent_pos, obstacle, goal): \n    goal_reward = -np.linalg.norm(agent_pos - goal) \n    collision_risk = -50 if np.linalg.norm(agent_pos - obstacle) < 0.8 else 0\n    reward = goal_reward  + collision_risk \n    return reward",
     "rejected": "def enumerate(): \n    return best_drone \n\n    def find_obstacle(): \n        return best_obstacle"
   },
   {
@@ -2419,7 +2419,7 @@
   },
   {
     "prompt": "Mission: Drone indoor exploration in a conference room. \n Objectives: Avoid collision with desk. \n Conditions: Agent's state, desk's state and wanted velocity are accessible. \n Write a reward function in Python. Only return the code. Do not explain.",
-    "chosen": "import numpy as np\n    def reward(p, obstacle, goal): \n    goal_reward = -np.linalg.norm(p - goal) \n    collision_risk = -50 if np.linalg.norm(p - obstacle) < 0.8 else 0\n    reward = goal_reward  + collision_risk \n    return reward",
+    "chosen": "import numpy as np\n    def reward(agent_pos, obstacle, goal): \n    goal_reward = -np.linalg.norm(agent_pos - goal) \n    collision_risk = -50 if np.linalg.norm(agent_pos - obstacle) < 0.8 else 0\n    reward = goal_reward  + collision_risk \n    return reward",
     "rejected": "Core core core core core core core core core core core core core core core core core core core core core core core core core core core core core core core core core core core core core core core core core core core core core core core core core core core core core core core core core core core core core core core core core core core core core core core core core core core core core core core core core core core core core core core core core core core core core core core core core"
   },
   {
@@ -2439,7 +2439,7 @@
   },
   {
     "prompt": "Mission: Drone indoor exploration in a conference room. \n Objectives: Avoid collision with laptops. \n Conditions: Agent's state and laptop's state are accessible. \n Write a reward function in Python. Only return the code. Do not explain.",
-    "chosen": "import numpy as np\n    def reward(p, obstacle, goal): \n    goal_reward = -np.linalg.norm(p - goal) \n    collision_risk = -50 if np.linalg.norm(p - obstacle) < 0.8 else 0\n    reward = goal_reward  + collision_risk \n    return reward",
+    "chosen": "import numpy as np\n    def reward(agent_pos, obstacle, goal): \n    goal_reward = -np.linalg.norm(agent_pos - goal) \n    collision_risk = -50 if np.linalg.norm(agent_pos - obstacle) < 0.8 else 0\n    reward = goal_reward  + collision_risk \n    return reward",
     "rejected": "def find_closest_point(agents, obstacles, agent_state, agent_speed, target, max_dist=50, min_dist=-max_dist, speed_factor=3):\n    closest_points = []\n    for i, point in enumerate(obstacles): \n        dist_from_agent = calculate_distance(agent_state, np.array(point)) \n        if dist_from_agent < min_dist: \n            continue \n         prev_point = np.array(np.where((np.linalg.norm(points) > 4)))"
   },
   {
@@ -2459,7 +2459,7 @@
   },
   {
     "prompt": "Mission: Pilot a drone through a warehouse. \n Objectives: Avoid collison with high storage racks. \n Conditions: Agent's state and storage rack's information and wanted velocity are obtainable. \n Write a reward function in Python. Only return the code. Do not explain.",
-    "chosen": "import numpy as np\n    def reward(p, obstacle, goal): \n    goal_reward = -np.linalg.norm(p - goal) \n    collision_risk = -50 if np.linalg.norm(p - obstacle) < 0.8 else 0\n    reward = goal_reward  + collision_risk \n    return reward",
+    "chosen": "import numpy as np\n    def reward(agent_pos, obstacle, goal): \n    goal_reward = -np.linalg.norm(agent_pos - goal) \n    collision_risk = -50 if np.linalg.norm(agent_pos - obstacle) < 0.8 else 0\n    reward = goal_reward  + collision_risk \n    return reward",
     "rejected": "def enumerate(): \n    return best_drone \n\n    def find_obstacle(): \n        return best_obstacle"
   },
   {
@@ -2479,7 +2479,7 @@
   },
   {
     "prompt": "Mission: Operate the drone in a warehouse. \n Objectives: Avoid collison with overhead pipes. \n Conditions: Agent's state and pipe's information and wanted velocity are obtainable. \n Write a reward function in Python. Only return the code. Do not explain.",
-    "chosen": "import numpy as np\n    def reward(p, obstacle, goal): \n    goal_reward = -np.linalg.norm(p - goal) \n    collision_risk = -50 if np.linalg.norm(p - obstacle) < 0.8 else 0\n    reward = goal_reward  + collision_risk \n    return reward",
+    "chosen": "import numpy as np\n    def reward(agent_pos, obstacle, goal): \n    goal_reward = -np.linalg.norm(agent_pos - goal) \n    collision_risk = -50 if np.linalg.norm(agent_pos - obstacle) < 0.8 else 0\n    reward = goal_reward  + collision_risk \n    return reward",
     "rejected": "def enumerate(): \n    return best_drone \n\n    def find_obstacle(): \n        return best_obstacle"
   },
   {
@@ -2499,7 +2499,7 @@
   },
   {
     "prompt": "Mission: Drone moves in a theater. \n Objectives: Detect people and avoid collison with balconies. \n Conditions: Agent's state, balcony's state and wanted velocity are obtainable. \n Write a reward function in Python. Only return the code. Do not explain.",
-    "chosen": "import numpy as np\n    def reward(p, obstacle, goal): \n    goal_reward = -np.linalg.norm(p - goal) \n    collision_risk = -50 if np.linalg.norm(p - obstacle) < 0.8 else 0\n    reward = goal_reward  + collision_risk \n    return reward",
+    "chosen": "import numpy as np\n    def reward(agent_pos, obstacle, goal): \n    goal_reward = -np.linalg.norm(agent_pos - goal) \n    collision_risk = -50 if np.linalg.norm(agent_pos - obstacle) < 0.8 else 0\n    reward = goal_reward  + collision_risk \n    return reward",
     "rejected": "def enumerate(): \n    return best_drone \n\n    def find_obstacle(): \n        return best_obstacle"
   },
   {
@@ -2519,7 +2519,7 @@
   },
   {
     "prompt": "Mission: Drone explores the theater. \n Objectives: Detect dynamic obstacle (people) and avoid collision. \n Conditions: Agent's state and people's state and wanted velocity are obtainable. \n Write a reward function in Python. Only return the code. Do not explain.",
-    "chosen": "import numpy as np\n    def reward(p, obstacle, goal): \n    goal_reward = -np.linalg.norm(p - goal) \n    collision_risk = -50 if np.linalg.norm(p - obstacle) < 0.8 else 0\n    reward = goal_reward  + collision_risk \n    return reward",
+    "chosen": "import numpy as np\n    def reward(agent_pos, obstacle, goal): \n    goal_reward = -np.linalg.norm(agent_pos - goal) \n    collision_risk = -50 if np.linalg.norm(agent_pos - obstacle) < 0.8 else 0\n    reward = goal_reward  + collision_risk \n    return reward",
     "rejected": "def find_closest_point(agents, obstacles, agent_state, agent_speed, target, max_dist=50, min_dist=-max_dist, speed_factor=3):\n    closest_points = []\n    for i, point in enumerate(obstacles): \n        dist_from_agent = calculate_distance(agent_state, np.array(point)) \n        if dist_from_agent < min_dist: \n            continue \n         prev_point = np.array(np.where((np.linalg.norm(points) > 4)))"
   },
   {
@@ -2539,7 +2539,7 @@
   },
   {
     "prompt": "Mission: Drone explores the sports hall. \n Objectives: Detect dynamic obstacle (human) and avoid collision. \n Conditions: Agent's state, human's state and wanted velocity are obtainable. \n Write a reward function in Python. Only return the code. Do not explain.",
-    "chosen": "import numpy as np\n    def reward(p, obstacle, goal): \n    goal_reward = -np.linalg.norm(p - goal) \n    collision_risk = -50 if np.linalg.norm(p - obstacle) < 0.8 else 0\n    reward = goal_reward  + collision_risk \n    return reward",
+    "chosen": "import numpy as np\n    def reward(agent_pos, obstacle, goal): \n    goal_reward = -np.linalg.norm(agent_pos - goal) \n    collision_risk = -50 if np.linalg.norm(agent_pos - obstacle) < 0.8 else 0\n    reward = goal_reward  + collision_risk \n    return reward",
     "rejected": "import math \n    nvel = int((max_vel * v0) / (math.sqrt(dt ** 2 + v0**2))) \n    return nvel"
   },
   {
@@ -2559,7 +2559,7 @@
   },
   {
     "prompt": "Mission: Drone explores the sports hall. \n Objectives: Avoid collision with loose balls. \n Conditions: Agent's state, ball's state and desired velocity are usable. \n Write a reward function in Python. Only return the code. Do not explain.",
-    "chosen": "import numpy as np\n    def reward(p, obstacle, goal): \n    goal_reward = -np.linalg.norm(p - goal) \n    collision_risk = -50 if np.linalg.norm(p - obstacle) < 0.8 else 0\n    reward = goal_reward  + collision_risk \n    return reward",
+    "chosen": "import numpy as np\n    def reward(agent_pos, obstacle, goal): \n    goal_reward = -np.linalg.norm(agent_pos - goal) \n    collision_risk = -50 if np.linalg.norm(agent_pos - obstacle) < 0.8 else 0\n    reward = goal_reward  + collision_risk \n    return reward",
     "rejected": "def reward(agent_pos, loose_balls_pos, goal_pos): \n    distance = agent_pos - loose_balls_pos\n    if distance.all() == 0: \n        reward = 100\n    else: \n        reward = -1\n    return reward"
   },
   {
@@ -2579,7 +2579,7 @@
   },
   {
     "prompt": "Mission: Drone explores the hospital. \n Objectives: Avoid  any collision with wall-mounted emergency devices. \n Conditions: Agent's state, emergency device's state and wanted velocity are accessible. \n Write a reward function in Python. Only return the code. Do not explain.",
-    "chosen": "import numpy as np\n    def reward(p, obstacle, goal): \n    goal_reward = -np.linalg.norm(p - goal) \n    collision_risk = -50 if np.linalg.norm(p - obstacle) < 0.8 else 0\n    reward = goal_reward  + collision_risk \n    return reward",
+    "chosen": "import numpy as np\n    def reward(agent_pos, obstacle, goal): \n    goal_reward = -np.linalg.norm(agent_pos - goal) \n    collision_risk = -50 if np.linalg.norm(agent_pos - obstacle) < 0.8 else 0\n    reward = goal_reward  + collision_risk \n    return reward",
     "rejected": "def enumerate(): \n    return best_drone \n\n    def find_obstacle(): \n        return best_obstacle"
   },
   {
