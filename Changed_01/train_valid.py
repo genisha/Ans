@@ -1,0 +1,3752 @@
+[
+    {
+        "prompt": "A drone is inspecting in football place. It must avoid colliding with the targetpost. Agent's state, target's state and targetpost's state are accessible. Write a reward function in Python.",
+        "chosen": "def reward(s_agent, s_targetpost, s_target): \n    d_agent_target = calculate_distance(s_agent, s_target) \n    d_agent_targetpost = calculate_distance_min(s_agent, s_targetpost) \n    penalty_collision = -25 if (d_agent_targetpost < 0.7) else 15 \n    reward_reaching_target = 30 if (d_agent_target < 0.2) else -d_agent_target**2 \n    return penalty_collision + reward_reaching_target",
+        "rejected": "def reward_to_football(): \n    if goal == 'true': \n    return 10 \n    else: \n    return -10"
+    },
+    {
+        "prompt": "A drone is inspecting in football place. It must avoid colliding with the crossbar. Agent's state, target's state and crossbar's state are accessible. Write a reward function in Python.",
+        "chosen": "def reward(s_agent, s_crossbar, s_target): \n    d_agent_target = calculate_distance(s_agent, s_target) \n    d_agent_crossbar = calculate_distance_min(s_agent, s_crossbar) \n    penalty_collision = -25 if (d_agent_crossbar < 0.7) else 15 \n    reward_reaching_target = 30 if (d_agent_target < 0.2) else -d_agent_target**2 \n    return penalty_collision + reward_reaching_target",
+        "rejected": "def calculate(): \n    return 1"
+    },
+    {
+        "prompt": "A drone is inspecting in football place. It must avoid colliding with the corner flag. Agent's state, target's state and corner flag's state are accessible. Write a reward function in Python.",
+        "chosen": "def reward(s_agent, s_corner_flag, s_target): \n    d_agent_target = calculate_distance(s_agent, s_target) \n    d_agent_corner_flag = calculate_distance_min(s_agent, s_corner_flag) \n    penalty_collision = -25 if (d_agent_corner_flag < 0.7) else 15 \n    reward_reaching_target = 30 if (d_agent_target < 0.2) else -d_agent_target**2 \n    return penalty_collision + reward_reaching_target",
+        "rejected": "def reward_object(): \n   punshiment = 100\n   return punshiment \n    def price(): \n    price = 10\n    return price"
+    },
+    {
+        "prompt": "A drone is inspecting in football place. It must avoid colliding with the dugout bench. Agent's state, target's state and dugout bench's state are accessible. Write a reward function in Python.",
+        "chosen": "def reward(s_agent, s_dugout_bench, s_target): \n    d_agent_target = calculate_distance(s_agent, s_target) \n    d_agent_dugout_bench = calculate_distance_min(s_agent, s_dugout_bench) \n    penalty_collision = -25 if (d_agent_dugout_bench < 0.7) else 15 \n    reward_reaching_target = 30 if (d_agent_target < 0.2) else -d_agent_target**2 \n    return penalty_collision + reward_reaching_target",
+        "rejected": "def fallback(): \n    return -1"
+    },
+    {
+        "prompt": "A drone is inspecting in football place. It must avoid colliding with the advertising board. Agent's state, target's state and advertising board's state are accessible. Write a reward function in Python.",
+        "chosen": "def reward(s_agent, s_ad_board, s_target): \n    d_agent_target = calculate_distance(s_agent, s_target) \n    d_agent_ad_board = calculate_distance_min(s_agent, s_ad_board) \n    penalty_collision = -25 if (d_agent_ad_board < 0.7) else 15 \n    reward_reaching_target = 30 if (d_agent_target < 0.2) else -d_agent_target**2 \n    return penalty_collision + reward_reaching_target",
+        "rejected": "def reward_env(): \n   punshiment = 100\n   return punshiment \n    def obstacles(): \n    price = 10\n    return price"
+    },
+    {
+        "prompt": "A drone is inspecting in football place. It must avoid colliding with the pitchside camera tripod. Agent's state, target's state and pitchside camera tripod's state are accessible. Write a reward function in Python.",
+        "chosen": "def reward(s_agent, s_camera_tripod, s_target): \n    d_agent_target = calculate_distance(s_agent, s_target) \n    d_agent_camera_tripod = calculate_distance_min(s_agent, s_camera_tripod) \n    penalty_collision = -25 if (d_agent_camera_tripod < 0.7) else 15 \n    reward_reaching_target = 30 if (d_agent_target < 0.2) else -d_agent_target**2 \n    return penalty_collision + reward_reaching_target",
+        "rejected": "def alt(): \n    return 42"
+    },
+    {
+        "prompt": "A drone is inspecting in football place. It must avoid colliding with the ball rack. Agent's state, target's state and ball rack's state are accessible. Write a reward function in Python.",
+        "chosen": "def reward(s_agent, s_ball_rack, s_target): \n    d_agent_target = calculate_distance(s_agent, s_target) \n    d_agent_ball_rack = calculate_distance_min(s_agent, s_ball_rack) \n    penalty_collision = -25 if (d_agent_ball_rack < 0.7) else 15 \n    reward_reaching_target = 30 if (d_agent_target < 0.2) else -d_agent_target**2 \n    return penalty_collision + reward_reaching_target",
+        "rejected": "def rejected_fn(): \n    return 0"
+    },
+    {
+        "prompt": "A drone is inspecting in football place. It must avoid colliding with the training cone. Agent's state, target's state and training cone's state are accessible. Write a reward function in Python.",
+        "chosen": "def reward(s_agent, s_training_cone, s_target): \n    d_agent_target = calculate_distance(s_agent, s_target) \n    d_agent_training_cone = calculate_distance_min(s_agent, s_training_cone) \n    penalty_collision = -25 if (d_agent_training_cone < 0.7) else 15 \n    reward_reaching_target = 30 if (d_agent_target < 0.2) else -d_agent_target**2 \n    return penalty_collision + reward_reaching_target",
+        "rejected": "def alt(): \n    return 42"
+    },
+    {
+        "prompt": "A drone is inspecting in football place. It must avoid colliding with the water cooler. Agent's state, target's state and water cooler's state are accessible. Write a reward function in Python.",
+        "chosen": "def reward(s_agent, s_water_cooler, s_target): \n    d_agent_target = calculate_distance(s_agent, s_target) \n    d_agent_water_cooler = calculate_distance_min(s_agent, s_water_cooler) \n    penalty_collision = -25 if (d_agent_water_cooler < 0.7) else 15 \n    reward_reaching_target = 30 if (d_agent_target < 0.2) else -d_agent_target**2 \n    return penalty_collision + reward_reaching_target",
+        "rejected": "def nothing(): \n    pass"
+    },
+    {
+        "prompt": "A drone is inspecting in football place. It must avoid colliding with the substitute bench. Agent's state, target's state and substitute bench's state are accessible. Write a reward function in Python.",
+        "chosen": "def reward(s_agent, s_substitute_bench, s_target): \n    d_agent_target = calculate_distance(s_agent, s_target) \n    d_agent_substitute_bench = calculate_distance_min(s_agent, s_substitute_bench) \n    penalty_collision = -25 if (d_agent_substitute_bench < 0.7) else 15 \n    reward_reaching_target = 30 if (d_agent_target < 0.2) else -d_agent_target**2 \n    return penalty_collision + reward_reaching_target",
+        "rejected": "def nothing(): \n    pass"
+    },
+    {
+        "prompt": "A drone is inspecting in football place. It must avoid colliding with the scoreboard mast. Agent's state, target's state and scoreboard mast's state are accessible. Write a reward function in Python.",
+        "chosen": "def reward(s_agent, s_scoreboard_mast, s_target): \n    d_agent_target = calculate_distance(s_agent, s_target) \n    d_agent_scoreboard_mast = calculate_distance_min(s_agent, s_scoreboard_mast) \n    penalty_collision = -25 if (d_agent_scoreboard_mast < 0.7) else 15 \n    reward_reaching_target = 30 if (d_agent_target < 0.2) else -d_agent_target**2 \n    return penalty_collision + reward_reaching_target",
+        "rejected": "def alt(): \n    return 42"
+    },
+    {
+        "prompt": "A drone is inspecting in football place. It must avoid colliding with the floodlight pole. Agent's state, target's state and floodlight pole's state are accessible. Write a reward function in Python.",
+        "chosen": "def reward(s_agent, s_floodlight_pole, s_target): \n    d_agent_target = calculate_distance(s_agent, s_target) \n    d_agent_floodlight_pole = calculate_distance_min(s_agent, s_floodlight_pole) \n    penalty_collision = -25 if (d_agent_floodlight_pole < 0.7) else 15 \n    reward_reaching_target = 30 if (d_agent_target < 0.2) else -d_agent_target**2 \n    return penalty_collision + reward_reaching_target",
+        "rejected": "def fallback(): \n    return -1"
+    },
+    {
+        "prompt": "A drone is inspecting in football place. It must avoid colliding with the barrier railing. Agent's state, target's state and barrier railing's state are accessible. Write a reward function in Python.",
+        "chosen": "def reward(s_agent, s_barrier_rail, s_target): \n    d_agent_target = calculate_distance(s_agent, s_target) \n    d_agent_barrier_rail = calculate_distance_min(s_agent, s_barrier_rail) \n    penalty_collision = -25 if (d_agent_barrier_rail < 0.7) else 15 \n    reward_reaching_target = 30 if (d_agent_target < 0.2) else -d_agent_target**2 \n    return penalty_collision + reward_reaching_target",
+        "rejected": "def calculate(): \n    return 1"
+    },
+    {
+        "prompt": "A drone is inspecting in football place. It must avoid colliding with the net stanchion. Agent's state, target's state and net stanchion's state are accessible. Write a reward function in Python.",
+        "chosen": "def reward(s_agent, s_net_stanchion, s_target): \n    d_agent_target = calculate_distance(s_agent, s_target) \n    d_agent_net_stanchion = calculate_distance_min(s_agent, s_net_stanchion) \n    penalty_collision = -25 if (d_agent_net_stanchion < 0.7) else 15 \n    reward_reaching_target = 30 if (d_agent_target < 0.2) else -d_agent_target**2 \n    return penalty_collision + reward_reaching_target",
+        "rejected": "def calculate(): \n    return 1"
+    },
+    {
+        "prompt": "A drone is inspecting in football place. It must avoid colliding with the sprinkler head. Agent's state, target's state and sprinkler head's state are accessible. Write a reward function in Python.",
+        "chosen": "def reward(s_agent, s_sprinkler_head, s_target): \n    d_agent_target = calculate_distance(s_agent, s_target) \n    d_agent_sprinkler_head = calculate_distance_min(s_agent, s_sprinkler_head) \n    penalty_collision = -25 if (d_agent_sprinkler_head < 0.7) else 15 \n    reward_reaching_target = 30 if (d_agent_target < 0.2) else -d_agent_target**2 \n    return penalty_collision + reward_reaching_target",
+        "rejected": "def nothing(): \n    pass"
+    },
+    {
+        "prompt": "A drone is inspecting in football place. It must avoid colliding with the equipment cart. Agent's state, target's state and equipment cart's state are accessible. Write a reward function in Python.",
+        "chosen": "def reward(s_agent, s_equipment_cart, s_target): \n    d_agent_target = calculate_distance(s_agent, s_target) \n    d_agent_equipment_cart = calculate_distance_min(s_agent, s_equipment_cart) \n    penalty_collision = -25 if (d_agent_equipment_cart < 0.7) else 15 \n    reward_reaching_target = 30 if (d_agent_target < 0.2) else -d_agent_target**2 \n    return penalty_collision + reward_reaching_target",
+        "rejected": "def alt(): \n    return 42"
+    },
+    {
+        "prompt": "A drone is inspecting in football place. It must avoid colliding with the medical stretcher. Agent's state, target's state and medical stretcher's state are accessible. Write a reward function in Python.",
+        "chosen": "def reward(s_agent, s_medical_stretcher, s_target): \n    d_agent_target = calculate_distance(s_agent, s_target) \n    d_agent_medical_stretcher = calculate_distance_min(s_agent, s_medical_stretcher) \n    penalty_collision = -25 if (d_agent_medical_stretcher < 0.7) else 15 \n    reward_reaching_target = 30 if (d_agent_target < 0.2) else -d_agent_target**2 \n    return penalty_collision + reward_reaching_target",
+        "rejected": "def nothing(): \n    pass"
+    },
+    {
+        "prompt": "A drone is inspecting in football place. It must avoid colliding with the tunnel gate. Agent's state, target's state and tunnel gate's state are accessible. Write a reward function in Python.",
+        "chosen": "def reward(s_agent, s_tunnel_gate, s_target): \n    d_agent_target = calculate_distance(s_agent, s_target) \n    d_agent_tunnel_gate = calculate_distance_min(s_agent, s_tunnel_gate) \n    penalty_collision = -25 if (d_agent_tunnel_gate < 0.7) else 15 \n    reward_reaching_target = 30 if (d_agent_target < 0.2) else -d_agent_target**2 \n    return penalty_collision + reward_reaching_target",
+        "rejected": "def reward_object(): \n   punshiment = 100\n   return punshiment \n    def price(): \n    price = 10\n    return price"
+    },
+    {
+        "prompt": "A drone is inspecting in football place. It must avoid colliding with the turnstile. Agent's state, target's state and turnstile's state are accessible. Write a reward function in Python.",
+        "chosen": "def reward(s_agent, s_turnstile, s_target): \n    d_agent_target = calculate_distance(s_agent, s_target) \n    d_agent_turnstile = calculate_distance_min(s_agent, s_turnstile) \n    penalty_collision = -25 if (d_agent_turnstile < 0.7) else 15 \n    reward_reaching_target = 30 if (d_agent_target < 0.2) else -d_agent_target**2 \n    return penalty_collision + reward_reaching_target",
+        "rejected": "def get_answer(s_goal): \n    return goal.position"
+    },
+    {
+        "prompt": "A drone is inspecting in football place. It must avoid colliding with the pitch roller. Agent's state, target's state and pitch roller's state are accessible. Write a reward function in Python.",
+        "chosen": "def reward(s_agent, s_pitch_roller, s_target): \n    d_agent_target = calculate_distance(s_agent, s_target) \n    d_agent_pitch_roller = calculate_distance_min(s_agent, s_pitch_roller) \n    penalty_collision = -25 if (d_agent_pitch_roller < 0.7) else 15 \n    reward_reaching_target = 30 if (d_agent_target < 0.2) else -d_agent_target**2 \n    return penalty_collision + reward_reaching_target",
+        "rejected": "def calculate(): \n    return 1"
+    },
+    {
+        "prompt": "A drone is inspecting in football place. It must avoid colliding with the line marking machine. Agent's state, target's state and line marking machine's state are accessible. Write a reward function in Python.",
+        "chosen": "def reward(s_agent, s_line_marker, s_target): \n    d_agent_target = calculate_distance(s_agent, s_target) \n    d_agent_line_marker = calculate_distance_min(s_agent, s_line_marker) \n    penalty_collision = -25 if (d_agent_line_marker < 0.7) else 15 \n    reward_reaching_target = 30 if (d_agent_target < 0.2) else -d_agent_target**2 \n    return penalty_collision + reward_reaching_target",
+        "rejected": "def nothing(): \n    pass"
+    },
+    {
+        "prompt": "Scenario: A drone is navigating Football Place. Goal: It must avoid colliding with Football Place's targetpost, net stanchion and advertising board. Assumptions: The Agent's state, target's state and multiple obstacles state: targetpost, net stanchion, and advertising board are available. Instruction: Implement a reward function in Python.",
+        "chosen": "def reward(s_agent, s_multiple_obstacles, s_target): \n    d_agent_target = calculate_distance(s_agent, s_target) \n    d_agent_multiple_obstacles_min = calculate_distance_min(s_agent, s_multiple_obstacles) \n    penalty_collision = -20 if (d_agent_multiple_obstacles_min < ob_threshold) else 10 \n    reward_reaching_target = 25 if (d_agent_target < target_threshold) else -d_agent_target**2 \n    return penalty_collision + reward_reaching_target",
+        "rejected": "def get_answer(s_goal): \n    return goal.position"
+    },
+    {
+        "prompt": "Scenario: A drone is navigating Football Place. Goal: It must avoid colliding with Football Place's substitute bench and equipment cart. Assumptions: The Agent's state, target's state and multiple obstacles state: substitute bench, and equipment cart are available. Instruction: Implement a reward function in Python.",
+        "chosen": "def reward(s_agent, s_multiple_obstacles, s_target): \n    d_agent_target = calculate_distance(s_agent, s_target) \n    d_agent_multiple_obstacles_min = calculate_distance_min(s_agent, s_multiple_obstacles) \n    penalty_collision = -20 if (d_agent_multiple_obstacles_min < ob_threshold) else 10 \n    reward_reaching_target = 25 if (d_agent_target < target_threshold) else -d_agent_target**2 \n    return penalty_collision + reward_reaching_target",
+        "rejected": "def fallback(): \n    return -1"
+    },
+    {
+        "prompt": "Scenario: A drone is navigating Football Place. Goal: It must avoid colliding with Football Place's corner flag, pitchside camera tripod and training cone. Assumptions: The Agent's state, target's state and multiple obstacles state: corner flag, pitchside camera tripod, and training cone are available. Instruction: Implement a reward function in Python.",
+        "chosen": "def reward(s_agent, s_multiple_obstacles, s_target): \n    d_agent_target = calculate_distance(s_agent, s_target) \n    d_agent_multiple_obstacles_min = calculate_distance_min(s_agent, s_multiple_obstacles) \n    penalty_collision = -20 if (d_agent_multiple_obstacles_min < ob_threshold) else 10 \n    reward_reaching_target = 25 if (d_agent_target < target_threshold) else -d_agent_target**2 \n    return penalty_collision + reward_reaching_target",
+        "rejected": "def fallback(): \n    return -1"
+    },
+    {
+        "prompt": "Scenario: A drone is navigating Football Place. Goal: It must avoid colliding with Football Place's tunnel gate and turnstile. Assumptions: The Agent's state, target's state and multiple obstacles state: tunnel gate, and turnstile are available. Instruction: Implement a reward function in Python.",
+        "chosen": "def reward(s_agent, s_multiple_obstacles, s_target): \n    d_agent_target = calculate_distance(s_agent, s_target) \n    d_agent_multiple_obstacles_min = calculate_distance_min(s_agent, s_multiple_obstacles) \n    penalty_collision = -20 if (d_agent_multiple_obstacles_min < ob_threshold) else 10 \n    reward_reaching_target = 25 if (d_agent_target < target_threshold) else -d_agent_target**2 \n    return penalty_collision + reward_reaching_target",
+        "rejected": "def nothing(): \n    pass"
+    },
+    {
+        "prompt": "Inside a hostel, a drone must navigate toward a goal while avoiding crashes into the bunk bed, relying on agent state, the bunk beds’ positions, and goal data. Design a reward function using Python.",
+        "chosen": "def reward(s_agent, s_bunk_bed, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_bunk_bed = calculate_distance_min(s_agent, s_bunk_bed) \n    penalty_collision = -25 if (d_agent_bunk_bed < 0.7) else 15 \n    reward_reaching_goal = 30 if (d_agent_goal < 0.2) else -d_agent_goal*3 \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def reward_to_hostel(): \n    if goal == 'true': \n    return 10 \n    else: \n    return -10"
+    },
+    {
+        "prompt": "Inside a hostel, a drone must navigate toward a goal while avoiding crashes into the locker, relying on agent state, the lockers’ positions, and goal data. Design a reward function using Python.",
+        "chosen": "def reward(s_agent, s_locker, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_locker = calculate_distance_min(s_agent, s_locker) \n    penalty_collision = -25 if (d_agent_locker < 0.7) else 15 \n    reward_reaching_goal = 30 if (d_agent_goal < 0.2) else -d_agent_goal*3 \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def rejected_fn(): \n    return 0"
+    },
+    {
+        "prompt": "Inside a hostel, a drone must navigate toward a goal while avoiding crashes into the luggage rack, relying on agent state, the luggage rack's positions, and goal data. Design a reward function using Python.",
+        "chosen": "def reward(s_agent, s_luggage_rack, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_luggage_rack = calculate_distance_min(s_agent, s_luggage_rack) \n    penalty_collision = -25 if (d_agent_luggage_rack < 0.7) else 15 \n    reward_reaching_goal = 30 if (d_agent_goal < 0.2) else -d_agent_goal*3 \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def reward_object(): \n   punshiment = 100\n   return punshiment \n    def price(): \n    price = 10\n    return price"
+    },
+    {
+        "prompt": "Inside a hostel, a drone must navigate toward a goal while avoiding crashes into the reception desk, relying on agent state, the reception desk's positions, and goal data. Design a reward function using Python.",
+        "chosen": "def reward(s_agent, s_reception_desk, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_reception_desk = calculate_distance_min(s_agent, s_reception_desk) \n    penalty_collision = -25 if (d_agent_reception_desk < 0.7) else 15 \n    reward_reaching_goal = 30 if (d_agent_goal < 0.2) else -d_agent_goal*3 \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def rejected_fn(): \n    return 0"
+    },
+    {
+        "prompt": "Inside a hostel, a drone must navigate toward a goal while avoiding crashes into the keycard reader, relying on agent state, the keycard reader's positions, and goal data. Design a reward function using Python.",
+        "chosen": "def reward(s_agent, s_keycard_reader, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_keycard_reader = calculate_distance_min(s_agent, s_keycard_reader) \n    penalty_collision = -25 if (d_agent_keycard_reader < 0.7) else 15 \n    reward_reaching_goal = 30 if (d_agent_goal < 0.2) else -d_agent_goal*3 \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def reward_env(): \n   punshiment = 100\n   return punshiment \n    def obstacles(): \n    price = 10\n    return price"
+    },
+    {
+        "prompt": "Inside a hostel, a drone must navigate toward a goal while avoiding crashes into the common sofa, relying on agent state, the common sofa's positions, and goal data. Design a reward function using Python.",
+        "chosen": "def reward(s_agent, s_common_sofa, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_common_sofa = calculate_distance_min(s_agent, s_common_sofa) \n    penalty_collision = -25 if (d_agent_common_sofa < 0.7) else 15 \n    reward_reaching_goal = 30 if (d_agent_goal < 0.2) else -d_agent_goal*3 \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def reward_object(): \n   punshiment = 100\n   return punshiment \n    def price(): \n    price = 10\n    return price"
+    },
+    {
+        "prompt": "Inside a hostel, a drone must navigate toward a goal while avoiding crashes into the coffee table, relying on agent state, the coffee table's positions, and goal data. Design a reward function using Python..",
+        "chosen": "def reward(s_agent, s_coffee_table, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_coffee_table = calculate_distance_min(s_agent, s_coffee_table) \n    penalty_collision = -25 if (d_agent_coffee_table < 0.7) else 15 \n    reward_reaching_goal = 30 if (d_agent_goal < 0.2) else -d_agent_goal*3 \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def reward_env(): \n   punshiment = 100\n   return punshiment \n    def obstacles(): \n    price = 10\n    return price"
+    },
+    {
+        "prompt": "Inside a hostel, a drone must navigate toward a goal while avoiding crashes into the football table, relying on agent state, the football table positions, and goal data. Design a reward function using Python.",
+        "chosen": "def reward(s_agent, s_foosball_table, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_foosball_table = calculate_distance_min(s_agent, s_foosball_table) \n    penalty_collision = -25 if (d_agent_foosball_table < 0.7) else 15 \n    reward_reaching_goal = 30 if (d_agent_goal < 0.2) else -d_agent_goal*3 \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def get_answer(s_goal): \n    return goal.position"
+    },
+    {
+        "prompt": "Inside a hostel, a drone must navigate toward a goal while avoiding crashes into the pool table, relying on agent state, the pool table positions, and goal data. Design a reward function using Python.",
+        "chosen": "def reward(s_agent, s_pool_table, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_pool_table = calculate_distance_min(s_agent, s_pool_table) \n    penalty_collision = -25 if (d_agent_pool_table < 0.7) else 15 \n    reward_reaching_goal = 30 if (d_agent_goal < 0.2) else -d_agent_goal*3 \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def rejected_fn(): \n    return 0"
+    },
+    {
+        "prompt": "Inside a hostel, a drone must navigate toward a goal while avoiding crashes into the kitchen island, relying on agent state, the kitchen island's positions, and goal data. Design a reward function using Python.",
+        "chosen": "def reward(s_agent, s_kitchen_island, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_kitchen_island = calculate_distance_min(s_agent, s_kitchen_island) \n    penalty_collision = -25 if (d_agent_kitchen_island < 0.7) else 15 \n    reward_reaching_goal = 30 if (d_agent_goal < 0.2) else -d_agent_goal*3 \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def reward_env(): \n   punshiment = 100\n   return punshiment \n    def obstacles(): \n    price = 10\n    return price"
+    },
+    {
+        "prompt": "Inside a hostel, a drone must navigate toward a goal while avoiding crashes into the fridge, relying on agent state, the fridge positions, and goal data. Design a reward function using Python.",
+        "chosen": "def reward(s_agent, s_fridge, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_fridge = calculate_distance_min(s_agent, s_fridge) \n    penalty_collision = -25 if (d_agent_fridge < 0.7) else 15 \n    reward_reaching_goal = 30 if (d_agent_goal < 0.2) else -d_agent_goal*3 \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def get_answer(s_goal): \n    return goal.position"
+    },
+    {
+        "prompt": "Inside a hostel, a drone must navigate toward a goal while avoiding crashes into the microwave shelf, relying on agent state, the microwave shelf's positions, and goal data. Design a reward function using Python.",
+        "chosen": "def reward(s_agent, s_microwave_shelf, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_microwave_shelf = calculate_distance_min(s_agent, s_microwave_shelf) \n    penalty_collision = -25 if (d_agent_microwave_shelf < 0.7) else 15 \n    reward_reaching_goal = 30 if (d_agent_goal < 0.2) else -d_agent_goal*3 \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def calculate(): \n    return 1"
+    },
+    {
+        "prompt": "Inside a hostel, a drone must navigate toward a goal while avoiding crashes into the kettle station, relying on agent state, the kettle station's positions, and goal data. Design a reward function using Python.",
+        "chosen": "def reward(s_agent, s_kettle_station, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_kettle_station = calculate_distance_min(s_agent, s_kettle_station) \n    penalty_collision = -25 if (d_agent_kettle_station < 0.7) else 15 \n    reward_reaching_goal = 30 if (d_agent_goal < 0.2) else -d_agent_goal*3 \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def calculate(): \n    return 1"
+    },
+    {
+        "prompt": "Inside a hostel, a drone must navigate toward a goal while avoiding crashes into the laundry maschine, relying on agent state, the laundry maschine's positions, and goal data. Design a reward function using Python.",
+        "chosen": "def reward(s_agent, s_laundry_machine, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_laundry_machine = calculate_distance_min(s_agent, s_laundry_machine) \n    penalty_collision = -25 if (d_agent_laundry_machine < 0.7) else 15 \n    reward_reaching_goal = 30 if (d_agent_goal < 0.2) else -d_agent_goal*3 \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def reward_env(): \n   punshiment = 100\n   return punshiment \n    def obstacles(): \n    price = 10\n    return price"
+    },
+    {
+        "prompt": "Inside a hostel, a drone must navigate toward a goal while avoiding crashes into the drying rack, relying on agent state, the drying rack's positions, and goal data. Design a reward function using Python.",
+        "chosen": "def reward(s_agent, s_drying_rack, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_drying_rack = calculate_distance_min(s_agent, s_drying_rack) \n    penalty_collision = -25 if (d_agent_drying_rack < 0.7) else 15 \n    reward_reaching_goal = 30 if (d_agent_goal < 0.2) else -d_agent_goal*3 \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def rejected_fn(): \n    return 0"
+    },
+    {
+        "prompt": "Inside a hostel, a drone must navigate toward a goal while avoiding crashes into the bathroom door, relying on agent state, the bathroom door's positions, and goal data. Design a reward function using Python.",
+        "chosen": "def reward(s_agent, s_bathroom_door, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_bathroom_door = calculate_distance_min(s_agent, s_bathroom_door) \n    penalty_collision = -25 if (d_agent_bathroom_door < 0.7) else 15 \n    reward_reaching_goal = 30 if (d_agent_goal < 0.2) else -d_agent_goal*3 \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def alt(): \n    return 42"
+    },
+    {
+        "prompt": "Inside a hostel, a drone must navigate toward a goal while avoiding crashes into the shower partition, relying on agent state, the shower partition's positions, and goal data. Design a reward function using Python..",
+        "chosen": "def reward(s_agent, s_shower_partition, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_shower_partition = calculate_distance_min(s_agent, s_shower_partition) \n    penalty_collision = -25 if (d_agent_shower_partition < 0.7) else 15 \n    reward_reaching_goal = 30 if (d_agent_goal < 0.2) else -d_agent_goal*3 \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def calculate(): \n    return 1"
+    },
+    {
+        "prompt": "Inside a hostel, a drone must navigate toward a goal while avoiding crashes into the sink counter, relying on agent state, the sink counter's positions, and goal data. Design a reward function using Python..",
+        "chosen": "def reward(s_agent, s_sink_counter, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_sink_counter = calculate_distance_min(s_agent, s_sink_counter) \n    penalty_collision = -25 if (d_agent_sink_counter < 0.7) else 15 \n    reward_reaching_goal = 30 if (d_agent_goal < 0.2) else -d_agent_goal*3 \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def nothing(): \n    pass"
+    },
+    {
+        "prompt": "Inside a hostel, a drone must navigate toward a goal while avoiding crashes into the stairwell, relying on agent state, the stairwell positions, and goal data. Design a reward function using Python.",
+        "chosen": "def reward(s_agent, s_stairwell, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_stairwell = calculate_distance_min(s_agent, s_stairwell) \n    penalty_collision = -25 if (d_agent_stairwell < 0.7) else 15 \n    reward_reaching_goal = 30 if (d_agent_goal < 0.2) else -d_agent_goal*3 \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def nothing(): \n    pass"
+    },
+    {
+        "prompt": "Inside a hostel, a drone must navigate toward a goal while avoiding crashes into the elevator door, relying on agent state, the elevator door positions, and goal data. Design a reward function using Python..",
+        "chosen": "def reward(s_agent, s_elevator_door, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_elevator_door = calculate_distance_min(s_agent, s_elevator_door) \n    penalty_collision = -25 if (d_agent_elevator_door < 0.7) else 15 \n    reward_reaching_goal = 30 if (d_agent_goal < 0.2) else -d_agent_goal*3 \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def reward_env(): \n   punshiment = 100\n   return punshiment \n    def obstacles(): \n    price = 10\n    return price"
+    },
+    {
+        "prompt": "Inside a hostel, a drone must navigate toward a goal while avoiding crashes into the bike rack, relying on agent state, the bike rack positions, and goal data. Design a reward function using Python.",
+        "chosen": "def reward(s_agent, s_bike_rack, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_bike_rack = calculate_distance_min(s_agent, s_bike_rack) \n    penalty_collision = -25 if (d_agent_bike_rack < 0.7) else 15 \n    reward_reaching_goal = 30 if (d_agent_goal < 0.2) else -d_agent_goal*3 \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def calculate(): \n    return 1"
+    },
+    {
+        "prompt": "Inside a hostel, a drone must navigate toward a goal while avoiding crashes into the bunk bed, luggage rack and door relying on agent state, the multiple obstacles's positions(bunk bed, luggage rack, door), and goal data. Design a reward function using Python.",
+        "chosen": "def reward(s_agent, s_multiple_obstacles, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_multiple_obstacles_min = calculate_distance_min(s_agent, s_multiple_obstacles) \n    penalty_collision = -20 if (d_agent_multiple_obstacles_min < ob_threshold) else 10 \n    reward_reaching_goal = 25 if (d_agent_goal < goal_threshold) else -d_agent_goal*3 \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def reward_object(): \n   punshiment = 100\n   return punshiment \n    def price(): \n    price = 10\n    return price"
+    },
+    {
+        "prompt": "Inside a hostel, a drone must navigate toward a goal while avoiding crashes into the reception counter and shower relying on agent state, the multiple obstacles's positions(reception counter, shower), and goal data. Design a reward function using Python.",
+        "chosen": "def reward(s_agent, s_multiple_obstacles, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_multiple_obstacles_min = calculate_distance_min(s_agent, s_multiple_obstacles) \n    penalty_collision = -20 if (d_agent_multiple_obstacles_min < ob_threshold) else 10 \n    reward_reaching_goal = 25 if (d_agent_goal < goal_threshold) else -d_agent_goal*3 \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def rejected_fn(): \n    return 0"
+    },
+    {
+        "prompt": "Inside a hostel, a drone must navigate toward a goal while avoiding crashes into the sink, fridge and kitchen island relying on agent state, the multiple obstacles's positions(sink, fridge and kitchen island), and goal data. Design a reward function using Python.",
+        "chosen": "def reward(s_agent, s_multiple_obstacles, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_multiple_obstacles_min = calculate_distance_min(s_agent, s_multiple_obstacles) \n    penalty_collision = -20 if (d_agent_multiple_obstacles_min < ob_threshold) else 10 \n    reward_reaching_goal = 25 if (d_agent_goal < goal_threshold) else -d_agent_goal*3 \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def reward_env(): \n   punshiment = 100\n   return punshiment \n    def obstacles(): \n    price = 10\n    return price"
+    },
+    {
+        "prompt": "Inside a hostel, a drone must navigate toward a goal while avoiding crashes into the pool tabel and signs relying on agent state, the multiple obstacles's positions(pool table, signs), and goal data. Design a reward function using Python.",
+        "chosen": "def reward(s_agent, s_multiple_obstacles, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_multiple_obstacles_min = calculate_distance_min(s_agent, s_multiple_obstacles) \n    penalty_collision = -20 if (d_agent_multiple_obstacles_min < ob_threshold) else 10 \n    reward_reaching_goal = 25 if (d_agent_goal < goal_threshold) else -d_agent_goal*3 \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def reward_to_hostel(): \n    if goal == 'true': \n    return 10 \n    else: \n    return -10"
+    },
+    {
+        "prompt": "Task: A drone navigates in a golf place with the aim of reaching a goal while avoiding collisions with flagstick. Available Information: The agent’s state and the flagstick’ states can be used. Create a reward function in Python.",
+        "chosen": "def reward(s_agent, s_flagstick, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_flagstick = calculate_distance_min(s_agent, s_flagstick) \n    penalty_collision = -20 if (d_agent_flagstick < 0.7) else 10 \n    reward_reaching_goal = 35 if (d_agent_goal < 0.2) else -d_agent_goal*4 \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def get_answer(s_goal): \n    return goal.position"
+    },
+    {
+        "prompt": "Task: A drone navigates in a golf place with the aim of reaching a goal while avoiding collisions with tee marker. Available Information: The agent’s state and the tee marker' states can be used. Create a reward function in Python.",
+        "chosen": "def reward(s_agent, s_tee_marker, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_tee_marker = calculate_distance_min(s_agent, s_tee_marker) \n    penalty_collision = -20 if (d_agent_tee_marker < 0.7) else 10 \n    reward_reaching_goal = 35 if (d_agent_goal < 0.2) else -d_agent_goal*4 \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def reward_object(): \n   punshiment = 100\n   return punshiment \n    def price(): \n    price = 10\n    return price"
+    },
+    {
+        "prompt": "Task: A drone navigates in a golf place with the aim of reaching a goal while avoiding collisions with golf cart. Available Information: The agent’s state and the golf cart' states can be used. Create a reward function in Python.",
+        "chosen": "def reward(s_agent, s_golf_cart, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_golf_cart = calculate_distance_min(s_agent, s_golf_cart) \n    penalty_collision = -20 if (d_agent_golf_cart < 0.7) else 10 \n    reward_reaching_goal = 35 if (d_agent_goal < 0.2) else -d_agent_goal*4 \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def get_answer(s_goal): \n    return goal.position"
+    },
+    {
+        "prompt": "Task: A drone navigates in a golf place with the aim of reaching a goal while avoiding collisions with ball washer. Available Information: The agent’s state and the ball washer' states can be used. Create a reward function in Python.",
+        "chosen": "def reward(s_agent, s_ball_washer, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_ball_washer = calculate_distance_min(s_agent, s_ball_washer) \n    penalty_collision = -20 if (d_agent_ball_washer < 0.7) else 10 \n    reward_reaching_goal = 35 if (d_agent_goal < 0.2) else -d_agent_goal*4 \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def reward_to_golf(): \n    if goal == 'true': \n    return 10 \n    else: \n    return -10"
+    },
+    {
+        "prompt": "Task: A drone navigates in a golf place with the aim of reaching a goal while avoiding collisions with yardage marker. Available Information: The agent’s state and the yardage marker' states can be used. Create a reward function in Python.",
+        "chosen": "def reward(s_agent, s_yardage_marker, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_yardage_marker = calculate_distance_min(s_agent, s_yardage_marker) \n    penalty_collision = -20 if (d_agent_yardage_marker < 0.7) else 10 \n    reward_reaching_goal = 35 if (d_agent_goal < 0.2) else -d_agent_goal*4 \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def nothing(): \n    pass"
+    },
+    {
+        "prompt": "Task: A drone navigates in a golf place with the aim of reaching a goal while avoiding collisions with sprinker head. Available Information: The agent’s state and the sprinker head' states can be used. Create a reward function in Python.",
+        "chosen": "def reward(s_agent, s_sprinkler_head, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_sprinkler_head = calculate_distance_min(s_agent, s_sprinkler_head) \n    penalty_collision = -20 if (d_agent_sprinkler_head < 0.7) else 10 \n    reward_reaching_goal = 35 if (d_agent_goal < 0.2) else -d_agent_goal*4 \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def reward_env(): \n   punshiment = 100\n   return punshiment \n    def obstacles(): \n    price = 10\n    return price"
+    },
+    {
+        "prompt": "Task: A drone navigates in a golf place with the aim of reaching a goal while avoiding collisions with cart path curb. Available Information: The agent’s state and the cart path curb' states can be used. Create a reward function in Python.",
+        "chosen": "def reward(s_agent, s_cart_path_curb, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_cart_path_curb = calculate_distance_min(s_agent, s_cart_path_curb) \n    penalty_collision = -20 if (d_agent_cart_path_curb < 0.7) else 10 \n    reward_reaching_goal = 35 if (d_agent_goal < 0.2) else -d_agent_goal*4 \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def rejected_fn(): \n    return 0"
+    },
+    {
+        "prompt": "Task: A drone navigates in a golf place with the aim of reaching a goal while avoiding collisions with practice cup. Available Information: The agent’s state and the practice cup' states can be used. Create a reward function in Python.",
+        "chosen": "def reward(s_agent, s_practice_cup, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_practice_cup = calculate_distance_min(s_agent, s_practice_cup) \n    penalty_collision = -20 if (d_agent_practice_cup < 0.7) else 10 \n    reward_reaching_goal = 35 if (d_agent_goal < 0.2) else -d_agent_goal*4 \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def nothing(): \n    pass"
+    },
+    {
+        "prompt": "Task: A drone navigates in a golf place with the aim of reaching a goal while avoiding collisions with range divider. Available Information: The agent’s state and the range divider' states can be used. Create a reward function in Python.",
+        "chosen": "def reward(s_agent, s_range_divider, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_range_divider = calculate_distance_min(s_agent, s_range_divider) \n    penalty_collision = -20 if (d_agent_range_divider < 0.7) else 10 \n    reward_reaching_goal = 35 if (d_agent_goal < 0.2) else -d_agent_goal*4 \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def get_answer(s_goal): \n    return goal.position"
+    },
+    {
+        "prompt": "Task: A drone navigates in a golf place with the aim of reaching a goal while avoiding collisions with bag stand. Available Information: The agent’s state and the bag stand' states can be used. Create a reward function in Python.",
+        "chosen": "def reward(s_agent, s_bag_stand, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_bag_stand = calculate_distance_min(s_agent, s_bag_stand) \n    penalty_collision = -20 if (d_agent_bag_stand < 0.7) else 10 \n    reward_reaching_goal = 35 if (d_agent_goal < 0.2) else -d_agent_goal*4 \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def reward_object(): \n   punshiment = 100\n   return punshiment \n    def price(): \n    price = 10\n    return price"
+    },
+    {
+        "prompt": "Task: A drone navigates in a golf place with the aim of reaching a goal while avoiding collisions with tee sign. Available Information: The agent’s state and the tee sign' states can be used. Create a reward function in Python.",
+        "chosen": "def reward(s_agent, s_tee_sign, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_tee_sign = calculate_distance_min(s_agent, s_tee_sign) \n    penalty_collision = -20 if (d_agent_tee_sign < 0.7) else 10 \n    reward_reaching_goal = 35 if (d_agent_goal < 0.2) else -d_agent_goal*4 \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def rejected_fn(): \n    return 0"
+    },
+    {
+        "prompt": "Task: A drone navigates in a golf place with the aim of reaching a goal while avoiding collisions with rope divider. Available Information: The agent’s state and the rope divider' states can be used. Create a reward function in Python.",
+        "chosen": "def reward(s_agent, s_rope_divider, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_rope_divider = calculate_distance_min(s_agent, s_rope_divider) \n    penalty_collision = -20 if (d_agent_rope_divider < 0.7) else 10 \n    reward_reaching_goal = 35 if (d_agent_goal < 0.2) else -d_agent_goal*4 \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def get_answer(s_goal): \n    return goal.position"
+    },
+    {
+        "prompt": "Task: A drone navigates in a golf place with the aim of reaching a goal while avoiding collisions with clubhouse door. Available Information: The agent’s state and the clubhouse door' states can be used. Create a reward function in Python.",
+        "chosen": "def reward(s_agent, s_clubhouse_door, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_clubhouse_door = calculate_distance_min(s_agent, s_clubhouse_door) \n    penalty_collision = -20 if (d_agent_clubhouse_door < 0.7) else 10 \n    reward_reaching_goal = 35 if (d_agent_goal < 0.2) else -d_agent_goal*4 \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def nothing(): \n    pass"
+    },
+    {
+        "prompt": "Task: A drone navigates in a golf place with the aim of reaching a goal while avoiding collisions with course kiosk. Available Information: The agent’s state and the course kiosk' states can be used. Create a reward function in Python.",
+        "chosen": "def reward(s_agent, s_course_kiosk, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_course_kiosk = calculate_distance_min(s_agent, s_course_kiosk) \n    penalty_collision = -20 if (d_agent_course_kiosk < 0.7) else 10 \n    reward_reaching_goal = 35 if (d_agent_goal < 0.2) else -d_agent_goal*4 \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def fallback(): \n    return -1"
+    },
+    {
+        "prompt": "Task: A drone navigates in a golf place with the aim of reaching a goal while avoiding collisions with scorecard stand. Available Information: The agent’s state and the scorecard stand' states can be used. Create a reward function in Python.",
+        "chosen": "def reward(s_agent, s_scorecard_stand, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_scorecard_stand = calculate_distance_min(s_agent, s_scorecard_stand) \n    penalty_collision = -20 if (d_agent_scorecard_stand < 0.7) else 10 \n    reward_reaching_goal = 35 if (d_agent_goal < 0.2) else -d_agent_goal*4 \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def reward_object(): \n   punshiment = 100\n   return punshiment \n    def price(): \n    price = 10\n    return price"
+    },
+    {
+        "prompt": "Task: A drone navigates in a golf place with the aim of reaching a goal while avoiding collisions with range net pole. Available Information: The agent’s state and the range net pole' states can be used. Create a reward function in Python.",
+        "chosen": "def reward(s_agent, s_range_net_pole, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_range_net_pole = calculate_distance_min(s_agent, s_range_net_pole) \n    penalty_collision = -20 if (d_agent_range_net_pole < 0.7) else 10 \n    reward_reaching_goal = 35 if (d_agent_goal < 0.2) else -d_agent_goal*4 \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def reward_to_golf(): \n    if goal == 'true': \n    return 10 \n    else: \n    return -10"
+    },
+    {
+        "prompt": "Task: A drone navigates in a golf place with the aim of reaching a goal while avoiding collisions with tee mat. Available Information: The agent’s state and the tee mat' states can be used. Create a reward function in Python.",
+        "chosen": "def reward(s_agent, s_tee_mat, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_tee_mat = calculate_distance_min(s_agent, s_tee_mat) \n    penalty_collision = -20 if (d_agent_tee_mat < 0.7) else 10 \n    reward_reaching_goal = 35 if (d_agent_goal < 0.2) else -d_agent_goal*4 \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def calculate(): \n    return 1"
+    },
+    {
+        "prompt": "Task: A drone navigates in a golf place with the aim of reaching a goal while avoiding collisions with bunker rake. Available Information: The agent’s state and the bunker rake' states can be used. Create a reward function in Python.",
+        "chosen": "def reward(s_agent, s_bunker_rake, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_bunker_rake = calculate_distance_min(s_agent, s_bunker_rake) \n    penalty_collision = -20 if (d_agent_bunker_rake < 0.7) else 10 \n    reward_reaching_goal = 35 if (d_agent_goal < 0.2) else -d_agent_goal*4 \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def reward_to_golf(): \n    if goal == 'true': \n    return 10 \n    else: \n    return -10"
+    },
+    {
+        "prompt": "Task: A drone navigates in a golf place with the aim of reaching a goal while avoiding collisions with ball pitcher cart. Available Information: The agent’s state and the ball pitcher cart' states can be used. Create a reward function in Python.",
+        "chosen": "def reward(s_agent, s_ball_picker_cart, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_ball_picker_cart = calculate_distance_min(s_agent, s_ball_picker_cart) \n    penalty_collision = -20 if (d_agent_ball_picker_cart < 0.7) else 10 \n    reward_reaching_goal = 35 if (d_agent_goal < 0.2) else -d_agent_goal*4 \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def fallback(): \n    return -1"
+    },
+    {
+        "prompt": "Task: A drone navigates in a golf place with the aim of reaching a goal while avoiding collisions with water marker. Available Information: The agent’s state and the water marker' states can be used. Create a reward function in Python.",
+        "chosen": "def reward(s_agent, s_water_marker, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_water_marker = calculate_distance_min(s_agent, s_water_marker) \n    penalty_collision = -20 if (d_agent_water_marker < 0.7) else 10 \n    reward_reaching_goal = 35 if (d_agent_goal < 0.2) else -d_agent_goal*4 \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def reward_to_golf(): \n    if goal == 'true': \n    return 10 \n    else: \n    return -10"
+    },
+    {
+        "prompt": "Task: A drone navigates in a golf place with the aim of reaching a goal while avoiding collisions with practicec flag. Available Information: The agent’s state and the practise flag' states can be used. Create a reward function in Python..",
+        "chosen": "def reward(s_agent, s_practice_flag, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_practice_flag = calculate_distance_min(s_agent, s_practice_flag) \n    penalty_collision = -20 if (d_agent_practice_flag < 0.7) else 10 \n    reward_reaching_goal = 35 if (d_agent_goal < 0.2) else -d_agent_goal*4 \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def nothing(): \n    pass"
+    },
+    {
+        "prompt": "Task: A drone navigates in a golf place with the aim of reaching a goal while avoiding collisions with flagstick, bunker rake and water marker. Available Information: The agent’s state and the multiple obstacle's states can be used. Create a reward function in Python.",
+        "chosen": "def reward(s_agent, s_multiple_obstacles, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_multiple_obstacles_min = calculate_distance_min(s_agent, s_multiple_obstacles) \n    penalty_collision = -20 if (d_agent_multiple_obstacles_min < 0.6) else 10 \n    reward_reaching_goal = 20 if (d_agent_goal < 0.1) else -d_agent_goal*4 \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def nothing(): \n    pass"
+    },
+    {
+        "prompt": "Task: A drone navigates in a golf place with the aim of reaching a goal while avoiding collisions with golf cart and cart path crub. Available Information: The agent’s state and the multiple obstacle's states can be used. Create a reward function in Python.",
+        "chosen": "def reward(s_agent, s_multiple_obstacles, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_multiple_obstacles_min = calculate_distance_min(s_agent, s_multiple_obstacles) \n    penalty_collision = -20 if (d_agent_multiple_obstacles_min < 0.6) else 10 \n    reward_reaching_goal = 20 if (d_agent_goal < 0.1) else -d_agent_goal*4 \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def rejected_fn(): \n    return 0"
+    },
+    {
+        "prompt": "Task: A drone navigates in a golf place with the aim of reaching a goal while avoiding collisions with tea marker, tee boxes abd yardage marker. Available Information: The agent’s state and the multiple obstacle's states can be used. Create a reward function in Python.",
+        "chosen": "def reward(s_agent, s_multiple_obstacles, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_multiple_obstacles_min = calculate_distance_min(s_agent, s_multiple_obstacles) \n    penalty_collision = -20 if (d_agent_multiple_obstacles_min < 0.6) else 10 \n    reward_reaching_goal = 20 if (d_agent_goal < 0.1) else -d_agent_goal*4 \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def fallback(): \n    return -1"
+    },
+    {
+        "prompt": "Task: A drone navigates in a golf place with the aim of reaching a goal while avoiding collisions with driving net, pole and range divider. Available Information: The agent’s state and the multiple obstacle's states can be used. Create a reward function in Python.",
+        "chosen": "def reward(s_agent, s_multiple_obstacles, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_multiple_obstacles_min = calculate_distance_min(s_agent, s_multiple_obstacles) \n    penalty_collision = -20 if (d_agent_multiple_obstacles_min < 0.6) else 10 \n    reward_reaching_goal = 20 if (d_agent_goal < 0.1) else -d_agent_goal*4 \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def nothing(): \n    pass"
+    },
+    {
+        "prompt": "In a basketball court setting, a drone navigates while tracking the backboard and avoiding collisions. The agent can access drone's state, goal's state and the backbord’s state. Write a reward function in Python.",
+        "chosen": "def reward(s_agent, s_backboard, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_backboard = calculate_distance_min(s_agent, s_backboard) \n    penalty_collision = -20 if (d_agent_backboard < 0.7) else 16 \n    reward_reaching_goal = 30 if (d_agent_goal < 0.2) else -d_agent_goal \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def rejected_fn(): \n    return 0"
+    },
+    {
+        "prompt": "In a basketball court setting, a drone navigates while tracking the rim and avoiding collisions. The agent can access drone's state, goal's state and the rim's state. Write a reward function in Python.",
+        "chosen": "def reward(s_agent, s_rim, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_rim = calculate_distance_min(s_agent, s_rim) \n    penalty_collision = -20 if (d_agent_rim < 0.7) else 16 \n    reward_reaching_goal = 30 if (d_agent_goal < 0.2) else -d_agent_goal \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def reward_to_court(): \n    if goal == 'true': \n    return 10 \n    else: \n    return -10"
+    },
+    {
+        "prompt": "In a basketball court setting, a drone navigates while tracking the  astanchion padding nd avoiding collisions. The agent can access drone's state, goal's state and the stanchion padding's state. Write a reward function in Python.",
+        "chosen": "def reward(s_agent, s_stanchion_padding, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_stanchion_padding = calculate_distance_min(s_agent, s_stanchion_padding) \n    penalty_collision = -20 if (d_agent_stanchion_padding < 0.7) else 16 \n    reward_reaching_goal = 30 if (d_agent_goal < 0.2) else -d_agent_goal \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def calculate(): \n    return 1"
+    },
+    {
+        "prompt": "In a basketball court setting, a drone navigates while tracking the shot clock stand and avoiding collisions. The agent can access drone's state, goal's state and the shot clock stand’s state. Write a reward function in Python.",
+        "chosen": "def reward(s_agent, s_shot_clock_stand, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_shot_clock_stand = calculate_distance_min(s_agent, s_shot_clock_stand) \n    penalty_collision = -20 if (d_agent_shot_clock_stand < 0.7) else 16 \n    reward_reaching_goal = 30 if (d_agent_goal < 0.2) else -d_agent_goal \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def rejected_fn(): \n    return 0"
+    },
+    {
+        "prompt": "In a basketball court setting, a drone navigates while tracking the scores table and avoiding collisions. The agent can access drone's state, goal's state and the scores table's state. Write a reward function in Python.",
+        "chosen": "def reward(s_agent, s_scorers_table, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_scorers_table = calculate_distance_min(s_agent, s_scorers_table) \n    penalty_collision = -20 if (d_agent_scorers_table < 0.7) else 16 \n    reward_reaching_goal = 30 if (d_agent_goal < 0.2) else -d_agent_goal \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def nothing(): \n    pass"
+    },
+    {
+        "prompt": "In a basketball court setting, a drone navigates while tracking the player bench and avoiding collisions. The agent can access drone's state, goal's state and the player bench’s state. Write a reward function in Python.",
+        "chosen": "def reward(s_agent, s_players_bench, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_players_bench = calculate_distance_min(s_agent, s_players_bench) \n    penalty_collision = -20 if (d_agent_players_bench < 0.7) else 16 \n    reward_reaching_goal = 30 if (d_agent_goal < 0.2) else -d_agent_goal \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def reward_to_court(): \n    if goal == 'true': \n    return 10 \n    else: \n    return -10"
+    },
+    {
+        "prompt": "In a basketball court setting, a drone navigates while tracking the camera tripod and avoiding collisions. The agent can access drone's state, goal's state and the camera tripod’s state. Write a reward function in Python.",
+        "chosen": "def reward(s_agent, s_camera_tripod, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_camera_tripod = calculate_distance_min(s_agent, s_camera_tripod) \n    penalty_collision = -20 if (d_agent_camera_tripod < 0.7) else 16 \n    reward_reaching_goal = 30 if (d_agent_goal < 0.2) else -d_agent_goal \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def nothing(): \n    pass"
+    },
+    {
+        "prompt": "In a basketball court setting, a drone navigates while tracking the ball rack and avoiding collisions. The agent can access drone's state, goal's state and the ball rack's state. Write a reward function in Python.",
+        "chosen": "def reward(s_agent, s_ball_rack, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_ball_rack = calculate_distance_min(s_agent, s_ball_rack) \n    penalty_collision = -20 if (d_agent_ball_rack < 0.7) else 16 \n    reward_reaching_goal = 30 if (d_agent_goal < 0.2) else -d_agent_goal \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def reward_env(): \n   punshiment = 100\n   return punshiment \n    def obstacles(): \n    price = 10\n    return price"
+    },
+    {
+        "prompt": "In a basketball court setting, a drone navigates while tracking the mop bucket and avoiding collisions. The agent can access drone's state, goal's state and the mop bucket'S state. Write a reward function in Python.",
+        "chosen": "def reward(s_agent, s_mop_bucket, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_mop_bucket = calculate_distance_min(s_agent, s_mop_bucket) \n    penalty_collision = -20 if (d_agent_mop_bucket < 0.7) else 16 \n    reward_reaching_goal = 30 if (d_agent_goal < 0.2) else -d_agent_goal \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def reward_to_court(): \n    if goal == 'true': \n    return 10 \n    else: \n    return -10"
+    },
+    {
+        "prompt": "In a basketball court setting, a drone navigates while tracking the water cooler and avoiding collisions. The agent can access drone's state, goal's state and the water cooler's state. Write a reward function in Python.",
+        "chosen": "def reward(s_agent, s_water_cooler, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_water_cooler = calculate_distance_min(s_agent, s_water_cooler) \n    penalty_collision = -20 if (d_agent_water_cooler < 0.7) else 16 \n    reward_reaching_goal = 30 if (d_agent_goal < 0.2) else -d_agent_goal \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def fallback(): \n    return -1"
+    },
+    {
+        "prompt": "In a basketball court setting, a drone navigates while tracking the medical cart and avoiding collisions. The agent can access drone's state, goal's state and the medical cart's state. Write a reward function in Python.",
+        "chosen": "def reward(s_agent, s_medical_cart, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_medical_cart = calculate_distance_min(s_agent, s_medical_cart) \n    penalty_collision = -20 if (d_agent_medical_cart < 0.7) else 16 \n    reward_reaching_goal = 30 if (d_agent_goal < 0.2) else -d_agent_goal \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def fallback(): \n    return -1"
+    },
+    {
+        "prompt": "In a basketball court setting, a drone navigates while tracking the ad board and avoiding collisions. The agent can access drone's state, goal's state and the ad board's state. Write a reward function in Python.",
+        "chosen": "def reward(s_agent, s_ad_board, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_ad_board = calculate_distance_min(s_agent, s_ad_board) \n    penalty_collision = -20 if (d_agent_ad_board < 0.7) else 16 \n    reward_reaching_goal = 30 if (d_agent_goal < 0.2) else -d_agent_goal \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def reward_to_court(): \n    if goal == 'true': \n    return 10 \n    else: \n    return -10"
+    },
+    {
+        "prompt": "In a basketball court setting, a drone navigates while tracking the portable hoop and avoiding collisions. The agent can access drone's state, goal's state and the portable hoop’s state. Write a reward function in Python.",
+        "chosen": "def reward(s_agent, s_portable_hoop, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_portable_hoop = calculate_distance_min(s_agent, s_portable_hoop) \n    penalty_collision = -20 if (d_agent_portable_hoop < 0.7) else 16 \n    reward_reaching_goal = 30 if (d_agent_goal < 0.2) else -d_agent_goal \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def fallback(): \n    return -1"
+    },
+    {
+        "prompt": "In a basketball court setting, a drone navigates while tracking the rebound maschine and avoiding collisions. The agent can access drone's state, goal's state and the rebound maschine's state. Write a reward function in Python.",
+        "chosen": "def reward(s_agent, s_rebound_machine, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_rebound_machine = calculate_distance_min(s_agent, s_rebound_machine) \n    penalty_collision = -20 if (d_agent_rebound_machine < 0.7) else 16 \n    reward_reaching_goal = 30 if (d_agent_goal < 0.2) else -d_agent_goal \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def fallback(): \n    return -1"
+    },
+    {
+        "prompt": "In a basketball court setting, a drone navigates while tracking the training cone and avoiding collisions. The agent can access drone's state, goal's state and the training conde's state. Write a reward function in Python.",
+        "chosen": "def reward(s_agent, s_training_cone, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_training_cone = calculate_distance_min(s_agent, s_training_cone) \n    penalty_collision = -20 if (d_agent_training_cone < 0.7) else 16 \n    reward_reaching_goal = 30 if (d_agent_goal < 0.2) else -d_agent_goal \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def fallback(): \n    return -1"
+    },
+    {
+        "prompt": "In a basketball court setting, a drone navigates while tracking the scoreboard pole and avoiding collisions. The agent can access drone's state, goal's state and the scoreboard pole’s state. Write a reward function in Python.",
+        "chosen": "def reward(s_agent, s_scoreboard_pole, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_scoreboard_pole = calculate_distance_min(s_agent, s_scoreboard_pole) \n    penalty_collision = -20 if (d_agent_scoreboard_pole < 0.7) else 16 \n    reward_reaching_goal = 30 if (d_agent_goal < 0.2) else -d_agent_goal \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def reward_to_court(): \n    if goal == 'true': \n    return 10 \n    else: \n    return -10"
+    },
+    {
+        "prompt": "In a basketball court setting, a drone navigates while tracking the tunnel gate and avoiding collisions. The agent can access drone's state, goal's state and the tunnel gate’s state. Write a reward function in Python.",
+        "chosen": "def reward(s_agent, s_tunnel_gate, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_tunnel_gate = calculate_distance_min(s_agent, s_tunnel_gate) \n    penalty_collision = -20 if (d_agent_tunnel_gate < 0.7) else 16 \n    reward_reaching_goal = 30 if (d_agent_goal < 0.2) else -d_agent_goal \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def nothing(): \n    pass"
+    },
+    {
+        "prompt": "In a basketball court setting, a drone navigates while tracking the cable cover and avoiding collisions. The agent can access drone's state, goal's state and the cable cover’s state. Write a reward function in Python.",
+        "chosen": "def reward(s_agent, s_cable_cover, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_cable_cover = calculate_distance_min(s_agent, s_cable_cover) \n    penalty_collision = -20 if (d_agent_cable_cover < 0.7) else 16 \n    reward_reaching_goal = 30 if (d_agent_goal < 0.2) else -d_agent_goal \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def reward_to_court(): \n    if goal == 'true': \n    return 10 \n    else: \n    return -10"
+    },
+    {
+        "prompt": "In a basketball court setting, a drone navigates while tracking the barrier rail and avoiding collisions. The agent can access drone's state, goal's state and the barrier rail’s state. Write a reward function in Python.",
+        "chosen": "def reward(s_agent, s_barrier_rail, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_barrier_rail = calculate_distance_min(s_agent, s_barrier_rail) \n    penalty_collision = -20 if (d_agent_barrier_rail < 0.7) else 16 \n    reward_reaching_goal = 30 if (d_agent_goal < 0.2) else -d_agent_goal \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def calculate(): \n    return 1"
+    },
+    {
+        "prompt": "In a basketball court setting, a drone navigates while tracking the towel cart and avoiding collisions. The agent can access drone's state, goal's state and the towel cart’s state. Write a reward function in Python.",
+        "chosen": "def reward(s_agent, s_towel_cart, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_towel_cart = calculate_distance_min(s_agent, s_towel_cart) \n    penalty_collision = -20 if (d_agent_towel_cart < 0.7) else 16 \n    reward_reaching_goal = 30 if (d_agent_goal < 0.2) else -d_agent_goal \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def get_answer(s_goal): \n    return goal.position"
+    },
+    {
+        "prompt": "In a basketball court setting, a drone navigates while tracking the speaker stand and avoiding collisions. The agent can access drone's state, goal's state and the speaker stand’s state. Write a reward function in Python.",
+        "chosen": "def reward(s_agent, s_speaker_stand, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_speaker_stand = calculate_distance_min(s_agent, s_speaker_stand) \n    penalty_collision = -20 if (d_agent_speaker_stand < 0.7) else 16 \n    reward_reaching_goal = 30 if (d_agent_goal < 0.2) else -d_agent_goal \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def reward_env(): \n   punshiment = 100\n   return punshiment \n    def obstacles(): \n    price = 10\n    return price"
+    },
+    {
+        "prompt": "In a basketball court setting, a drone navigates while tracking the backboard , rim and stanchion padding and avoiding collisions with them. The agent can access drone's state, goal's state and the multiple obstacle’s state. Write a reward function in Python.",
+        "chosen": "def reward(s_agent, s_multiple_obstacles, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_multiple_obstacles_min = calculate_distance_min(s_agent, s_multiple_obstacles) \n    penalty_collision = -20 if (d_agent_multiple_obstacles_min < ob_threshold) else 10 \n    reward_reaching_goal = 20 if (d_agent_goal < goal_threshold) else -d_agent_goal \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def reward_env(): \n   punshiment = 100\n   return punshiment \n    def obstacles(): \n    price = 10\n    return price"
+    },
+    {
+        "prompt": "In a basketball court setting, a drone navigates while tracking the scorer's table and players' bench and avoiding collisions with them. The agent can access drone's state, goal's state and the multiple obstacle’s state. Write a reward function in Python.",
+        "chosen": "def reward(s_agent, s_multiple_obstacles, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_multiple_obstacles_min = calculate_distance_min(s_agent, s_multiple_obstacles) \n    penalty_collision = -20 if (d_agent_multiple_obstacles_min < ob_threshold) else 10 \n    reward_reaching_goal = 20 if (d_agent_goal < goal_threshold) else -d_agent_goal \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def reward_object(): \n   punshiment = 100\n   return punshiment \n    def price(): \n    price = 10\n    return price"
+    },
+    {
+        "prompt": "In a basketball court setting, a drone navigates while tracking the courtside camera tripod, board and floor cable and avoiding collisions with them. The agent can access drone's state, goal's state and the multiple obstacle’s state. Write a reward function in Python.",
+        "chosen": "def reward(s_agent, s_multiple_obstacles, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_multiple_obstacles_min = calculate_distance_min(s_agent, s_multiple_obstacles) \n    penalty_collision = -20 if (d_agent_multiple_obstacles_min < ob_threshold) else 10 \n    reward_reaching_goal = 20 if (d_agent_goal < goal_threshold) else -d_agent_goal \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def get_answer(s_goal): \n    return goal.position"
+    },
+    {
+        "prompt": "In a basketball court setting, a drone navigates while tracking the ball rack and trining cone and avoiding collisions with them. The agent can access drone's state, goal's state and the multiple obstacle’s state. Write a reward function in Python.",
+        "chosen": "def reward(s_agent, s_multiple_obstacles, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_multiple_obstacles_min = calculate_distance_min(s_agent, s_multiple_obstacles) \n    penalty_collision = -20 if (d_agent_multiple_obstacles_min < ob_threshold) else 10 \n    reward_reaching_goal = 20 if (d_agent_goal < goal_threshold) else -d_agent_goal \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def reward_object(): \n   punshiment = 100\n   return punshiment \n    def price(): \n    price = 10\n    return price"
+    },
+    {
+        "prompt": "A drone navigates inside a Family home, aims to reach a designated goal, and must steer clear of sofa by relying on its own state, the sofas’ status, and the goal information. Create a reward function in Python.",
+        "chosen": "def reward(s_agent, s_sofa, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_sofa = calculate_distance_min(s_agent, s_sofa) \n    penalty_collision = -12 if (d_agent_sofa < 0.7) else 15 \n    reward_reaching_goal = 20 if (d_agent_goal < 0.2) else -2**d_agent_goal \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def reward_env(): \n   punshiment = 100\n   return punshiment \n    def obstacles(): \n    price = 10\n    return price"
+    },
+    {
+        "prompt": "A drone navigates inside a Family home, aims to reach a designated goal, and must steer clear of coffee table by relying on its own state, the coffee tables’ status, and the goal information. Create a reward function in Python.",
+        "chosen": "def reward(s_agent, s_coffee_table, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_coffee_table = calculate_distance_min(s_agent, s_coffee_table) \n    penalty_collision = -12 if (d_agent_coffee_table < 0.7) else 15 \n    reward_reaching_goal = 20 if (d_agent_goal < 0.2) else -2**d_agent_goal \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def get_answer(s_goal): \n    return goal.position"
+    },
+    {
+        "prompt": "A drone navigates inside a Family home, aims to reach a designated goal, and must steer clear of TV stand by relying on its own state, the tv stands’ status, and the goal information. Create a reward function in Python.",
+        "chosen": "def reward(s_agent, s_tv_stand, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_tv_stand = calculate_distance_min(s_agent, s_tv_stand) \n    penalty_collision = -12 if (d_agent_tv_stand < 0.7) else 15 \n    reward_reaching_goal = 20 if (d_agent_goal < 0.2) else -2**d_agent_goal \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def fallback(): \n    return -1"
+    },
+    {
+        "prompt": "A drone navigates inside a Family home, aims to reach a designated goal, and must steer clear of floor lamp by relying on its own state, the floor lamps' status, and the goal information. Create a reward function in Python.",
+        "chosen": "def reward(s_agent, s_floor_lamp, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_floor_lamp = calculate_distance_min(s_agent, s_floor_lamp) \n    penalty_collision = -12 if (d_agent_floor_lamp < 0.7) else 15 \n    reward_reaching_goal = 20 if (d_agent_goal < 0.2) else -2**d_agent_goal \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def reward_env(): \n   punshiment = 100\n   return punshiment \n    def obstacles(): \n    price = 10\n    return price"
+    },
+    {
+        "prompt": "A drone navigates inside a Family home, aims to reach a designated goal, and must steer clear of bookshelf by relying on its own state, the bookshelfes' status, and the goal information. Create a reward function in Python.",
+        "chosen": "def reward(s_agent, s_bookshelf, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_bookshelf = calculate_distance_min(s_agent, s_bookshelf) \n    penalty_collision = -12 if (d_agent_bookshelf < 0.7) else 15 \n    reward_reaching_goal = 20 if (d_agent_goal < 0.2) else -2**d_agent_goal \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def rejected_fn(): \n    return 0"
+    },
+    {
+        "prompt": "A drone navigates inside a Family home, aims to reach a designated goal, and must steer clear of dining table by relying on its own state, the dining table’ status, and the goal information. Create a reward function in Python.",
+        "chosen": "def reward(s_agent, s_dining_table, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_dining_table = calculate_distance_min(s_agent, s_dining_table) \n    penalty_collision = -12 if (d_agent_dining_table < 0.7) else 15 \n    reward_reaching_goal = 20 if (d_agent_goal < 0.2) else -2**d_agent_goal \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def reward_env(): \n   punshiment = 100\n   return punshiment \n    def obstacles(): \n    price = 10\n    return price"
+    },
+    {
+        "prompt": "A drone navigates inside a Family home, aims to reach a designated goal, and must steer clear of dining chair by relying on its own state, the dining chairs' status, and the goal information. Create a reward function in Python.",
+        "chosen": "def reward(s_agent, s_dining_chair, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_dining_chair = calculate_distance_min(s_agent, s_dining_chair) \n    penalty_collision = -12 if (d_agent_dining_chair < 0.7) else 15 \n    reward_reaching_goal = 20 if (d_agent_goal < 0.2) else -2**d_agent_goal \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def reward_object(): \n   punshiment = 100\n   return punshiment \n    def price(): \n    price = 10\n    return price"
+    },
+    {
+        "prompt": "A drone navigates inside a Family home, aims to reach a designated goal, and must steer clear of kitchen island by relying on its own state, the kitchen island's status, and the goal information. Create a reward function in Python.",
+        "chosen": "def reward(s_agent, s_kitchen_island, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_kitchen_island = calculate_distance_min(s_agent, s_kitchen_island) \n    penalty_collision = -12 if (d_agent_kitchen_island < 0.7) else 15 \n    reward_reaching_goal = 20 if (d_agent_goal < 0.2) else -2**d_agent_goal \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def calculate(): \n    return 1"
+    },
+    {
+        "prompt": "A drone navigates inside a Family home, aims to reach a designated goal, and must steer clear of refridgerator by relying on its own state, the refridgerator status, and the goal information. Create a reward function in Python.",
+        "chosen": "def reward(s_agent, s_refrigerator, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_refrigerator = calculate_distance_min(s_agent, s_refrigerator) \n    penalty_collision = -12 if (d_agent_refrigerator < 0.7) else 15 \n    reward_reaching_goal = 20 if (d_agent_goal < 0.2) else -2**d_agent_goal \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def get_answer(s_goal): \n    return goal.position"
+    },
+    {
+        "prompt": "A drone navigates inside a Family home, aims to reach a designated goal, and must steer clear of oven by relying on its own state, the ovens' status, and the goal information. Create a reward function in Python.",
+        "chosen": "def reward(s_agent, s_oven, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_oven = calculate_distance_min(s_agent, s_oven) \n    penalty_collision = -12 if (d_agent_oven < 0.7) else 15 \n    reward_reaching_goal = 20 if (d_agent_goal < 0.2) else -2**d_agent_goal \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def calculate(): \n    return 1"
+    },
+    {
+        "prompt": "A drone navigates inside a Family home, aims to reach a designated goal, and must steer clear of dishwascher by relying on its own state, the dishwasher status, and the goal information. Create a reward function in Python.",
+        "chosen": "def reward(s_agent, s_dishwasher, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_dishwasher = calculate_distance_min(s_agent, s_dishwasher) \n    penalty_collision = -12 if (d_agent_dishwasher < 0.7) else 15 \n    reward_reaching_goal = 20 if (d_agent_goal < 0.2) else -2**d_agent_goal \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def fallback(): \n    return -1"
+    },
+    {
+        "prompt": "A drone navigates inside a Family home, aims to reach a designated goal, and must steer clear of sink counter by relying on its own state, the sink counter's status, and the goal information. Create a reward function in Python.",
+        "chosen": "def reward(s_agent, s_sink_counter, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_sink_counter = calculate_distance_min(s_agent, s_sink_counter) \n    penalty_collision = -12 if (d_agent_sink_counter < 0.7) else 15 \n    reward_reaching_goal = 20 if (d_agent_goal < 0.2) else -2**d_agent_goal \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def calculate(): \n    return 1"
+    },
+    {
+        "prompt": "A drone navigates inside a Family home, aims to reach a designated goal, and must steer clear of bar stool by relying on its own state, the bar stools' status, and the goal information. Create a reward function in Python.",
+        "chosen": "def reward(s_agent, s_bar_stool, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_bar_stool = calculate_distance_min(s_agent, s_bar_stool) \n    penalty_collision = -12 if (d_agent_bar_stool < 0.7) else 15 \n    reward_reaching_goal = 20 if (d_agent_goal < 0.2) else -2**d_agent_goal \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def get_answer(s_goal): \n    return goal.position"
+    },
+    {
+        "prompt": "A drone navigates inside a Family home, aims to reach a designated goal, and must steer clear of shoe rack by relying on its own state, the shoe racks’ status, and the goal information. Create a reward function in Python.",
+        "chosen": "def reward(s_agent, s_shoe_rack, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_shoe_rack = calculate_distance_min(s_agent, s_shoe_rack) \n    penalty_collision = -12 if (d_agent_shoe_rack < 0.7) else 15 \n    reward_reaching_goal = 20 if (d_agent_goal < 0.2) else -2**d_agent_goal \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def fallback(): \n    return -1"
+    },
+    {
+        "prompt": "A drone navigates inside a Family home, aims to reach a designated goal, and must steer clear of coat rack by relying on its own state, the coat rack’ status, and the goal information. Create a reward function in Python.",
+        "chosen": "def reward(s_agent, s_coat_rack, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_coat_rack = calculate_distance_min(s_agent, s_coat_rack) \n    penalty_collision = -12 if (d_agent_coat_rack < 0.7) else 15 \n    reward_reaching_goal = 20 if (d_agent_goal < 0.2) else -2**d_agent_goal \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def fallback(): \n    return -1"
+    },
+    {
+        "prompt": "A drone navigates inside a Family home, aims to reach a designated goal, and must steer clear of laundry basket by relying on its own state, the laundry baskets’ status, and the goal information. Create a reward function in Python.",
+        "chosen": "def reward(s_agent, s_laundry_basket, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_laundry_basket = calculate_distance_min(s_agent, s_laundry_basket) \n    penalty_collision = -12 if (d_agent_laundry_basket < 0.7) else 15 \n    reward_reaching_goal = 20 if (d_agent_goal < 0.2) else -2**d_agent_goal \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def rejected_fn(): \n    return 0"
+    },
+    {
+        "prompt": "A drone navigates inside a Family home, aims to reach a designated goal, and must steer clear of drying rack by relying on its own state, the drying racks’ status, and the goal information. Create a reward function in Python.",
+        "chosen": "def reward(s_agent, s_drying_rack, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_drying_rack = calculate_distance_min(s_agent, s_drying_rack) \n    penalty_collision = -12 if (d_agent_drying_rack < 0.7) else 15 \n    reward_reaching_goal = 20 if (d_agent_goal < 0.2) else -2**d_agent_goal \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def reward_object(): \n   punshiment = 100\n   return punshiment \n    def price(): \n    price = 10\n    return price"
+    },
+    {
+        "prompt": "A drone navigates inside a Family home, aims to reach a designated goal, and must steer clear of staircase by relying on its own state, the staircases’ status, and the goal information. Create a reward function in Python.",
+        "chosen": "def reward(s_agent, s_staircase, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_staircase = calculate_distance_min(s_agent, s_staircase) \n    penalty_collision = -12 if (d_agent_staircase < 0.7) else 15 \n    reward_reaching_goal = 20 if (d_agent_goal < 0.2) else -2**d_agent_goal \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def rejected_fn(): \n    return 0"
+    },
+    {
+        "prompt": "A drone navigates inside a Family home, aims to reach a designated goal, and must steer clear of baby gate by relying on its own state, the baby gate’ status, and the goal information. Create a reward function in Python.",
+        "chosen": "def reward(s_agent, s_baby_gate, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_baby_gate = calculate_distance_min(s_agent, s_baby_gate) \n    penalty_collision = -12 if (d_agent_baby_gate < 0.7) else 15 \n    reward_reaching_goal = 20 if (d_agent_goal < 0.2) else -2**d_agent_goal \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def reward_object(): \n   punshiment = 100\n   return punshiment \n    def price(): \n    price = 10\n    return price"
+    },
+    {
+        "prompt": "A drone navigates inside a Family home, aims to reach a designated goal, and must steer clear of sofa by relying on its own state, the sofas’ status, and the goal information. Create a reward function in Python.",
+        "chosen": "def reward(s_agent, s_pet_bed, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_pet_bed = calculate_distance_min(s_agent, s_pet_bed) \n    penalty_collision = -12 if (d_agent_pet_bed < 0.7) else 15 \n    reward_reaching_goal = 20 if (d_agent_goal < 0.2) else -2**d_agent_goal \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def calculate(): \n    return 1"
+    },
+    {
+        "prompt": "A drone navigates inside a Family home, aims to reach a designated goal, and must steer clear of toy box by relying on its own state, the toy box’ status, and the goal information. Create a reward function in Python.",
+        "chosen": "def reward(s_agent, s_toy_box, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_toy_box = calculate_distance_min(s_agent, s_toy_box) \n    penalty_collision = -12 if (d_agent_toy_box < 0.7) else 15 \n    reward_reaching_goal = 20 if (d_agent_goal < 0.2) else -2**d_agent_goal \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def get_answer(s_goal): \n    return goal.position"
+    },
+    {
+        "prompt": "A drone navigates inside a Family home, aims to reach a designated goal, and must steer clear of staircase and baby gate by relying on its own state, the multiple obstcales’ status: staircase and baby gate, and the goal information. Create a reward function in Python.",
+        "chosen": "def reward(s_agent, s_multiple_obstacles, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_multiple_obstacles_min = calculate_distance_min(s_agent, s_multiple_obstacles) \n    penalty_collision = -20 if (d_agent_multiple_obstacles_min < 0.8) else 10 \n    reward_reaching_goal = 12 if (d_agent_goal < 0.3) else -2**d_agent_goal \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def reward_to_family(): \n    if goal == 'true': \n    return 10 \n    else: \n    return -10"
+    },
+    {
+        "prompt": "A drone navigates inside a Family home, aims to reach a designated goal, and must steer clear of dining table, high chair and toy box by relying on its own state, the multiple obstcales’ status: dining table, high chair and toy box, and the goal information. Create a reward function in Python.",
+        "chosen": "def reward(s_agent, s_multiple_obstacles, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_multiple_obstacles_min = calculate_distance_min(s_agent, s_multiple_obstacles) \n    penalty_collision = -20 if (d_agent_multiple_obstacles_min < 0.8) else 10 \n    reward_reaching_goal = 12 if (d_agent_goal < 0.3) else -2**d_agent_goal \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def rejected_fn(): \n    return 0"
+    },
+    {
+        "prompt": "A drone navigates inside a Family home, aims to reach a designated goal, and must steer clear of kitchen island, bar stool and pet bed by relying on its own state, the multiple obstcales’ status: kitchen island, bar stool and pet bed, and the goal information. Create a reward function in Python.",
+        "chosen": "def reward(s_agent, s_multiple_obstacles, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_multiple_obstacles_min = calculate_distance_min(s_agent, s_multiple_obstacles) \n    penalty_collision = -20 if (d_agent_multiple_obstacles_min < 0.8) else 10 \n    reward_reaching_goal = 12 if (d_agent_goal < 0.3) else -2**d_agent_goal \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def reward_object(): \n   punshiment = 100\n   return punshiment \n    def price(): \n    price = 10\n    return price"
+    },
+    {
+        "prompt": "A drone navigates inside a Family home, aims to reach a designated goal, and must steer clear of shoe rack and umbrella stand by relying on its own state, the multiple obstcales’ status: shoe rack and umbrella stand, and the goal information. Create a reward function in Python.",
+        "chosen": "def reward(s_agent, s_multiple_obstacles, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_multiple_obstacles_min = calculate_distance_min(s_agent, s_multiple_obstacles) \n    penalty_collision = -20 if (d_agent_multiple_obstacles_min < 0.8) else 10 \n    reward_reaching_goal = 12 if (d_agent_goal < 0.3) else -2**d_agent_goal \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def get_answer(s_goal): \n    return goal.position"
+    },
+    {
+        "prompt": "Inside a stray animals collection, a drone must navigate toward a goal while avoiding crashes into the kennel gate, relying on its state, the kennel gate’ positions, and goal data. Design a reward function using Python.",
+        "chosen": "def reward(s_agent, s_kennel_gate, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_kennel_gate = calculate_distance_min(s_agent, s_kennel_gate) \n    penalty_collision = -20 if (d_agent_kennel_gate < 0.6) else 10 \n    reward_reaching_goal = 15 if (d_agent_goal < 0.2) else -3*d_agent_goal \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def nothing(): \n    pass"
+    },
+    {
+        "prompt": "Inside a stray animals collection, a drone must navigate toward a goal while avoiding crashes into the cage door, relying on its state, the cage door’ positions, and goal data. Design a reward function using Python.",
+        "chosen": "def reward(s_agent, s_cage_door, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_cage_door = calculate_distance_min(s_agent, s_cage_door) \n    penalty_collision = -20 if (d_agent_cage_door < 0.6) else 10 \n    reward_reaching_goal = 15 if (d_agent_goal < 0.2) else -3*d_agent_goal \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def nothing(): \n    pass"
+    },
+    {
+        "prompt": "Inside a stray animals collection, a drone must navigate toward a goal while avoiding crashes into the transport crate, relying on its state, the transport crate’ positions, and goal data. Design a reward function using Python.",
+        "chosen": "def reward(s_agent, s_transport_crate, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_transport_crate = calculate_distance_min(s_agent, s_transport_crate) \n    penalty_collision = -20 if (d_agent_transport_crate < 0.6) else 10 \n    reward_reaching_goal = 15 if (d_agent_goal < 0.2) else -3*d_agent_goal \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def calculate(): \n    return 1"
+    },
+    {
+        "prompt": "Inside a stray animals collection, a drone must navigate toward a goal while avoiding crashes into the leash pole, relying on its state, the leash pole’ positions, and goal data. Design a reward function using Python.",
+        "chosen": "def reward(s_agent, s_leash_pole, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_leash_pole = calculate_distance_min(s_agent, s_leash_pole) \n    penalty_collision = -20 if (d_agent_leash_pole < 0.6) else 10 \n    reward_reaching_goal = 15 if (d_agent_goal < 0.2) else -3*d_agent_goal \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def alt(): \n    return 42"
+    },
+    {
+        "prompt": "Inside a stray animals collection, a drone must navigate toward a goal while avoiding crashes into the feeding stand, relying on its state, the feeding stand’ positions, and goal data. Design a reward function using Python.",
+        "chosen": "def reward(s_agent, s_feeding_stand, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_feeding_stand = calculate_distance_min(s_agent, s_feeding_stand) \n    penalty_collision = -20 if (d_agent_feeding_stand < 0.6) else 10 \n    reward_reaching_goal = 15 if (d_agent_goal < 0.2) else -3*d_agent_goal \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def alt(): \n    return 42"
+    },
+    {
+        "prompt": "Inside a stray animals collection, a drone must navigate toward a goal while avoiding crashes into the water trough, relying on its state, the water trough’ positions, and goal data. Design a reward function using Python.",
+        "chosen": "def reward(s_agent, s_water_trough, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_water_trough = calculate_distance_min(s_agent, s_water_trough) \n    penalty_collision = -20 if (d_agent_water_trough < 0.6) else 10 \n    reward_reaching_goal = 15 if (d_agent_goal < 0.2) else -3*d_agent_goal \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def reward_to_animal(): \n    if goal == 'true': \n    return 10 \n    else: \n    return -10"
+    },
+    {
+        "prompt": "Inside a stray animals collection, a drone must navigate toward a goal while avoiding crashes into the litter box station, relying on its state, the litter box station’ positions, and goal data. Design a reward function using Python.",
+        "chosen": "def reward(s_agent, s_litter_box_station, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_litter_box_station = calculate_distance_min(s_agent, s_litter_box_station) \n    penalty_collision = -20 if (d_agent_litter_box_station < 0.6) else 10 \n    reward_reaching_goal = 15 if (d_agent_goal < 0.2) else -3*d_agent_goal \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def get_answer(s_goal): \n    return goal.position"
+    },
+    {
+        "prompt": "Inside a stray animals collection, a drone must navigate toward a goal while avoiding crashes into the cat_tree, relying on its state, the cat tree’ positions, and goal data. Design a reward function using Python..",
+        "chosen": "def reward(s_agent, s_cat_tree, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_cat_tree = calculate_distance_min(s_agent, s_cat_tree) \n    penalty_collision = -20 if (d_agent_cat_tree < 0.6) else 10 \n    reward_reaching_goal = 15 if (d_agent_goal < 0.2) else -3*d_agent_goal \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def reward_object(): \n   punshiment = 100\n   return punshiment \n    def price(): \n    price = 10\n    return price"
+    },
+    {
+        "prompt": "Inside a stray animals collection, a drone must navigate toward a goal while avoiding crashes into the scratching post, relying on its state, the scratching post’ positions, and goal data. Design a reward function using Python.",
+        "chosen": "def reward(s_agent, s_scratching_post, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_scratching_post = calculate_distance_min(s_agent, s_scratching_post) \n    penalty_collision = -20 if (d_agent_scratching_post < 0.6) else 10 \n    reward_reaching_goal = 15 if (d_agent_goal < 0.2) else -3*d_agent_goal \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def nothing(): \n    pass"
+    },
+    {
+        "prompt": "Inside a stray animals collection, a drone must navigate toward a goal while avoiding crashes into the exam table, relying on its state, the exam table’ positions, and goal data. Design a reward function using Python.",
+        "chosen": "def reward(s_agent, s_exam_table, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_exam_table = calculate_distance_min(s_agent, s_exam_table) \n    penalty_collision = -20 if (d_agent_exam_table < 0.6) else 10 \n    reward_reaching_goal = 15 if (d_agent_goal < 0.2) else -3*d_agent_goal \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def rejected_fn(): \n    return 0"
+    },
+    {
+        "prompt": "Inside a stray animals collection, a drone must navigate toward a goal while avoiding crashes into the chip scanner station, relying on its state, the chip scanner station’ positions, and goal data. Design a reward function using Python.",
+        "chosen": "def reward(s_agent, s_chip_scanner_station, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_chip_scanner_station = calculate_distance_min(s_agent, s_chip_scanner_station) \n    penalty_collision = -20 if (d_agent_chip_scanner_station < 0.6) else 10 \n    reward_reaching_goal = 15 if (d_agent_goal < 0.2) else -3*d_agent_goal \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def calculate(): \n    return 1"
+    },
+    {
+        "prompt": "Inside a stray animals collection, a drone must navigate toward a goal while avoiding crashes into the vaccination cart, relying on its state, the vaccination cart’ positions, and goal data. Design a reward function using Python.",
+        "chosen": "def reward(s_agent, s_vaccination_cart, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_vaccination_cart = calculate_distance_min(s_agent, s_vaccination_cart) \n    penalty_collision = -20 if (d_agent_vaccination_cart < 0.6) else 10 \n    reward_reaching_goal = 15 if (d_agent_goal < 0.2) else -3*d_agent_goal \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def get_answer(s_goal): \n    return goal.position"
+    },
+    {
+        "prompt": "Inside a stray animals collection, a drone must navigate toward a goal while avoiding crashes into the scale platform, relying on its state, the scale platform’ positions, and goal data. Design a reward function using Python.",
+        "chosen": "def reward(s_agent, s_scale_platform, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_scale_platform = calculate_distance_min(s_agent, s_scale_platform) \n    penalty_collision = -20 if (d_agent_scale_platform < 0.6) else 10 \n    reward_reaching_goal = 15 if (d_agent_goal < 0.2) else -3*d_agent_goal \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def reward_env(): \n   punshiment = 100\n   return punshiment \n    def obstacles(): \n    price = 10\n    return price"
+    },
+    {
+        "prompt": "Inside a stray animals collection, a drone must navigate toward a goal while avoiding crashes into the quarantine door, relying on its state, the quarantine door’ positions, and goal data. Design a reward function using Python.",
+        "chosen": "def reward(s_agent, s_quarantine_door, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_quarantine_door = calculate_distance_min(s_agent, s_quarantine_door) \n    penalty_collision = -20 if (d_agent_quarantine_door < 0.6) else 10 \n    reward_reaching_goal = 15 if (d_agent_goal < 0.2) else -3*d_agent_goal \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def reward_object(): \n   punshiment = 100\n   return punshiment \n    def price(): \n    price = 10\n    return price"
+    },
+    {
+        "prompt": "Inside a stray animals collection, a drone must navigate toward a goal while avoiding crashes into the isolation cage, relying on its state, the isolation cage’ positions, and goal data. Design a reward function using Python.",
+        "chosen": "def reward(s_agent, s_isolation_cage, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_isolation_cage = calculate_distance_min(s_agent, s_isolation_cage) \n    penalty_collision = -20 if (d_agent_isolation_cage < 0.6) else 10 \n    reward_reaching_goal = 15 if (d_agent_goal < 0.2) else -3*d_agent_goal \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def reward_object(): \n   punshiment = 100\n   return punshiment \n    def price(): \n    price = 10\n    return price"
+    },
+    {
+        "prompt": "Inside a stray animals collection, a drone must navigate toward a goal while avoiding crashes into the playpen fence, relying on its state, the playpen fence’ positions, and goal data. Design a reward function using Python.",
+        "chosen": "def reward(s_agent, s_playpen_fence, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_playpen_fence = calculate_distance_min(s_agent, s_playpen_fence) \n    penalty_collision = -20 if (d_agent_playpen_fence < 0.6) else 10 \n    reward_reaching_goal = 15 if (d_agent_goal < 0.2) else -3*d_agent_goal \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def nothing(): \n    pass"
+    },
+    {
+        "prompt": "Inside a stray animals collection, a drone must navigate toward a goal while avoiding crashes into the hose reel, relying on its state, the hose reel’ positions, and goal data. Design a reward function using Python.",
+        "chosen": "def reward(s_agent, s_hose_reel, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_hose_reel = calculate_distance_min(s_agent, s_hose_reel) \n    penalty_collision = -20 if (d_agent_hose_reel < 0.6) else 10 \n    reward_reaching_goal = 15 if (d_agent_goal < 0.2) else -3*d_agent_goal \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def reward_to_animal(): \n    if goal == 'true': \n    return 10 \n    else: \n    return -10"
+    },
+    {
+        "prompt": "Inside a stray animals collection, a drone must navigate toward a goal while avoiding crashes into the laundry cart, relying on its state, the laundry cart’ positions, and goal data. Design a reward function using Python.",
+        "chosen": "def reward(s_agent, s_laundry_cart, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_laundry_cart = calculate_distance_min(s_agent, s_laundry_cart) \n    penalty_collision = -20 if (d_agent_laundry_cart < 0.6) else 10 \n    reward_reaching_goal = 15 if (d_agent_goal < 0.2) else -3*d_agent_goal \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def rejected_fn(): \n    return 0"
+    },
+    {
+        "prompt": "Inside a stray animals collection, a drone must navigate toward a goal while avoiding crashes into the wet floor sign, relying on its state, the wet floor sign’ positions, and goal data. Design a reward function using Python.",
+        "chosen": "def reward(s_agent, s_wet_floor_sign, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_wet_floor_sign = calculate_distance_min(s_agent, s_wet_floor_sign) \n    penalty_collision = -20 if (d_agent_wet_floor_sign < 0.6) else 10 \n    reward_reaching_goal = 15 if (d_agent_goal < 0.2) else -3*d_agent_goal \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def rejected_fn(): \n    return 0"
+    },
+    {
+        "prompt": "Inside a stray animals collection, a drone must navigate toward a goal while avoiding crashes into the biohazard bin, relying on its state, the biohazard bin’ positions, and goal data. Design a reward function using Python.",
+        "chosen": "def reward(s_agent, s_biohazard_bin, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_biohazard_bin = calculate_distance_min(s_agent, s_biohazard_bin) \n    penalty_collision = -20 if (d_agent_biohazard_bin < 0.6) else 10 \n    reward_reaching_goal = 15 if (d_agent_goal < 0.2) else -3*d_agent_goal \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def reward_to_animal(): \n    if goal == 'true': \n    return 10 \n    else: \n    return -10"
+    },
+    {
+        "prompt": "Inside a stray animals collection, a drone must navigate toward a goal while avoiding crashes into the waste bin, relying on its state, the waste bin’ positions, and goal data. Design a reward function using Python.",
+        "chosen": "def reward(s_agent, s_waste_bin, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_waste_bin = calculate_distance_min(s_agent, s_waste_bin) \n    penalty_collision = -20 if (d_agent_waste_bin < 0.6) else 10 \n    reward_reaching_goal = 15 if (d_agent_goal < 0.2) else -3*d_agent_goal \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def rejected_fn(): \n    return 0"
+    },
+    {
+        "prompt": "Inside a stray animals collection, a drone must navigate toward a goal while avoiding crashes into the kennel gate,playpen fence abd leash pole, relying on its state, the multiple obstacles’ positions, and goal data. Design a reward function using Python.",
+        "chosen": "def reward(s_agent, s_multiple_obstacles, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_multiple_obstacles_min = calculate_distance_min(s_agent, s_multiple_obstacles) \n    penalty_collision = -20 if (d_agent_multiple_obstacles_min < 0.9) else 10 \n    reward_reaching_goal = 20 if (d_agent_goal < 0.15) else -3*d_agent_goal \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def reward_object(): \n   punshiment = 100\n   return punshiment \n    def price(): \n    price = 10\n    return price"
+    },
+    {
+        "prompt": "Inside a stray animals collection, a drone must navigate toward a goal while avoiding crashes into the transport crate and vaccination cart, relying on its state, the multiple obstacles’ positions, and goal data. Design a reward function using Python.",
+        "chosen": "def reward(s_agent, s_multiple_obstacles, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_multiple_obstacles_min = calculate_distance_min(s_agent, s_multiple_obstacles) \n    penalty_collision = -20 if (d_agent_multiple_obstacles_min < 0.9) else 10 \n    reward_reaching_goal = 20 if (d_agent_goal < 0.15) else -3*d_agent_goal \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def reward_to_animal(): \n    if goal == 'true': \n    return 10 \n    else: \n    return -10"
+    },
+    {
+        "prompt": "Inside a stray animals collection, a drone must navigate toward a goal while avoiding crashes into the exam table, micrchip station and scale platform, relying on its state, the multiple obstacles’ positions, and goal data. Design a reward function using Python.",
+        "chosen": "def reward(s_agent, s_multiple_obstacles, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_multiple_obstacles_min = calculate_distance_min(s_agent, s_multiple_obstacles) \n    penalty_collision = -20 if (d_agent_multiple_obstacles_min < 0.9) else 10 \n    reward_reaching_goal = 20 if (d_agent_goal < 0.15) else -3*d_agent_goal \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def reward_env(): \n   punshiment = 100\n   return punshiment \n    def obstacles(): \n    price = 10\n    return price"
+    },
+    {
+        "prompt": "Inside a stray animals collection, a drone must navigate toward a goal while avoiding crashes into the quarantine room door and isolation chip relying on its state, the multiple obstacles’ positions, and goal data. Design a reward function using Python.",
+        "chosen": "def reward(s_agent, s_multiple_obstacles, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_multiple_obstacles_min = calculate_distance_min(s_agent, s_multiple_obstacles) \n    penalty_collision = -20 if (d_agent_multiple_obstacles_min < 0.9) else 10 \n    reward_reaching_goal = 20 if (d_agent_goal < 0.15) else -3*d_agent_goal \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def alt(): \n    return 42"
+    },
+    {
+        "prompt": "A drone is inspecting in Toys 'R' Us. It must avoid colliding with the toy shelf. Agent's state, goal's state and toy shelf's state are accessible. Write a reward function in Python.",
+        "chosen": "def reward(s_agent, s_toy_shelf, s_goal): \n    dist_goal = calculate_distance(s_agent, s_goal) \n    d_agent_toy_shelf = calculate_distance_min(s_agent, s_toy_shelf) \n    penalty_collision = -28 if (d_agent_toy_shelf < 0.7) else 29 \n    reward_reaching_goal = 40 if (dist_goal < 0.2) else -math.exp(dist_goal) \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def nothing(): \n    pass"
+    },
+    {
+        "prompt": "A drone is inspecting in Toys 'R' Us. It must avoid colliding with the plush bin. Agent's state, goal's state and plush bin's state are accessible. Write a reward function in Python.",
+        "chosen": "def reward(s_agent, s_plush_bin, s_goal): \n    dist_goal = calculate_distance(s_agent, s_goal) \n    d_agent_plush_bin = calculate_distance_min(s_agent, s_plush_bin) \n    penalty_collision = -28 if (d_agent_plush_bin < 0.7) else 29 \n    reward_reaching_goal = 40 if (dist_goal < 0.2) else -math.exp(dist_goal) \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def reward_to_toy(): \n    if goal == 'true': \n    return 10 \n    else: \n    return -10"
+    },
+    {
+        "prompt": "A drone is inspecting in Toys 'R' Us. It must avoid colliding with the action figure rack. Agent's state, goal's state and action figure rack's state are accessible. Write a reward function in Python.",
+        "chosen": "def reward(s_agent, s_action_figure_rack, s_goal): \n    dist_goal = calculate_distance(s_agent, s_goal) \n    d_agent_action_figure_rack = calculate_distance_min(s_agent, s_action_figure_rack) \n    penalty_collision = -28 if (d_agent_action_figure_rack < 0.7) else 29 \n    reward_reaching_goal = 40 if (dist_goal < 0.2) else -math.exp(dist_goal) \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def nothing(): \n    pass"
+    },
+    {
+        "prompt": "A drone is inspecting in Toys 'R' Us. It must avoid colliding with the doll aisle endcap. Agent's state, goal's state and doll aisle endcap's state are accessible. Write a reward function in Python.",
+        "chosen": "def reward(s_agent, s_doll_endcap, s_goal): \n    dist_goal = calculate_distance(s_agent, s_goal) \n    d_agent_doll_endcap = calculate_distance_min(s_agent, s_doll_endcap) \n    penalty_collision = -28 if (d_agent_doll_endcap < 0.7) else 29 \n    reward_reaching_goal = 40 if (dist_goal < 0.2) else -math.exp(dist_goal) \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def reward_to_toy(): \n    if goal == 'true': \n    return 10 \n    else: \n    return -10"
+    },
+    {
+        "prompt": "A drone is inspecting in Toys 'R' Us. It must avoid colliding with the LEGO display table. Agent's state, goal's state and LEGO display table's state are accessible. Write a reward function in Python.",
+        "chosen": "def reward(s_agent, s_lego_display_table, s_goal): \n    dist_goal = calculate_distance(s_agent, s_goal) \n    d_agent_lego_display_table = calculate_distance_min(s_agent, s_lego_display_table) \n    penalty_collision = -28 if (d_agent_lego_display_table < 0.7) else 29 \n    reward_reaching_goal = 40 if (dist_goal < 0.2) else -math.exp(dist_goal) \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def reward_to_toy(): \n    if goal == 'true': \n    return 10 \n    else: \n    return -10"
+    },
+    {
+        "prompt": "A drone is inspecting in Toys 'R' Us. It must avoid colliding with the RC drone demo cage. Agent's state, goal's state and RC drone demo cage's state are accessible. Write a reward function in Python.",
+        "chosen": "def reward(s_agent, s_rc_demo_cage, s_goal): \n    dist_goal = calculate_distance(s_agent, s_goal) \n    d_agent_rc_demo_cage = calculate_distance_min(s_agent, s_rc_demo_cage) \n    penalty_collision = -28 if (d_agent_rc_demo_cage < 0.7) else 29 \n    reward_reaching_goal = 40 if (dist_goal < 0.2) else -math.exp(dist_goal) \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def reward_object(): \n   punshiment = 100\n   return punshiment \n    def price(): \n    price = 10\n    return price"
+    },
+    {
+        "prompt": "A drone is inspecting in Toys 'R' Us. It must avoid colliding with the ride-on car display. Agent's state, goal's state and ride-on car display's state are accessible. Write a reward function in Python.",
+        "chosen": "def reward(s_agent, s_rideon_car_display, s_goal): \n    dist_goal = calculate_distance(s_agent, s_goal) \n    d_agent_rideon_car_display = calculate_distance_min(s_agent, s_rideon_car_display) \n    penalty_collision = -28 if (d_agent_rideon_car_display < 0.7) else 29 \n    reward_reaching_goal = 40 if (dist_goal < 0.2) else -math.exp(dist_goal) \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def reward_to_toy(): \n    if goal == 'true': \n    return 10 \n    else: \n    return -10"
+    },
+    {
+        "prompt": "A drone is inspecting in Toys 'R' Us. It must avoid colliding with the video game demo kiosk. Agent's state, goal's state and video game demo kiosk's state are accessible. Write a reward function in Python.",
+        "chosen": "def reward(s_agent, s_game_kiosk, s_goal): \n    dist_goal = calculate_distance(s_agent, s_goal) \n    d_agent_game_kiosk = calculate_distance_min(s_agent, s_game_kiosk) \n    penalty_collision = -28 if (d_agent_game_kiosk < 0.7) else 29 \n    reward_reaching_goal = 40 if (dist_goal < 0.2) else -math.exp(dist_goal) \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def calculate(): \n    return 1"
+    },
+    {
+        "prompt": "A drone is inspecting in Toys 'R' Us. It must avoid colliding with the board game stack. Agent's state, goal's state and board game stack's state are accessible. Write a reward function in Python.",
+        "chosen": "def reward(s_agent, s_board_game_stack, s_goal): \n    dist_goal = calculate_distance(s_agent, s_goal) \n    d_agent_board_game_stack = calculate_distance_min(s_agent, s_board_game_stack) \n    penalty_collision = -28 if (d_agent_board_game_stack < 0.7) else 29 \n    reward_reaching_goal = 40 if (dist_goal < 0.2) else -math.exp(dist_goal) \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def get_answer(s_goal): \n    return goal.position"
+    },
+    {
+        "prompt": "A drone is inspecting in Toys 'R' Us. It must avoid colliding with the checkout counter. Agent's state, goal's state and checkout counter's state are accessible. Write a reward function in Python.",
+        "chosen": "def reward(s_agent, s_checkout_counter, s_goal): \n    dist_goal = calculate_distance(s_agent, s_goal) \n    d_agent_checkout_counter = calculate_distance_min(s_agent, s_checkout_counter) \n    penalty_collision = -28 if (d_agent_checkout_counter < 0.7) else 29 \n    reward_reaching_goal = 40 if (dist_goal < 0.2) else -math.exp(dist_goal) \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def reward_object(): \n   punshiment = 100\n   return punshiment \n    def price(): \n    price = 10\n    return price"
+    },
+    {
+        "prompt": "A drone is inspecting in Toys 'R' Us. It must avoid colliding with the queue stanchion. Agent's state, goal's state and queue stanchion's state are accessible. Write a reward function in Python.",
+        "chosen": "def reward(s_agent, s_queue_stanchion, s_goal): \n    dist_goal = calculate_distance(s_agent, s_goal) \n    d_agent_queue_stanchion = calculate_distance_min(s_agent, s_queue_stanchion) \n    penalty_collision = -28 if (d_agent_queue_stanchion < 0.7) else 29 \n    reward_reaching_goal = 40 if (dist_goal < 0.2) else -math.exp(dist_goal) \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def fallback(): \n    return -1"
+    },
+    {
+        "prompt": "A drone is inspecting in Toys 'R' Us. It must avoid colliding with the gift wrap station. Agent's state, goal's state and gift wrap station's state are accessible. Write a reward function in Python.",
+        "chosen": "def reward(s_agent, s_gift_wrap_station, s_goal): \n    dist_goal = calculate_distance(s_agent, s_goal) \n    d_agent_gift_wrap_station = calculate_distance_min(s_agent, s_gift_wrap_station) \n    penalty_collision = -28 if (d_agent_gift_wrap_station < 0.7) else 29 \n    reward_reaching_goal = 40 if (dist_goal < 0.2) else -math.exp(dist_goal) \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def rejected_fn(): \n    return 0"
+    },
+    {
+        "prompt": "A drone is inspecting in Toys 'R' Us. It must avoid colliding with the balloon tank. Agent's state, goal's state and balloon tank's state are accessible. Write a reward function in Python.",
+        "chosen": "def reward(s_agent, s_balloon_tank, s_goal): \n    dist_goal = calculate_distance(s_agent, s_goal) \n    d_agent_balloon_tank = calculate_distance_min(s_agent, s_balloon_tank) \n    penalty_collision = -28 if (d_agent_balloon_tank < 0.7) else 29 \n    reward_reaching_goal = 40 if (dist_goal < 0.2) else -math.exp(dist_goal) \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def fallback(): \n    return -1"
+    },
+    {
+        "prompt": "A drone is inspecting in Toys 'R' Us. It must avoid colliding with the floor signage stand. Agent's state, goal's state and floor signage stand's state are accessible. Write a reward function in Python.",
+        "chosen": "def reward(s_agent, s_floor_signage_stand, s_goal): \n    dist_goal = calculate_distance(s_agent, s_goal) \n    d_agent_floor_signage_stand = calculate_distance_min(s_agent, s_floor_signage_stand) \n    penalty_collision = -28 if (d_agent_floor_signage_stand < 0.7) else 29 \n    reward_reaching_goal = 40 if (dist_goal < 0.2) else -math.exp(dist_goal) \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def alt(): \n    return 42"
+    },
+    {
+        "prompt": "A drone is inspecting in Toys 'R' Us. It must avoid colliding with the hanging banner. Agent's state, goal's state and hanging banner's state are accessible. Write a reward function in Python.",
+        "chosen": "def reward(s_agent, s_hanging_banner, s_goal): \n    dist_goal = calculate_distance(s_agent, s_goal) \n    d_agent_hanging_banner = calculate_distance_min(s_agent, s_hanging_banner) \n    penalty_collision = -28 if (d_agent_hanging_banner < 0.7) else 29 \n    reward_reaching_goal = 40 if (dist_goal < 0.2) else -math.exp(dist_goal) \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def nothing(): \n    pass"
+    },
+    {
+        "prompt": "A drone is inspecting in Toys 'R' Us. It must avoid colliding with the gashapon machine. Agent's state, goal's state and gashapon machine's state are accessible. Write a reward function in Python.",
+        "chosen": "def reward(s_agent, s_gashapon_machine, s_goal): \n    dist_goal = calculate_distance(s_agent, s_goal) \n    d_agent_gashapon_machine = calculate_distance_min(s_agent, s_gashapon_machine) \n    penalty_collision = -28 if (d_agent_gashapon_machine < 0.7) else 29 \n    reward_reaching_goal = 40 if (dist_goal < 0.2) else -math.exp(dist_goal) \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def calculate(): \n    return 1"
+    },
+    {
+        "prompt": "A drone is inspecting in Toys 'R' Us. It must avoid colliding with the claw machine. Agent's state, goal's state and claw machine's state are accessible. Write a reward function in Python.",
+        "chosen": "def reward(s_agent, s_claw_machine, s_goal): \n    dist_goal = calculate_distance(s_agent, s_goal) \n    d_agent_claw_machine = calculate_distance_min(s_agent, s_claw_machine) \n    penalty_collision = -28 if (d_agent_claw_machine < 0.7) else 29 \n    reward_reaching_goal = 40 if (dist_goal < 0.2) else -math.exp(dist_goal) \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def calculate(): \n    return 1"
+    },
+    {
+        "prompt": "A drone is inspecting in Toys 'R' Us. It must avoid colliding with the stroller parking rack. Agent's state, goal's state and stroller parking rack's state are accessible. Write a reward function in Python.",
+        "chosen": "def reward(s_agent, s_stroller_parking, s_goal): \n    dist_goal = calculate_distance(s_agent, s_goal) \n    d_agent_stroller_parking = calculate_distance_min(s_agent, s_stroller_parking) \n    penalty_collision = -28 if (d_agent_stroller_parking < 0.7) else 29 \n    reward_reaching_goal = 40 if (dist_goal < 0.2) else -math.exp(dist_goal) \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def get_answer(s_goal): \n    return goal.position"
+    },
+    {
+        "prompt": "A drone is inspecting in Toys 'R' Us. It must avoid colliding with the shopping cart. Agent's state, goal's state and shopping cart's state are accessible. Write a reward function in Python.",
+        "chosen": "def reward(s_agent, s_shopping_cart, s_goal): \n    dist_goal = calculate_distance(s_agent, s_goal) \n    d_agent_shopping_cart = calculate_distance_min(s_agent, s_shopping_cart) \n    penalty_collision = -28 if (d_agent_shopping_cart < 0.7) else 29 \n    reward_reaching_goal = 40 if (dist_goal < 0.2) else -math.exp(dist_goal) \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def reward_object(): \n   punshiment = 100\n   return punshiment \n    def price(): \n    price = 10\n    return price"
+    },
+    {
+        "prompt": "A drone is inspecting in Toys 'R' Us. It must avoid colliding with the customer service desk. Agent's state, goal's state and customer service desk's state are accessible. Write a reward function in Python.",
+        "chosen": "def reward(s_agent, s_customer_service_desk, s_goal): \n    dist_goal = calculate_distance(s_agent, s_goal) \n    d_agent_customer_service_desk = calculate_distance_min(s_agent, s_customer_service_desk) \n    penalty_collision = -28 if (d_agent_customer_service_desk < 0.7) else 29 \n    reward_reaching_goal = 40 if (dist_goal < 0.2) else -math.exp(dist_goal) \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def rejected_fn(): \n    return 0"
+    },
+    {
+        "prompt": "A drone is inspecting in Toys 'R' Us. It must avoid colliding with the stock pallet. Agent's state, goal's state and stock pallet's state are accessible. Write a reward function in Python.",
+        "chosen": "def reward(s_agent, s_stock_pallet, s_goal): \n    dist_goal = calculate_distance(s_agent, s_goal) \n    d_agent_stock_pallet = calculate_distance_min(s_agent, s_stock_pallet) \n    penalty_collision = -28 if (d_agent_stock_pallet < 0.7) else 29 \n    reward_reaching_goal = 40 if (dist_goal < 0.2) else -math.exp(dist_goal) \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def reward_env(): \n   punshiment = 100\n   return punshiment \n    def obstacles(): \n    price = 10\n    return price"
+    },
+    {
+        "prompt": "Scenario: A drone is navigating Toys 'R' Us. Goal: It must avoid colliding with Toys 'R' Us's toy shelf, checkout counter and queue stanchion. Assumptions: The Agent's state, goal's state and multiple obstacles state: toy shelf, checkout counter, and queue stanchion are available. Instruction: Implement a reward function in Python.",
+        "chosen": "def reward(s_agent, s_multiple_obstacles, s_goal): \n    dist_goal = calculate_distance(s_agent, s_goal) \n    d_agent_multiple_obstacles_min = calculate_distance_min(s_agent, s_multiple_obstacles) \n    penalty_collision = -20 if (d_agent_multiple_obstacles_min < 0.8) else 10 \n    reward_reaching_goal = 28 if (dist_goal < 0.4) else -math.exp(dist_goal) \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def reward_to_toy(): \n    if goal == 'true': \n    return 10 \n    else: \n    return -10"
+    },
+    {
+        "prompt": "Scenario: A drone is navigating Toys 'R' Us. Goal: It must avoid colliding with Toys 'R' Us's RC drone demo cage and LEGO display table. Assumptions: The Agent's state, goal's state and multiple obstacles state: RC drone demo cage, and LEGO display table are available. Instruction: Implement a reward function in Python.",
+        "chosen": "def reward(s_agent, s_multiple_obstacles, s_goal): \n    dist_goal = calculate_distance(s_agent, s_goal) \n    d_agent_multiple_obstacles_min = calculate_distance_min(s_agent, s_multiple_obstacles) \n    penalty_collision = -20 if (d_agent_multiple_obstacles_min < 0.8) else 10 \n    reward_reaching_goal = 28 if (dist_goal < 0.4) else -math.exp(dist_goal) \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def reward_object(): \n   punshiment = 100\n   return punshiment \n    def price(): \n    price = 10\n    return price"
+    },
+    {
+        "prompt": "Scenario: A drone is navigating Toys 'R' Us. Goal: It must avoid colliding with Toys 'R' Us's ride-on car display, stroller parking rack and shopping cart. Assumptions: The Agent's state, goal's state and multiple obstacles state: ride-on car display, stroller parking rack, and shopping cart are available. Instruction: Implement a reward function in Python.",
+        "chosen": "def reward(s_agent, s_multiple_obstacles, s_goal): \n    dist_goal = calculate_distance(s_agent, s_goal) \n    d_agent_multiple_obstacles_min = calculate_distance_min(s_agent, s_multiple_obstacles) \n    penalty_collision = -20 if (d_agent_multiple_obstacles_min < 0.8) else 10 \n    reward_reaching_goal = 28 if (dist_goal < 0.4) else -math.exp(dist_goal) \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def rejected_fn(): \n    return 0"
+    },
+    {
+        "prompt": "Scenario: A drone is navigating Toys 'R' Us. Goal: It must avoid colliding with Toys 'R' Us's video game demo kiosk and floor signage stand. Assumptions: The Agent's state, goal's state and multiple obstacles state: video game demo kiosk, and floor signage stand are available. Instruction: Implement a reward function in Python.",
+        "chosen": "def reward(s_agent, s_multiple_obstacles, s_goal): \n    dist_goal = calculate_distance(s_agent, s_goal) \n    d_agent_multiple_obstacles_min = calculate_distance_min(s_agent, s_multiple_obstacles) \n    penalty_collision = -20 if (d_agent_multiple_obstacles_min < 0.8) else 10 \n    reward_reaching_goal = 28 if (dist_goal < 0.4) else -math.exp(dist_goal) \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def reward_to_toy(): \n    if goal == 'true': \n    return 10 \n    else: \n    return -10"
+    },
+    {
+        "prompt": "While operating in Toys 'R' Us, a drone must avoid crashing into a toy shelf and reaching goal by using the available information about its own state, goal's state and the toy shelf’s state. Design a reward function in Python",
+        "chosen": "def reward(s_agent, s_toy_shelf, s_target): \n    dist_target = calculate_distance(s_agent, s_target) \n    d_agent_toy_shelf = calculate_distance_min(s_agent, s_toy_shelf) \n    penalty_collision = -28 if (d_agent_toy_shelf < 0.7) else 29 \n    reward_reaching_target = 40 if (dist_target < 0.2) else -math.exp(dist_goal) \n    return penalty_collision + reward_reaching_target",
+        "rejected": "def calculate(): \n    return 1"
+    },
+    {
+        "prompt": "While operating in Toys 'R' Us, a drone must avoid crashing into a plush bin and reaching goal by using the available information about its own state, goal's state and the plush bin’s state. Design a reward function in Python",
+        "chosen": "def reward(s_agent, s_plush_bin, s_target): \n    dist_target = calculate_distance(s_agent, s_target) \n    d_agent_plush_bin = calculate_distance_min(s_agent, s_plush_bin) \n    penalty_collision = -28 if (d_agent_plush_bin < 0.7) else 29 \n    reward_reaching_target = 40 if (dist_target < 0.2) else -math.log(dist_target) \n    return penalty_collision + reward_reaching_target",
+        "rejected": "def rejected_fn(): \n    return 0"
+    },
+    {
+        "prompt": "While operating in Toys 'R' Us, a drone must avoid crashing into a action figure rack and reaching goal by using the available information about its own state, goal's state and the action figure rack’s state. Design a reward function in Python",
+        "chosen": "def reward(s_agent, s_action_figure_rack, s_target): \n    dist_target = calculate_distance(s_agent, s_target) \n    d_agent_action_figure_rack = calculate_distance_min(s_agent, s_action_figure_rack) \n    penalty_collision = -28 if (d_agent_action_figure_rack < 0.7) else 29 \n    reward_reaching_target = 40 if (dist_target < 0.2) else -math.log(dist_target) \n    return penalty_collision + reward_reaching_target",
+        "rejected": "def alt(): \n    return 42"
+    },
+    {
+        "prompt": "While operating in Toys 'R' Us, a drone must avoid crashing into a doll endcup and reaching goal by using the available information about its own state, goal's state and the doll endcup’s state. Design a reward function in Python",
+        "chosen": "def reward(s_agent, s_doll_endcap, s_target): \n    dist_target = calculate_distance(s_agent, s_target) \n    d_agent_doll_endcap = calculate_distance_min(s_agent, s_doll_endcap) \n    penalty_collision = -28 if (d_agent_doll_endcap < 0.7) else 29 \n    reward_reaching_target = 40 if (dist_target < 0.2) else -math.log(dist_target) \n    return penalty_collision + reward_reaching_target",
+        "rejected": "def reward_object(): \n   punshiment = 100\n   return punshiment \n    def price(): \n    price = 10\n    return price"
+    },
+    {
+        "prompt": "While operating in Toys 'R' Us, a drone must avoid crashing into a lego display table and reaching goal by using the available information about its own state, goal's state and the lego display table’s state. Design a reward function in Python",
+        "chosen": "def reward(s_agent, s_lego_display_table, s_target): \n    dist_target = calculate_distance(s_agent, s_target) \n    d_agent_lego_display_table = calculate_distance_min(s_agent, s_lego_display_table) \n    penalty_collision = -28 if (d_agent_lego_display_table < 0.7) else 29 \n    reward_reaching_target = 40 if (dist_target < 0.2) else -math.log(dist_target) \n    return penalty_collision + reward_reaching_target",
+        "rejected": "def reward_env(): \n   punshiment = 100\n   return punshiment \n    def obstacles(): \n    price = 10\n    return price"
+    },
+    {
+        "prompt": "While operating in Toys 'R' Us, a drone must avoid crashing into a RC demo cage and reaching goal by using the available information about its own state, goal's state and the RC demo cage’s state. Design a reward function in Python",
+        "chosen": "def reward(s_agent, s_rc_demo_cage, s_target): \n    dist_target = calculate_distance(s_agent, s_target) \n    d_agent_rc_demo_cage = calculate_distance_min(s_agent, s_rc_demo_cage) \n    penalty_collision = -28 if (d_agent_rc_demo_cage < 0.7) else 29 \n    reward_reaching_target = 40 if (dist_target < 0.2) else -math.log(dist_target) \n    return penalty_collision + reward_reaching_target",
+        "rejected": "def nothing(): \n    pass"
+    },
+    {
+        "prompt": "While operating in Toys 'R' Us, a drone must avoid crashing into a rideon car display and reaching goal by using the available information about its own state, goal's state and the rideon car display’s state. Design a reward function in Python",
+        "chosen": "def reward(s_agent, s_rideon_car_display, s_target): \n    dist_target = calculate_distance(s_agent, s_target) \n    d_agent_rideon_car_display = calculate_distance_min(s_agent, s_rideon_car_display) \n    penalty_collision = -28 if (d_agent_rideon_car_display < 0.7) else 29 \n    reward_reaching_target = 40 if (dist_target < 0.2) else -math.log(dist_target) \n    return penalty_collision + reward_reaching_target",
+        "rejected": "def alt(): \n    return 42"
+    },
+    {
+        "prompt": "While operating in Toys 'R' Us, a drone must avoid crashing into a game kiosk and reaching goal by using the available information about its own state, goal's state and the game kiosk’s state. Design a reward function in Python",
+        "chosen": "def reward(s_agent, s_game_kiosk, s_target): \n    dist_target = calculate_distance(s_agent, s_target) \n    d_agent_game_kiosk = calculate_distance_min(s_agent, s_game_kiosk) \n    penalty_collision = -28 if (d_agent_game_kiosk < 0.7) else 29 \n    reward_reaching_target = 40 if (dist_target < 0.2) else -math.log(dist_target) \n    return penalty_collision + reward_reaching_target",
+        "rejected": "def reward_to_toy(): \n    if goal == 'true': \n    return 10 \n    else: \n    return -10"
+    },
+    {
+        "prompt": "While operating in Toys 'R' Us, a drone must avoid crashing into a board game stack and reaching goal by using the available information about its own state, goal's state and the board game stack’s state. Design a reward function in Python",
+        "chosen": "def reward(s_agent, s_board_game_stack, s_target): \n    dist_target = calculate_distance(s_agent, s_target) \n    d_agent_board_game_stack = calculate_distance_min(s_agent, s_board_game_stack) \n    penalty_collision = -28 if (d_agent_board_game_stack < 0.7) else 29 \n    reward_reaching_target = 40 if (dist_target < 0.2) else -math.log(dist_target) \n    return penalty_collision + reward_reaching_target",
+        "rejected": "def reward_object(): \n   punshiment = 100\n   return punshiment \n    def price(): \n    price = 10\n    return price"
+    },
+    {
+        "prompt": "While operating in Toys 'R' Us, a drone must avoid crashing into a checkout counter and reaching goal by using the available information about its own state, goal's state and the checkout counter’s state. Design a reward function in Python",
+        "chosen": "def reward(s_agent, s_checkout_counter, s_target): \n    dist_target = calculate_distance(s_agent, s_target) \n    d_agent_checkout_counter = calculate_distance_min(s_agent, s_checkout_counter) \n    penalty_collision = -28 if (d_agent_checkout_counter < 0.7) else 29 \n    reward_reaching_target = 40 if (dist_target < 0.2) else -math.log(dist_target) \n    return penalty_collision + reward_reaching_target",
+        "rejected": "def reward_env(): \n   punshiment = 100\n   return punshiment \n    def obstacles(): \n    price = 10\n    return price"
+    },
+    {
+        "prompt": "While operating in Toys 'R' Us, a drone must avoid crashing into a queue stanchion and reaching goal by using the available information about its own state, goal's state and the queue stanchion’s state. Design a reward function in Python",
+        "chosen": "def reward(s_agent, s_queue_stanchion, s_target): \n    dist_target = calculate_distance(s_agent, s_target) \n    d_agent_queue_stanchion = calculate_distance_min(s_agent, s_queue_stanchion) \n    penalty_collision = -28 if (d_agent_queue_stanchion < 0.7) else 29 \n    reward_reaching_target = 40 if (dist_target < 0.2) else -math.log(dist_target) \n    return penalty_collision + reward_reaching_target",
+        "rejected": "def alt(): \n    return 42"
+    },
+    {
+        "prompt": "While operating in Toys 'R' Us, a drone must avoid crashing into a gift wrap station and reaching goal by using the available information about its own state, goal's state and the gift wrap station’s state. Design a reward function in Python",
+        "chosen": "def reward(s_agent, s_gift_wrap_station, s_target): \n    dist_target = calculate_distance(s_agent, s_target) \n    d_agent_gift_wrap_station = calculate_distance_min(s_agent, s_gift_wrap_station) \n    penalty_collision = -28 if (d_agent_gift_wrap_station < 0.7) else 29 \n    reward_reaching_target = 40 if (dist_target < 0.2) else -math.log(dist_target) \n    return penalty_collision + reward_reaching_target",
+        "rejected": "def get_answer(s_goal): \n    return goal.position"
+    },
+    {
+        "prompt": "While operating in Toys 'R' Us, a drone must avoid crashing into a ballon tank and reaching goal by using the available information about its own state, goal's state and the ballon tank’s state. Design a reward function in Python",
+        "chosen": "def reward(s_agent, s_balloon_tank, s_target): \n    dist_target = calculate_distance(s_agent, s_target) \n    d_agent_balloon_tank = calculate_distance_min(s_agent, s_balloon_tank) \n    penalty_collision = -28 if (d_agent_balloon_tank < 0.7) else 29 \n    reward_reaching_target = 40 if (dist_target < 0.2) else -math.log(dist_target) \n    return penalty_collision + reward_reaching_target",
+        "rejected": "def get_answer(s_goal): \n    return goal.position"
+    },
+    {
+        "prompt": "While operating in Toys 'R' Us, a drone must avoid crashing into a floor signage stand and reaching goal by using the available information about its own state, goal's state and the floor signage station’s state. Design a reward function in Python",
+        "chosen": "def reward(s_agent, s_floor_signage_stand, s_target): \n    dist_target = calculate_distance(s_agent, s_target) \n    d_agent_floor_signage_stand = calculate_distance_min(s_agent, s_floor_signage_stand) \n    penalty_collision = -28 if (d_agent_floor_signage_stand < 0.7) else 29 \n    reward_reaching_target = 40 if (dist_target < 0.2) else -math.log(dist_target) \n    return penalty_collision + reward_reaching_target",
+        "rejected": "def reward_to_toy(): \n    if goal == 'true': \n    return 10 \n    else: \n    return -10"
+    },
+    {
+        "prompt": "While operating in Toys 'R' Us, a drone must avoid crashing into a hanging banner and reaching goal by using the available information about its own state, goal's state and the hanging banner’s state. Design a reward function in Python",
+        "chosen": "def reward(s_agent, s_hanging_banner, s_target): \n    dist_target = calculate_distance(s_agent, s_target) \n    d_agent_hanging_banner = calculate_distance_min(s_agent, s_hanging_banner) \n    penalty_collision = -28 if (d_agent_hanging_banner < 0.7) else 29 \n    reward_reaching_target = 40 if (dist_target < 0.2) else -math.log(dist_target) \n    return penalty_collision + reward_reaching_target",
+        "rejected": "def reward_object(): \n   punshiment = 100\n   return punshiment \n    def price(): \n    price = 10\n    return price"
+    },
+    {
+        "prompt": "While operating in Toys 'R' Us, a drone must avoid crashing into a gashapon maschine and reaching goal by using the available information about its own state, goal's state and the gashapon maschine’s state. Design a reward function in Python",
+        "chosen": "def reward(s_agent, s_gashapon_machine, s_target): \n    dist_target = calculate_distance(s_agent, s_target) \n    d_agent_gashapon_machine = calculate_distance_min(s_agent, s_gashapon_machine) \n    penalty_collision = -28 if (d_agent_gashapon_machine < 0.7) else 29 \n    reward_reaching_target = 40 if (dist_target < 0.2) else -math.log(dist_target) \n    return penalty_collision + reward_reaching_target",
+        "rejected": "def fallback(): \n    return -1"
+    },
+    {
+        "prompt": "While operating in Toys 'R' Us, a drone must avoid crashing into a claw machine and reaching goal by using the available information about its own state, goal's state and the claw machine’s state. Design a reward function in Python",
+        "chosen": "def reward(s_agent, s_claw_machine, s_target): \n    dist_target = calculate_distance(s_agent, s_target) \n    d_agent_claw_machine = calculate_distance_min(s_agent, s_claw_machine) \n    penalty_collision = -28 if (d_agent_claw_machine < 0.7) else 29 \n    reward_reaching_target = 40 if (dist_target < 0.2) else -math.log(dist_target) \n    return penalty_collision + reward_reaching_target",
+        "rejected": "def reward_object(): \n   punshiment = 100\n   return punshiment \n    def price(): \n    price = 10\n    return price"
+    },
+    {
+        "prompt": "While operating in Toys 'R' Us, a drone must avoid crashing into a stroller parking and reaching goal by using the available information about its own state, goal's state and the crashing parking’s state. Design a reward function in Python",
+        "chosen": "def reward(s_agent, s_stroller_parking, s_target): \n    dist_target = calculate_distance(s_agent, s_target) \n    d_agent_stroller_parking = calculate_distance_min(s_agent, s_stroller_parking) \n    penalty_collision = -28 if (d_agent_stroller_parking < 0.7) else 29 \n    reward_reaching_target = 40 if (dist_target < 0.2) else -math.log(dist_target) \n    return penalty_collision + reward_reaching_target",
+        "rejected": "def rejected_fn(): \n    return 0"
+    },
+    {
+        "prompt": "While operating in Toys 'R' Us, a drone must avoid crashing into a shopping cart and reaching goal by using the available information about its own state, goal's state and the shopping cart’s state. Design a reward function in Python",
+        "chosen": "def reward(s_agent, s_shopping_cart, s_target): \n    dist_target = calculate_distance(s_agent, s_target) \n    d_agent_shopping_cart = calculate_distance_min(s_agent, s_shopping_cart) \n    penalty_collision = -28 if (d_agent_shopping_cart < 0.7) else 29 \n    reward_reaching_target = 40 if (dist_target < 0.2) else -math.log(dist_target) \n    return penalty_collision + reward_reaching_target",
+        "rejected": "def calculate(): \n    return 1"
+    },
+    {
+        "prompt": "While operating in Toys 'R' Us, a drone must avoid crashing into a customer service desk and reaching goal by using the available information about its own state, goal's state and the customer service desk’s state. Design a reward function in Python",
+        "chosen": "def reward(s_agent, s_customer_service_desk, s_target): \n    dist_target = calculate_distance(s_agent, s_target) \n    d_agent_customer_service_desk = calculate_distance_min(s_agent, s_customer_service_desk) \n    penalty_collision = -28 if (d_agent_customer_service_desk < 0.7) else 29 \n    reward_reaching_target = 40 if (dist_target < 0.2) else -math.log(dist_target) \n    return penalty_collision + reward_reaching_target",
+        "rejected": "def reward_object(): \n   punshiment = 100\n   return punshiment \n    def price(): \n    price = 10\n    return price"
+    },
+    {
+        "prompt": "While operating in Toys 'R' Us, a drone must avoid crashing into a stock pallet and reaching goal by using the available information about its own state, goal's state and the stock pallet’s state. Design a reward function in Python",
+        "chosen": "def reward(s_agent, s_stock_pallet, s_target): \n    dist_target = calculate_distance(s_agent, s_target) \n    d_agent_stock_pallet = calculate_distance_min(s_agent, s_stock_pallet) \n    penalty_collision = -28 if (d_agent_stock_pallet < 0.7) else 29 \n    reward_reaching_target = 40 if (dist_target < 0.2) else -math.log(dist_target) \n    return penalty_collision + reward_reaching_target",
+        "rejected": "def reward_env(): \n   punshiment = 100\n   return punshiment \n    def obstacles(): \n    price = 10\n    return price"
+    },
+    {
+        "prompt": "While operating in Toys 'R' Us, a drone must avoid crashing into a toy shelf, checkout counter and queue stanchion and reaching goal by using the available information about its own state, goal's state and the multiple obstacles’s state: toy shelf, checkout counter and queue stanchiom. Design a reward function in Python.",
+        "chosen": "def reward(s_agent, s_multiple_obstacles, s_target): \n    dist_target = calculate_distance(s_agent, s_target) \n    d_agent_multiple_obstacles_min = calculate_distance_min(s_agent, s_multiple_obstacles) \n    penalty_collision = -20 if (d_agent_multiple_obstacles_min < 0.8) else 10 \n    reward_reaching_target = 28 if (dist_target < 0.4) else -math.log(dist_target) \n    return penalty_collision + reward_reaching_target",
+        "rejected": "def reward_object(): \n   punshiment = 100\n   return punshiment \n    def price(): \n    price = 10\n    return price"
+    },
+    {
+        "prompt": "While operating in Toys 'R' Us, a drone must avoid crashing into a demo cage and LEGO display table and reaching goal by using the available information about its own state, goal's state and the multiple obstacles’s state: demo cage and LEGO display table. Design a reward function in Python.",
+        "chosen": "def reward(s_agent, s_multiple_obstacles, s_target): \n    dist_target = calculate_distance(s_agent, s_target) \n    d_agent_multiple_obstacles_min = calculate_distance_min(s_agent, s_multiple_obstacles) \n    penalty_collision = -20 if (d_agent_multiple_obstacles_min < 0.8) else 10 \n    reward_reaching_target = 28 if (dist_target < 0.4) else -math.log(dist_target) \n    return penalty_collision + reward_reaching_target",
+        "rejected": "def nothing(): \n    pass"
+    },
+    {
+        "prompt": "While operating in Toys 'R' Us, a drone must avoid crashing into a car display, stroller parking rack, shopping cart and reaching goal by using the available information about its own state, goal's state and the multiple obstacles’s state: car display, stroller parking rack and shopping cart. Design a reward function in Python.",
+        "chosen": "def reward(s_agent, s_multiple_obstacles, s_target): \n    dist_target = calculate_distance(s_agent, s_target) \n    d_agent_multiple_obstacles_min = calculate_distance_min(s_agent, s_multiple_obstacles) \n    penalty_collision = -20 if (d_agent_multiple_obstacles_min < 0.8) else 10 \n    reward_reaching_target = 28 if (dist_target < 0.4) else -math.log(dist_target) \n    return penalty_collision + reward_reaching_target",
+        "rejected": "def nothing(): \n    pass"
+    },
+    {
+        "prompt": "While operating in Toys 'R' Us, a drone must avoid crashing into a video game demo, kiosk, floor sign and reaching goal by using the available information about its own state, goal's state and the multiple obstacles’s state: video game demo, kiosk, floor sign. Design a reward function in Python.",
+        "chosen": "def reward(s_agent, s_multiple_obstacles, s_target): \n    dist_target = calculate_distance(s_agent, s_target) \n    d_agent_multiple_obstacles_min = calculate_distance_min(s_agent, s_multiple_obstacles) \n    penalty_collision = -20 if (d_agent_multiple_obstacles_min < 0.8) else 10 \n    reward_reaching_target = 28 if (dist_target < 0.4) else -math.log(dist_target) \n    return penalty_collision + reward_reaching_target",
+        "rejected": "def nothing(): \n    pass"
+    },
+    {
+        "prompt": "Scenario:: A drone is flying in skyscraper. \n Goal: It must avoid hitting with the revolving door. \n Given: Agent's state, goal's state and revolving door's state are available. Write a reward function in Python.",
+        "chosen": "def reward(s_agent, s_revolving_door, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_revolving_door = calculate_distance_min(s_agent, s_revolving_door) \n    penalty_collision = -25 if (d_agent_revolving_door < 0.7) else 15 \n    reward_reaching_goal = 30 if (d_agent_goal < 0.2) else -10 \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def reward_to_skyscraper(): \n    if goal == 'true': \n    return 10 \n    else: \n    return -10"
+    },
+    {
+        "prompt": "Scenario:: A drone is flying in skyscraper. \n Goal: It must avoid hitting with the security turnstile. \n Given: Agent's state, goal's state and security turnstile's state are available. Write a reward function in Python.",
+        "chosen": "def reward(s_agent, s_security_turnstile, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_security_turnstile = calculate_distance_min(s_agent, s_security_turnstile) \n    penalty_collision = -25 if (d_agent_security_turnstile < 0.7) else 15 \n    reward_reaching_goal = 30 if (d_agent_goal < 0.2) else -10 \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def fallback(): \n    return -1"
+    },
+    {
+        "prompt": "Scenario:: A drone is flying in skyscraper. \n Goal: It must avoid hitting with the lobby reception desk. \n Given: Agent's state, goal's state and lobby reception desk's state are available. Write a reward function in Python.",
+        "chosen": "def reward(s_agent, s_reception_desk, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_reception_desk = calculate_distance_min(s_agent, s_reception_desk) \n    penalty_collision = -25 if (d_agent_reception_desk < 0.7) else 15 \n    reward_reaching_goal = 30 if (d_agent_goal < 0.2) else -10 \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def reward_env(): \n   punshiment = 100\n   return punshiment \n    def obstacles(): \n    price = 10\n    return price"
+    },
+    {
+        "prompt": "Scenario:: A drone is flying in skyscraper. \n Goal: It must avoid hitting with the visitor kiosk. \n Given: Agent's state, goal's state and visitor kiosk's state are available. Write a reward function in Python.",
+        "chosen": "def reward(s_agent, s_visitor_kiosk, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_visitor_kiosk = calculate_distance_min(s_agent, s_visitor_kiosk) \n    penalty_collision = -25 if (d_agent_visitor_kiosk < 0.7) else 15 \n    reward_reaching_goal = 30 if (d_agent_goal < 0.2) else -10 \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def calculate(): \n    return 1"
+    },
+    {
+        "prompt": "Scenario:: A drone is flying in skyscraper. \n Goal: It must avoid hitting with the planter. \n Given: Agent's state, goal's state and planter's state are available. Write a reward function in Python.",
+        "chosen": "def reward(s_agent, s_planter, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_planter = calculate_distance_min(s_agent, s_planter) \n    penalty_collision = -25 if (d_agent_planter < 0.7) else 15 \n    reward_reaching_goal = 30 if (d_agent_goal < 0.2) else -10 \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def alt(): \n    return 42"
+    },
+    {
+        "prompt": "Scenario:: A drone is flying in skyscraper. \n Goal: It must avoid hitting with the bollard. \n Given: Agent's state, goal's state and bollard's state are available. Write a reward function in Python.",
+        "chosen": "def reward(s_agent, s_bollard, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_bollard = calculate_distance_min(s_agent, s_bollard) \n    penalty_collision = -25 if (d_agent_bollard < 0.7) else 15 \n    reward_reaching_goal = 30 if (d_agent_goal < 0.2) else -10 \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def reward_object(): \n   punshiment = 100\n   return punshiment \n    def price(): \n    price = 10\n    return price"
+    },
+    {
+        "prompt": "Scenario:: A drone is flying in skyscraper. \n Goal: It must avoid hitting with the elevator bank. \n Given: Agent's state, goal's state and elevator bank's state are available. Write a reward function in Python.",
+        "chosen": "def reward(s_agent, s_elevator_bank, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_elevator_bank = calculate_distance_min(s_agent, s_elevator_bank) \n    penalty_collision = -25 if (d_agent_elevator_bank < 0.7) else 15 \n    reward_reaching_goal = 30 if (d_agent_goal < 0.2) else -10 \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def reward_object(): \n   punshiment = 100\n   return punshiment \n    def price(): \n    price = 10\n    return price"
+    },
+    {
+        "prompt": "Scenario:: A drone is flying in skyscraper. \n Goal: It must avoid hitting with the stairwell door. \n Given: Agent's state, goal's state and stairwell door's state are available. Write a reward function in Python.",
+        "chosen": "def reward(s_agent, s_stairwell_door, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_stairwell_door = calculate_distance_min(s_agent, s_stairwell_door) \n    penalty_collision = -25 if (d_agent_stairwell_door < 0.7) else 15 \n    reward_reaching_goal = 30 if (d_agent_goal < 0.2) else -10 \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def alt(): \n    return 42"
+    },
+    {
+        "prompt": "Scenario:: A drone is flying in skyscraper. \n Goal: It must avoid hitting with the glass curtain wall. \n Given: Agent's state, goal's state and glass curtain wall's state are available. Write a reward function in Python.",
+        "chosen": "def reward(s_agent, s_glass_curtain_wall, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_glass_curtain_wall = calculate_distance_min(s_agent, s_glass_curtain_wall) \n    penalty_collision = -25 if (d_agent_glass_curtain_wall < 0.7) else 15 \n    reward_reaching_goal = 30 if (d_agent_goal < 0.2) else -10 \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def reward_object(): \n   punshiment = 100\n   return punshiment \n    def price(): \n    price = 10\n    return price"
+    },
+    {
+        "prompt": "Scenario:: A drone is flying in skyscraper. \n Goal: It must avoid hitting with the support column. \n Given: Agent's state, goal's state and support column's state are available. Write a reward function in Python.",
+        "chosen": "def reward(s_agent, s_support_column, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_support_column = calculate_distance_min(s_agent, s_support_column) \n    penalty_collision = -25 if (d_agent_support_column < 0.7) else 15 \n    reward_reaching_goal = 30 if (d_agent_goal < 0.2) else -10 \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def alt(): \n    return 42"
+    },
+    {
+        "prompt": "Scenario:: A drone is flying in skyscraper. \n Goal: It must avoid hitting with the maintenance scaffold. \n Given: Agent's state, goal's state and maintenance scaffold's state are available. Write a reward function in Python.",
+        "chosen": "def reward(s_agent, s_scaffold, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_scaffold = calculate_distance_min(s_agent, s_scaffold) \n    penalty_collision = -25 if (d_agent_scaffold < 0.7) else 15 \n    reward_reaching_goal = 30 if (d_agent_goal < 0.2) else -10 \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def calculate(): \n    return 1"
+    },
+    {
+        "prompt": "Scenario:: A drone is flying in skyscraper. \n Goal: It must avoid hitting with the window-washing platform. \n Given: Agent's state, goal's state and window-washing platform's state are available. Write a reward function in Python.",
+        "chosen": "def reward(s_agent, s_window_platform, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_window_platform = calculate_distance_min(s_agent, s_window_platform) \n    penalty_collision = -25 if (d_agent_window_platform < 0.7) else 15 \n    reward_reaching_goal = 30 if (d_agent_goal < 0.2) else -10 \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def rejected_fn(): \n    return 0"
+    },
+    {
+        "prompt": "Scenario:: A drone is flying in skyscraper. \n Goal: It must avoid hitting with the parapet wall. \n Given: Agent's state, goal's state and parapet wall's state are available. Write a reward function in Python.",
+        "chosen": "def reward(s_agent, s_parapet_wall, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_parapet_wall = calculate_distance_min(s_agent, s_parapet_wall) \n    penalty_collision = -25 if (d_agent_parapet_wall < 0.7) else 15 \n    reward_reaching_goal = 30 if (d_agent_goal < 0.2) else -10 \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def alt(): \n    return 42"
+    },
+    {
+        "prompt": "Scenario:: A drone is flying in skyscraper. \n Goal: It must avoid hitting with the rooftop HVAC unit. \n Given: Agent's state, goal's state and rooftop HVAC unit's state are available. Write a reward function in Python.",
+        "chosen": "def reward(s_agent, s_hvac_unit, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_hvac_unit = calculate_distance_min(s_agent, s_hvac_unit) \n    penalty_collision = -25 if (d_agent_hvac_unit < 0.7) else 15 \n    reward_reaching_goal = 30 if (d_agent_goal < 0.2) else -10 \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def calculate(): \n    return 1"
+    },
+    {
+        "prompt": "Scenario:: A drone is flying in skyscraper. \n Goal: It must avoid hitting with the cooling tower. \n Given: Agent's state, goal's state and cooling tower's state are available. Write a reward function in Python.",
+        "chosen": "def reward(s_agent, s_cooling_tower, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_cooling_tower = calculate_distance_min(s_agent, s_cooling_tower) \n    penalty_collision = -25 if (d_agent_cooling_tower < 0.7) else 15 \n    reward_reaching_goal = 30 if (d_agent_goal < 0.2) else -10 \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def reward_object(): \n   punshiment = 100\n   return punshiment \n    def price(): \n    price = 10\n    return price"
+    },
+    {
+        "prompt": "Scenario:: A drone is flying in skyscraper. \n Goal: It must avoid hitting with the antenna mast. \n Given: Agent's state, goal's state and antenna mast's state are available. Write a reward function in Python.",
+        "chosen": "def reward(s_agent, s_antenna_mast, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_antenna_mast = calculate_distance_min(s_agent, s_antenna_mast) \n    penalty_collision = -25 if (d_agent_antenna_mast < 0.7) else 15 \n    reward_reaching_goal = 30 if (d_agent_goal < 0.2) else -10 \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def calculate(): \n    return 1"
+    },
+    {
+        "prompt": "Scenario:: A drone is flying in skyscraper. \n Goal: It must avoid hitting with the satellite dish. \n Given: Agent's state, goal's state and satellite dish's state are available. Write a reward function in Python.",
+        "chosen": "def reward(s_agent, s_satellite_dish, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_satellite_dish = calculate_distance_min(s_agent, s_satellite_dish) \n    penalty_collision = -25 if (d_agent_satellite_dish < 0.7) else 15 \n    reward_reaching_goal = 30 if (d_agent_goal < 0.2) else -10 \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def reward_env(): \n   punshiment = 100\n   return punshiment \n    def obstacles(): \n    price = 10\n    return price"
+    },
+    {
+        "prompt": "Scenario:: A drone is flying in skyscraper. \n Goal: It must avoid hitting with the loading dock gate. \n Given: Agent's state, goal's state and loading dock gate's state are available. Write a reward function in Python.",
+        "chosen": "def reward(s_agent, s_loading_dock_gate, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_loading_dock_gate = calculate_distance_min(s_agent, s_loading_dock_gate) \n    penalty_collision = -25 if (d_agent_loading_dock_gate < 0.7) else 15 \n    reward_reaching_goal = 30 if (d_agent_goal < 0.2) else -10 \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def reward_to_skyscraper(): \n    if goal == 'true': \n    return 10 \n    else: \n    return -10"
+    },
+    {
+        "prompt": "Scenario:: A drone is flying in skyscraper. \n Goal: It must avoid hitting with the service cart. \n Given: Agent's state, goal's state and service cart's state are available. Write a reward function in Python.",
+        "chosen": "def reward(s_agent, s_service_cart, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_service_cart = calculate_distance_min(s_agent, s_service_cart) \n    penalty_collision = -25 if (d_agent_service_cart < 0.7) else 15 \n    reward_reaching_goal = 30 if (d_agent_goal < 0.2) else -10 \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def rejected_fn(): \n    return 0"
+    },
+    {
+        "prompt": "Scenario:: A drone is flying in skyscraper. \n Goal: It must avoid hitting with the fire hose cabinet. \n Given: Agent's state, goal's state and fire hose cabinet's state are available. Write a reward function in Python.",
+        "chosen": "def reward(s_agent, s_fire_hose_cabinet, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_fire_hose_cabinet = calculate_distance_min(s_agent, s_fire_hose_cabinet) \n    penalty_collision = -25 if (d_agent_fire_hose_cabinet < 0.7) else 15 \n    reward_reaching_goal = 30 if (d_agent_goal < 0.2) else -10 \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def alt(): \n    return 42"
+    },
+    {
+        "prompt": "Scenario:: A drone is flying in skyscraper. \n Goal: It must avoid hitting with the electrical panel. \n Given: Agent's state, goal's state and electrical panel's state are available. Write a reward function in Python.",
+        "chosen": "def reward(s_agent, s_electrical_panel, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_electrical_panel = calculate_distance_min(s_agent, s_electrical_panel) \n    penalty_collision = -25 if (d_agent_electrical_panel < 0.7) else 15 \n    reward_reaching_goal = 30 if (d_agent_goal < 0.2) else -10 \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def alt(): \n    return 42"
+    },
+    {
+        "prompt": "Scenario: Scenario:: A drone is navigating Skyscraper. Goal: \n Goal: It must avoid hitting with Skyscraper's security turnstile, revolving door and visitor kiosk. Assumptions: The \n Given: Agent's state, goal's state and multiple obstacles state: security turnstile, revolving door, and visitor kiosk are available. Instruction: Implement a reward function in Python.",
+        "chosen": "def reward(s_agent, s_multiple_obstacles, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_multiple_obstacles_min = calculate_distance_min(s_agent, s_multiple_obstacles) \n    penalty_collision = -20 if (d_agent_multiple_obstacles_min < ob_threshold) else 10 \n    reward_reaching_goal = 25 if (d_agent_goal < goal_threshold) else -10 \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def get_answer(s_goal): \n    return goal.position"
+    },
+    {
+        "prompt": "Scenario: Scenario:: A drone is navigating Skyscraper. Goal: \n Goal: It must avoid hitting with Skyscraper's elevator bank and stairwell door. Assumptions: The \n Given: Agent's state, goal's state and multiple obstacles state: elevator bank, and stairwell door are available. Instruction: Implement a reward function in Python.",
+        "chosen": "def reward(s_agent, s_multiple_obstacles, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_multiple_obstacles_min = calculate_distance_min(s_agent, s_multiple_obstacles) \n    penalty_collision = -20 if (d_agent_multiple_obstacles_min < ob_threshold) else 10 \n    reward_reaching_goal = 25 if (d_agent_goal < goal_threshold) else -10 \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def nothing(): \n    pass"
+    },
+    {
+        "prompt": "Scenario: Scenario:: A drone is navigating Skyscraper. Goal: \n Goal: It must avoid hitting with Skyscraper's maintenance scaffold, window-washing platform and glass curtain wall. Assumptions: The \n Given: Agent's state, goal's state and multiple obstacles state: maintenance scaffold, window-washing platform, and glass curtain wall are available. Instruction: Implement a reward function in Python.",
+        "chosen": "def reward(s_agent, s_multiple_obstacles, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_multiple_obstacles_min = calculate_distance_min(s_agent, s_multiple_obstacles) \n    penalty_collision = -20 if (d_agent_multiple_obstacles_min < ob_threshold) else 10 \n    reward_reaching_goal = 25 if (d_agent_goal < goal_threshold) else -10 \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def reward_env(): \n   punshiment = 100\n   return punshiment \n    def obstacles(): \n    price = 10\n    return price"
+    },
+    {
+        "prompt": "Scenario: Scenario:: A drone is navigating Skyscraper. Goal: \n Goal: It must avoid hitting with Skyscraper's rooftop HVAC unit, antenna mast and cooling tower. Assumptions: The \n Given: Agent's state, goal's state and multiple obstacles state: rooftop HVAC unit, antenna mast, and cooling tower are available. Instruction: Implement a reward function in Python.",
+        "chosen": "def reward(s_agent, s_multiple_obstacles, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_multiple_obstacles_min = calculate_distance_min(s_agent, s_multiple_obstacles) \n    penalty_collision = -20 if (d_agent_multiple_obstacles_min < ob_threshold) else 10 \n    reward_reaching_goal = 25 if (d_agent_goal < goal_threshold) else -10 \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def rejected_fn(): \n    return 0"
+    },
+    {
+        "prompt": "Mission: A drone is moving in power plant. \n Objectives: It must avoid colliding with the turbine generator. \n Conditions: Agent's state, goal's state and turbine generator's state are accessible. Write a reward function in Python.",
+        "chosen": "def reward(s_agent, s_turbine_generator, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_turbine_generator = calculate_distance_min(s_agent, s_turbine_generator) \n    penalty_collision = -27 if (d_agent_turbine_generator < 1) else 20 \n    reward_reaching_goal = 25 if (d_agent_goal < 0.2) else -50 \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def calculate(): \n    return 1"
+    },
+    {
+        "prompt": "Mission: A drone is moving in power plant. \n Objectives: It must avoid colliding with the boiler drum. \n Conditions: Agent's state, goal's state and boiler drum's state are accessible. Write a reward function in Python.",
+        "chosen": "def reward(s_agent, s_boiler_drum, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_boiler_drum = calculate_distance_min(s_agent, s_boiler_drum) \n    penalty_collision = -27 if (d_agent_boiler_drum < 1) else 20 \n    reward_reaching_goal = 25 if (d_agent_goal < 0.2) else -50 \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def calculate(): \n    return 1"
+    },
+    {
+        "prompt": "Mission: A drone is moving in power plant. \n Objectives: It must avoid colliding with the condenser unit. \n Conditions: Agent's state, goal's state and condenser unit's state are accessible. Write a reward function in Python.",
+        "chosen": "def reward(s_agent, s_condenser_unit, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_condenser_unit = calculate_distance_min(s_agent, s_condenser_unit) \n    penalty_collision = -27 if (d_agent_condenser_unit < 1) else 20 \n    reward_reaching_goal = 25 if (d_agent_goal < 0.2) else -50 \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def alt(): \n    return 42"
+    },
+    {
+        "prompt": "Mission: A drone is moving in power plant. \n Objectives: It must avoid colliding with the feedwater pump. \n Conditions: Agent's state, goal's state and feedwater pump's state are accessible. Write a reward function in Python.",
+        "chosen": "def reward(s_agent, s_feedwater_pump, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_feedwater_pump = calculate_distance_min(s_agent, s_feedwater_pump) \n    penalty_collision = -27 if (d_agent_feedwater_pump < 1) else 20 \n    reward_reaching_goal = 25 if (d_agent_goal < 0.2) else -50 \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def calculate(): \n    return 1"
+    },
+    {
+        "prompt": "Mission: A drone is moving in power plant. \n Objectives: It must avoid colliding with the cooling water pump. \n Conditions: Agent's state, goal's state and cooling water pump's state are accessible. Write a reward function in Python.",
+        "chosen": "def reward(s_agent, s_cw_pump, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_cw_pump = calculate_distance_min(s_agent, s_cw_pump) \n    penalty_collision = -27 if (d_agent_cw_pump < 1) else 20 \n    reward_reaching_goal = 25 if (d_agent_goal < 0.2) else -50 \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def reward_to_power_plant(): \n    if goal == 'true': \n    return 10 \n    else: \n    return -10"
+    },
+    {
+        "prompt": "Mission: A drone is moving in power plant. \n Objectives: It must avoid colliding with the switchgear cabinet. \n Conditions: Agent's state, goal's state and switchgear cabinet's state are accessible. Write a reward function in Python.",
+        "chosen": "def reward(s_agent, s_switchgear_cabinet, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_switchgear_cabinet = calculate_distance_min(s_agent, s_switchgear_cabinet) \n    penalty_collision = -27 if (d_agent_switchgear_cabinet < 1) else 20 \n    reward_reaching_goal = 25 if (d_agent_goal < 0.2) else -50 \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def fallback(): \n    return -1"
+    },
+    {
+        "prompt": "Mission: A drone is moving in power plant. \n Objectives: It must avoid colliding with the step-up transformer. \n Conditions: Agent's state, goal's state and step-up transformer's state are accessible. Write a reward function in Python.",
+        "chosen": "def reward(s_agent, s_transformer, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_transformer = calculate_distance_min(s_agent, s_transformer) \n    penalty_collision = -27 if (d_agent_transformer < 1) else 20 \n    reward_reaching_goal = 25 if (d_agent_goal < 0.2) else -50 \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def reward_to_power_plant(): \n    if goal == 'true': \n    return 10 \n    else: \n    return -10"
+    },
+    {
+        "prompt": "Mission: A drone is moving in power plant. \n Objectives: It must avoid colliding with the busbar trunking. \n Conditions: Agent's state, goal's state and busbar trunking's state are accessible. Write a reward function in Python.",
+        "chosen": "def reward(s_agent, s_busbar_trunking, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_busbar_trunking = calculate_distance_min(s_agent, s_busbar_trunking) \n    penalty_collision = -27 if (d_agent_busbar_trunking < 1) else 20 \n    reward_reaching_goal = 25 if (d_agent_goal < 0.2) else -50 \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def get_answer(s_goal): \n    return goal.position"
+    },
+    {
+        "prompt": "Mission: A drone is moving in power plant. \n Objectives: It must avoid colliding with the control room console. \n Conditions: Agent's state, goal's state and control room console's state are accessible. Write a reward function in Python.",
+        "chosen": "def reward(s_agent, s_control_console, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_control_console = calculate_distance_min(s_agent, s_control_console) \n    penalty_collision = -27 if (d_agent_control_console < 1) else 20 \n    reward_reaching_goal = 25 if (d_agent_goal < 0.2) else -50 \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def calculate(): \n    return 1"
+    },
+    {
+        "prompt": "Mission: A drone is moving in power plant. \n Objectives: It must avoid colliding with the cable tray. \n Conditions: Agent's state, goal's state and cable tray's state are accessible. Write a reward function in Python.",
+        "chosen": "def reward(s_agent, s_cable_tray, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_cable_tray = calculate_distance_min(s_agent, s_cable_tray) \n    penalty_collision = -27 if (d_agent_cable_tray < 1) else 20 \n    reward_reaching_goal = 25 if (d_agent_goal < 0.2) else -50 \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def rejected_fn(): \n    return 0"
+    },
+    {
+        "prompt": "Mission: A drone is moving in power plant. \n Objectives: It must avoid colliding with the overhead crane. \n Conditions: Agent's state, goal's state and overhead crane's state are accessible. Write a reward function in Python.",
+        "chosen": "def reward(s_agent, s_overhead_crane, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_overhead_crane = calculate_distance_min(s_agent, s_overhead_crane) \n    penalty_collision = -27 if (d_agent_overhead_crane < 1) else 20 \n    reward_reaching_goal = 25 if (d_agent_goal < 0.2) else -50 \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def reward_env(): \n   punshiment = 100\n   return punshiment \n    def obstacles(): \n    price = 10\n    return price"
+    },
+    {
+        "prompt": "Mission: A drone is moving in power plant. \n Objectives: It must avoid colliding with the pipe. \n Conditions: Agent's state, goal's state and pipe's state are accessible. Write a reward function in Python.",
+        "chosen": "def reward(s_agent, s_pipe, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_pipe = calculate_distance_min(s_agent, s_pipe) \n    penalty_collision = -27 if (d_agent_pipe < 1) else 20 \n    reward_reaching_goal = 25 if (d_agent_goal < 0.2) else -50 \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def alt(): \n    return 42"
+    },
+    {
+        "prompt": "Mission: A drone is moving in power plant. \n Objectives: It must avoid colliding with the valve manifold. \n Conditions: Agent's state, goal's state and valve manifold's state are accessible. Write a reward function in Python.",
+        "chosen": "def reward(s_agent, s_valve_manifold, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_valve_manifold = calculate_distance_min(s_agent, s_valve_manifold) \n    penalty_collision = -27 if (d_agent_valve_manifold < 1) else 20 \n    reward_reaching_goal = 25 if (d_agent_goal < 0.2) else -50 \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def fallback(): \n    return -1"
+    },
+    {
+        "prompt": "Mission: A drone is moving in power plant. \n Objectives: It must avoid colliding with the flue gas duct. \n Conditions: Agent's state, goal's state and flue gas duct's state are accessible. Write a reward function in Python.",
+        "chosen": "def reward(s_agent, s_flue_gas_duct, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_flue_gas_duct = calculate_distance_min(s_agent, s_flue_gas_duct) \n    penalty_collision = -27 if (d_agent_flue_gas_duct < 1) else 20 \n    reward_reaching_goal = 25 if (d_agent_goal < 0.2) else -50 \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def reward_env(): \n   punshiment = 100\n   return punshiment \n    def obstacles(): \n    price = 10\n    return price"
+    },
+    {
+        "prompt": "Mission: A drone is moving in power plant. \n Objectives: It must avoid colliding with the chimney stack. \n Conditions: Agent's state, goal's state and chimney stack's state are accessible. Write a reward function in Python.",
+        "chosen": "def reward(s_agent, s_chimney_stack, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_chimney_stack = calculate_distance_min(s_agent, s_chimney_stack) \n    penalty_collision = -27 if (d_agent_chimney_stack < 1) else 20 \n    reward_reaching_goal = 25 if (d_agent_goal < 0.2) else -50 \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def calculate(): \n    return 1"
+    },
+    {
+        "prompt": "Mission: A drone is moving in power plant. \n Objectives: It must avoid colliding with the cooling tower cell. \n Conditions: Agent's state, goal's state and cooling tower cell's state are accessible. Write a reward function in Python.",
+        "chosen": "def reward(s_agent, s_cooling_tower_cell, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_cooling_tower_cell = calculate_distance_min(s_agent, s_cooling_tower_cell) \n    penalty_collision = -27 if (d_agent_cooling_tower_cell < 1) else 20 \n    reward_reaching_goal = 25 if (d_agent_goal < 0.2) else -50 \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def rejected_fn(): \n    return 0"
+    },
+    {
+        "prompt": "Mission: A drone is moving in power plant. \n Objectives: It must avoid colliding with the ash conveyor. \n Conditions: Agent's state, goal's state and ash conveyor's state are accessible. Write a reward function in Python.",
+        "chosen": "def reward(s_agent, s_ash_conveyor, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_ash_conveyor = calculate_distance_min(s_agent, s_ash_conveyor) \n    penalty_collision = -27 if (d_agent_ash_conveyor < 1) else 20 \n    reward_reaching_goal = 25 if (d_agent_goal < 0.2) else -50 \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def nothing(): \n    pass"
+    },
+    {
+        "prompt": "Mission: A drone is moving in power plant. \n Objectives: It must avoid colliding with the coal hopper. \n Conditions: Agent's state, goal's state and coal hopper's state are accessible. Write a reward function in Python.",
+        "chosen": "def reward(s_agent, s_coal_hopper, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_coal_hopper = calculate_distance_min(s_agent, s_coal_hopper) \n    penalty_collision = -27 if (d_agent_coal_hopper < 1) else 20 \n    reward_reaching_goal = 25 if (d_agent_goal < 0.2) else -50 \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def nothing(): \n    pass"
+    },
+    {
+        "prompt": "Mission: A drone is moving in power plant. \n Objectives: It must avoid colliding with the water treatment tank. \n Conditions: Agent's state, goal's state and water treatment tank's state are accessible. Write a reward function in Python.",
+        "chosen": "def reward(s_agent, s_wt_tank, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_wt_tank = calculate_distance_min(s_agent, s_wt_tank) \n    penalty_collision = -27 if (d_agent_wt_tank < 1) else 20 \n    reward_reaching_goal = 25 if (d_agent_goal < 0.2) else -50 \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def alt(): \n    return 42"
+    },
+    {
+        "prompt": "Mission: A drone is moving in power plant. \n Objectives: It must avoid colliding with the hydrogen storage cabinet. \n Conditions: Agent's state, goal's state and hydrogen storage cabinet's state are accessible. Write a reward function in Python.",
+        "chosen": "def reward(s_agent, s_h2_cabinet, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_h2_cabinet = calculate_distance_min(s_agent, s_h2_cabinet) \n    penalty_collision = -27 if (d_agent_h2_cabinet < 1) else 20 \n    reward_reaching_goal = 25 if (d_agent_goal < 0.2) else -50 \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def calculate(): \n    return 1"
+    },
+    {
+        "prompt": "Mission: A drone is moving in power plant. \n Objectives: It must avoid colliding with the emergency generator. \n Conditions: Agent's state, goal's state and emergency generator's state are accessible. Write a reward function in Python.",
+        "chosen": "def reward(s_agent, s_emergency_generator, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_emergency_generator = calculate_distance_min(s_agent, s_emergency_generator) \n    penalty_collision = -27 if (d_agent_emergency_generator < 1) else 20 \n    reward_reaching_goal = 25 if (d_agent_goal < 0.2) else -50 \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def calculate(): \n    return 1"
+    },
+    {
+        "prompt": "Mission A drone is moving Power Plant. Goal: It must avoid colliding with Power Plant's turbine generator, overhead crane and cable tray. Conditions: Agent's state, goal's state and the states of the drone and many obstacles states: turbine generator, overhead crane, and cable tray are available. Instruction: Implement a reward function in Python.",
+        "chosen": "def reward(s_agent, s_multiple_obstacles, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_multiple_obstacles_min = calculate_distance_min(s_agent, s_multiple_obstacles) \n    penalty_collision = -20 if (d_agent_multiple_obstacles_min < 1) else 10 \n    reward_reaching_goal = 27 if (d_agent_goal < 0.1) else -50 \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def reward_to_power_plant(): \n    if goal == 'true': \n    return 10 \n    else: \n    return -10"
+    },
+    {
+        "prompt": "Mission A drone is moving Power Plant. Goal: It must avoid colliding with Power Plant's switchgear cabinet and step-up transformer. Conditions: Agent's state, goal's state and many obstacles states: switchgear cabinet, and step-up transformer are available. Instruction: Implement a reward function in Python.",
+        "chosen": "def reward(s_agent, s_multiple_obstacles, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_multiple_obstacles_min = calculate_distance_min(s_agent, s_multiple_obstacles) \n    penalty_collision = -20 if (d_agent_multiple_obstacles_min < 1) else 10 \n    reward_reaching_goal = 27 if (d_agent_goal < 0.1) else -50 \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def fallback(): \n    return -1"
+    },
+    {
+        "prompt": "Mission A drone is moving Power Plant. Goal: It must avoid colliding with Power Plant's cooling tower cell, flue gas duct and chimney stack. Conditions: Agent's state, goal's state and many obstacles states: cooling tower cell, flue gas duct, and chimney stack are available. Instruction: Implement a reward function in Python.",
+        "chosen": "def reward(s_agent, s_multiple_obstacles, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_multiple_obstacles_min = calculate_distance_min(s_agent, s_multiple_obstacles) \n    penalty_collision = -20 if (d_agent_multiple_obstacles_min < 1) else 10 \n    reward_reaching_goal = 27 if (d_agent_goal < 0.1) else -50 \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def alt(): \n    return 42"
+    },
+    {
+        "prompt": "Mission A drone is moving Power Plant. Goal: It must avoid colliding with Power Plant's coal hopper and ash conveyor. Conditions: Agent's state, goal's state and many obstacles states: coal hopper, and ash conveyor are available. Instruction: Implement a reward function in Python.",
+        "chosen": "def reward(s_agent, s_multiple_obstacles, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_multiple_obstacles_min = calculate_distance_min(s_agent, s_multiple_obstacles) \n    penalty_collision = -20 if (d_agent_multiple_obstacles_min < 1) else 10 \n    reward_reaching_goal = 27 if (d_agent_goal < 0.1) else -50 \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def rejected_fn(): \n    return 0"
+    },
+    {
+        "prompt": "Scenario:: A drone is inspecting in military. \n Goal: It must avoid colliding with the checkpoint gate. \n Given: Drone's state, goal's state checkpoint gate's state are accessible. Write a reward function in Python.",
+        "chosen": "def reward(s_agent, s_checkpoint_gate, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_checkpoint_gate = calculate_distance_min(s_agent, s_checkpoint_gate) \n    penalty_collision = -20 if (d_agent_checkpoint_gate < 0.9) else 12 \n    reward_reaching_goal = 30 if (d_agent_goal < 0.3) else -math.exp(d_agent_goal) \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def rejected_fn(): \n    return 0"
+    },
+    {
+        "prompt": "Scenario:: A drone is inspecting in military. \n Goal: It must avoid colliding with the vehicle barrier. \n Given: Drone's state, goal's state vehicle barrier's state are accessible. Write a reward function in Python.",
+        "chosen": "def reward(s_agent, s_vehicle_barrier, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_vehicle_barrier = calculate_distance_min(s_agent, s_vehicle_barrier) \n    penalty_collision = -20 if (d_agent_vehicle_barrier < 0.9) else 12 \n    reward_reaching_goal = 30 if (d_agent_goal < 0.3) else -math.exp(d_agent_goal) \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def reward_object(): \n   punshiment = 100\n   return punshiment \n    def price(): \n    price = 10\n    return price"
+    },
+    {
+        "prompt": "Scenario:: A drone is inspecting in military. \n Goal: It must avoid colliding with the sandbag wall. \n Given: Drone's state, goal's state sandbag wall's state are accessible. Write a reward function in Python.",
+        "chosen": "def reward(s_agent, s_sandbag_wall, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_sandbag_wall = calculate_distance_min(s_agent, s_sandbag_wall) \n    penalty_collision = -20 if (d_agent_sandbag_wall < 0.9) else 12 \n    reward_reaching_goal = 30 if (d_agent_goal < 0.3) else -math.exp(d_agent_goal) \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def reward_env(): \n   punshiment = 100\n   return punshiment \n    def obstacles(): \n    price = 10\n    return price"
+    },
+    {
+        "prompt": "Scenario:: A drone is inspecting in military. \n Goal: It must avoid colliding with the watchtower column. \n Given: Drone's state, goal's state watchtower column's state are accessible. Write a reward function in Python.",
+        "chosen": "def reward(s_agent, s_watchtower_column, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_watchtower_column = calculate_distance_min(s_agent, s_watchtower_column) \n    penalty_collision = -20 if (d_agent_watchtower_column < 0.9) else 12 \n    reward_reaching_goal = 30 if (d_agent_goal < 0.3) else -math.exp(d_agent_goal) \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def get_answer(s_goal): \n    return goal.position"
+    },
+    {
+        "prompt": "Scenario:: A drone is inspecting in military. \n Goal: It must avoid colliding with the perimeter fence. \n Given: Drone's state, goal's state perimeter fence's state are accessible. Write a reward function in Python.",
+        "chosen": "def reward(s_agent, s_perimeter_fence, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_perimeter_fence = calculate_distance_min(s_agent, s_perimeter_fence) \n    penalty_collision = -20 if (d_agent_perimeter_fence < 0.9) else 12 \n    reward_reaching_goal = 30 if (d_agent_goal < 0.3) else -math.exp(d_agent_goal) \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def reward_object(): \n   punshiment = 100\n   return punshiment \n    def price(): \n    price = 10\n    return price"
+    },
+    {
+        "prompt": "Scenario:: A drone is inspecting in military. \n Goal: It must avoid colliding with the radio antenna. \n Given: Drone's state, goal's state radio antenna's state are accessible. Write a reward function in Python.",
+        "chosen": "def reward(s_agent, s_radio_antenna, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_radio_antenna = calculate_distance_min(s_agent, s_radio_antenna) \n    penalty_collision = -20 if (d_agent_radio_antenna < 0.9) else 12 \n    reward_reaching_goal = 30 if (d_agent_goal < 0.3) else -math.exp(d_agent_goal) \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def rejected_fn(): \n    return 0"
+    },
+    {
+        "prompt": "Scenario:: A drone is inspecting in military. \n Goal: It must avoid colliding with the satellite comm dish. \n Given: Drone's state, goal's state satellite comm dish's state are accessible. Write a reward function in Python.",
+        "chosen": "def reward(s_agent, s_sat_comm_dish, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_sat_comm_dish = calculate_distance_min(s_agent, s_sat_comm_dish) \n    penalty_collision = -20 if (d_agent_sat_comm_dish < 0.9) else 12 \n    reward_reaching_goal = 30 if (d_agent_goal < 0.3) else -math.exp(d_agent_goal) \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def reward_env(): \n   punshiment = 100\n   return punshiment \n    def obstacles(): \n    price = 10\n    return price"
+    },
+    {
+        "prompt": "Scenario:: A drone is inspecting in military. \n Goal: It must avoid colliding with the generator unit. \n Given: Drone's state, goal's state generator unit's state are accessible. Write a reward function in Python.",
+        "chosen": "def reward(s_agent, s_generator_unit, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_generator_unit = calculate_distance_min(s_agent, s_generator_unit) \n    penalty_collision = -20 if (d_agent_generator_unit < 0.9) else 12 \n    reward_reaching_goal = 30 if (d_agent_goal < 0.3) else -math.exp(d_agent_goal) \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def fallback(): \n    return -1"
+    },
+    {
+        "prompt": "Scenario:: A drone is inspecting in military. \n Goal: It must avoid colliding with the fuel storage tank. \n Given: Drone's state, goal's state fuel storage tank's state are accessible. Write a reward function in Python.",
+        "chosen": "def reward(s_agent, s_fuel_tank, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_fuel_tank = calculate_distance_min(s_agent, s_fuel_tank) \n    penalty_collision = -20 if (d_agent_fuel_tank < 0.9) else 12 \n    reward_reaching_goal = 30 if (d_agent_goal < 0.3) else -math.exp(d_agent_goal) \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def reward_env(): \n   punshiment = 100\n   return punshiment \n    def obstacles(): \n    price = 10\n    return price"
+    },
+    {
+        "prompt": "Scenario:: A drone is inspecting in military. \n Goal: It must avoid colliding with the water tank. \n Given: Drone's state, goal's state water tank's state are accessible. Write a reward function in Python.",
+        "chosen": "def reward(s_agent, s_water_tank, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_water_tank = calculate_distance_min(s_agent, s_water_tank) \n    penalty_collision = -20 if (d_agent_water_tank < 0.9) else 12 \n    reward_reaching_goal = 30 if (d_agent_goal < 0.3) else -math.exp(d_agent_goal) \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def reward_object(): \n   punshiment = 100\n   return punshiment \n    def price(): \n    price = 10\n    return price"
+    },
+    {
+        "prompt": "Scenario:: A drone is inspecting in military. \n Goal: It must avoid colliding with the cargo pallet stack. \n Given: Drone's state, goal's state cargo pallet stack's state are accessible. Write a reward function in Python.",
+        "chosen": "def reward(s_agent, s_cargo_pallet_stack, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_cargo_pallet_stack = calculate_distance_min(s_agent, s_cargo_pallet_stack) \n    penalty_collision = -20 if (d_agent_cargo_pallet_stack < 0.9) else 12 \n    reward_reaching_goal = 30 if (d_agent_goal < 0.3) else -math.exp(d_agent_goal) \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def rejected_fn(): \n    return 0"
+    },
+    {
+        "prompt": "Scenario:: A drone is inspecting in military. \n Goal: It must avoid colliding with the storage container. \n Given: Drone's state, goal's state storage container's state are accessible. Write a reward function in Python.",
+        "chosen": "def reward(s_agent, s_storage_container, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_storage_container = calculate_distance_min(s_agent, s_storage_container) \n    penalty_collision = -20 if (d_agent_storage_container < 0.9) else 12 \n    reward_reaching_goal = 30 if (d_agent_goal < 0.3) else -math.exp(d_agent_goal) \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def reward_object(): \n   punshiment = 100\n   return punshiment \n    def price(): \n    price = 10\n    return price"
+    },
+    {
+        "prompt": "Scenario:: A drone is inspecting in military. \n Goal: It must avoid colliding with the supply crate stack. \n Given: Drone's state, goal's state supply crate stack's state are accessible. Write a reward function in Python.",
+        "chosen": "def reward(s_agent, s_supply_crate_stack, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_supply_crate_stack = calculate_distance_min(s_agent, s_supply_crate_stack) \n    penalty_collision = -20 if (d_agent_supply_crate_stack < 0.9) else 12 \n    reward_reaching_goal = 30 if (d_agent_goal < 0.3) else -math.exp(d_agent_goal) \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def alt(): \n    return 42"
+    },
+    {
+        "prompt": "Scenario:: A drone is inspecting in military. \n Goal: It must avoid colliding with the camouflage net pole. \n Given: Drone's state, goal's state camouflage net pole's state are accessible. Write a reward function in Python.",
+        "chosen": "def reward(s_agent, s_camo_net_pole, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_camo_net_pole = calculate_distance_min(s_agent, s_camo_net_pole) \n    penalty_collision = -20 if (d_agent_camo_net_pole < 0.9) else 12 \n    reward_reaching_goal = 30 if (d_agent_goal < 0.3) else -math.exp(d_agent_goal) \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def nothing(): \n    pass"
+    },
+    {
+        "prompt": "Scenario:: A drone is inspecting in military. \n Goal: It must avoid colliding with the flagpole. \n Given: Drone's state, goal's state flagpole's state are accessible. Write a reward function in Python.",
+        "chosen": "def reward(s_agent, s_flagpole, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_flagpole = calculate_distance_min(s_agent, s_flagpole) \n    penalty_collision = -20 if (d_agent_flagpole < 0.9) else 12 \n    reward_reaching_goal = 30 if (d_agent_goal < 0.3) else -math.exp(d_agent_goal) \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def reward_object(): \n   punshiment = 100\n   return punshiment \n    def price(): \n    price = 10\n    return price"
+    },
+    {
+        "prompt": "Scenario:: A drone is inspecting in military. \n Goal: It must avoid colliding with the vehicle bay door. \n Given: Drone's state, goal's state vehicle bay door's state are accessible. Write a reward function in Python.",
+        "chosen": "def reward(s_agent, s_vehicle_bay_door, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_vehicle_bay_door = calculate_distance_min(s_agent, s_vehicle_bay_door) \n    penalty_collision = -20 if (d_agent_vehicle_bay_door < 0.9) else 12 \n    reward_reaching_goal = 30 if (d_agent_goal < 0.3) else -math.exp(d_agent_goal) \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def alt(): \n    return 42"
+    },
+    {
+        "prompt": "Scenario:: A drone is inspecting in military. \n Goal: It must avoid colliding with the maintenance scaffold. \n Given: Drone's state, goal's state maintenance scaffold's state are accessible. Write a reward function in Python.",
+        "chosen": "def reward(s_agent, s_maintenance_scaffold, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_maintenance_scaffold = calculate_distance_min(s_agent, s_maintenance_scaffold) \n    penalty_collision = -20 if (d_agent_maintenance_scaffold < 0.9) else 12 \n    reward_reaching_goal = 30 if (d_agent_goal < 0.3) else -math.exp(d_agent_goal) \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def get_answer(s_goal): \n    return goal.position"
+    },
+    {
+        "prompt": "Scenario:: A drone is inspecting in military. \n Goal: It must avoid colliding with the portable light tower. \n Given: Drone's state, goal's state portable light tower's state are accessible. Write a reward function in Python.",
+        "chosen": "def reward(s_agent, s_light_tower, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_light_tower = calculate_distance_min(s_agent, s_light_tower) \n    penalty_collision = -20 if (d_agent_light_tower < 0.9) else 12 \n    reward_reaching_goal = 30 if (d_agent_goal < 0.3) else -math.exp(d_agent_goal) \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def alt(): \n    return 42"
+    },
+    {
+        "prompt": "Scenario:: A drone is inspecting in military. \n Goal: It must avoid colliding with the command tent pole. \n Given: Drone's state, goal's state command tent pole's state are accessible. Write a reward function in Python.",
+        "chosen": "def reward(s_agent, s_command_tent_pole, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_command_tent_pole = calculate_distance_min(s_agent, s_command_tent_pole) \n    penalty_collision = -20 if (d_agent_command_tent_pole < 0.9) else 12 \n    reward_reaching_goal = 30 if (d_agent_goal < 0.3) else -math.exp(d_agent_goal) \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def fallback(): \n    return -1"
+    },
+    {
+        "prompt": "Scenario:: A drone is inspecting in military. \n Goal: It must avoid colliding with the rope barrier. \n Given: Drone's state, goal's state rope barrier's state are accessible. Write a reward function in Python.",
+        "chosen": "def reward(s_agent, s_rope_barrier, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_rope_barrier = calculate_distance_min(s_agent, s_rope_barrier) \n    penalty_collision = -20 if (d_agent_rope_barrier < 0.9) else 12 \n    reward_reaching_goal = 30 if (d_agent_goal < 0.3) else -math.exp(d_agent_goal) \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def calculate(): \n    return 1"
+    },
+    {
+        "prompt": "Scenario:: A drone is inspecting in military. \n Goal: It must avoid colliding with the barracks stairwell. \n Given: Drone's state, goal's state barracks stairwell's state are accessible. Write a reward function in Python.",
+        "chosen": "def reward(s_agent, s_barracks_stairwell, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_barracks_stairwell = calculate_distance_min(s_agent, s_barracks_stairwell) \n    penalty_collision = -20 if (d_agent_barracks_stairwell < 0.9) else 12 \n    reward_reaching_goal = 30 if (d_agent_goal < 0.3) else -math.exp(d_agent_goal) \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def reward_to_military(): \n    if goal == 'true': \n    return 10 \n    else: \n    return -10"
+    },
+    {
+        "prompt": "Scenario: Scenario:: A drone is navigating Military. Goal: \n Goal: It must avoid colliding with Military's checkpoint gate, vehicle barrier and rope barrier. Assumptions: The \n Given: Drone's state, goal's state multiple obstacles state: checkpoint gate, vehicle barrier, and rope barrier are available. Instruction: Implement a reward function in Python.",
+        "chosen": "def reward(s_agent, s_multiple_obstacles, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_multiple_obstacles_min = calculate_distance_min(s_agent, s_multiple_obstacles) \n    penalty_collision = -20 if (d_agent_multiple_obstacles_min < ob_threshold) else 10 \n    reward_reaching_goal = 20 if (d_agent_goal < goal_threshold) else -math.exp(d_agent_goal) \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def alt(): \n    return 42"
+    },
+    {
+        "prompt": "Scenario: Scenario:: A drone is navigating Military. Goal: \n Goal: It must avoid colliding with Military's radio antenna and satellite comm dish. Assumptions: The \n Given: Drone's state, goal's state multiple obstacles state: radio antenna, and satellite comm dish are available. Instruction: Implement a reward function in Python.",
+        "chosen": "def reward(s_agent, s_multiple_obstacles, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_multiple_obstacles_min = calculate_distance_min(s_agent, s_multiple_obstacles) \n    penalty_collision = -20 if (d_agent_multiple_obstacles_min < ob_threshold) else 10 \n    reward_reaching_goal = 20 if (d_agent_goal < goal_threshold) else -math.exp(d_agent_goal) \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def nothing(): \n    pass"
+    },
+    {
+        "prompt": "Scenario: Scenario:: A drone is navigating Military. Goal: \n Goal: It must avoid colliding with Military's supply crate stack, cargo pallet stack and storage container. Assumptions: The \n Given: Drone's state, goal's state multiple obstacles state: supply crate stack, cargo pallet stack, and storage container are available. Instruction: Implement a reward function in Python.",
+        "chosen": "def reward(s_agent, s_multiple_obstacles, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_multiple_obstacles_min = calculate_distance_min(s_agent, s_multiple_obstacles) \n    penalty_collision = -20 if (d_agent_multiple_obstacles_min < ob_threshold) else 10 \n    reward_reaching_goal = 20 if (d_agent_goal < goal_threshold) else -math.exp(d_agent_goal) \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def reward_to_military(): \n    if goal == 'true': \n    return 10 \n    else: \n    return -10"
+    },
+    {
+        "prompt": "Scenario: Scenario:: A drone is navigating Military. Goal: \n Goal: It must avoid colliding with Military's portable light tower and generator unit. Assumptions: The \n Given: Drone's state, goal's state multiple obstacles state: portable light tower, and generator unit are available. Instruction: Implement a reward function in Python.",
+        "chosen": "def reward(s_agent, s_multiple_obstacles, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_multiple_obstacles_min = calculate_distance_min(s_agent, s_multiple_obstacles) \n    penalty_collision = -20 if (d_agent_multiple_obstacles_min < ob_threshold) else 10 \n    reward_reaching_goal = 20 if (d_agent_goal < goal_threshold) else -math.exp(d_agent_goal) \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def get_answer(s_goal): \n    return goal.position"
+    },
+    {
+        "prompt": "The task is to move a drone within a village so that it avoids collisions with the well while reaching a specified goal. The drone’s state, the wells’ positions, and the goal’s state are all available.  Implement a reward function.",
+        "chosen": "def reward(s_agent, s_well, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_well = calculate_distance_min(s_agent, s_well) \n    penalty_collision = -25 if (d_agent_well < 0.7) else 17 \n    reward_reaching_goal = 34 if (d_agent_goal < 0.2) else -2**d_agent_goal \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def fallback(): \n    return -1"
+    },
+    {
+        "prompt": "The task is to move a drone within a village so that it avoids collisions with the water pump while reaching a specified goal. The drone’s state, the water pumps’ positions, and the goal’s state are all available.  Implement a reward function.",
+        "chosen": "def reward(s_agent, s_water_pump, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_water_pump = calculate_distance_min(s_agent, s_water_pump) \n    penalty_collision = -25 if (d_agent_water_pump < 0.7) else 17 \n    reward_reaching_goal = 34 if (d_agent_goal < 0.2) else -2**d_agent_goal \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def reward_object(): \n   punshiment = 100\n   return punshiment \n    def price(): \n    price = 10\n    return price"
+    },
+    {
+        "prompt": "The task is to move a drone within a village so that it avoids collisions with the livestock gate while reaching a specified goal. The drone’s state, the livestock gates’ positions, and the goal’s state are all available.  Implement a reward function.",
+        "chosen": "def reward(s_agent, s_livestock_gate, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_livestock_gate = calculate_distance_min(s_agent, s_livestock_gate) \n    penalty_collision = -25 if (d_agent_livestock_gate < 0.7) else 17 \n    reward_reaching_goal = 34 if (d_agent_goal < 0.2) else -2**d_agent_goal \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def alt(): \n    return 42"
+    },
+    {
+        "prompt": "The task is to move a drone within a village so that it avoids collisions with the wooden cart while reaching a specified goal. The drone’s state, the wodden carts’ positions, and the goal’s state are all available.  Implement a reward function.",
+        "chosen": "def reward(s_agent, s_wooden_cart, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_wooden_cart = calculate_distance_min(s_agent, s_wooden_cart) \n    penalty_collision = -25 if (d_agent_wooden_cart < 0.7) else 17 \n    reward_reaching_goal = 34 if (d_agent_goal < 0.2) else -2**d_agent_goal \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def rejected_fn(): \n    return 0"
+    },
+    {
+        "prompt": "The task is to move a drone within a village so that it avoids collisions with the hay bale stack while reaching a specified goal. The drone’s state, the hay bale stacks’ positions, and the goal’s state are all available.  Implement a reward function.",
+        "chosen": "def reward(s_agent, s_hay_bale_stack, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_hay_bale_stack = calculate_distance_min(s_agent, s_hay_bale_stack) \n    penalty_collision = -25 if (d_agent_hay_bale_stack < 0.7) else 17 \n    reward_reaching_goal = 34 if (d_agent_goal < 0.2) else -2**d_agent_goal \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def fallback(): \n    return -1"
+    },
+    {
+        "prompt": "The task is to move a drone within a village so that it avoids collisions with the market stall while reaching a specified goal. The drone’s state, the market stalls’ positions, and the goal’s state are all available.  Implement a reward function.",
+        "chosen": "def reward(s_agent, s_market_stall, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_market_stall = calculate_distance_min(s_agent, s_market_stall) \n    penalty_collision = -25 if (d_agent_market_stall < 0.7) else 17 \n    reward_reaching_goal = 34 if (d_agent_goal < 0.2) else -2**d_agent_goal \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def reward_object(): \n   punshiment = 100\n   return punshiment \n    def price(): \n    price = 10\n    return price"
+    },
+    {
+        "prompt": "The task is to move a drone within a village so that it avoids collisions with the signpost while reaching a specified goal. The drone’s state, the signposts’ positions, and the goal’s state are all available.  Implement a reward function.",
+        "chosen": "def reward(s_agent, s_signpost, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_signpost = calculate_distance_min(s_agent, s_signpost) \n    penalty_collision = -25 if (d_agent_signpost < 0.7) else 17 \n    reward_reaching_goal = 34 if (d_agent_goal < 0.2) else -2**d_agent_goal \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def fallback(): \n    return -1"
+    },
+    {
+        "prompt": "The task is to move a drone within a village so that it avoids collisions with the stone wall while reaching a specified goal. The drone’s state, the stone walls’ positions, and the goal’s state are all available.  Implement a reward function..",
+        "chosen": "def reward(s_agent, s_stone_wall, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_stone_wall = calculate_distance_min(s_agent, s_stone_wall) \n    penalty_collision = -25 if (d_agent_stone_wall < 0.7) else 17 \n    reward_reaching_goal = 34 if (d_agent_goal < 0.2) else -2**d_agent_goal \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def reward_to_village(): \n    if goal == 'true': \n    return 10 \n    else: \n    return -10"
+    },
+    {
+        "prompt": "The task is to move a drone within a village so that it avoids collisions with the footbridge while reaching a specified goal. The drone’s state, the footbridges’ positions, and the goal’s state are all available.  Implement a reward function.",
+        "chosen": "def reward(s_agent, s_footbridge, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_footbridge = calculate_distance_min(s_agent, s_footbridge) \n    penalty_collision = -25 if (d_agent_footbridge < 0.7) else 17 \n    reward_reaching_goal = 34 if (d_agent_goal < 0.2) else -2**d_agent_goal \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def calculate(): \n    return 1"
+    },
+    {
+        "prompt": "The task is to move a drone within a village so that it avoids collisions with the canal railing while reaching a specified goal. The drone’s state, the canal railings’ positions, and the goal’s state are all available.  Implement a reward function.",
+        "chosen": "def reward(s_agent, s_canal_railing, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_canal_railing = calculate_distance_min(s_agent, s_canal_railing) \n    penalty_collision = -25 if (d_agent_canal_railing < 0.7) else 17 \n    reward_reaching_goal = 34 if (d_agent_goal < 0.2) else -2**d_agent_goal \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def reward_to_village(): \n    if goal == 'true': \n    return 10 \n    else: \n    return -10"
+    },
+    {
+        "prompt": "The task is to move a drone within a village so that it avoids collisions with the power pole while reaching a specified goal. The drone’s state, the power poles’ positions, and the goal’s state are all available.  Implement a reward function..",
+        "chosen": "def reward(s_agent, s_power_pole, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_power_pole = calculate_distance_min(s_agent, s_power_pole) \n    penalty_collision = -25 if (d_agent_power_pole < 0.7) else 17 \n    reward_reaching_goal = 34 if (d_agent_goal < 0.2) else -2**d_agent_goal \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def get_answer(s_goal): \n    return goal.position"
+    },
+    {
+        "prompt": "The task is to move a drone within a village so that it avoids collisions with the mailbox post while reaching a specified goal. The drone’s state, the mailbox posts’ positions, and the goal’s state are all available.  Implement a reward function.",
+        "chosen": "def reward(s_agent, s_mailbox_post, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_mailbox_post = calculate_distance_min(s_agent, s_mailbox_post) \n    penalty_collision = -25 if (d_agent_mailbox_post < 0.7) else 17 \n    reward_reaching_goal = 34 if (d_agent_goal < 0.2) else -2**d_agent_goal \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def reward_object(): \n   punshiment = 100\n   return punshiment \n    def price(): \n    price = 10\n    return price"
+    },
+    {
+        "prompt": "The task is to move a drone within a village so that it avoids collisions with the bus shelter while reaching a specified goal. The drone’s state, the bus shelters’ positions, and the goal’s state are all available.  Implement a reward function..",
+        "chosen": "def reward(s_agent, s_bus_shelter, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_bus_shelter = calculate_distance_min(s_agent, s_bus_shelter) \n    penalty_collision = -25 if (d_agent_bus_shelter < 0.7) else 17 \n    reward_reaching_goal = 34 if (d_agent_goal < 0.2) else -2**d_agent_goal \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def reward_object(): \n   punshiment = 100\n   return punshiment \n    def price(): \n    price = 10\n    return price"
+    },
+    {
+        "prompt": "The task is to move a drone within a village so that it avoids collisions with the bicyle rack while reaching a specified goal. The drone’s state, the bicycle racks’ positions, and the goal’s state are all available.  Implement a reward function.",
+        "chosen": "def reward(s_agent, s_bicycle_rack, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_bicycle_rack = calculate_distance_min(s_agent, s_bicycle_rack) \n    penalty_collision = -25 if (d_agent_bicycle_rack < 0.7) else 17 \n    reward_reaching_goal = 34 if (d_agent_goal < 0.2) else -2**d_agent_goal \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def calculate(): \n    return 1"
+    },
+    {
+        "prompt": "The task is to move a drone within a village so that it avoids collisions with the water tower while reaching a specified goal. The drone’s state, the water towers’ positions, and the goal’s state are all available.  Implement a reward function.",
+        "chosen": "def reward(s_agent, s_water_tower, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_water_tower = calculate_distance_min(s_agent, s_water_tower) \n    penalty_collision = -25 if (d_agent_water_tower < 0.7) else 17 \n    reward_reaching_goal = 34 if (d_agent_goal < 0.2) else -2**d_agent_goal \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def alt(): \n    return 42"
+    },
+    {
+        "prompt": "The task is to move a drone within a village so that it avoids collisions with the notice board while reaching a specified goal. The drone’s state, the notice boards’ positions, and the goal’s state are all available.  Implement a reward function.",
+        "chosen": "def reward(s_agent, s_notice_board, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_notice_board = calculate_distance_min(s_agent, s_notice_board) \n    penalty_collision = -25 if (d_agent_notice_board < 0.7) else 17 \n    reward_reaching_goal = 34 if (d_agent_goal < 0.2) else -2**d_agent_goal \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def reward_to_village(): \n    if goal == 'true': \n    return 10 \n    else: \n    return -10"
+    },
+    {
+        "prompt": "The task is to move a drone within a village so that it avoids collisions with the village gate while reaching a specified goal. The drone’s state, the village gates’ positions, and the goal’s state are all available.  Implement a reward function.",
+        "chosen": "def reward(s_agent, s_village_gate, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_village_gate = calculate_distance_min(s_agent, s_village_gate) \n    penalty_collision = -25 if (d_agent_village_gate < 0.7) else 17 \n    reward_reaching_goal = 34 if (d_agent_goal < 0.2) else -2**d_agent_goal \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def reward_env(): \n   punshiment = 100\n   return punshiment \n    def obstacles(): \n    price = 10\n    return price"
+    },
+    {
+        "prompt": "The task is to move a drone within a village so that it avoids collisions with the grian drying rack while reaching a specified goal. The drone’s state, the grain drying racks’ positions, and the goal’s state are all available.  Implement a reward function.",
+        "chosen": "def reward(s_agent, s_grain_drying_rack, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_grain_drying_rack = calculate_distance_min(s_agent, s_grain_drying_rack) \n    penalty_collision = -25 if (d_agent_grain_drying_rack < 0.7) else 17 \n    reward_reaching_goal = 34 if (d_agent_goal < 0.2) else -2**d_agent_goal \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def reward_to_village(): \n    if goal == 'true': \n    return 10 \n    else: \n    return -10"
+    },
+    {
+        "prompt": "The task is to move a drone within a village so that it avoids collisions with the clothsline pole while reaching a specified goal. The drone’s state, the clotheline poles’ positions, and the goal’s state are all available.  Implement a reward function.",
+        "chosen": "def reward(s_agent, s_clothesline_pole, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_clothesline_pole = calculate_distance_min(s_agent, s_clothesline_pole) \n    penalty_collision = -25 if (d_agent_clothesline_pole < 0.7) else 17 \n    reward_reaching_goal = 34 if (d_agent_goal < 0.2) else -2**d_agent_goal \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def alt(): \n    return 42"
+    },
+    {
+        "prompt": "The task is to move a drone within a village so that it avoids collisions with the public bench while reaching a specified goal. The drone’s state, the public benchs’ positions, and the goal’s state are all available.  Implement a reward function.",
+        "chosen": "def reward(s_agent, s_public_bench, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_public_bench = calculate_distance_min(s_agent, s_public_bench) \n    penalty_collision = -25 if (d_agent_public_bench < 0.7) else 17 \n    reward_reaching_goal = 34 if (d_agent_goal < 0.2) else -2**d_agent_goal \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def fallback(): \n    return -1"
+    },
+    {
+        "prompt": "The task is to move a drone within a village so that it avoids collisions with the handcart while reaching a specified goal. The drone’s state, the handcarts’ positions, and the goal’s state are all available.  Implement a reward function.",
+        "chosen": "def reward(s_agent, s_handcart, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_handcart = calculate_distance_min(s_agent, s_handcart) \n    penalty_collision = -25 if (d_agent_handcart < 0.7) else 17 \n    reward_reaching_goal = 34 if (d_agent_goal < 0.2) else -2**d_agent_goal \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def reward_to_village(): \n    if goal == 'true': \n    return 10 \n    else: \n    return -10"
+    },
+    {
+        "prompt": "The task is to move a drone within a village so that it avoids collisions with the market stall, wooden cart anf bicycle rack while reaching a specified goal. The drone’s state, the multiple obstacles’ positions, and the goal’s state are all available.  Implement a reward function.",
+        "chosen": "def reward(s_agent, s_multiple_obstacles, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_multiple_obstacles_min = calculate_distance_min(s_agent, s_multiple_obstacles) \n    penalty_collision = -25 if (d_agent_multiple_obstacles_min < 1) else 15 \n    reward_reaching_goal = 25 if (d_agent_goal < 0.2) else -2**d_agent_goal \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def get_answer(s_goal): \n    return goal.position"
+    },
+    {
+        "prompt": "The task is to move a drone within a village so that it avoids collisions with the village gate and stone wall while reaching a specified goal. The drone’s state, the multiple obstacles’ positions, and the goal’s state are all available.  Implement a reward function.",
+        "chosen": "def reward(s_agent, s_multiple_obstacles, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_multiple_obstacles_min = calculate_distance_min(s_agent, s_multiple_obstacles) \n    penalty_collision = -25 if (d_agent_multiple_obstacles_min < 1) else 15 \n    reward_reaching_goal = 25 if (d_agent_goal < 0.2) else -2**d_agent_goal \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def fallback(): \n    return -1"
+    },
+    {
+        "prompt": "The task is to move a drone within a village so that it avoids collisions with the well and signpost and public bench anf bicycle rack while reaching a specified goal. The drone’s state, the multiple obstacles’ positions, and the goal’s state are all available.  Implement a reward function.",
+        "chosen": "def reward(s_agent, s_multiple_obstacles, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_multiple_obstacles_min = calculate_distance_min(s_agent, s_multiple_obstacles) \n    penalty_collision = -25 if (d_agent_multiple_obstacles_min < 1) else 15 \n    reward_reaching_goal = 25 if (d_agent_goal < 0.2) else -2**d_agent_goal \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def fallback(): \n    return -1"
+    },
+    {
+        "prompt": "The task is to move a drone within a village so that it avoids collisions with the bus stop shelter and power pole while reaching a specified goal. The drone’s state, the multiple obstacles’ positions, and the goal’s state are all available.  Implement a reward function.",
+        "chosen": "def reward(s_agent, s_multiple_obstacles, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_multiple_obstacles_min = calculate_distance_min(s_agent, s_multiple_obstacles) \n    penalty_collision = -25 if (d_agent_multiple_obstacles_min < 1) else 15 \n    reward_reaching_goal = 25 if (d_agent_goal < 0.2) else -2**d_agent_goal \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def reward_object(): \n   punshiment = 100\n   return punshiment \n    def price(): \n    price = 10\n    return price"
+    },
+    {
+        "prompt": "A drone flying within a training base, avoiding any contact with the climbing wall and moving toward a designated goal. The system provides access to the drone’s state, the climbing wall information, and the goal state. Write a reward function in Python.",
+        "chosen": "def reward(s_agent, s_climbing_wall, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_climbing_wall = calculate_distance_min(s_agent, s_climbing_wall) \n    penalty_collision = -20 if (d_agent_climbing_wall < 0.9) else 10 \n    reward_reaching_goal = 30 if (d_agent_goal < 0.3) else -4*d_agent_goal \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def nothing(): \n    pass"
+    },
+    {
+        "prompt": "A drone flying within a training base, avoiding any contact with the cargo net and moving toward a designated goal. The system provides access to the drone’s state, the cargo net information, and the goal state. Write a reward function in Python.",
+        "chosen": "def reward(s_agent, s_cargo_net, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_cargo_net = calculate_distance_min(s_agent, s_cargo_net) \n    penalty_collision = -20 if (d_agent_cargo_net < 0.9) else 10 \n    reward_reaching_goal = 30 if (d_agent_goal < 0.3) else -4*d_agent_goal \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def nothing(): \n    pass"
+    },
+    {
+        "prompt": "A drone flying within a training base, avoiding any contact with the rope bridge and moving toward a designated goal. The system provides access to the drone’s state, the rope bridge information, and the goal state. Write a reward function in Python.",
+        "chosen": "def reward(s_agent, s_rope_bridge, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_rope_bridge = calculate_distance_min(s_agent, s_rope_bridge) \n    penalty_collision = -20 if (d_agent_rope_bridge < 0.9) else 10 \n    reward_reaching_goal = 30 if (d_agent_goal < 0.3) else -4*d_agent_goal \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def nothing(): \n    pass"
+    },
+    {
+        "prompt": "A drone flying within a training base, avoiding any contact with the balanace beam and moving toward a designated goal. The system provides access to the drone’s state, the balance beam information, and the goal state. Write a reward function in Python.",
+        "chosen": "def reward(s_agent, s_balance_beam, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_balance_beam = calculate_distance_min(s_agent, s_balance_beam) \n    penalty_collision = -20 if (d_agent_balance_beam < 0.9) else 10 \n    reward_reaching_goal = 30 if (d_agent_goal < 0.3) else -4*d_agent_goal \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def reward_object(): \n   punshiment = 100\n   return punshiment \n    def price(): \n    price = 10\n    return price"
+    },
+    {
+        "prompt": "A drone flying within a training base, avoiding any contact with the tire run and moving toward a designated goal. The system provides access to the drone’s state, the tire run information, and the goal state. Write a reward function in Python.",
+        "chosen": "def reward(s_agent, s_tire_run, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_tire_run = calculate_distance_min(s_agent, s_tire_run) \n    penalty_collision = -20 if (d_agent_tire_run < 0.9) else 10 \n    reward_reaching_goal = 30 if (d_agent_goal < 0.3) else -4*d_agent_goal \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def rejected_fn(): \n    return 0"
+    },
+    {
+        "prompt": "A drone flying within a training base, avoiding any contact with the low crawl net and moving toward a designated goal. The system provides access to the drone’s state, the low crawl net information, and the goal state. Write a reward function in Python.",
+        "chosen": "def reward(s_agent, s_low_crawl_net, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_low_crawl_net = calculate_distance_min(s_agent, s_low_crawl_net) \n    penalty_collision = -20 if (d_agent_low_crawl_net < 0.9) else 10 \n    reward_reaching_goal = 30 if (d_agent_goal < 0.3) else -4*d_agent_goal \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def fallback(): \n    return -1"
+    },
+    {
+        "prompt": "A drone flying within a training base, avoiding any contact with the hurdle and moving toward a designated goal. The system provides access to the drone’s state, the hurdle information, and the goal state. Write a reward function in Python.",
+        "chosen": "def reward(s_agent, s_hurdle, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_hurdle = calculate_distance_min(s_agent, s_hurdle) \n    penalty_collision = -20 if (d_agent_hurdle < 0.9) else 10 \n    reward_reaching_goal = 30 if (d_agent_goal < 0.3) else -4*d_agent_goal \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def reward_to_training_base(): \n    if goal == 'true': \n    return 10 \n    else: \n    return -10"
+    },
+    {
+        "prompt": "A drone flying within a training base, avoiding any contact with the rappel tower and moving toward a designated goal. The system provides access to the drone’s state, the rappel tower information, and the goal state. Write a reward function in Python.",
+        "chosen": "def reward(s_agent, s_rappel_tower, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_rappel_tower = calculate_distance_min(s_agent, s_rappel_tower) \n    penalty_collision = -20 if (d_agent_rappel_tower < 0.9) else 10 \n    reward_reaching_goal = 30 if (d_agent_goal < 0.3) else -4*d_agent_goal \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def reward_to_training_base(): \n    if goal == 'true': \n    return 10 \n    else: \n    return -10"
+    },
+    {
+        "prompt": "A drone flying within a training base, avoiding any contact with the mud trench and moving toward a designated goal. The system provides access to the drone’s state, the mud trench information, and the goal state. Write a reward function in Python.",
+        "chosen": "def reward(s_agent, s_mud_trench, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_mud_trench = calculate_distance_min(s_agent, s_mud_trench) \n    penalty_collision = -20 if (d_agent_mud_trench < 0.9) else 10 \n    reward_reaching_goal = 30 if (d_agent_goal < 0.3) else -4*d_agent_goal \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def alt(): \n    return 42"
+    },
+    {
+        "prompt": "A drone flying within a training base, avoiding any contact with the water pit and moving toward a designated goal. The system provides access to the drone’s state, the water pit information, and the goal state. Write a reward function in Python.",
+        "chosen": "def reward(s_agent, s_water_pit, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_water_pit = calculate_distance_min(s_agent, s_water_pit) \n    penalty_collision = -20 if (d_agent_water_pit < 0.9) else 10 \n    reward_reaching_goal = 30 if (d_agent_goal < 0.3) else -4*d_agent_goal \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def fallback(): \n    return -1"
+    },
+    {
+        "prompt": "A drone flying within a training base, avoiding any contact with the monkey bar and moving toward a designated goal. The system provides access to the drone’s state, the monkey bars information, and the goal state. Write a reward function in Python.",
+        "chosen": "def reward(s_agent, s_monkey_bars, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_monkey_bars = calculate_distance_min(s_agent, s_monkey_bars) \n    penalty_collision = -20 if (d_agent_monkey_bars < 0.9) else 10 \n    reward_reaching_goal = 30 if (d_agent_goal < 0.3) else -4*d_agent_goal \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def calculate(): \n    return 1"
+    },
+    {
+        "prompt": "A drone flying within a training base, avoiding any contact with the suspension ladder and moving toward a designated goal. The system provides access to the drone’s state, the suspension ladder information, and the goal state.Write a reward function in Python.",
+        "chosen": "def reward(s_agent, s_suspension_ladder, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_suspension_ladder = calculate_distance_min(s_agent, s_suspension_ladder) \n    penalty_collision = -20 if (d_agent_suspension_ladder < 0.9) else 10 \n    reward_reaching_goal = 30 if (d_agent_goal < 0.3) else -4*d_agent_goal \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def calculate(): \n    return 1"
+    },
+    {
+        "prompt": "A drone flying within a training base, avoiding any contact with the training dummy and moving toward a designated goal. The system provides access to the drone’s state, the training dummy information, and the goal state. Write a reward function in Python.",
+        "chosen": "def reward(s_agent, s_training_dummy, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_training_dummy = calculate_distance_min(s_agent, s_training_dummy) \n    penalty_collision = -20 if (d_agent_training_dummy < 0.9) else 10 \n    reward_reaching_goal = 30 if (d_agent_goal < 0.3) else -4*d_agent_goal \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def nothing(): \n    pass"
+    },
+    {
+        "prompt": "A drone flying within a training base, avoiding any contact with the equipment rack and moving toward a designated goal. The system provides access to the drone’s state, the equipment rack information, and the goal state. Write a reward function in Python.",
+        "chosen": "def reward(s_agent, s_equipment_rack, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_equipment_rack = calculate_distance_min(s_agent, s_equipment_rack) \n    penalty_collision = -20 if (d_agent_equipment_rack < 0.9) else 10 \n    reward_reaching_goal = 30 if (d_agent_goal < 0.3) else -4*d_agent_goal \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def alt(): \n    return 42"
+    },
+    {
+        "prompt": "A drone flying within a training base, avoiding any contact with the hydration station and moving toward a designated goal. The system provides access to the drone’s state, the hydration station information, and the goal state. Write a reward function in Python.",
+        "chosen": "def reward(s_agent, s_hydration_station, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_hydration_station = calculate_distance_min(s_agent, s_hydration_station) \n    penalty_collision = -20 if (d_agent_hydration_station < 0.9) else 10 \n    reward_reaching_goal = 30 if (d_agent_goal < 0.3) else -4*d_agent_goal \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def reward_to_training_base(): \n    if goal == 'true': \n    return 10 \n    else: \n    return -10"
+    },
+    {
+        "prompt": "A drone flying within a training base, avoiding any contact with the first aid tent and moving toward a designated goal. The system provides access to the drone’s state, the first aid tent information, and the goal state. Write a reward function in Python.",
+        "chosen": "def reward(s_agent, s_first_aid_tent, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_first_aid_tent = calculate_distance_min(s_agent, s_first_aid_tent) \n    penalty_collision = -20 if (d_agent_first_aid_tent < 0.9) else 10 \n    reward_reaching_goal = 30 if (d_agent_goal < 0.3) else -4*d_agent_goal \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def get_answer(s_goal): \n    return goal.position"
+    },
+    {
+        "prompt": "A drone flying within a training base, avoiding any contact with the bleachers and moving toward a designated goal. The system provides access to the drone’s state, the bleachers information, and the goal state. Write a reward function in Python.",
+        "chosen": "def reward(s_agent, s_bleachers, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_bleachers = calculate_distance_min(s_agent, s_bleachers) \n    penalty_collision = -20 if (d_agent_bleachers < 0.9) else 10 \n    reward_reaching_goal = 30 if (d_agent_goal < 0.3) else -4*d_agent_goal \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def alt(): \n    return 42"
+    },
+    {
+        "prompt": "A drone flying within a training base, avoiding any contact with the storage container and moving toward a designated goal. The system provides access to the drone’s state, the storage container information, and the goal state. Write a reward function in Python.",
+        "chosen": "def reward(s_agent, s_storage_container, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_storage_container = calculate_distance_min(s_agent, s_storage_container) \n    penalty_collision = -20 if (d_agent_storage_container < 0.9) else 10 \n    reward_reaching_goal = 30 if (d_agent_goal < 0.3) else -4*d_agent_goal \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def reward_to_training_base(): \n    if goal == 'true': \n    return 10 \n    else: \n    return -10"
+    },
+    {
+        "prompt": "A drone flying within a training base, avoiding any contact with the perimeter fence and moving toward a designated goal. The system provides access to the drone’s state, the perimenter fence information, and the goal state. Write a reward function in Python.",
+        "chosen": "def reward(s_agent, s_perimeter_fence, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_perimeter_fence = calculate_distance_min(s_agent, s_perimeter_fence) \n    penalty_collision = -20 if (d_agent_perimeter_fence < 0.9) else 10 \n    reward_reaching_goal = 30 if (d_agent_goal < 0.3) else -4*d_agent_goal \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def get_answer(s_goal): \n    return goal.position"
+    },
+    {
+        "prompt": "A drone flying within a training base, avoiding any contact with the gate and moving toward a designated goal. The system provides access to the drone’s state, the gate information, and the goal state. Write a reward function in Python.",
+        "chosen": "def reward(s_agent, s_gate, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_gate = calculate_distance_min(s_agent, s_gate) \n    penalty_collision = -20 if (d_agent_gate < 0.9) else 10 \n    reward_reaching_goal = 30 if (d_agent_goal < 0.3) else -4*d_agent_goal \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def alt(): \n    return 42"
+    },
+    {
+        "prompt": "A drone flying within a training base, avoiding any contact with the safety cone and moving toward a designated goal. The system provides access to the drone’s state, the safety cone information, and the goal state. Write a reward function in Python.",
+        "chosen": "def reward(s_agent, s_safety_cone, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_safety_cone = calculate_distance_min(s_agent, s_safety_cone) \n    penalty_collision = -20 if (d_agent_safety_cone < 0.9) else 10 \n    reward_reaching_goal = 30 if (d_agent_goal < 0.3) else -4*d_agent_goal \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def rejected_fn(): \n    return 0"
+    },
+    {
+        "prompt": "Scenario: A drone is navigating Training Base. Goal: It must avoid colliding with Training Base's climbing wall, cargo net and rope bridge. Assumptions: The Agent's state, goal's state and the multiple obstacles: climbing wall, cargo net, and rope bridge are available. Instruction: Implement a reward function in Python.",
+        "chosen": "def reward(s_agent, s_multiple_obstacles, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_multiple_obstacles_min = calculate_distance_min(s_agent, s_multiple_obstacles) \n    penalty_collision = -20 if (d_agent_multiple_obstacles_min < ob_threshold) else 10 \n    reward_reaching_goal = 20 if (d_agent_goal < goal_threshold) else -4*d_agent_goal \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def calculate(): \n    return 1"
+    },
+    {
+        "prompt": "A drone flying within a training base, avoiding any contact with the blanace beam and hurdle and moving toward a designated goal. The system provides access to the drone’s state, the multiple obstacles information, and the goal state. Implement a reward function in Python.",
+        "chosen": "def reward(s_agent, s_multiple_obstacles, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_multiple_obstacles_min = calculate_distance_min(s_agent, s_multiple_obstacles) \n    penalty_collision = -20 if (d_agent_multiple_obstacles_min < ob_threshold) else 10 \n    reward_reaching_goal = 20 if (d_agent_goal < goal_threshold) else -4*d_agent_goal \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def alt(): \n    return 42"
+    },
+    {
+        "prompt": "A drone flying within a training base, avoiding any contact with the tire run, low crawl net and mud trench and moving toward a designated goal. The system provides access to the drone’s state, the multiple obstacles information, and the goal state. Implement a reward function in Python.",
+        "chosen": "def reward(s_agent, s_multiple_obstacles, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_multiple_obstacles_min = calculate_distance_min(s_agent, s_multiple_obstacles) \n    penalty_collision = -20 if (d_agent_multiple_obstacles_min < ob_threshold) else 10 \n    reward_reaching_goal = 20 if (d_agent_goal < goal_threshold) else -4*d_agent_goal \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def rejected_fn(): \n    return 0"
+    },
+    {
+        "prompt": "A drone flying within a training base, avoiding any contact with the hydration station and first-aid tent and moving toward a designated goal. The system provides access to the drone’s state, the multiple obstacles information, and the goal state. Implement a reward function in Python.",
+        "chosen": "def reward(s_agent, s_multiple_obstacles, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_multiple_obstacles_min = calculate_distance_min(s_agent, s_multiple_obstacles) \n    penalty_collision = -20 if (d_agent_multiple_obstacles_min < ob_threshold) else 10 \n    reward_reaching_goal = 20 if (d_agent_goal < goal_threshold) else -4*d_agent_goal \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def fallback(): \n    return -1"
+    },
+    {
+        "prompt": "Design a Python reward function for a drone tasked with navigating inside a doctor room. The drone must detect and avoid exam table while heading toward a target goal. You are provided with the agent’s state, the goal’s state, and the positions of exam table in the room",
+        "chosen": "def reward(s_agent, s_exam_table, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_exam_table = calculate_distance_min(s_agent, s_exam_table) \n    penalty_collision = -25 if (d_agent_exam_table < 0.7) else 10 \n    reward_reaching_goal = 30 if (d_agent_goal < 0.2) else -math.exp(d_agent_goal) \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def fallback(): \n    return -1"
+    },
+    {
+        "prompt": "Design a Python reward function for a drone tasked with navigating inside a doctor room. The drone must detect and avoid rolling stool while heading toward a target goal. You are provided with the agent’s state, the goal’s state, and the positions of rolling stone in the room",
+        "chosen": "def reward(s_agent, s_rolling_stool, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_rolling_stool = calculate_distance_min(s_agent, s_rolling_stool) \n    penalty_collision = -25 if (d_agent_rolling_stool < 0.7) else 10 \n    reward_reaching_goal = 30 if (d_agent_goal < 0.2) else -math.exp(d_agent_goal) \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def get_answer(s_goal): \n    return goal.position"
+    },
+    {
+        "prompt": "Design a Python reward function for a drone tasked with navigating inside a doctor room. The drone must detect and avoid instrument tray while heading toward a target goal. You are provided with the agent’s state, the goal’s state, and the positions of instrumnet tray in the room",
+        "chosen": "def reward(s_agent, s_instrument_tray, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_instrument_tray = calculate_distance_min(s_agent, s_instrument_tray) \n    penalty_collision = -25 if (d_agent_instrument_tray < 0.7) else 10 \n    reward_reaching_goal = 30 if (d_agent_goal < 0.2) else -math.exp(d_agent_goal) \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def reward_object(): \n   punshiment = 100\n   return punshiment \n    def price(): \n    price = 10\n    return price"
+    },
+    {
+        "prompt": "Design a Python reward function for a drone tasked with navigating inside a doctor room. The drone must detect and avoid IV stand while heading toward a target goal. You are provided with the agent’s state, the goal’s state, and the positions of IV stand in the room",
+        "chosen": "def reward(s_agent, s_iv_stand, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_iv_stand = calculate_distance_min(s_agent, s_iv_stand) \n    penalty_collision = -25 if (d_agent_iv_stand < 0.7) else 10 \n    reward_reaching_goal = 30 if (d_agent_goal < 0.2) else -math.exp(d_agent_goal) \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def reward_env(): \n   punshiment = 100\n   return punshiment \n    def obstacles(): \n    price = 10\n    return price"
+    },
+    {
+        "prompt": "Design a Python reward function for a drone tasked with navigating inside a doctor room. The drone must detect and avoid vitals monitor while heading toward a target goal. You are provided with the agent’s state, the goal’s state, and the positions of vitials monitor in the room",
+        "chosen": "def reward(s_agent, s_vitals_monitor, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_vitals_monitor = calculate_distance_min(s_agent, s_vitals_monitor) \n    penalty_collision = -25 if (d_agent_vitals_monitor < 0.7) else 10 \n    reward_reaching_goal = 30 if (d_agent_goal < 0.2) else -math.exp(d_agent_goal) \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def nothing(): \n    pass"
+    },
+    {
+        "prompt": "Design a Python reward function for a drone tasked with navigating inside a doctor room. The drone must detect and avoid ultrasound cart while heading toward a target goal. You are provided with the agent’s state, the goal’s state, and the positions of ultrasound cart in the room",
+        "chosen": "def reward(s_agent, s_ultrasound_cart, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_ultrasound_cart = calculate_distance_min(s_agent, s_ultrasound_cart) \n    penalty_collision = -25 if (d_agent_ultrasound_cart < 0.7) else 10 \n    reward_reaching_goal = 30 if (d_agent_goal < 0.2) else -math.exp(d_agent_goal) \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def reward_object(): \n   punshiment = 100\n   return punshiment \n    def price(): \n    price = 10\n    return price"
+    },
+    {
+        "prompt": "Design a Python reward function for a drone tasked with navigating inside a doctor room. The drone must detect and avoid ECG machine while heading toward a target goal. You are provided with the agent’s state, the goal’s state, and the positions of ECG machine in the room",
+        "chosen": "def reward(s_agent, s_ecg_machine, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_ecg_machine = calculate_distance_min(s_agent, s_ecg_machine) \n    penalty_collision = -25 if (d_agent_ecg_machine < 0.7) else 10 \n    reward_reaching_goal = 30 if (d_agent_goal < 0.2) else -math.exp(d_agent_goal) \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def reward_env(): \n   punshiment = 100\n   return punshiment \n    def obstacles(): \n    price = 10\n    return price"
+    },
+    {
+        "prompt": "Design a Python reward function for a drone tasked with navigating inside a doctor room. The drone must detect and avoid while head BP stand ing toward a target goal. You are provided with the agent’s state, the goal’s state, and the positions of BP stand in the room",
+        "chosen": "def reward(s_agent, s_bp_stand, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_bp_stand = calculate_distance_min(s_agent, s_bp_stand) \n    penalty_collision = -25 if (d_agent_bp_stand < 0.7) else 10 \n    reward_reaching_goal = 30 if (d_agent_goal < 0.2) else -math.exp(d_agent_goal) \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def nothing(): \n    pass"
+    },
+    {
+        "prompt": "Design a Python reward function for a drone tasked with navigating inside a doctor room. The drone must detect and avoid otoscope unit while heading toward a target goal. You are provided with the agent’s state, the goal’s state, and the positions of otoscope unit in the room",
+        "chosen": "def reward(s_agent, s_otoscope_unit, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_otoscope_unit = calculate_distance_min(s_agent, s_otoscope_unit) \n    penalty_collision = -25 if (d_agent_otoscope_unit < 0.7) else 10 \n    reward_reaching_goal = 30 if (d_agent_goal < 0.2) else -math.exp(d_agent_goal) \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def reward_to_room(): \n    if goal == 'true': \n    return 10 \n    else: \n    return -10"
+    },
+    {
+        "prompt": "Design a Python reward function for a drone tasked with navigating inside a doctor room. The drone must detect and avoid sharps container while heading toward a target goal. You are provided with the agent’s state, the goal’s state, and the positions of sharps container in the room",
+        "chosen": "def reward(s_agent, s_sharps_container, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_sharps_container = calculate_distance_min(s_agent, s_sharps_container) \n    penalty_collision = -25 if (d_agent_sharps_container < 0.7) else 10 \n    reward_reaching_goal = 30 if (d_agent_goal < 0.2) else -math.exp(d_agent_goal) \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def reward_env(): \n   punshiment = 100\n   return punshiment \n    def obstacles(): \n    price = 10\n    return price"
+    },
+    {
+        "prompt": "Design a Python reward function for a drone tasked with navigating inside a doctor room. The drone must detect and avoid privacy screen while heading toward a target goal. You are provided with the agent’s state, the goal’s state, and the positions of privacy screen in the room",
+        "chosen": "def reward(s_agent, s_privacy_screen, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_privacy_screen = calculate_distance_min(s_agent, s_privacy_screen) \n    penalty_collision = -25 if (d_agent_privacy_screen < 0.7) else 10 \n    reward_reaching_goal = 30 if (d_agent_goal < 0.2) else -math.exp(d_agent_goal) \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def get_answer(s_goal): \n    return goal.position"
+    },
+    {
+        "prompt": "Design a Python reward function for a drone tasked with navigating inside a doctor room. The drone must detect and avoid task lamp while heading toward a target goal. You are provided with the agent’s state, the goal’s state, and the positions of task lamp in the room",
+        "chosen": "def reward(s_agent, s_task_lamp, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_task_lamp = calculate_distance_min(s_agent, s_task_lamp) \n    penalty_collision = -25 if (d_agent_task_lamp < 0.7) else 10 \n    reward_reaching_goal = 30 if (d_agent_goal < 0.2) else -math.exp(d_agent_goal) \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def reward_object(): \n   punshiment = 100\n   return punshiment \n    def price(): \n    price = 10\n    return price"
+    },
+    {
+        "prompt": "Design a Python reward function for a drone tasked with navigating inside a doctor room. The drone must detect and avoid med cabinet while heading toward a target goal. You are provided with the agent’s state, the goal’s state, and the positions of med cabinet in the room",
+        "chosen": "def reward(s_agent, s_med_cabinet, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_med_cabinet = calculate_distance_min(s_agent, s_med_cabinet) \n    penalty_collision = -25 if (d_agent_med_cabinet < 0.7) else 10 \n    reward_reaching_goal = 30 if (d_agent_goal < 0.2) else -math.exp(d_agent_goal) \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def alt(): \n    return 42"
+    },
+    {
+        "prompt": "Design a Python reward function for a drone tasked with navigating inside a doctor room. The drone must detect and avoid sink counter while heading toward a target goal. You are provided with the agent’s state, the goal’s state, and the positions of sink counter in the room",
+        "chosen": "def reward(s_agent, s_sink_counter, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_sink_counter = calculate_distance_min(s_agent, s_sink_counter) \n    penalty_collision = -25 if (d_agent_sink_counter < 0.7) else 10 \n    reward_reaching_goal = 30 if (d_agent_goal < 0.2) else -math.exp(d_agent_goal) \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def alt(): \n    return 42"
+    },
+    {
+        "prompt": "Design a Python reward function for a drone tasked with navigating inside a doctor room. The drone must detect and avoid specimen fridge while heading toward a target goal. You are provided with the agent’s state, the goal’s state, and the positions of specimen fridge in the room",
+        "chosen": "def reward(s_agent, s_specimen_fridge, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_specimen_fridge = calculate_distance_min(s_agent, s_specimen_fridge) \n    penalty_collision = -25 if (d_agent_specimen_fridge < 0.7) else 10 \n    reward_reaching_goal = 30 if (d_agent_goal < 0.2) else -math.exp(d_agent_goal) \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def nothing(): \n    pass"
+    },
+    {
+        "prompt": "Design a Python reward function for a drone tasked with navigating inside a doctor room. The drone must detect and avoid oxygen cylinder while heading toward a target goal. You are provided with the agent’s state, the goal’s state, and the positions of oxygen cylinder in the room",
+        "chosen": "def reward(s_agent, s_oxygen_cylinder, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_oxygen_cylinder = calculate_distance_min(s_agent, s_oxygen_cylinder) \n    penalty_collision = -25 if (d_agent_oxygen_cylinder < 0.7) else 10 \n    reward_reaching_goal = 30 if (d_agent_goal < 0.2) else -math.exp(d_agent_goal) \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def reward_object(): \n   punshiment = 100\n   return punshiment \n    def price(): \n    price = 10\n    return price"
+    },
+    {
+        "prompt": "Design a Python reward function for a drone tasked with navigating inside a doctor room. The drone must detect and avoid waste bin while heading toward a target goal. You are provided with the agent’s state, the goal’s state, and the positions of waste bin in the room",
+        "chosen": "def reward(s_agent, s_waste_bin, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_waste_bin = calculate_distance_min(s_agent, s_waste_bin) \n    penalty_collision = -25 if (d_agent_waste_bin < 0.7) else 10 \n    reward_reaching_goal = 30 if (d_agent_goal < 0.2) else -math.exp(d_agent_goal) \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def get_answer(s_goal): \n    return goal.position"
+    },
+    {
+        "prompt": "Design a Python reward function for a drone tasked with navigating inside a doctor room. The drone must detect and avoid sanitizer stand while heading toward a target goal. You are provided with the agent’s state, the goal’s state, and the positions of sanitizer stand in the room",
+        "chosen": "def reward(s_agent, s_sanitizer_stand, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_sanitizer_stand = calculate_distance_min(s_agent, s_sanitizer_stand) \n    penalty_collision = -25 if (d_agent_sanitizer_stand < 0.7) else 10 \n    reward_reaching_goal = 30 if (d_agent_goal < 0.2) else -math.exp(d_agent_goal) \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def reward_env(): \n   punshiment = 100\n   return punshiment \n    def obstacles(): \n    price = 10\n    return price"
+    },
+    {
+        "prompt": "Design a Python reward function for a drone tasked with navigating inside a doctor room. The drone must detect and avoid step stool while heading toward a target goal. You are provided with the agent’s state, the goal’s state, and the positions of step stool in the room",
+        "chosen": "def reward(s_agent, s_step_stool, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_step_stool = calculate_distance_min(s_agent, s_step_stool) \n    penalty_collision = -25 if (d_agent_step_stool < 0.7) else 10 \n    reward_reaching_goal = 30 if (d_agent_goal < 0.2) else -math.exp(d_agent_goal) \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def nothing(): \n    pass"
+    },
+    {
+        "prompt": "Design a Python reward function for a drone tasked with navigating inside a doctor room. The drone must detect and avoid computer cart while heading toward a target goal. You are provided with the agent’s state, the goal’s state, and the positions of computer cart in the room",
+        "chosen": "def reward(s_agent, s_computer_cart, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_computer_cart = calculate_distance_min(s_agent, s_computer_cart) \n    penalty_collision = -25 if (d_agent_computer_cart < 0.7) else 10 \n    reward_reaching_goal = 30 if (d_agent_goal < 0.2) else -math.exp(d_agent_goal) \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def fallback(): \n    return -1"
+    },
+    {
+        "prompt": "Design a Python reward function for a drone tasked with navigating inside a doctor room. The drone must detect and avoid patient chair while heading toward a target goal. You are provided with the agent’s state, the goal’s state, and the positions of patient chair in the room",
+        "chosen": "def reward(s_agent, s_patient_chair, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_patient_chair = calculate_distance_min(s_agent, s_patient_chair) \n    penalty_collision = -25 if (d_agent_patient_chair < 0.7) else 10 \n    reward_reaching_goal = 30 if (d_agent_goal < 0.2) else -math.exp(d_agent_goal) \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def calculate(): \n    return 1"
+    },
+    {
+        "prompt": "Design a Python reward function for a drone tasked with navigating inside a doctor room. The drone must detect and avoid exam table, privacy screen and rolling stool while heading toward a target goal. You are provided with the agent’s state, the goal’s state, and the positions of the multiple obstacles in the room",
+        "chosen": "def reward(s_agent, s_multiple_obstacles, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_multiple_obstacles_min = calculate_distance_min(s_agent, s_multiple_obstacles) \n    penalty_collision = -20 if (d_agent_multiple_obstacles_min < ob_threshold) else 10 \n    reward_reaching_goal = 25 if (d_agent_goal < goal_threshold) else -math.exp(d_agent_goal) \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def calculate(): \n    return 1"
+    },
+    {
+        "prompt": "Design a Python reward function for a drone tasked with navigating inside a doctor room. The drone must detect and avoid IV stand and oxygen cylinder while heading toward a target goal. You are provided with the agent’s state, the goal’s state, and the positions of the multiple obstacles in the room",
+        "chosen": "def reward(s_agent, s_multiple_obstacles, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_multiple_obstacles_min = calculate_distance_min(s_agent, s_multiple_obstacles) \n    penalty_collision = -20 if (d_agent_multiple_obstacles_min < ob_threshold) else 10 \n    reward_reaching_goal = 25 if (d_agent_goal < goal_threshold) else -math.exp(d_agent_goal) \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def rejected_fn(): \n    return 0"
+    },
+    {
+        "prompt": "Design a Python reward function for a drone tasked with navigating inside a doctor room. The drone must detect and avoid instrument tray, computer cart and waste bin while heading toward a target goal. You are provided with the agent’s state, the goal’s state, and the positions of the multiple obstacles in the room",
+        "chosen": "def reward(s_agent, s_multiple_obstacles, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_multiple_obstacles_min = calculate_distance_min(s_agent, s_multiple_obstacles) \n    penalty_collision = -20 if (d_agent_multiple_obstacles_min < ob_threshold) else 10 \n    reward_reaching_goal = 25 if (d_agent_goal < goal_threshold) else -math.exp(d_agent_goal) \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def reward_to_room(): \n    if goal == 'true': \n    return 10 \n    else: \n    return -10"
+    },
+    {
+        "prompt": "Design a Python reward function for a drone tasked with navigating inside a doctor room. The drone must detect and avoid medication cabinet and sink counter while heading toward a target goal. You are provided with the agent’s state, the goal’s state, and the positions of the multiple obstacles in the room",
+        "chosen": "def reward(s_agent, s_multiple_obstacles, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_multiple_obstacles_min = calculate_distance_min(s_agent, s_multiple_obstacles) \n    penalty_collision = -20 if (d_agent_multiple_obstacles_min < ob_threshold) else 10 \n    reward_reaching_goal = 25 if (d_agent_goal < goal_threshold) else -math.exp(d_agent_goal) \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def reward_env(): \n   punshiment = 100\n   return punshiment \n    def obstacles(): \n    price = 10\n    return price"
+    },
+    {
+        "prompt": "A drone is driving in cottage. It must avoid colliding with the wood stove. Agent's state, goal's state and wood stove's state are accessible. Write a reward function in Python.",
+        "chosen": "def reward(s_agent, s_wood_stove, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_wood_stove = calculate_distance_min(s_agent, s_wood_stove) \n    penalty_collision = -25 if (d_agent_wood_stove < 0.8) else 15 \n    reward_reaching_goal = 30 if (d_agent_goal < 0.4) else -d_agent_goal**3 \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def reward_object(): \n   punshiment = 100\n   return punshiment \n    def price(): \n    price = 10\n    return price"
+    },
+    {
+        "prompt": "A drone is driving in cottage. It must avoid colliding with the firewood stack. Agent's state, goal's state and firewood stack's state are accessible. Write a reward function in Python.",
+        "chosen": "def reward(s_agent, s_firewood_stack, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_firewood_stack = calculate_distance_min(s_agent, s_firewood_stack) \n    penalty_collision = -25 if (d_agent_firewood_stack < 0.8) else 15 \n    reward_reaching_goal = 30 if (d_agent_goal < 0.4) else -d_agent_goal**3 \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def rejected_fn(): \n    return 0"
+    },
+    {
+        "prompt": "A drone is driving in cottage. It must avoid colliding with the rocking chair. Agent's state, goal's state and rocking chair's state are accessible. Write a reward function in Python.",
+        "chosen": "def reward(s_agent, s_rocking_chair, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_rocking_chair = calculate_distance_min(s_agent, s_rocking_chair) \n    penalty_collision = -25 if (d_agent_rocking_chair < 0.8) else 15 \n    reward_reaching_goal = 30 if (d_agent_goal < 0.4) else -d_agent_goal**3 \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def reward_env(): \n   punshiment = 100\n   return punshiment \n    def obstacles(): \n    price = 10\n    return price"
+    },
+    {
+        "prompt": "A drone is driving in cottage. It must avoid colliding with the low ceiling beam. Agent's state, goal's state and low ceiling beam's state are accessible. Write a reward function in Python.",
+        "chosen": "def reward(s_agent, s_low_beam, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_low_beam = calculate_distance_min(s_agent, s_low_beam) \n    penalty_collision = -25 if (d_agent_low_beam < 0.8) else 15 \n    reward_reaching_goal = 30 if (d_agent_goal < 0.4) else -d_agent_goal**3 \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def fallback(): \n    return -1"
+    },
+    {
+        "prompt": "A drone is driving in cottage. It must avoid colliding with the woven rug edge. Agent's state, goal's state and woven rug edge's state are accessible. Write a reward function in Python.",
+        "chosen": "def reward(s_agent, s_rug_edge, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_rug_edge = calculate_distance_min(s_agent, s_rug_edge) \n    penalty_collision = -25 if (d_agent_rug_edge < 0.8) else 15 \n    reward_reaching_goal = 30 if (d_agent_goal < 0.4) else -d_agent_goal**3 \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def nothing(): \n    pass"
+    },
+    {
+        "prompt": "A drone is driving in cottage. It must avoid colliding with the dining table. Agent's state, goal's state and dining table's state are accessible. Write a reward function in Python.",
+        "chosen": "def reward(s_agent, s_dining_table, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_dining_table = calculate_distance_min(s_agent, s_dining_table) \n    penalty_collision = -25 if (d_agent_dining_table < 0.8) else 15 \n    reward_reaching_goal = 30 if (d_agent_goal < 0.4) else -d_agent_goal**3 \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def rejected_fn(): \n    return 0"
+    },
+    {
+        "prompt": "A drone is driving in cottage. It must avoid colliding with the hutch cabinet. Agent's state, goal's state and hutch cabinet's state are accessible. Write a reward function in Python.",
+        "chosen": "def reward(s_agent, s_hutch_cabinet, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_hutch_cabinet = calculate_distance_min(s_agent, s_hutch_cabinet) \n    penalty_collision = -25 if (d_agent_hutch_cabinet < 0.8) else 15 \n    reward_reaching_goal = 30 if (d_agent_goal < 0.4) else -d_agent_goal**3 \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def reward_to_coottage(): \n    if goal == 'true': \n    return 10 \n    else: \n    return -10"
+    },
+    {
+        "prompt": "A drone is driving in cottage. It must avoid colliding with the kitchen island. Agent's state, goal's state and kitchen island's state are accessible. Write a reward function in Python.",
+        "chosen": "def reward(s_agent, s_kitchen_island, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_kitchen_island = calculate_distance_min(s_agent, s_kitchen_island) \n    penalty_collision = -25 if (d_agent_kitchen_island < 0.8) else 15 \n    reward_reaching_goal = 30 if (d_agent_goal < 0.4) else -d_agent_goal**3 \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def rejected_fn(): \n    return 0"
+    },
+    {
+        "prompt": "A drone is driving in cottage. It must avoid colliding with the pot rack. Agent's state, goal's state and pot rack's state are accessible. Write a reward function in Python.",
+        "chosen": "def reward(s_agent, s_pot_rack, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_pot_rack = calculate_distance_min(s_agent, s_pot_rack) \n    penalty_collision = -25 if (d_agent_pot_rack < 0.8) else 15 \n    reward_reaching_goal = 30 if (d_agent_goal < 0.4) else -d_agent_goal**3 \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def alt(): \n    return 42"
+    },
+    {
+        "prompt": "A drone is driving in cottage. It must avoid colliding with the pantry shelf. Agent's state, goal's state and pantry shelf's state are accessible. Write a reward function in Python.",
+        "chosen": "def reward(s_agent, s_pantry_shelf, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_pantry_shelf = calculate_distance_min(s_agent, s_pantry_shelf) \n    penalty_collision = -25 if (d_agent_pantry_shelf < 0.8) else 15 \n    reward_reaching_goal = 30 if (d_agent_goal < 0.4) else -d_agent_goal**3 \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def nothing(): \n    pass"
+    },
+    {
+        "prompt": "A drone is driving in cottage. It must avoid colliding with the window. Agent's state, goal's state and window's state are accessible. Write a reward function in Python.",
+        "chosen": "def reward(s_agent, s_window, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_window = calculate_distance_min(s_agent, s_window) \n    penalty_collision = -25 if (d_agent_window < 0.8) else 15 \n    reward_reaching_goal = 30 if (d_agent_goal < 0.4) else -d_agent_goal**3 \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def get_answer(s_goal): \n    return goal.position"
+    },
+    {
+        "prompt": "A drone is driving in cottage. It must avoid colliding with the rain barrel. Agent's state, goal's state and rain barrel's state are accessible. Write a reward function in Python.",
+        "chosen": "def reward(s_agent, s_rain_barrel, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_rain_barrel = calculate_distance_min(s_agent, s_rain_barrel) \n    penalty_collision = -25 if (d_agent_rain_barrel < 0.8) else 15 \n    reward_reaching_goal = 30 if (d_agent_goal < 0.4) else -d_agent_goal**3 \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def rejected_fn(): \n    return 0"
+    },
+    {
+        "prompt": "A drone is driving in cottage. It must avoid colliding with the garden gate. Agent's state, goal's state and garden gate's state are accessible. Write a reward function in Python.",
+        "chosen": "def reward(s_agent, s_garden_gate, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_garden_gate = calculate_distance_min(s_agent, s_garden_gate) \n    penalty_collision = -25 if (d_agent_garden_gate < 0.8) else 15 \n    reward_reaching_goal = 30 if (d_agent_goal < 0.4) else -d_agent_goal**3 \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def nothing(): \n    pass"
+    },
+    {
+        "prompt": "A drone is driving in cottage. It must avoid colliding with the bird feeder pole. Agent's state, goal's state and bird feeder pole's state are accessible. Write a reward function in Python.",
+        "chosen": "def reward(s_agent, s_bird_feeder_pole, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_bird_feeder_pole = calculate_distance_min(s_agent, s_bird_feeder_pole) \n    penalty_collision = -25 if (d_agent_bird_feeder_pole < 0.8) else 15 \n    reward_reaching_goal = 30 if (d_agent_goal < 0.4) else -d_agent_goal**3 \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def get_answer(s_goal): \n    return goal.position"
+    },
+    {
+        "prompt": "A drone is driving in cottage. It must avoid colliding with the porch step. Agent's state, goal's state and porch step's state are accessible. Write a reward function in Python.",
+        "chosen": "def reward(s_agent, s_porch_step, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_porch_step = calculate_distance_min(s_agent, s_porch_step) \n    penalty_collision = -25 if (d_agent_porch_step < 0.8) else 15 \n    reward_reaching_goal = 30 if (d_agent_goal < 0.4) else -d_agent_goal**3 \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def get_answer(s_goal): \n    return goal.position"
+    },
+    {
+        "prompt": "A drone is driving in cottage. It must avoid colliding with the coat rack. Agent's state, goal's state and coat rack's state are accessible. Write a reward function in Python.",
+        "chosen": "def reward(s_agent, s_coat_rack, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_coat_rack = calculate_distance_min(s_agent, s_coat_rack) \n    penalty_collision = -25 if (d_agent_coat_rack < 0.8) else 15 \n    reward_reaching_goal = 30 if (d_agent_goal < 0.4) else -d_agent_goal**3 \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def reward_env(): \n   punshiment = 100\n   return punshiment \n    def obstacles(): \n    price = 10\n    return price"
+    },
+    {
+        "prompt": "A drone is driving in cottage. It must avoid colliding with the boot tray. Agent's state, goal's state and boot tray's state are accessible. Write a reward function in Python.",
+        "chosen": "def reward(s_agent, s_boot_rack, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_boot_tray = calculate_distance_min(s_agent, s_boot_tray) \n    penalty_collision = -25 if (d_agent_boot_tray < 0.8) else 15 \n    reward_reaching_goal = 30 if (d_agent_goal < 0.4) else -d_agent_goal**3 \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def reward_env(): \n   punshiment = 100\n   return punshiment \n    def obstacles(): \n    price = 10\n    return price"
+    },
+    {
+        "prompt": "A drone is driving in cottage. It must avoid colliding with the umbrella stand. Agent's state, goal's state and umbrella stand's state are accessible. Write a reward function in Python.",
+        "chosen": "def reward(s_agent, s_umbrella_stand, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_umbrella_stand = calculate_distance_min(s_agent, s_umbrella_stand) \n    penalty_collision = -25 if (d_agent_umbrella_stand < 0.8) else 15 \n    reward_reaching_goal = 30 if (d_agent_goal < 0.4) else -d_agent_goal**3 \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def reward_object(): \n   punshiment = 100\n   return punshiment \n    def price(): \n    price = 10\n    return price"
+    },
+    {
+        "prompt": "A drone is driving in cottage. It must avoid colliding with the chandelier. Agent's state, goal's state and chandelier's state are accessible. Write a reward function in Python.",
+        "chosen": "def reward(s_agent, s_chandelier, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_chandelier = calculate_distance_min(s_agent, s_chandelier) \n    penalty_collision = -25 if (d_agent_chandelier < 0.8) else 15 \n    reward_reaching_goal = 30 if (d_agent_goal < 0.4) else -d_agent_goal**3 \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def get_answer(s_goal): \n    return goal.position"
+    },
+    {
+        "prompt": "A drone is driving in cottage. It must avoid colliding with the loft ladder. Agent's state, goal's state and loft ladder's state are accessible. Write a reward function in Python.",
+        "chosen": "def reward(s_agent, s_loft_ladder, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_loft_ladder = calculate_distance_min(s_agent, s_loft_ladder) \n    penalty_collision = -25 if (d_agent_loft_ladder < 0.8) else 15 \n    reward_reaching_goal = 30 if (d_agent_goal < 0.4) else -d_agent_goal**3 \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def rejected_fn(): \n    return 0"
+    },
+    {
+        "prompt": "A drone is driving in cottage. It must avoid colliding with the wooden bench. Agent's state, goal's state and wooden bench's state are accessible. Write a reward function in Python.",
+        "chosen": "def reward(s_agent, s_wooden_bench, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_wooden_bench = calculate_distance_min(s_agent, s_wooden_bench) \n    penalty_collision = -25 if (d_agent_wooden_bench < 0.8) else 15 \n    reward_reaching_goal = 30 if (d_agent_goal < 0.4) else -d_agent_goal**3 \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def alt(): \n    return 42"
+    },
+    {
+        "prompt": "Scenario: A drone is navigating Cottage. Goal: It must avoid colliding with Cottage's wood stove, firewood stack and woven rug edge. Assumptions: The Agent's state, goal's state and the multiple obstacles: wood stove, firewood stack, and woven rug edge are available. Instruction: Implement a reward function in Python.",
+        "chosen": "def reward(s_agent, s_multiple_obstacles, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_multiple_obstacles_min = calculate_distance_min(s_agent, s_multiple_obstacles) \n    penalty_collision = -20 if (d_agent_multiple_obstacles_min < 0.65) else 10 \n    reward_reaching_goal = 25 if (d_agent_goal < 0.4) else -d_agent_goal**3 \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def calculate(): \n    return 1"
+    },
+    {
+        "prompt": "Scenario: A drone is navigating Cottage. Goal: It must avoid colliding with Cottage's dining table and hutch cabinet. Assumptions: The Agent's state, goal's state and the multiple obstacles: dining table, and hutch cabinet are available. Instruction: Implement a reward function in Python.",
+        "chosen": "def reward(s_agent, s_multiple_obstacles, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_multiple_obstacles_min = calculate_distance_min(s_agent, s_multiple_obstacles) \n    penalty_collision = -20 if (d_agent_multiple_obstacles_min < 0.65) else 10 \n    reward_reaching_goal = 25 if (d_agent_goal < 0.4) else -d_agent_goal**3 \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def alt(): \n    return 42"
+    },
+    {
+        "prompt": "Scenario: A drone is navigating Cottage. Goal: It must avoid colliding with Cottage's garden gate, rain barrel and bird feeder pole. Assumptions: The Agent's state, goal's state and the multiple obstacles: garden gate, rain barrel, and bird feeder pole are available. Instruction: Implement a reward function in Python.",
+        "chosen": "def reward(s_agent, s_multiple_obstacles, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_multiple_obstacles_min = calculate_distance_min(s_agent, s_multiple_obstacles) \n    penalty_collision = -20 if (d_agent_multiple_obstacles_min < 0.65) else 10 \n    reward_reaching_goal = 25 if (d_agent_goal < 0.4) else -d_agent_goal**3 \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def reward_env(): \n   punshiment = 100\n   return punshiment \n    def obstacles(): \n    price = 10\n    return price"
+    },
+    {
+        "prompt": "Scenario: A drone is navigating Cottage. Goal: It must avoid colliding with Cottage's porch step and rocking chair. Assumptions: The Agent's state, goal's state and the multiple obstacles: porch step, and rocking chair are available. Instruction: Implement a reward function in Python.",
+        "chosen": "def reward(s_agent, s_multiple_obstacles, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_multiple_obstacles_min = calculate_distance_min(s_agent, s_multiple_obstacles) \n    penalty_collision = -20 if (d_agent_multiple_obstacles_min < 0.65) else 10 \n    reward_reaching_goal = 25 if (d_agent_goal < 0.4) else -d_agent_goal**3 \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def reward_object(): \n   punshiment = 100\n   return punshiment \n    def price(): \n    price = 10\n    return price"
+    },
+    {
+        "prompt": "Scenario: A drone is inspecting in vineyard. Requirements: It must avoid colliding with the trellis post. Given: Agent's state, goal's state and trellis post's state are accessible. Write a reward function in Python.",
+        "chosen": "def reward(s_agent, s_trellis_post, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_trellis_post = calculate_distance_min(s_agent, s_trellis_post) \n    penalty_collision = -20 if (d_agent_trellis_post < 0.65) else 10 \n    reward_reaching_goal = 30 if (d_agent_goal < 0.3) else -10 \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def nothing(): \n    pass"
+    },
+    {
+        "prompt": "Scenario: A drone is inspecting in vineyard. Requirements: It must avoid colliding with the vine row canopy. Given: Agent's state, goal's state and vine row canopy's state are accessible. Write a reward function in Python.",
+        "chosen": "def reward(s_agent, s_vine_row, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_vine_row = calculate_distance_min(s_agent, s_vine_row) \n    penalty_collision = -20 if (d_agent_vine_row < 0.65) else 10 \n    reward_reaching_goal = 30 if (d_agent_goal < 0.3) else -10 \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def reward_env(): \n   punshiment = 100\n   return punshiment \n    def obstacles(): \n    price = 10\n    return price"
+    },
+    {
+        "prompt": "Scenario: A drone is inspecting in vineyard. Requirements: It must avoid colliding with the row end-post anchor. Given: Agent's state, goal's state and row end-post anchor's state are accessible. Write a reward function in Python.",
+        "chosen": "def reward(s_agent, s_end_post_anchor, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_end_post_anchor = calculate_distance_min(s_agent, s_end_post_anchor) \n    penalty_collision = -20 if (d_agent_end_post_anchor < 0.65) else 10 \n    reward_reaching_goal = 30 if (d_agent_goal < 0.3) else -10 \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def reward_to_vineyaard(): \n    if goal == 'true': \n    return 10 \n    else: \n    return -10"
+    },
+    {
+        "prompt": "Scenario: A drone is inspecting in vineyard. Requirements: It must avoid colliding with the guy wire. Given: Agent's state, goal's state and guy wire's state are accessible. Write a reward function in Python.",
+        "chosen": "def reward(s_agent, s_guy_wire, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_guy_wire = calculate_distance_min(s_agent, s_guy_wire) \n    penalty_collision = -20 if (d_agent_guy_wire < 0.65) else 10 \n    reward_reaching_goal = 30 if (d_agent_goal < 0.3) else -10 \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def rejected_fn(): \n    return 0"
+    },
+    {
+        "prompt": "Scenario: A drone is inspecting in vineyard. Requirements: It must avoid colliding with the irrigation drip line. Given: Agent's state, goal's state and irrigation drip line's state are accessible. Write a reward function in Python.",
+        "chosen": "def reward(s_agent, s_drip_line, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_drip_line = calculate_distance_min(s_agent, s_drip_line) \n    penalty_collision = -20 if (d_agent_drip_line < 0.65) else 10 \n    reward_reaching_goal = 30 if (d_agent_goal < 0.3) else -10 \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def alt(): \n    return 42"
+    },
+    {
+        "prompt": "Scenario: A drone is inspecting in vineyard. Requirements: It must avoid colliding with the irrigation riser. Given: Agent's state, goal's state and irrigation riser's state are accessible. Write a reward function in Python.",
+        "chosen": "def reward(s_agent, s_irrigation_riser, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_irrigation_riser = calculate_distance_min(s_agent, s_irrigation_riser) \n    penalty_collision = -20 if (d_agent_irrigation_riser < 0.65) else 10 \n    reward_reaching_goal = 30 if (d_agent_goal < 0.3) else -10 \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def nothing(): \n    pass"
+    },
+    {
+        "prompt": "Scenario: A drone is inspecting in vineyard. Requirements: It must avoid colliding with the valve box. Given: Agent's state, goal's state and valve box's state are accessible. Write a reward function in Python.",
+        "chosen": "def reward(s_agent, s_valve_box, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_valve_box = calculate_distance_min(s_agent, s_valve_box) \n    penalty_collision = -20 if (d_agent_valve_box < 0.65) else 10 \n    reward_reaching_goal = 30 if (d_agent_goal < 0.3) else -10 \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def calculate(): \n    return 1"
+    },
+    {
+        "prompt": "Scenario: A drone is inspecting in vineyard. Requirements: It must avoid colliding with the bird netting. Given: Agent's state, goal's state and bird netting's state are accessible. Write a reward function in Python.",
+        "chosen": "def reward(s_agent, s_bird_net, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_bird_net = calculate_distance_min(s_agent, s_bird_net) \n    penalty_collision = -20 if (d_agent_bird_net < 0.65) else 10 \n    reward_reaching_goal = 30 if (d_agent_goal < 0.3) else -10 \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def nothing(): \n    pass"
+    },
+    {
+        "prompt": "Scenario: A drone is inspecting in vineyard. Requirements: It must avoid colliding with the bird scarer. Given: Agent's state, goal's state and bird scarer's state are accessible. Write a reward function in Python.",
+        "chosen": "def reward(s_agent, s_bird_scarer, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_bird_scarer = calculate_distance_min(s_agent, s_bird_scarer) \n    penalty_collision = -20 if (d_agent_bird_scarer < 0.65) else 10 \n    reward_reaching_goal = 30 if (d_agent_goal < 0.3) else -10 \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def reward_to_vineyard(): \n    if goal == 'true': \n    return 10 \n    else: \n    return -10"
+    },
+    {
+        "prompt": "Scenario: A drone is inspecting in vineyard. Requirements: It must avoid colliding with the wind machine tower. Given: Agent's state, goal's state and wind machine tower's state are accessible. Write a reward function in Python.",
+        "chosen": "def reward(s_agent, s_wind_machine, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_wind_machine = calculate_distance_min(s_agent, s_wind_machine) \n    penalty_collision = -20 if (d_agent_wind_machine < 0.65) else 10 \n    reward_reaching_goal = 30 if (d_agent_goal < 0.3) else -10 \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def calculate(): \n    return 1"
+    },
+    {
+        "prompt": "Scenario: A drone is inspecting in vineyard. Requirements: It must avoid colliding with the weather station mast. Given: Agent's state, goal's state and weather station mast's state are accessible. Write a reward function in Python.",
+        "chosen": "def reward(s_agent, s_weather_mast, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_weather_mast = calculate_distance_min(s_agent, s_weather_mast) \n    penalty_collision = -20 if (d_agent_weather_mast < 0.65) else 10 \n    reward_reaching_goal = 30 if (d_agent_goal < 0.3) else -10 \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def reward_object(): \n   punshiment = 100\n   return punshiment \n    def price(): \n    price = 10\n    return price"
+    },
+    {
+        "prompt": "Scenario: A drone is inspecting in vineyard. Requirements: It must avoid colliding with the ATV. Given: Agent's state, goal's state and ATV's state are accessible. Write a reward function in Python.",
+        "chosen": "def reward(s_agent, s_atv, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_atv = calculate_distance_min(s_agent, s_atv) \n    penalty_collision = -20 if (d_agent_atv < 0.65) else 10 \n    reward_reaching_goal = 30 if (d_agent_goal < 0.3) else -10 \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def rejected_fn(): \n    return 0"
+    },
+    {
+        "prompt": "Scenario: A drone is inspecting in vineyard. Requirements: It must avoid colliding with the harvest bin. Given: Agent's state, goal's state and harvest bin's state are accessible. Write a reward function in Python.",
+        "chosen": "def reward(s_agent, s_harvest_bin, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_harvest_bin = calculate_distance_min(s_agent, s_harvest_bin) \n    penalty_collision = -20 if (d_agent_harvest_bin < 0.65) else 10 \n    reward_reaching_goal = 30 if (d_agent_goal < 0.3) else -10 \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def reward_env(): \n   punshiment = 100\n   return punshiment \n    def obstacles(): \n    price = 10\n    return price"
+    },
+    {
+        "prompt": "Scenario: A drone is inspecting in vineyard. Requirements: It must avoid colliding with the pallet stack. Given: Agent's state, goal's state and pallet stack's state are accessible. Write a reward function in Python.",
+        "chosen": "def reward(s_agent, s_pallet_stack, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_pallet_stack = calculate_distance_min(s_agent, s_pallet_stack) \n    penalty_collision = -20 if (d_agent_pallet_stack < 0.65) else 10 \n    reward_reaching_goal = 30 if (d_agent_goal < 0.3) else -10 \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def reward_object(): \n   punshiment = 100\n   return punshiment \n    def price(): \n    price = 10\n    return price"
+    },
+    {
+        "prompt": "Scenario: A drone is inspecting in vineyard. Requirements: It must avoid colliding with the hose reel. Given: Agent's state, goal's state and hose reel's state are accessible. Write a reward function in Python.",
+        "chosen": "def reward(s_agent, s_hose_reel, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_hose_reel = calculate_distance_min(s_agent, s_hose_reel) \n    penalty_collision = -20 if (d_agent_hose_reel < 0.65) else 10 \n    reward_reaching_goal = 30 if (d_agent_goal < 0.3) else -10 \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def fallback(): \n    return -1"
+    },
+    {
+        "prompt": "Scenario: A drone is inspecting in vineyard. Requirements: It must avoid colliding with the tractor (parked). Given: Agent's state, goal's state and tractor (parked)'s state are accessible. Write a reward function in Python.",
+        "chosen": "def reward(s_agent, s_tractor, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_tractor = calculate_distance_min(s_agent, s_tractor) \n    penalty_collision = -20 if (d_agent_tractor < 0.65) else 10 \n    reward_reaching_goal = 30 if (d_agent_goal < 0.3) else -10 \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def calculate(): \n    return 1"
+    },
+    {
+        "prompt": "Scenario: A drone is inspecting in vineyard. Requirements: It must avoid colliding with the sprayer cart. Given: Agent's state, goal's state and sprayer cart's state are accessible. Write a reward function in Python.",
+        "chosen": "def reward(s_agent, s_sprayer_cart, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_sprayer_cart = calculate_distance_min(s_agent, s_sprayer_cart) \n    penalty_collision = -20 if (d_agent_sprayer_cart < 0.65) else 10 \n    reward_reaching_goal = 30 if (d_agent_goal < 0.3) else -10 \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def calculate(): \n    return 1"
+    },
+    {
+        "prompt": "Scenario: A drone is inspecting in vineyard. Requirements: It must avoid colliding with the fence gate. Given: Agent's state, goal's state and fence gate's state are accessible. Write a reward function in Python.",
+        "chosen": "def reward(s_agent, s_fence_gate, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_fence_gate = calculate_distance_min(s_agent, s_fence_gate) \n    penalty_collision = -20 if (d_agent_fence_gate < 0.65) else 10 \n    reward_reaching_goal = 30 if (d_agent_goal < 0.3) else -10 \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def rejected_fn(): \n    return 0"
+    },
+    {
+        "prompt": "Scenario: A drone is inspecting in vineyard. Requirements: It must avoid colliding with the drainage ditch. Given: Agent's state, goal's state and drainage ditch's state are accessible. Write a reward function in Python.",
+        "chosen": "def reward(s_agent, s_drainage_ditch, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_drainage_ditch = calculate_distance_min(s_agent, s_drainage_ditch) \n    penalty_collision = -20 if (d_agent_drainage_ditch < 0.65) else 10 \n    reward_reaching_goal = 30 if (d_agent_goal < 0.3) else -10 \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def reward_env(): \n   punshiment = 100\n   return punshiment \n    def obstacles(): \n    price = 10\n    return price"
+    },
+    {
+        "prompt": "Scenario: A drone is inspecting in vineyard. Requirements: It must avoid colliding with the gravel pile. Given: Agent's state, goal's state and gravel pile's state are accessible. Write a reward function in Python.",
+        "chosen": "def reward(s_agent, s_gravel_pile, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_gravel_pile = calculate_distance_min(s_agent, s_gravel_pile) \n    penalty_collision = -20 if (d_agent_gravel_pile < 0.65) else 10 \n    reward_reaching_goal = 30 if (d_agent_goal < 0.3) else -10 \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def calculate(): \n    return 1"
+    },
+    {
+        "prompt": "Scenario: A drone is inspecting in vineyard. Requirements: It must avoid colliding with the solar pump stand. Given: Agent's state, goal's state and solar pump stand's state are accessible. Write a reward function in Python.",
+        "chosen": "def reward(s_agent, s_solar_pump_stand, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_solar_pump_stand = calculate_distance_min(s_agent, s_solar_pump_stand) \n    penalty_collision = -20 if (d_agent_solar_pump_stand < 0.65) else 10 \n    reward_reaching_goal = 30 if (d_agent_goal < 0.3) else -10 \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def alt(): \n    return 42"
+    },
+    {
+        "prompt": "Scenario: A drone is navigating Vineyard. Goal: It must avoid colliding with Vineyard's trellis post, guy wire and irrigation drip line. Assumptions: The Agent's state, goal's state and the multiple obstacles: trellis post, guy wire, and irrigation drip line are available. Instruction: Implement a reward function in Python.",
+        "chosen": "def reward(s_agent, s_multiple_obstacles, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_multiple_obstacles_min = calculate_distance_min(s_agent, s_multiple_obstacles) \n    penalty_collision = -20 if (d_agent_multiple_obstacles_min < 0.65) else 10 \n    reward_reaching_goal = 20 if (d_agent_goal < 0.3) else -10 \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def reward_to_vineyard(): \n    if goal == 'true': \n    return 10 \n    else: \n    return -10"
+    },
+    {
+        "prompt": "Scenario: A drone is navigating Vineyard. Goal: It must avoid colliding with Vineyard's harvest bin and pallet stack. Assumptions: The Agent's state, goal's state and the multiple obstacles: harvest bin, and pallet stack are available. Instruction: Implement a reward function in Python.",
+        "chosen": "def reward(s_agent, s_multiple_obstacles, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_multiple_obstacles_min = calculate_distance_min(s_agent, s_multiple_obstacles) \n    penalty_collision = -20 if (d_agent_multiple_obstacles_min < 0.65) else 10 \n    reward_reaching_goal = 20 if (d_agent_goal < 0.3) else -10 \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def reward_object(): \n   punshiment = 100\n   return punshiment \n    def price(): \n    price = 10\n    return price"
+    },
+    {
+        "prompt": "Scenario: A drone is navigating Vineyard. Goal: It must avoid colliding with Vineyard's wind machine tower, weather station mast and bird netting. Assumptions: The Agent's state, goal's state and the multiple obstacles: wind machine tower, weather station mast, and bird netting are available. Instruction: Implement a reward function in Python.",
+        "chosen": "def reward(s_agent, s_multiple_obstacles, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_multiple_obstacles_min = calculate_distance_min(s_agent, s_multiple_obstacles) \n    penalty_collision = -20 if (d_agent_multiple_obstacles_min < 0.65) else 10 \n    reward_reaching_goal = 20 if (d_agent_goal < 0.3) else -10 \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def rejected_fn(): \n    return 0"
+    },
+    {
+        "prompt": "Scenario: A drone is navigating Vineyard. Goal: It must avoid colliding with Vineyard's fence gate and drainage ditch. Assumptions: The Agent's state, goal's state and the multiple obstacles: fence gate, and drainage ditch are available. Instruction: Implement a reward function in Python.",
+        "chosen": "def reward(s_agent, s_multiple_obstacles, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_multiple_obstacles_min = calculate_distance_min(s_agent, s_multiple_obstacles) \n    penalty_collision = -20 if (d_agent_multiple_obstacles_min < 0.65) else 10 \n    reward_reaching_goal = 20 if (d_agent_goal < 0.3) else -10 \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def fallback(): \n    return -1"
+    },
+    {
+        "prompt": "Scenario: A agent is inspecting in elementary school. \n Goal: It must avoid colliding with the classroom desk. \n Given: Agent's state, goal's state and classroom desk's state are accessible. Write a reward function in Python.",
+        "chosen": "def reward(s_agent, s_classroom_desk, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_classroom_desk = calculate_distance_min(s_agent, s_classroom_desk) \n    penalty_collision = -25 if (d_agent_classroom_desk < 0.5) else 20 \n    reward_reaching_goal = 10 if (d_agent_goal < 0.18) else -2**d_agent_goal \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def get_answer(s_goal): \n    return goal.position"
+    },
+    {
+        "prompt": "Scenario: A agent is inspecting in elementary school. \n Goal: It must avoid colliding with the whiteboard. \n Given: Agent's state, goal's state and whiteboard's state are accessible. Write a reward function in Python.",
+        "chosen": "def reward(s_agent, s_whiteboard, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_whiteboard = calculate_distance_min(s_agent, s_whiteboard) \n    penalty_collision = -25 if (d_agent_whiteboard < 0.5) else 20 \n    reward_reaching_goal = 10 if (d_agent_goal < 0.18) else -2**d_agent_goal \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def reward_to_school(): \n    if goal == 'true': \n    return 10 \n    else: \n    return -10"
+    },
+    {
+        "prompt": "Scenario: A agent is inspecting in elementary school. \n Goal: It must avoid colliding with the cubby shelf. \n Given: Agent's state, goal's state and cubby shelf's state are accessible. Write a reward function in Python.",
+        "chosen": "def reward(s_agent, s_cubby_shelf, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_cubby_shelf = calculate_distance_min(s_agent, s_cubby_shelf) \n    penalty_collision = -25 if (d_agent_cubby_shelf < 0.5) else 20 \n    reward_reaching_goal = 10 if (d_agent_goal < 0.18) else -2**d_agent_goal \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def fallback(): \n    return -1"
+    },
+    {
+        "prompt": "Scenario: A agent is inspecting in elementary school. \n Goal: It must avoid colliding with the bookshelf. \n Given: Agent's state, goal's state and bookshelf's state are accessible. Write a reward function in Python.",
+        "chosen": "def reward(s_agent, s_bookshelf, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_bookshelf = calculate_distance_min(s_agent, s_bookshelf) \n    penalty_collision = -25 if (d_agent_bookshelf < 0.5) else 20 \n    reward_reaching_goal = 10 if (d_agent_goal < 0.18) else -2**d_agent_goal \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def alt(): \n    return 42"
+    },
+    {
+        "prompt": "Scenario: A agent is inspecting in elementary school. \n Goal: It must avoid colliding with the art easel. \n Given: Agent's state, goal's state and art easel's state are accessible. Write a reward function in Python.",
+        "chosen": "def reward(s_agent, s_art_easel, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_art_easel = calculate_distance_min(s_agent, s_art_easel) \n    penalty_collision = -25 if (d_agent_art_easel < 0.5) else 20 \n    reward_reaching_goal = 10 if (d_agent_goal < 0.18) else -2**d_agent_goal \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def alt(): \n    return 42"
+    },
+    {
+        "prompt": "Scenario: A agent is inspecting in elementary school. \n Goal: It must avoid colliding with the coat hook rack. \n Given: Agent's state, goal's state and coat hook rack's state are accessible. Write a reward function in Python.",
+        "chosen": "def reward(s_agent, s_coat_hook_rack, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_coat_hook_rack = calculate_distance_min(s_agent, s_coat_hook_rack) \n    penalty_collision = -25 if (d_agent_coat_hook_rack < 0.5) else 20 \n    reward_reaching_goal = 10 if (d_agent_goal < 0.18) else -2**d_agent_goal \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def alt(): \n    return 42"
+    },
+    {
+        "prompt": "Scenario: A agent is inspecting in elementary school. \n Goal: It must avoid colliding with the backpack rack. \n Given: Agent's state, goal's state and backpack rack's state are accessible. Write a reward function in Python.",
+        "chosen": "def reward(s_agent, s_backpack_rack, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_backpack_rack = calculate_distance_min(s_agent, s_backpack_rack) \n    penalty_collision = -25 if (d_agent_backpack_rack < 0.5) else 20 \n    reward_reaching_goal = 10 if (d_agent_goal < 0.18) else -2**d_agent_goal \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def reward_object(): \n   punshiment = 100\n   return punshiment \n    def price(): \n    price = 10\n    return price"
+    },
+    {
+        "prompt": "Scenario: A agent is inspecting in elementary school. \n Goal: It must avoid colliding with the smartboard. \n Given: Agent's state, goal's state and smartboard's state are accessible. Write a reward function in Python.",
+        "chosen": "def reward(s_agent, s_smartboard, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_smartboard = calculate_distance_min(s_agent, s_smartboard) \n    penalty_collision = -25 if (d_agent_smartboard < 0.5) else 20 \n    reward_reaching_goal = 10 if (d_agent_goal < 0.18) else -2**d_agent_goal \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def reward_env(): \n   punshiment = 100\n   return punshiment \n    def obstacles(): \n    price = 10\n    return price"
+    },
+    {
+        "prompt": "Scenario: A agent is inspecting in elementary school. \n Goal: It must avoid colliding with the projector cart. \n Given: Agent's state, goal's state and projector cart's state are accessible. Write a reward function in Python.",
+        "chosen": "def reward(s_agent, s_projector_cart, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_projector_cart = calculate_distance_min(s_agent, s_projector_cart) \n    penalty_collision = -25 if (d_agent_projector_cart < 0.5) else 20 \n    reward_reaching_goal = 10 if (d_agent_goal < 0.18) else -2**d_agent_goal \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def rejected_fn(): \n    return 0"
+    },
+    {
+        "prompt": "Scenario: A agent is inspecting in elementary school. \n Goal: It must avoid colliding with the computer station. \n Given: Agent's state, goal's state and computer station's state are accessible. Write a reward function in Python.",
+        "chosen": "def reward(s_agent, s_computer_station, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_computer_station = calculate_distance_min(s_agent, s_computer_station) \n    penalty_collision = -25 if (d_agent_computer_station < 0.5) else 20 \n    reward_reaching_goal = 10 if (d_agent_goal < 0.18) else -2**d_agent_goal \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def get_answer(s_goal): \n    return goal.position"
+    },
+    {
+        "prompt": "Scenario: A agent is inspecting in elementary school. \n Goal: It must avoid colliding with the printer stand. \n Given: Agent's state, goal's state and printer stand's state are accessible. Write a reward function in Python.",
+        "chosen": "def reward(s_agent, s_printer_stand, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_printer_stand = calculate_distance_min(s_agent, s_printer_stand) \n    penalty_collision = -25 if (d_agent_printer_stand < 0.5) else 20 \n    reward_reaching_goal = 10 if (d_agent_goal < 0.18) else -2**d_agent_goal \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def reward_to_school(): \n    if goal == 'true': \n    return 10 \n    else: \n    return -10"
+    },
+    {
+        "prompt": "Scenario: A agent is inspecting in elementary school. \n Goal: It must avoid colliding with the water fountain. \n Given: Agent's state, goal's state and water fountain's state are accessible. Write a reward function in Python.",
+        "chosen": "def reward(s_agent, s_water_fountain, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_water_fountain = calculate_distance_min(s_agent, s_water_fountain) \n    penalty_collision = -25 if (d_agent_water_fountain < 0.5) else 20 \n    reward_reaching_goal = 10 if (d_agent_goal < 0.18) else -2**d_agent_goal \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def reward_object(): \n   punshiment = 100\n   return punshiment \n    def price(): \n    price = 10\n    return price"
+    },
+    {
+        "prompt": "Scenario: A agent is inspecting in elementary school. \n Goal: It must avoid colliding with the bulletin board. \n Given: Agent's state, goal's state and bulletin board's state are accessible. Write a reward function in Python.",
+        "chosen": "def reward(s_agent, s_bulletin_board, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_bulletin_board = calculate_distance_min(s_agent, s_bulletin_board) \n    penalty_collision = -25 if (d_agent_bulletin_board < 0.5) else 20 \n    reward_reaching_goal = 10 if (d_agent_goal < 0.18) else -2**d_agent_goal \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def get_answer(s_goal): \n    return goal.position"
+    },
+    {
+        "prompt": "Scenario: A agent is inspecting in elementary school. \n Goal: It must avoid colliding with the lunch table. \n Given: Agent's state, goal's state and lunch table's state are accessible. Write a reward function in Python.",
+        "chosen": "def reward(s_agent, s_lunch_table, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_lunch_table = calculate_distance_min(s_agent, s_lunch_table) \n    penalty_collision = -25 if (d_agent_lunch_table < 0.5) else 20 \n    reward_reaching_goal = 10 if (d_agent_goal < 0.18) else -2**d_agent_goal \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def get_answer(s_goal): \n    return goal.position"
+    },
+    {
+        "prompt": "Scenario: A agent is inspecting in elementary school. \n Goal: It must avoid colliding with the cafeteria tray cart. \n Given: Agent's state, goal's state and cafeteria tray cart's state are accessible. Write a reward function in Python.",
+        "chosen": "def reward(s_agent, s_tray_cart, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_tray_cart = calculate_distance_min(s_agent, s_tray_cart) \n    penalty_collision = -25 if (d_agent_tray_cart < 0.5) else 20 \n    reward_reaching_goal = 10 if (d_agent_goal < 0.18) else -2**d_agent_goal \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def reward_env(): \n   punshiment = 100\n   return punshiment \n    def obstacles(): \n    price = 10\n    return price"
+    },
+    {
+        "prompt": "Scenario: A agent is inspecting in elementary school. \n Goal: It must avoid colliding with the milk cooler. \n Given: Agent's state, goal's state and milk cooler's state are accessible. Write a reward function in Python.",
+        "chosen": "def reward(s_agent, s_milk_cooler, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_milk_cooler = calculate_distance_min(s_agent, s_milk_cooler) \n    penalty_collision = -25 if (d_agent_milk_cooler < 0.5) else 20 \n    reward_reaching_goal = 10 if (d_agent_goal < 0.18) else -2**d_agent_goal \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def reward_to_school(): \n    if goal == 'true': \n    return 10 \n    else: \n    return -10"
+    },
+    {
+        "prompt": "Scenario: A agent is inspecting in elementary school. \n Goal: It must avoid colliding with the gym bleachers. \n Given: Agent's state, goal's state and gym bleachers's state are accessible. Write a reward function in Python.",
+        "chosen": "def reward(s_agent, s_gym_bleachers, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_gym_bleachers = calculate_distance_min(s_agent, s_gym_bleachers) \n    penalty_collision = -25 if (d_agent_gym_bleachers < 0.5) else 20 \n    reward_reaching_goal = 10 if (d_agent_goal < 0.18) else -2**d_agent_goal \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def fallback(): \n    return -1"
+    },
+    {
+        "prompt": "Scenario: A agent is inspecting in elementary school. \n Goal: It must avoid colliding with the basketball rack. \n Given: Agent's state, goal's state and basketball rack's state are accessible. Write a reward function in Python.",
+        "chosen": "def reward(s_agent, s_basketball_rack, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_basketball_rack = calculate_distance_min(s_agent, s_basketball_rack) \n    penalty_collision = -25 if (d_agent_basketball_rack < 0.5) else 20 \n    reward_reaching_goal = 10 if (d_agent_goal < 0.18) else -2**d_agent_goal \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def rejected_fn(): \n    return 0"
+    },
+    {
+        "prompt": "Scenario: A agent is inspecting in elementary school. \n Goal: It must avoid colliding with the music stand. \n Given: Agent's state, goal's state and music stand's state are accessible. Write a reward function in Python.",
+        "chosen": "def reward(s_agent, s_music_stand, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_music_stand = calculate_distance_min(s_agent, s_music_stand) \n    penalty_collision = -25 if (d_agent_music_stand < 0.5) else 20 \n    reward_reaching_goal = 10 if (d_agent_goal < 0.18) else -2**d_agent_goal \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def fallback(): \n    return -1"
+    },
+    {
+        "prompt": "Scenario: A agent is inspecting in elementary school. \n Goal: It must avoid colliding with the instrument cart. \n Given: Agent's state, goal's state and instrument cart's state are accessible. Write a reward function in Python.",
+        "chosen": "def reward(s_agent, s_instrument_cart, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_instrument_cart = calculate_distance_min(s_agent, s_instrument_cart) \n    penalty_collision = -25 if (d_agent_instrument_cart < 0.5) else 20 \n    reward_reaching_goal = 10 if (d_agent_goal < 0.18) else -2**d_agent_goal \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def reward_object(): \n   punshiment = 100\n   return punshiment \n    def price(): \n    price = 10\n    return price"
+    },
+    {
+        "prompt": "Scenario: A agent is inspecting in elementary school. \n Goal: It must avoid colliding with the library book cart. \n Given: Agent's state, goal's state and library book cart's state are accessible. Write a reward function in Python.",
+        "chosen": "def reward(s_agent, s_library_cart, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_library_cart = calculate_distance_min(s_agent, s_library_cart) \n    penalty_collision = -25 if (d_agent_library_cart < 0.5) else 20 \n    reward_reaching_goal = 10 if (d_agent_goal < 0.18) else -2**d_agent_goal \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def calculate(): \n    return 1"
+    },
+    {
+        "prompt": "Scenario: A drone is navigating Elementary School. Goal: It must avoid colliding with Elementary School's classroom desk, smartboard and projector cart. Assumptions: The Agent's state, goal's state and the multiple obstacles: classroom desk, smartboard, and projector cart are available. Instruction: Implement a reward function in Python.",
+        "chosen": "def reward(s_agent, s_multiple_obstacles, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_multiple_obstacles_min = calculate_distance_min(s_agent, s_multiple_obstacles) \n    penalty_collision = -20 if (d_agent_multiple_obstacles_min < 0.5) else 10 \n    reward_reaching_goal = 25 if (d_agent_goal < 0.18) else -2**d_agent_goal \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def reward_env(): \n   punshiment = 100\n   return punshiment \n    def obstacles(): \n    price = 10\n    return price"
+    },
+    {
+        "prompt": "Scenario: A drone is navigating Elementary School. Goal: It must avoid colliding with Elementary School's lunch table and cafeteria tray cart. Assumptions: The Agent's state, goal's state and the multiple obstacles: lunch table, and cafeteria tray cart are available. Instruction: Implement a reward function in Python.",
+        "chosen": "def reward(s_agent, s_multiple_obstacles, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_multiple_obstacles_min = calculate_distance_min(s_agent, s_multiple_obstacles) \n    penalty_collision = -20 if (d_agent_multiple_obstacles_min < 0.5) else 10 \n    reward_reaching_goal = 25 if (d_agent_goal < 0.18) else -2**d_agent_goal \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def reward_to_school(): \n    if goal == 'true': \n    return 10 \n    else: \n    return -10"
+    },
+    {
+        "prompt": "Scenario: A drone is navigating Elementary School. Goal: It must avoid colliding with Elementary School's gym bleachers, basketball rack and music stand. Assumptions: The Agent's state, goal's state and the multiple obstacles: gym bleachers, basketball rack, and music stand are available. Instruction: Implement a reward function in Python.",
+        "chosen": "def reward(s_agent, s_multiple_obstacles, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_multiple_obstacles_min = calculate_distance_min(s_agent, s_multiple_obstacles) \n    penalty_collision = -20 if (d_agent_multiple_obstacles_min < 0.5) else 10 \n    reward_reaching_goal = 25 if (d_agent_goal < 0.18) else -2**d_agent_goal \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def fallback(): \n    return -1"
+    },
+    {
+        "prompt": "Scenario: A drone is navigating Elementary School. Goal: It must avoid colliding with Elementary School's cubby shelf and backpack rack. Assumptions: The Agent's state, goal's state and the multiple obstacles: cubby shelf, and backpack rack are available. Instruction: Implement a reward function in Python.",
+        "chosen": "def reward(s_agent, s_multiple_obstacles, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_multiple_obstacles_min = calculate_distance_min(s_agent, s_multiple_obstacles) \n    penalty_collision = -20 if (d_agent_multiple_obstacles_min < 0.5) else 10 \n    reward_reaching_goal = 25 if (d_agent_goal < 0.18) else -2**d_agent_goal \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def reward_object(): \n   punshiment = 100\n   return punshiment \n    def price(): \n    price = 10\n    return price"
+    },
+    {
+        "prompt": "In a environment of a water park, a drone must navigate to a goal. \n It has access to its own state, the target’s state, and the states of slide tower present. \n Write a reward function in Python that rewards reaching the goal.",
+        "chosen": "def reward(s_agent, s_slide_tower, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_slide_tower = calculate_distance_min(s_agent, s_slide_tower) \n    penalty_collision = -33 if (d_agent_slide_tower < 0.9) else 16 \n    reward_reaching_goal = 31 if (d_agent_goal < 0.18) else -d_agent_goal**2 \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def reward_to_park(): \n    if goal == 'true': \n    return 10 \n    else: \n    return -10"
+    },
+    {
+        "prompt": "In a environment of a water park, a drone must navigate to a goal. \n It has access to its own state, the target’s state, and the states of river wall present. \n Write a reward function in Python that rewards reaching the goal.",
+        "chosen": "def reward(s_agent, s_river_wall, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_river_wall = calculate_distance_min(s_agent, s_river_wall) \n    penalty_collision = -33 if (d_agent_river_wall < 0.9) else 16 \n    reward_reaching_goal = 31 if (d_agent_goal < 0.18) else -d_agent_goal**2 \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def fallback(): \n    return -1"
+    },
+    {
+        "prompt": "In a environment of a water park, a drone must navigate to a goal. \n It has access to its own state, the target’s state, and the states of wave pool wall present. \n Write a reward function in Python that rewards reaching the goal.",
+        "chosen": "def reward(s_agent, s_wave_pool_wall, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_wave_pool_wall = calculate_distance_min(s_agent, s_wave_pool_wall) \n    penalty_collision = -33 if (d_agent_wave_pool_wall < 0.9) else 16 \n    reward_reaching_goal = 31 if (d_agent_goal < 0.18) else -d_agent_goal**2 \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def reward_to_park(): \n    if goal == 'true': \n    return 10 \n    else: \n    return -10"
+    },
+    {
+        "prompt": "In a environment of a water park, a drone must navigate to a goal. \n It has access to its own state, the target’s state, and the states of lifeguard chair present. \n Write a reward function in Python that rewards reaching the goal.",
+        "chosen": "def reward(s_agent, s_lifeguard_chair, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_lifeguard_chair = calculate_distance_min(s_agent, s_lifeguard_chair) \n    penalty_collision = -33 if (d_agent_lifeguard_chair < 0.9) else 16 \n    reward_reaching_goal = 31 if (d_agent_goal < 0.18) else -d_agent_goal**2 \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def get_answer(s_goal): \n    return goal.position"
+    },
+    {
+        "prompt": "In a environment of a water park, a drone must navigate to a goal. \n It has access to its own state, the target’s state, and the states of splash fountain present. \n Write a reward function in Python that rewards reaching the goal.",
+        "chosen": "def reward(s_agent, s_splash_fountain, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_splash_fountain = calculate_distance_min(s_agent, s_splash_fountain) \n    penalty_collision = -33 if (d_agent_splash_fountain < 0.9) else 16 \n    reward_reaching_goal = 31 if (d_agent_goal < 0.18) else -d_agent_goal**2 \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def reward_env(): \n   punshiment = 100\n   return punshiment \n    def obstacles(): \n    price = 10\n    return price"
+    },
+    {
+        "prompt": "In a environment of a water park, a drone must navigate to a goal. \n It has access to its own state, the target’s state, and the states of umbrella stand present. \n Write a reward function in Python that rewards reaching the goal.",
+        "chosen": "def reward(s_agent, s_umbrella_stand, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_umbrella_stand = calculate_distance_min(s_agent, s_umbrella_stand) \n    penalty_collision = -33 if (d_agent_umbrella_stand < 0.9) else 16 \n    reward_reaching_goal = 31 if (d_agent_goal < 0.18) else -d_agent_goal**2 \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def reward_to_park(): \n    if goal == 'true': \n    return 10 \n    else: \n    return -10"
+    },
+    {
+        "prompt": "In a environment of a water park, a drone must navigate to a goal. \n It has access to its own state, the target’s state, and the states of cabana post present. \n Write a reward function in Python that rewards reaching the goal.",
+        "chosen": "def reward(s_agent, s_cabana_post, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_cabana_post = calculate_distance_min(s_agent, s_cabana_post) \n    penalty_collision = -33 if (d_agent_cabana_post < 0.9) else 16 \n    reward_reaching_goal = 31 if (d_agent_goal < 0.18) else -d_agent_goal**2 \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def alt(): \n    return 42"
+    },
+    {
+        "prompt": "In a environment of a water park, a drone must navigate to a goal. \n It has access to its own state, the target’s state, and the states of queue stanchion present. \n Write a reward function in Python that rewards reaching the goal.",
+        "chosen": "def reward(s_agent, s_queue_stanchion, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_queue_stanchion = calculate_distance_min(s_agent, s_queue_stanchion) \n    penalty_collision = -33 if (d_agent_queue_stanchion < 0.9) else 16 \n    reward_reaching_goal = 31 if (d_agent_goal < 0.18) else -d_agent_goal**2 \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def calculate(): \n    return 1"
+    },
+    {
+        "prompt": "In a environment of a water park, a drone must navigate to a goal. \n It has access to its own state, the target’s state, and the states of slide tube rack present. \n Write a reward function in Python that rewards reaching the goal.",
+        "chosen": "def reward(s_agent, s_tube_rack, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_tube_rack = calculate_distance_min(s_agent, s_tube_rack) \n    penalty_collision = -33 if (d_agent_tube_rack < 0.9) else 16 \n    reward_reaching_goal = 31 if (d_agent_goal < 0.18) else -d_agent_goal**2 \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def alt(): \n    return 42"
+    },
+    {
+        "prompt": "In a environment of a water park, a drone must navigate to a goal. \n It has access to its own state, the target’s state, and the states of locker bank present. \n Write a reward function in Python that rewards reaching the goal.",
+        "chosen": "def reward(s_agent, s_locker_bank, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_locker_bank = calculate_distance_min(s_agent, s_locker_bank) \n    penalty_collision = -33 if (d_agent_locker_bank < 0.9) else 16 \n    reward_reaching_goal = 31 if (d_agent_goal < 0.18) else -d_agent_goal**2 \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def get_answer(s_goal): \n    return goal.position"
+    },
+    {
+        "prompt": "In a environment of a water park, a drone must navigate to a goal. \n It has access to its own state, the target’s state, and the states of towel bin present. \n Write a reward function in Python that rewards reaching the goal.",
+        "chosen": "def reward(s_agent, s_towel_bin, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_towel_bin = calculate_distance_min(s_agent, s_towel_bin) \n    penalty_collision = -33 if (d_agent_towel_bin < 0.9) else 16 \n    reward_reaching_goal = 31 if (d_agent_goal < 0.18) else -d_agent_goal**2 \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def reward_object(): \n   punshiment = 100\n   return punshiment \n    def price(): \n    price = 10\n    return price"
+    },
+    {
+        "prompt": "In a environment of a water park, a drone must navigate to a goal. \n It has access to its own state, the target’s state, and the states of concession counter present. \n Write a reward function in Python that rewards reaching the goal.",
+        "chosen": "def reward(s_agent, s_concession_counter, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_concession_counter = calculate_distance_min(s_agent, s_concession_counter) \n    penalty_collision = -33 if (d_agent_concession_counter < 0.9) else 16 \n    reward_reaching_goal = 31 if (d_agent_goal < 0.18) else -d_agent_goal**2 \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def rejected_fn(): \n    return 0"
+    },
+    {
+        "prompt": "In a environment of a water park, a drone must navigate to a goal. \n It has access to its own state, the target’s state, and the states of pump house door present. \n Write a reward function in Python that rewards reaching the goal.",
+        "chosen": "def reward(s_agent, s_pump_house_door, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_pump_house_door = calculate_distance_min(s_agent, s_pump_house_door) \n    penalty_collision = -33 if (d_agent_pump_house_door < 0.9) else 16 \n    reward_reaching_goal = 31 if (d_agent_goal < 0.18) else -d_agent_goal**2 \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def fallback(): \n    return -1"
+    },
+    {
+        "prompt": "In a environment of a water park, a drone must navigate to a goal. \n It has access to its own state, the target’s state, and the states of slide fitration grate present. \n Write a reward function in Python that rewards reaching the goal.",
+        "chosen": "def reward(s_agent, s_filtration_grate, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_filtration_grate = calculate_distance_min(s_agent, s_filtration_grate) \n    penalty_collision = -33 if (d_agent_filtration_grate < 0.9) else 16 \n    reward_reaching_goal = 31 if (d_agent_goal < 0.18) else -d_agent_goal**2 \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def reward_object(): \n   punshiment = 100\n   return punshiment \n    def price(): \n    price = 10\n    return price"
+    },
+    {
+        "prompt": "In a environment of a water park, a drone must navigate to a goal. \n It has access to its own state, the target’s state, and the states of chlorine enclosure present. \n Write a reward function in Python that rewards reaching the goal.",
+        "chosen": "def reward(s_agent, s_chlorine_enclosure, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_chlorine_enclosure = calculate_distance_min(s_agent, s_chlorine_enclosure) \n    penalty_collision = -33 if (d_agent_chlorine_enclosure < 0.9) else 16 \n    reward_reaching_goal = 31 if (d_agent_goal < 0.18) else -d_agent_goal**2 \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def alt(): \n    return 42"
+    },
+    {
+        "prompt": "In a environment of a water park, a drone must navigate to a goal. \n It has access to its own state, the target’s state, and the states of river bridge present. \n Write a reward function in Python that rewards reaching the goal.",
+        "chosen": "def reward(s_agent, s_river_bridge, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_river_bridge = calculate_distance_min(s_agent, s_river_bridge) \n    penalty_collision = -33 if (d_agent_river_bridge < 0.9) else 16 \n    reward_reaching_goal = 31 if (d_agent_goal < 0.18) else -d_agent_goal**2 \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def calculate(): \n    return 1"
+    },
+    {
+        "prompt": "In a environment of a water park, a drone must navigate to a goal. \n It has access to its own state, the target’s state, and the states of shade sail pole present. \n Write a reward function in Python that rewards reaching the goal.",
+        "chosen": "def reward(s_agent, s_shade_sail_pole, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_shade_sail_pole = calculate_distance_min(s_agent, s_shade_sail_pole) \n    penalty_collision = -33 if (d_agent_shade_sail_pole < 0.9) else 16 \n    reward_reaching_goal = 31 if (d_agent_goal < 0.18) else -d_agent_goal**2 \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def alt(): \n    return 42"
+    },
+    {
+        "prompt": "In a environment of a water park, a drone must navigate to a goal. \n It has access to its own state, the target’s state, and the states of rope net bridge present. \n Write a reward function in Python that rewards reaching the goal.",
+        "chosen": "def reward(s_agent, s_rope_net_bridge, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_rope_net_bridge = calculate_distance_min(s_agent, s_rope_net_bridge) \n    penalty_collision = -33 if (d_agent_rope_net_bridge < 0.9) else 16 \n    reward_reaching_goal = 31 if (d_agent_goal < 0.18) else -d_agent_goal**2 \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def fallback(): \n    return -1"
+    },
+    {
+        "prompt": "In a environment of a water park, a drone must navigate to a goal. \n It has access to its own state, the target’s state, and the states of surf divider present. \n Write a reward function in Python that rewards reaching the goal.",
+        "chosen": "def reward(s_agent, s_surf_divider, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_surf_divider = calculate_distance_min(s_agent, s_surf_divider) \n    penalty_collision = -33 if (d_agent_surf_divider < 0.9) else 16 \n    reward_reaching_goal = 31 if (d_agent_goal < 0.18) else -d_agent_goal**2 \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def get_answer(s_goal): \n    return goal.position"
+    },
+    {
+        "prompt": "In a environment of a water park, a drone must navigate to a goal. \n It has access to its own state, the target’s state, and the states of first aid cabinet present. \n Write a reward function in Python that rewards reaching the goal.",
+        "chosen": "def reward(s_agent, s_first_aid_cabinet, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_first_aid_cabinet = calculate_distance_min(s_agent, s_first_aid_cabinet) \n    penalty_collision = -33 if (d_agent_first_aid_cabinet < 0.9) else 16 \n    reward_reaching_goal = 31 if (d_agent_goal < 0.18) else -d_agent_goal**2 \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def reward_object(): \n   punshiment = 100\n   return punshiment \n    def price(): \n    price = 10\n    return price"
+    },
+    {
+        "prompt": "In a environment of a water park, a drone must navigate to a goal. \n It has access to its own state, the target’s state, and the states of shower pole present. \n Write a reward function in Python that rewards reaching the goal.",
+        "chosen": "def reward(s_agent, s_shower_pole, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_shower_pole = calculate_distance_min(s_agent, s_shower_pole) \n    penalty_collision = -33 if (d_agent_shower_pole < 0.9) else 16 \n    reward_reaching_goal = 31 if (d_agent_goal < 0.18) else -d_agent_goal**2 \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def reward_to_park(): \n    if goal == 'true': \n    return 10 \n    else: \n    return -10"
+    },
+    {
+        "prompt": "In a environment of a water park, a drone must navigate to a goal. \n It has access to its own state, the target’s state, and the states of multiple obstacles: slide tower, queue stanchion and tube rack present. \n Write a reward function in Python that rewards reaching the goal.",
+        "chosen": "def reward(s_agent, s_multiple_obstacles, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_multiple_obstacles_min = calculate_distance_min(s_agent, s_multiple_obstacles) \n    penalty_collision = -20 if (d_agent_multiple_obstacles_min < 0.9) else 10 \n    reward_reaching_goal = 33 if (d_agent_goal < 0.18) else -d_agent_goal**2 \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def alt(): \n    return 42"
+    },
+    {
+        "prompt": "In a environment of a water park, a drone must navigate to a goal. \n It has access to its own state, the target’s state, and the states of multiple obstacles: wave pool wall and lifeguard chair present. \n Write a reward function in Python that rewards reaching the goal.",
+        "chosen": "def reward(s_agent, s_multiple_obstacles, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_multiple_obstacles_min = calculate_distance_min(s_agent, s_multiple_obstacles) \n    penalty_collision = -20 if (d_agent_multiple_obstacles_min < 0.9) else 10 \n    reward_reaching_goal = 33 if (d_agent_goal < 0.18) else -d_agent_goal**2 \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def get_answer(s_goal): \n    return goal.position"
+    },
+    {
+        "prompt": "In a environment of a water park, a drone must navigate to a goal. \n It has access to its own state, the target’s state, and the states of multiple obstacles: splash pad fountain, shade sail and umbrella stand present. \n Write a reward function in Python that rewards reaching the goal.",
+        "chosen": "def reward(s_agent, s_multiple_obstacles, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_multiple_obstacles_min = calculate_distance_min(s_agent, s_multiple_obstacles) \n    penalty_collision = -20 if (d_agent_multiple_obstacles_min < 0.9) else 10 \n    reward_reaching_goal = 33 if (d_agent_goal < 0.18) else -d_agent_goal**2 \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def alt(): \n    return 42"
+    },
+    {
+        "prompt": "In a environment of a water park, a drone must navigate to a goal. \n It has access to its own state, the target’s state, and the states of multiple obstacles: pump house door and filtration grate present. \n Write a reward function in Python that rewards reaching the goal.",
+        "chosen": "def reward(s_agent, s_multiple_obstacles, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_multiple_obstacles_min = calculate_distance_min(s_agent, s_multiple_obstacles) \n    penalty_collision = -20 if (d_agent_multiple_obstacles_min < 0.9) else 10 \n    reward_reaching_goal = 33 if (d_agent_goal < 0.18) else -d_agent_goal**2 \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def rejected_fn(): \n    return 0"
+    },
+    {
+        "prompt": "Write a Python reward function for an indoor drone navigating in a cinema. The function should encourage goal-reaching, penalize collisions with concession counter, and use the available agent, goal, and concession counter states.",
+        "chosen": "def reward(s_agent, s_concession_counter, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_concession_counter = calculate_distance_min(s_agent, s_concession_counter) \n    penalty_collision = -35 if (d_agent_concession_counter < 0.5) else 15 \n    reward_reaching_goal = 30 if (d_agent_goal < 0.1) else -20 \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def fallback(): \n    return -1"
+    },
+    {
+        "prompt": "Write a Python reward function for an indoor drone navigating in a cinema. The function should encourage goal-reaching, penalize collisions with popcorn machine, and use the available agent, goal, and popcorn machine states.",
+        "chosen": "def reward(s_agent, s_popcorn_machine, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_popcorn_machine = calculate_distance_min(s_agent, s_popcorn_machine) \n    penalty_collision = -35 if (d_agent_popcorn_machine < 0.5) else 15 \n    reward_reaching_goal = 30 if (d_agent_goal < 0.1) else -20 \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def alt(): \n    return 42"
+    },
+    {
+        "prompt": "Write a Python reward function for an indoor drone navigating in a cinema. The function should encourage goal-reaching, penalize collisions with soda fountain, and use the available agent, goal, and soda fountain states.",
+        "chosen": "def reward(s_agent, s_soda_fountain, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_soda_fountain = calculate_distance_min(s_agent, s_soda_fountain) \n    penalty_collision = -35 if (d_agent_soda_fountain < 0.5) else 15 \n    reward_reaching_goal = 30 if (d_agent_goal < 0.1) else -20 \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def reward_to_cinema(): \n    if goal == 'true': \n    return 10 \n    else: \n    return -10"
+    },
+    {
+        "prompt": "Write a Python reward function for an indoor drone navigating in a cinema. The function should encourage goal-reaching, penalize collisions with candy rack, and use the available agent, goal, and candy rack states.",
+        "chosen": "def reward(s_agent, s_candy_rack, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_candy_rack = calculate_distance_min(s_agent, s_candy_rack) \n    penalty_collision = -35 if (d_agent_candy_rack < 0.5) else 15 \n    reward_reaching_goal = 30 if (d_agent_goal < 0.1) else -20 \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def rejected_fn(): \n    return 0"
+    },
+    {
+        "prompt": "Write a Python reward function for an indoor drone navigating in a cinema. The function should encourage goal-reaching, penalize collisions with nacho warmer, and use the available agent, goal, and nano warmer states.",
+        "chosen": "def reward(s_agent, s_nacho_warmer, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_nacho_warmer = calculate_distance_min(s_agent, s_nacho_warmer) \n    penalty_collision = -35 if (d_agent_nacho_warmer < 0.5) else 15 \n    reward_reaching_goal = 30 if (d_agent_goal < 0.1) else -20 \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def nothing(): \n    pass"
+    },
+    {
+        "prompt": "Write a Python reward function for an indoor drone navigating in a cinema. The function should encourage goal-reaching, penalize collisions with ticket kiosk, and use the available agent, goal, and ticket kiosk states.",
+        "chosen": "def reward(s_agent, s_ticket_kiosk, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_ticket_kiosk = calculate_distance_min(s_agent, s_ticket_kiosk) \n    penalty_collision = -35 if (d_agent_ticket_kiosk < 0.5) else 15 \n    reward_reaching_goal = 30 if (d_agent_goal < 0.1) else -20 \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def nothing(): \n    pass"
+    },
+    {
+        "prompt": "Write a Python reward function for an indoor drone navigating in a cinema. The function should encourage goal-reaching, penalize collisions with ticket counter, and use the available agent, goal, and ticket counter states.",
+        "chosen": "def reward(s_agent, s_ticket_counter, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_ticket_counter = calculate_distance_min(s_agent, s_ticket_counter) \n    penalty_collision = -35 if (d_agent_ticket_counter < 0.5) else 15 \n    reward_reaching_goal = 30 if (d_agent_goal < 0.1) else -20 \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def rejected_fn(): \n    return 0"
+    },
+    {
+        "prompt": "Write a Python reward function for an indoor drone navigating in a cinema. The function should encourage goal-reaching, penalize collisions with queue, and use the available agent, goal, and queue states.",
+        "chosen": "def reward(s_agent, s_queue, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_queue = calculate_distance_min(s_agent, s_queue) \n    penalty_collision = -35 if (d_agent_queue < 0.5) else 15 \n    reward_reaching_goal = 30 if (d_agent_goal < 0.1) else -20 \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def reward_object(): \n   punshiment = 100\n   return punshiment \n    def price(): \n    price = 10\n    return price"
+    },
+    {
+        "prompt": "Write a Python reward function for an indoor drone navigating in a cinema. The function should encourage goal-reaching, penalize collisions with poster stand, and use the available agent, goal, and poster stand states.",
+        "chosen": "def reward(s_agent, s_poster_stand, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_poster_stand = calculate_distance_min(s_agent, s_poster_stand) \n    penalty_collision = -35 if (d_agent_poster_stand < 0.5) else 15 \n    reward_reaching_goal = 30 if (d_agent_goal < 0.1) else -20 \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def fallback(): \n    return -1"
+    },
+    {
+        "prompt": "Write a Python reward function for an indoor drone navigating in a cinema. The function should encourage goal-reaching, penalize collisions with standee, and use the available agent, goal, and standee states.",
+        "chosen": "def reward(s_agent, s_standee, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_standee = calculate_distance_min(s_agent, s_standee) \n    penalty_collision = -35 if (d_agent_standee < 0.5) else 15 \n    reward_reaching_goal = 30 if (d_agent_goal < 0.1) else -20 \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def rejected_fn(): \n    return 0"
+    },
+    {
+        "prompt": "Write a Python reward function for an indoor drone navigating in a cinema. The function should encourage goal-reaching, penalize collisions with auditorium, and use the available agent, goal, and auditorium states.",
+        "chosen": "def reward(s_agent, s_auditorium_door, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_auditorium_door = calculate_distance_min(s_agent, s_auditorium_door) \n    penalty_collision = -35 if (d_agent_auditorium_door < 0.5) else 15 \n    reward_reaching_goal = 30 if (d_agent_goal < 0.1) else -20 \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def calculate(): \n    return 1"
+    },
+    {
+        "prompt": "Write a Python reward function for an indoor drone navigating in a cinema. The function should encourage goal-reaching, penalize collisions with aisle handrail, and use the available agent, goal, and aisle handrail states.",
+        "chosen": "def reward(s_agent, s_aisle_handrail, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_aisle_handrail = calculate_distance_min(s_agent, s_aisle_handrail) \n    penalty_collision = -35 if (d_agent_aisle_handrail < 0.5) else 15 \n    reward_reaching_goal = 30 if (d_agent_goal < 0.1) else -20 \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def reward_to_cinema(): \n    if goal == 'true': \n    return 10 \n    else: \n    return -10"
+    },
+    {
+        "prompt": "Write a Python reward function for an indoor drone navigating in a cinema. The function should encourage goal-reaching, penalize collisions with step light, and use the available agent, goal, and step light states.",
+        "chosen": "def reward(s_agent, s_step_light, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_step_light = calculate_distance_min(s_agent, s_step_light) \n    penalty_collision = -35 if (d_agent_step_light < 0.5) else 15 \n    reward_reaching_goal = 30 if (d_agent_goal < 0.1) else -20 \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def reward_env(): \n   punshiment = 100\n   return punshiment \n    def obstacles(): \n    price = 10\n    return price"
+    },
+    {
+        "prompt": "Write a Python reward function for an indoor drone navigating in a cinema. The function should encourage goal-reaching, penalize collisions with row endcap, and use the available agent, goal, and row endcup states.",
+        "chosen": "def reward(s_agent, s_row_endcap, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_row_endcap = calculate_distance_min(s_agent, s_row_endcap) \n    penalty_collision = -35 if (d_agent_row_endcap < 0.5) else 15 \n    reward_reaching_goal = 30 if (d_agent_goal < 0.1) else -20 \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def reward_env(): \n   punshiment = 100\n   return punshiment \n    def obstacles(): \n    price = 10\n    return price"
+    },
+    {
+        "prompt": "Write a Python reward function for an indoor drone navigating in a cinema. The function should encourage goal-reaching, penalize collisions with screen frame, and use the available agent, goal, and screen frame states.",
+        "chosen": "def reward(s_agent, s_screen_frame, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_screen_frame = calculate_distance_min(s_agent, s_screen_frame) \n    penalty_collision = -35 if (d_agent_screen_frame < 0.5) else 15 \n    reward_reaching_goal = 30 if (d_agent_goal < 0.1) else -20 \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def fallback(): \n    return -1"
+    },
+    {
+        "prompt": "Write a Python reward function for an indoor drone navigating in a cinema. The function should encourage goal-reaching, penalize collisions with projector booth door, and use the available agent, goal, and projector booth door states.",
+        "chosen": "def reward(s_agent, s_projector_booth_door, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_projector_booth_door = calculate_distance_min(s_agent, s_projector_booth_door) \n    penalty_collision = -35 if (d_agent_projector_booth_door < 0.5) else 15 \n    reward_reaching_goal = 30 if (d_agent_goal < 0.1) else -20 \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def reward_to_cinema(): \n    if goal == 'true': \n    return 10 \n    else: \n    return -10"
+    },
+    {
+        "prompt": "Write a Python reward function for an indoor drone navigating in a cinema. The function should encourage goal-reaching, penalize collisions with speaker column, and use the available agent, goal, and speaker column states.",
+        "chosen": "def reward(s_agent, s_speaker_column, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_speaker_column = calculate_distance_min(s_agent, s_speaker_column) \n    penalty_collision = -35 if (d_agent_speaker_column < 0.5) else 15 \n    reward_reaching_goal = 30 if (d_agent_goal < 0.1) else -20 \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def rejected_fn(): \n    return 0"
+    },
+    {
+        "prompt": "Write a Python reward function for an indoor drone navigating in a cinema. The function should encourage goal-reaching, penalize collisions with glasses bin, and use the available agent, goal, and glasses bin states.",
+        "chosen": "def reward(s_agent, s_glasses_bin, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_glasses_bin = calculate_distance_min(s_agent, s_glasses_bin) \n    penalty_collision = -35 if (d_agent_glasses_bin < 0.5) else 15 \n    reward_reaching_goal = 30 if (d_agent_goal < 0.1) else -20 \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def rejected_fn(): \n    return 0"
+    },
+    {
+        "prompt": "Write a Python reward function for an indoor drone navigating in a cinema. The function should encourage goal-reaching, penalize collisions with trash bin, and use the available agent, goal, and trash bin states.",
+        "chosen": "def reward(s_agent, s_trash_bin, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_trash_bin = calculate_distance_min(s_agent, s_trash_bin) \n    penalty_collision = -35 if (d_agent_trash_bin < 0.5) else 15 \n    reward_reaching_goal = 30 if (d_agent_goal < 0.1) else -20 \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def reward_object(): \n   punshiment = 100\n   return punshiment \n    def price(): \n    price = 10\n    return price"
+    },
+    {
+        "prompt": "Write a Python reward function for an indoor drone navigating in a cinema. The function should encourage goal-reaching, penalize collisions with cleaning cart, and use the available agent, goal, and cleaning cart states.",
+        "chosen": "def reward(s_agent, s_cleaning_cart, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_cleaning_cart = calculate_distance_min(s_agent, s_cleaning_cart) \n    penalty_collision = -35 if (d_agent_cleaning_cart < 0.5) else 15 \n    reward_reaching_goal = 30 if (d_agent_goal < 0.1) else -20 \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def reward_to_cinema(): \n    if goal == 'true': \n    return 10 \n    else: \n    return -10"
+    },
+    {
+        "prompt": "Write a Python reward function for an indoor drone navigating in a cinema. The function should encourage goal-reaching, penalize collisions with exit sign, and use the available agent, goal, and exit sign states.",
+        "chosen": "def reward(s_agent, s_exit_sign, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_exit_sign = calculate_distance_min(s_agent, s_exit_sign) \n    penalty_collision = -35 if (d_agent_exit_sign < 0.5) else 15 \n    reward_reaching_goal = 30 if (d_agent_goal < 0.1) else -20 \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def calculate(): \n    return 1"
+    },
+    {
+        "prompt": "Write a Python reward function for an indoor drone navigating in a cinema. The function should encourage goal-reaching, penalize collisions with concession counter, queue stanchion and ticket kiosk, and use the available agent, goal, and multiple obstacles states: concession counter, queue stanchion and ticket kiosk.",
+        "chosen": "def reward(s_agent, s_multiple_obstacles, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_multiple_obstacles_min = calculate_distance_min(s_agent, s_multiple_obstacles) \n    penalty_collision = -20 if (d_agent_multiple_obstacles_min < 0.5) else 10 \n    reward_reaching_goal = 35 if (d_agent_goal < 0.1) else -20 \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def rejected_fn(): \n    return 0"
+    },
+    {
+        "prompt": "Write a Python reward function for an indoor drone navigating in a cinema. The function should encourage goal-reaching, penalize collisions with auditorium and aisle handrail, and use the available agent, goal, and multiple obstacles states: auditorium and aisle handrail.",
+        "chosen": "def reward(s_agent, s_multiple_obstacles, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_multiple_obstacles_min = calculate_distance_min(s_agent, s_multiple_obstacles) \n    penalty_collision = -20 if (d_agent_multiple_obstacles_min < 0.5) else 10 \n    reward_reaching_goal = 35 if (d_agent_goal < 0.1) else -20 \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def get_answer(s_goal): \n    return goal.position"
+    },
+    {
+        "prompt": "Write a Python reward function for an indoor drone navigating in a cinema. The function should encourage goal-reaching, penalize collisions with screen frame, speaker column and step light strip, and use the available agent, goal, and multiple obstacles states: screen frame, speaker column and step light  strip.",
+        "chosen": "def reward(s_agent, s_multiple_obstacles, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_multiple_obstacles_min = calculate_distance_min(s_agent, s_multiple_obstacles) \n    penalty_collision = -20 if (d_agent_multiple_obstacles_min < 0.5) else 10 \n    reward_reaching_goal = 35 if (d_agent_goal < 0.1) else -20 \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def calculate(): \n    return 1"
+    },
+    {
+        "prompt": "Write a Python reward function for an indoor drone navigating in a cinema. The function should encourage goal-reaching, penalize collisions with poster stand and cardboard standee, and use the available agent, goal, and multiple obstacles states: poster stand and cardboard standee.",
+        "chosen": "def reward(s_agent, s_multiple_obstacles, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_multiple_obstacles_min = calculate_distance_min(s_agent, s_multiple_obstacles) \n    penalty_collision = -20 if (d_agent_multiple_obstacles_min < 0.5) else 10 \n    reward_reaching_goal = 35 if (d_agent_goal < 0.1) else -20 \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def reward_env(): \n   punshiment = 100\n   return punshiment \n    def obstacles(): \n    price = 10\n    return price"
+    },
+    {
+        "prompt": "Scenario: a drone moves through a auditorium environment. It should identify stage edge as obstacles, prevent collisions, reach goal and rely on the Agent, goal and stage edge states. Develop a reward function in Python.",
+        "chosen": "def reward(s_agent, s_stage_edge, s_goal): \n    dist_goal = calculate_distance(s_agent, s_goal) \n    dist_stage_edge = calculate_distance_min(s_agent, s_stage_edge) \n    penalty_collision = -28 if (dist_stage_edge < 0.8) else 10 \n    reward_reaching_goal = 30 if (dist_goal < 0.2) else -dist_goal \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def fallback(): \n    return -1"
+    },
+    {
+        "prompt": "Scenario: a drone moves through a auditorium environment. It should identify lectern as obstacles, prevent collisions, reach goal and rely on the Agent, goal and lectern states. Develop a reward function in Python.",
+        "chosen": "def reward(s_agent, s_lectern, s_goal): \n    dist_goal = calculate_distance(s_agent, s_goal) \n    dist_lectern = calculate_distance_min(s_agent, s_lectern) \n    penalty_collision = -28 if (dist_lectern < 0.8) else 10 \n    reward_reaching_goal = 30 if (dist_goal < 0.2) else -dist_goal \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def calculate(): \n    return 1"
+    },
+    {
+        "prompt": "Scenario: a drone moves through a auditorium environment. It should identify mic stand as obstacles, prevent collisions, reach goal and rely on the Agent, goal and mic stand states. Develop a reward function in Python.",
+        "chosen": "def reward(s_agent, s_mic_stand, s_goal): \n    dist_goal = calculate_distance(s_agent, s_goal) \n    dist_mic_stand = calculate_distance_min(s_agent, s_mic_stand) \n    penalty_collision = -28 if (dist_mic_stand < 0.8) else 10 \n    reward_reaching_goal = 30 if (dist_goal < 0.2) else -dist_goal \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def calculate(): \n    return 1"
+    },
+    {
+        "prompt": "Scenario: a drone moves through a auditorium environment. It should identify cable ramp as obstacles, prevent collisions, reach goal and rely on the Agent, goal and cable ramp states. Develop a reward function in Python.",
+        "chosen": "def reward(s_agent, s_cable_ramp, s_goal): \n    dist_goal = calculate_distance(s_agent, s_goal) \n    dist_cable_ramp = calculate_distance_min(s_agent, s_cable_ramp) \n    penalty_collision = -28 if (dist_cable_ramp < 0.8) else 10 \n    reward_reaching_goal = 30 if (dist_goal < 0.2) else -dist_goal \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def rejected_fn(): \n    return 0"
+    },
+    {
+        "prompt": "Scenario: a drone moves through a auditorium environment. It should identify lighting truss as obstacles, prevent collisions, reach goal and rely on the Agent, goal and lighting truss states. Develop a reward function in Python.",
+        "chosen": "def reward(s_agent, s_lighting_truss, s_goal): \n    dist_goal = calculate_distance(s_agent, s_goal) \n    dist_lighting_truss = calculate_distance_min(s_agent, s_lighting_truss) \n    penalty_collision = -28 if (dist_lighting_truss < 0.8) else 10 \n    reward_reaching_goal = 30 if (dist_goal < 0.2) else -dist_goal \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def get_answer(s_goal): \n    return goal.position"
+    },
+    {
+        "prompt": "Scenario: a drone moves through a auditorium environment. It should identify line array as obstacles, prevent collisions, reach goal and rely on the Agent, goal and line array states. Develop a reward function in Python.",
+        "chosen": "def reward(s_agent, s_line_array, s_goal): \n    dist_goal = calculate_distance(s_agent, s_goal) \n    dist_line_array = calculate_distance_min(s_agent, s_line_array) \n    penalty_collision = -28 if (dist_line_array < 0.8) else 10 \n    reward_reaching_goal = 30 if (dist_goal < 0.2) else -dist_goal \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def nothing(): \n    pass"
+    },
+    {
+        "prompt": "Scenario: a drone moves through a auditorium environment. It should identify subwoofer as obstacles, prevent collisions, reach goal and rely on the Agent, goal and subwoofer states. Develop a reward function in Python.",
+        "chosen": "def reward(s_agent, s_subwoofer, s_goal): \n    dist_goal = calculate_distance(s_agent, s_goal) \n    dist_subwoofer = calculate_distance_min(s_agent, s_subwoofer) \n    penalty_collision = -28 if (dist_subwoofer < 0.8) else 10 \n    reward_reaching_goal = 30 if (dist_goal < 0.2) else -dist_goal \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def nothing(): \n    pass"
+    },
+    {
+        "prompt": "Scenario: a drone moves through a auditorium environment. It should identify stage monitor as obstacles, prevent collisions, reach goal and rely on the Agent, goal and stage monitor states. Develop a reward function in Python.",
+        "chosen": "def reward(s_agent, s_stage_monitor, s_goal): \n    dist_goal = calculate_distance(s_agent, s_goal) \n    dist_stage_monitor = calculate_distance_min(s_agent, s_stage_monitor) \n    penalty_collision = -28 if (dist_stage_monitor < 0.8) else 10 \n    reward_reaching_goal = 30 if (dist_goal < 0.2) else -dist_goal \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def reward_object(): \n   punshiment = 100\n   return punshiment \n    def price(): \n    price = 10\n    return price"
+    },
+    {
+        "prompt": "Scenario: a drone moves through a auditorium environment. It should identify stage curtain as obstacles, prevent collisions, reach goal and rely on the Agent, goal and stage curtain states. Develop a reward function in Python.",
+        "chosen": "def reward(s_agent, s_stage_curtain, s_goal): \n    dist_goal = calculate_distance(s_agent, s_goal) \n    dist_stage_curtain = calculate_distance_min(s_agent, s_stage_curtain) \n    penalty_collision = -28 if (dist_stage_curtain < 0.8) else 10 \n    reward_reaching_goal = 30 if (dist_goal < 0.2) else -dist_goal \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def fallback(): \n    return -1"
+    },
+    {
+        "prompt": "Scenario: a drone moves through a auditorium environment. It should identify pit rail as obstacles, prevent collisions, reach goal and rely on the Agent, goal and pit rail states. Develop a reward function in Python.",
+        "chosen": "def reward(s_agent, s_pit_rail, s_goal): \n    dist_goal = calculate_distance(s_agent, s_goal) \n    dist_pit_rail = calculate_distance_min(s_agent, s_pit_rail) \n    penalty_collision = -28 if (dist_pit_rail < 0.8) else 10 \n    reward_reaching_goal = 30 if (dist_goal < 0.2) else -dist_goal \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def alt(): \n    return 42"
+    },
+    {
+        "prompt": "Scenario: a drone moves through a auditorium environment. It should identify row endcap as obstacles, prevent collisions, reach goal and rely on the Agent, goal and row endcap states. Develop a reward function in Python.",
+        "chosen": "def reward(s_agent, s_row_endcap, s_goal): \n    dist_goal = calculate_distance(s_agent, s_goal) \n    dist_row_endcap = calculate_distance_min(s_agent, s_row_endcap) \n    penalty_collision = -28 if (dist_row_endcap < 0.8) else 10 \n    reward_reaching_goal = 30 if (dist_goal < 0.2) else -dist_goal \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def fallback(): \n    return -1"
+    },
+    {
+        "prompt": "Scenario: a drone moves through a auditorium environment. It should identify aisle handrail as obstacles, prevent collisions, reach goal and rely on the Agent, goal and aisle handrail states. Develop a reward function in Python.",
+        "chosen": "def reward(s_agent, s_aisle_handrail, s_goal): \n    dist_goal = calculate_distance(s_agent, s_goal) \n    dist_aisle_handrail = calculate_distance_min(s_agent, s_aisle_handrail) \n    penalty_collision = -28 if (dist_aisle_handrail < 0.8) else 10 \n    reward_reaching_goal = 30 if (dist_goal < 0.2) else -dist_goal \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def reward_object(): \n   punshiment = 100\n   return punshiment \n    def price(): \n    price = 10\n    return price"
+    },
+    {
+        "prompt": "Scenario: a drone moves through a auditorium environment. It should identify projector mount as obstacles, prevent collisions, reach goal and rely on the Agent, goal and projector mount states. Develop a reward function in Python.",
+        "chosen": "def reward(s_agent, s_projector_mount, s_goal): \n    dist_goal = calculate_distance(s_agent, s_goal) \n    dist_projector_mount = calculate_distance_min(s_agent, s_projector_mount) \n    penalty_collision = -28 if (dist_projector_mount < 0.8) else 10 \n    reward_reaching_goal = 30 if (dist_goal < 0.2) else -dist_goal \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def alt(): \n    return 42"
+    },
+    {
+        "prompt": "Scenario: a drone moves through a auditorium environment. It should identify control console as obstacles, prevent collisions, reach goal and rely on the Agent, goal and control console states. Develop a reward function in Python.",
+        "chosen": "def reward(s_agent, s_control_console, s_goal): \n    dist_goal = calculate_distance(s_agent, s_goal) \n    dist_control_console = calculate_distance_min(s_agent, s_control_console) \n    penalty_collision = -28 if (dist_control_console < 0.8) else 10 \n    reward_reaching_goal = 30 if (dist_goal < 0.2) else -dist_goal \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def alt(): \n    return 42"
+    },
+    {
+        "prompt": "Scenario: a drone moves through a auditorium environment. It should identify followspot stand as obstacles, prevent collisions, reach goal and rely on the Agent, goal and followspot stand states. Develop a reward function in Python.",
+        "chosen": "def reward(s_agent, s_followspot_stand, s_goal): \n    dist_goal = calculate_distance(s_agent, s_goal) \n    dist_followspot_stand = calculate_distance_min(s_agent, s_followspot_stand) \n    penalty_collision = -28 if (dist_followspot_stand < 0.8) else 10 \n    reward_reaching_goal = 30 if (dist_goal < 0.2) else -dist_goal \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def alt(): \n    return 42"
+    },
+    {
+        "prompt": "Scenario: a drone moves through a auditorium environment. It should identify rigging pulley as obstacles, prevent collisions, reach goal and rely on the Agent, goal and rigging pulley states. Develop a reward function in Python.",
+        "chosen": "def reward(s_agent, s_rigging_pulley, s_goal): \n    dist_goal = calculate_distance(s_agent, s_goal) \n    dist_rigging_pulley = calculate_distance_min(s_agent, s_rigging_pulley) \n    penalty_collision = -28 if (dist_rigging_pulley < 0.8) else 10 \n    reward_reaching_goal = 30 if (dist_goal < 0.2) else -dist_goal \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def nothing(): \n    pass"
+    },
+    {
+        "prompt": "Scenario: a drone moves through a auditorium environment. It should catwalk ladder stand as obstacles, prevent collisions, reach goal and rely on the Agent, goal and catwalk ladder states. Develop a reward function in Python.",
+        "chosen": "def reward(s_agent, s_catwalk_ladder, s_goal): \n    dist_goal = calculate_distance(s_agent, s_goal) \n    dist_catwalk_ladder = calculate_distance_min(s_agent, s_catwalk_ladder) \n    penalty_collision = -28 if (dist_catwalk_ladder < 0.8) else 10 \n    reward_reaching_goal = 30 if (dist_goal < 0.2) else -dist_goal \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def rejected_fn(): \n    return 0"
+    },
+    {
+        "prompt": "Scenario: a drone moves through a auditorium environment. It should identify acoustic panel stand as obstacles, prevent collisions, reach goal and rely on the Agent, goal and acoustic panel states. Develop a reward function in Python.",
+        "chosen": "def reward(s_agent, s_acoustic_panel_stand, s_goal): \n    dist_goal = calculate_distance(s_agent, s_goal) \n    dist_acoustic_panel_stand = calculate_distance_min(s_agent, s_acoustic_panel_stand) \n    penalty_collision = -28 if (dist_acoustic_panel_stand < 0.8) else 10 \n    reward_reaching_goal = 30 if (dist_goal < 0.2) else -dist_goal \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def fallback(): \n    return -1"
+    },
+    {
+        "prompt": "Scenario: a drone moves through a auditorium environment. It should identify sign stand as obstacles, prevent collisions, reach goal and rely on the Agent, goal and sign stand states. Develop a reward function in Python.",
+        "chosen": "def reward(s_agent, s_sign_stand, s_goal): \n    dist_goal = calculate_distance(s_agent, s_goal) \n    dist_sign_stand = calculate_distance_min(s_agent, s_sign_stand) \n    penalty_collision = -28 if (dist_sign_stand < 0.8) else 10 \n    reward_reaching_goal = 30 if (dist_goal < 0.2) else -dist_goal \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def alt(): \n    return 42"
+    },
+    {
+        "prompt": "Scenario: a drone moves through a auditorium environment. It should identify camera tripod as obstacles, prevent collisions, reach goal and rely on the Agent, goal and camera tripod states. Develop a reward function in Python.",
+        "chosen": "def reward(s_agent, s_camera_tripod, s_goal): \n    dist_goal = calculate_distance(s_agent, s_goal) \n    dist_camera_tripod = calculate_distance_min(s_agent, s_camera_tripod) \n    penalty_collision = -28 if (dist_camera_tripod < 0.8) else 10 \n    reward_reaching_goal = 30 if (dist_goal < 0.2) else -dist_goal \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def get_answer(s_goal): \n    return goal.position"
+    },
+    {
+        "prompt": "Scenario: a drone moves through a auditorium environment. It should identify stagebox as obstacles, prevent collisions, reach goal and rely on the Agent, goal and stagebox states. Develop a reward function in Python.",
+        "chosen": "def reward(s_agent, s_stagebox, s_goal): \n    dist_goal = calculate_distance(s_agent, s_goal) \n    dist_stagebox = calculate_distance_min(s_agent, s_stagebox) \n    penalty_collision = -28 if (dist_stagebox < 0.8) else 10 \n    reward_reaching_goal = 30 if (dist_goal < 0.2) else -dist_goal \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def calculate(): \n    return 1"
+    },
+    {
+        "prompt": "Scenario: a drone moves through a auditorium environment. It should identify lighting truss, line array speaker and floor cable ramp as obstacles, prevent collisions, reach goal and rely on the Agent, goal and multiple obstacles states. Develop a reward function in Python.",
+        "chosen": "def reward(s_agent, s_multiple_obstacles, s_goal): \n    dist_goal = calculate_distance(s_agent, s_goal) \n    dist_multiple_obstacles_min = calculate_distance_min(s_agent, s_multiple_obstacles) \n    penalty_collision = -20 if (dist_multiple_obstacles_min < 0.8) else 10 \n    reward_reaching_goal = 28 if (dist_goal < 0.2) else -dist_goal \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def calculate(): \n    return 1"
+    },
+    {
+        "prompt": "Scenario: a drone moves through a auditorium environment. It should identify lectern and microphone stand as obstacles, prevent collisions, reach goal and rely on the Agent, goal and multiple obstacles states. Develop a reward function in Python.",
+        "chosen": "def reward(s_agent, s_multiple_obstacles, s_goal): \n    dist_goal = calculate_distance(s_agent, s_goal) \n    dist_multiple_obstacles_min = calculate_distance_min(s_agent, s_multiple_obstacles) \n    penalty_collision = -20 if (dist_multiple_obstacles_min < 0.8) else 10 \n    reward_reaching_goal = 28 if (dist_goal < 0.2) else -dist_goal \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def fallback(): \n    return -1"
+    },
+    {
+        "prompt": "Scenario: a drone moves through a auditorium environment. It should identify control console, camera tripod and sign stand as obstacles, prevent collisions, reach goal and rely on the Agent, goal and multiple obstacles states. Develop a reward function in Python.",
+        "chosen": "def reward(s_agent, s_multiple_obstacles, s_goal): \n    dist_goal = calculate_distance(s_agent, s_goal) \n    dist_multiple_obstacles_min = calculate_distance_min(s_agent, s_multiple_obstacles) \n    penalty_collision = -20 if (dist_multiple_obstacles_min < 0.8) else 10 \n    reward_reaching_goal = 28 if (dist_goal < 0.2) else -dist_goal \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def alt(): \n    return 42"
+    },
+    {
+        "prompt": "Scenario: a drone moves through a auditorium environment. It should identify curtain and orchestra as obstacles, prevent collisions, reach goal and rely on the Agent, goal and multiple obstacles states. Develop a reward function in Python.",
+        "chosen": "def reward(s_agent, s_multiple_obstacles, s_goal): \n    dist_goal = calculate_distance(s_agent, s_goal) \n    dist_multiple_obstacles_min = calculate_distance_min(s_agent, s_multiple_obstacles) \n    penalty_collision = -20 if (dist_multiple_obstacles_min < 0.8) else 10 \n    reward_reaching_goal = 28 if (dist_goal < 0.2) else -dist_goal \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def nothing(): \n    pass"
+    },
+    {
+        "prompt": "In a storage environment, a drone is required to navigate safely and reach goal. It can access its own state and the states of pallet rack as obstacle in the storage and goal’s state. Write a reward function in Python supporting safe movement.",
+        "chosen": "def reward(s_agent, s_pallet_rack, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_pallet_rack = calculate_distance_min(s_agent, s_pallet_rack) \n    penalty_collision = -25 if (d_agent_pallet_rack < 0.9) else 20 \n    reward_reaching_goal = 30 if (d_agent_goal < 0.3) else -30 \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def nothing(): \n    pass"
+    },
+    {
+        "prompt": "In a storage environment, a drone is required to navigate safely and reach goal. It can access its own state and the states of shelving unit as obstacle in the storage and goal’s state. Write a reward function in Python supporting safe movement.",
+        "chosen": "def reward(s_agent, s_shelving_unit, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_shelving_unit = calculate_distance_min(s_agent, s_shelving_unit) \n    penalty_collision = -25 if (d_agent_shelving_unit < 0.9) else 20 \n    reward_reaching_goal = 30 if (d_agent_goal < 0.3) else -30 \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def reward_env(): \n   punshiment = 100\n   return punshiment \n    def obstacles(): \n    price = 10\n    return price"
+    },
+    {
+        "prompt": "In a storage environment, a drone is required to navigate safely and reach goal. It can access its own state and the states of bin stack as obstacle in the storage and goal’s state. Write a reward function in Python supporting safe movement.",
+        "chosen": "def reward(s_agent, s_bin_stack, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_bin_stack = calculate_distance_min(s_agent, s_bin_stack) \n    penalty_collision = -25 if (d_agent_bin_stack < 0.9) else 20 \n    reward_reaching_goal = 30 if (d_agent_goal < 0.3) else -30 \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def get_answer(s_goal): \n    return goal.position"
+    },
+    {
+        "prompt": "In a storage environment, a drone is required to navigate safely and reach goal. It can access its own state and the states of rolling ladder as obstacle in the storage and goal’s state. Write a reward function in Python supporting safe movement..",
+        "chosen": "def reward(s_agent, s_rolling_ladder, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_rolling_ladder = calculate_distance_min(s_agent, s_rolling_ladder) \n    penalty_collision = -25 if (d_agent_rolling_ladder < 0.9) else 20 \n    reward_reaching_goal = 30 if (d_agent_goal < 0.3) else -30 \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def get_answer(s_goal): \n    return goal.position"
+    },
+    {
+        "prompt": "In a storage environment, a drone is required to navigate safely and reach goal. It can access its own state and the states of pallet rack as obstacle in the storage and goal’s state. Write a reward function in Python supporting safe movement.",
+        "chosen": "def reward(s_agent, s_pallet_jack, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_pallet_jack = calculate_distance_min(s_agent, s_pallet_jack) \n    penalty_collision = -25 if (d_agent_pallet_jack < 0.9) else 20 \n    reward_reaching_goal = 30 if (d_agent_goal < 0.3) else -30 \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def nothing(): \n    pass"
+    },
+    {
+        "prompt": "In a storage environment, a drone is required to navigate safely and reach goal. It can access its own state and the states of forklift bay as obstacle in the storage and goal’s state. Write a reward function in Python supporting safe movement.",
+        "chosen": "def reward(s_agent, s_forklift_bay, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_forklift_bay = calculate_distance_min(s_agent, s_forklift_bay) \n    penalty_collision = -25 if (d_agent_forklift_bay < 0.9) else 20 \n    reward_reaching_goal = 30 if (d_agent_goal < 0.3) else -30 \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def reward_to_storage(): \n    if goal == 'true': \n    return 10 \n    else: \n    return -10"
+    },
+    {
+        "prompt": "In a storage environment, a drone is required to navigate safely and reach goal. It can access its own state and the states of mezzanine rail as obstacle in the storage and goal’s state. Write a reward function in Python supporting safe movement.",
+        "chosen": "def reward(s_agent, s_mezzanine_rail, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_mezzanine_rail = calculate_distance_min(s_agent, s_mezzanine_rail) \n    penalty_collision = -25 if (d_agent_mezzanine_rail < 0.9) else 20 \n    reward_reaching_goal = 30 if (d_agent_goal < 0.3) else -30 \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def calculate(): \n    return 1"
+    },
+    {
+        "prompt": "In a storage environment, a drone is required to navigate safely and reach goal. It can access its own state and the states of support column as obstacle in the storage and goal’s state. Write a reward function in Python supporting safe movement.",
+        "chosen": "def reward(s_agent, s_support_column, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_support_column = calculate_distance_min(s_agent, s_support_column) \n    penalty_collision = -25 if (d_agent_support_column < 0.9) else 20 \n    reward_reaching_goal = 30 if (d_agent_goal < 0.3) else -30 \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def fallback(): \n    return -1"
+    },
+    {
+        "prompt": "In a storage environment, a drone is required to navigate safely and reach goal. It can access its own state and the states of dock door as obstacle in the storage and goal’s state. Write a reward function in Python supporting safe movement.",
+        "chosen": "def reward(s_agent, s_dock_door, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_dock_door = calculate_distance_min(s_agent, s_dock_door) \n    penalty_collision = -25 if (d_agent_dock_door < 0.9) else 20 \n    reward_reaching_goal = 30 if (d_agent_goal < 0.3) else -30 \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def fallback(): \n    return -1"
+    },
+    {
+        "prompt": "In a storage environment, a drone is required to navigate safely and reach goal. It can access its own state and the states of dock leveler as obstacle in the storage and goal’s state. Write a reward function in Python supporting safe movement.",
+        "chosen": "def reward(s_agent, s_dock_leveler, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_dock_leveler = calculate_distance_min(s_agent, s_dock_leveler) \n    penalty_collision = -25 if (d_agent_dock_leveler < 0.9) else 20 \n    reward_reaching_goal = 30 if (d_agent_goal < 0.3) else -30 \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def reward_env(): \n   punshiment = 100\n   return punshiment \n    def obstacles(): \n    price = 10\n    return price"
+    },
+    {
+        "prompt": "In a storage environment, a drone is required to navigate safely and reach goal. It can access its own state and the states of loading ramp as obstacle in the storage and goal’s state. Write a reward function in Python supporting safe movement.",
+        "chosen": "def reward(s_agent, s_loading_ramp, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_loading_ramp = calculate_distance_min(s_agent, s_loading_ramp) \n    penalty_collision = -25 if (d_agent_loading_ramp < 0.9) else 20 \n    reward_reaching_goal = 30 if (d_agent_goal < 0.3) else -30 \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def calculate(): \n    return 1"
+    },
+    {
+        "prompt": "In a storage environment, a drone is required to navigate safely and reach goal. It can access its own state and the states of cage trolley as obstacle in the storage and goal’s state. Write a reward function in Python supporting safe movement.",
+        "chosen": "def reward(s_agent, s_cage_trolley, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_cage_trolley = calculate_distance_min(s_agent, s_cage_trolley) \n    penalty_collision = -25 if (d_agent_cage_trolley < 0.9) else 20 \n    reward_reaching_goal = 30 if (d_agent_goal < 0.3) else -30 \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def calculate(): \n    return 1"
+    },
+    {
+        "prompt": "In a storage environment, a drone is required to navigate safely and reach goal. It can access its own state and the states of tote cart as obstacle in the storage and goal’s state. Write a reward function in Python supporting safe movement.",
+        "chosen": "def reward(s_agent, s_tote_cart, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_tote_cart = calculate_distance_min(s_agent, s_tote_cart) \n    penalty_collision = -25 if (d_agent_tote_cart < 0.9) else 20 \n    reward_reaching_goal = 30 if (d_agent_goal < 0.3) else -30 \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def reward_env(): \n   punshiment = 100\n   return punshiment \n    def obstacles(): \n    price = 10\n    return price"
+    },
+    {
+        "prompt": "In a storage environment, a drone is required to navigate safely and reach goal. It can access its own state and the states of packing table rack as obstacle in the storage and goal’s state. Write a reward function in Python supporting safe movement.",
+        "chosen": "def reward(s_agent, s_packing_table, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_packing_table = calculate_distance_min(s_agent, s_packing_table) \n    penalty_collision = -25 if (d_agent_packing_table < 0.9) else 20 \n    reward_reaching_goal = 30 if (d_agent_goal < 0.3) else -30 \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def calculate(): \n    return 1"
+    },
+    {
+        "prompt": "In a storage environment, a drone is required to navigate safely and reach goal. It can access its own state and the states of wrap machine as obstacle in the storage and goal’s state. Write a reward function in Python supporting safe movement.",
+        "chosen": "def reward(s_agent, s_wrap_machine, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_wrap_machine = calculate_distance_min(s_agent, s_wrap_machine) \n    penalty_collision = -25 if (d_agent_wrap_machine < 0.9) else 20 \n    reward_reaching_goal = 30 if (d_agent_goal < 0.3) else -30 \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def reward_object(): \n   punshiment = 100\n   return punshiment \n    def price(): \n    price = 10\n    return price"
+    },
+    {
+        "prompt": "In a storage environment, a drone is required to navigate safely and reach goal. It can access its own state and the states of conveyor end as obstacle in the storage and goal’s state. Write a reward function in Python supporting safe movement.",
+        "chosen": "def reward(s_agent, s_conveyor_end, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_conveyor_end = calculate_distance_min(s_agent, s_conveyor_end) \n    penalty_collision = -25 if (d_agent_conveyor_end < 0.9) else 20 \n    reward_reaching_goal = 30 if (d_agent_goal < 0.3) else -30 \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def reward_to_storage(): \n    if goal == 'true': \n    return 10 \n    else: \n    return -10"
+    },
+    {
+        "prompt": "In a storage environment, a drone is required to navigate safely and reach goal. It can access its own state and the states of safetly ballard as obstacle in the storage and goal’s state. Write a reward function in Python supporting safe movement.",
+        "chosen": "def reward(s_agent, s_safety_bollard, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_safety_bollard = calculate_distance_min(s_agent, s_safety_bollard) \n    penalty_collision = -25 if (d_agent_safety_bollard < 0.9) else 20 \n    reward_reaching_goal = 30 if (d_agent_goal < 0.3) else -30 \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def alt(): \n    return 42"
+    },
+    {
+        "prompt": "In a storage environment, a drone is required to navigate safely and reach goal. It can access its own state and the states of fire ext cabint as obstacle in the storage and goal’s state. Write a reward function in Python supporting safe movement.",
+        "chosen": "def reward(s_agent, s_fire_ext_cabinet, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_fire_ext_cabinet = calculate_distance_min(s_agent, s_fire_ext_cabinet) \n    penalty_collision = -25 if (d_agent_fire_ext_cabinet < 0.9) else 20 \n    reward_reaching_goal = 30 if (d_agent_goal < 0.3) else -30 \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def reward_to_storage(): \n    if goal == 'true': \n    return 10 \n    else: \n    return -10"
+    },
+    {
+        "prompt": "In a storage environment, a drone is required to navigate safely and reach goal. It can access its own state and the states of electrical panel as obstacle in the storage and goal’s state. Write a reward function in Python supporting safe movement.",
+        "chosen": "def reward(s_agent, s_electrical_panel, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_electrical_panel = calculate_distance_min(s_agent, s_electrical_panel) \n    penalty_collision = -25 if (d_agent_electrical_panel < 0.9) else 20 \n    reward_reaching_goal = 30 if (d_agent_goal < 0.3) else -30 \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def rejected_fn(): \n    return 0"
+    },
+    {
+        "prompt": "In a storage environment, a drone is required to navigate safely and reach goal. It can access its own state and the states of sprinkler pipe as obstacle in the storage and goal’s state. Write a reward function in Python supporting safe movement.",
+        "chosen": "def reward(s_agent, s_sprinkler_pipe, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_sprinkler_pipe = calculate_distance_min(s_agent, s_sprinkler_pipe) \n    penalty_collision = -25 if (d_agent_sprinkler_pipe < 0.9) else 20 \n    reward_reaching_goal = 30 if (d_agent_goal < 0.3) else -30 \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def reward_env(): \n   punshiment = 100\n   return punshiment \n    def obstacles(): \n    price = 10\n    return price"
+    },
+    {
+        "prompt": "In a storage environment, a drone is required to navigate safely and reach goal. It can access its own state and the states of floor cable cover as obstacle in the storage and goal’s state. Write a reward function in Python supporting safe movement.",
+        "chosen": "def reward(s_agent, s_floor_cable_cover, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_floor_cable_cover = calculate_distance_min(s_agent, s_floor_cable_cover) \n    penalty_collision = -25 if (d_agent_floor_cable_cover < 0.9) else 20 \n    reward_reaching_goal = 30 if (d_agent_goal < 0.3) else -30 \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def nothing(): \n    pass"
+    },
+    {
+        "prompt": "Scenario: A drone is navigating Storage. Goal: It must avoid colliding with Storage's pallet rack upright, rolling ladder and pallet jack. Assumptions: The Agent's state, goal's state and the multiple obstacles: pallet rack upright, rolling ladder, and pallet jack are available. Instruction: Implement a reward function in Python.",
+        "chosen": "def reward(s_agent, s_multiple_obstacles, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_multiple_obstacles_min = calculate_distance_min(s_agent, s_multiple_obstacles) \n    penalty_collision = -20 if (d_agent_multiple_obstacles_min < 0.9) else 10 \n    reward_reaching_goal = 25 if (d_agent_goal < 0.3) else -30 \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def get_answer(s_goal): \n    return goal.position"
+    },
+    {
+        "prompt": "Scenario: A drone is navigating Storage. Goal: It must avoid colliding with Storage's dock door and dock leveler. Assumptions: The Agent's state, goal's state and the multiple obstacles: dock door, and dock leveler are available. Instruction: Implement a reward function in Python.",
+        "chosen": "def reward(s_agent, s_multiple_obstacles, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_multiple_obstacles_min = calculate_distance_min(s_agent, s_multiple_obstacles) \n    penalty_collision = -20 if (d_agent_multiple_obstacles_min < 0.9) else 10 \n    reward_reaching_goal = 25 if (d_agent_goal < 0.3) else -30 \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def rejected_fn(): \n    return 0"
+    },
+    {
+        "prompt": "Scenario: A drone is navigating Storage. Goal: It must avoid colliding with Storage's cage trolley, tote cart and packing table. Assumptions: The Agent's state, goal's state and the multiple obstacles: cage trolley, tote cart, and packing table are available. Instruction: Implement a reward function in Python.",
+        "chosen": "def reward(s_agent, s_multiple_obstacles, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_multiple_obstacles_min = calculate_distance_min(s_agent, s_multiple_obstacles) \n    penalty_collision = -20 if (d_agent_multiple_obstacles_min < 0.9) else 10 \n    reward_reaching_goal = 25 if (d_agent_goal < 0.3) else -30 \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def rejected_fn(): \n    return 0"
+    },
+    {
+        "prompt": "Scenario: A drone is navigating Storage. Goal: It must avoid colliding with Storage's support column and safety bollard. Assumptions: The Agent's state, goal's state and the multiple obstacles: support column, and safety bollard are available. Instruction: Implement a reward function in Python.",
+        "chosen": "def reward(s_agent, s_multiple_obstacles, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_multiple_obstacles_min = calculate_distance_min(s_agent, s_multiple_obstacles) \n    penalty_collision = -20 if (d_agent_multiple_obstacles_min < 0.9) else 10 \n    reward_reaching_goal = 25 if (d_agent_goal < 0.3) else -30 \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def alt(): \n    return 42"
+    },
+    {
+        "prompt": "A drone is inspecting in balcony. It must avoid colliding with the balcony railing. Agent's state, goal's state and balcony railing's state are accessible. Write a reward function in Python.",
+        "chosen": "def reward(s_agent, s_railing, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_railing = calculate_distance_min(s_agent, s_railing) \n    penalty_collision = -23 if (d_agent_railing < 0.55) else 13 \n    reward_reaching_goal = 20 if (d_agent_goal < 0.13) else -d_agent_goal**2 \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def reward_env(): \n   punshiment = 100\n   return punshiment \n    def obstacles(): \n    price = 10\n    return price"
+    },
+    {
+        "prompt": "A drone is inspecting in balcony. It must avoid colliding with the planter box. Agent's state, goal's state and planter box's state are accessible. Write a reward function in Python.",
+        "chosen": "def reward(s_agent, s_planter_box, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_planter_box = calculate_distance_min(s_agent, s_planter_box) \n    penalty_collision = -23 if (d_agent_planter_box < 0.55) else 13 \n    reward_reaching_goal = 20 if (d_agent_goal < 0.13) else -d_agent_goal**2 \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def get_answer(s_goal): \n    return goal.position"
+    },
+    {
+        "prompt": "A drone is inspecting in balcony. It must avoid colliding with the hanging flower pot. Agent's state, goal's state and hanging flower pot's state are accessible. Write a reward function in Python.",
+        "chosen": "def reward(s_agent, s_hanging_pot, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_hanging_pot = calculate_distance_min(s_agent, s_hanging_pot) \n    penalty_collision = -23 if (d_agent_hanging_pot < 0.55) else 13 \n    reward_reaching_goal = 20 if (d_agent_goal < 0.13) else -d_agent_goal**2 \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def fallback(): \n    return -1"
+    },
+    {
+        "prompt": "A drone is inspecting in balcony. It must avoid colliding with the outdoor chair. Agent's state, goal's state and outdoor chair's state are accessible. Write a reward function in Python.",
+        "chosen": "def reward(s_agent, s_outdoor_chair, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_outdoor_chair = calculate_distance_min(s_agent, s_outdoor_chair) \n    penalty_collision = -23 if (d_agent_outdoor_chair < 0.55) else 13 \n    reward_reaching_goal = 20 if (d_agent_goal < 0.13) else -d_agent_goal**2 \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def nothing(): \n    pass"
+    },
+    {
+        "prompt": "A drone is inspecting in balcony. It must avoid colliding with the bistro table. Agent's state, goal's state and bistro table's state are accessible. Write a reward function in Python.",
+        "chosen": "def reward(s_agent, s_bistro_table, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_bistro_table = calculate_distance_min(s_agent, s_bistro_table) \n    penalty_collision = -23 if (d_agent_bistro_table < 0.55) else 13 \n    reward_reaching_goal = 20 if (d_agent_goal < 0.13) else -d_agent_goal**2 \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def reward_env(): \n   punshiment = 100\n   return punshiment \n    def obstacles(): \n    price = 10\n    return price"
+    },
+    {
+        "prompt": "A drone is inspecting in balcony. It must avoid colliding with the umbrella stand. Agent's state, goal's state and umbrella stand's state are accessible. Write a reward function in Python.",
+        "chosen": "def reward(s_agent, s_umbrella_stand, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_umbrella_stand = calculate_distance_min(s_agent, s_umbrella_stand) \n    penalty_collision = -23 if (d_agent_umbrella_stand < 0.55) else 13 \n    reward_reaching_goal = 20 if (d_agent_goal < 0.13) else -d_agent_goal**2 \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def reward_object(): \n   punshiment = 100\n   return punshiment \n    def price(): \n    price = 10\n    return price"
+    },
+    {
+        "prompt": "A drone is inspecting in balcony. It must avoid colliding with the clothes drying rack. Agent's state, goal's state and clothes drying rack's state are accessible. Write a reward function in Python.",
+        "chosen": "def reward(s_agent, s_drying_rack, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_drying_rack = calculate_distance_min(s_agent, s_drying_rack) \n    penalty_collision = -23 if (d_agent_drying_rack < 0.55) else 13 \n    reward_reaching_goal = 20 if (d_agent_goal < 0.13) else -d_agent_goal**2 \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def rejected_fn(): \n    return 0"
+    },
+    {
+        "prompt": "A drone is inspecting in balcony. It must avoid colliding with the AC condenser unit. Agent's state, goal's state and AC condenser unit's state are accessible. Write a reward function in Python.",
+        "chosen": "def reward(s_agent, s_ac_condenser, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_ac_condenser = calculate_distance_min(s_agent, s_ac_condenser) \n    penalty_collision = -23 if (d_agent_ac_condenser < 0.55) else 13 \n    reward_reaching_goal = 20 if (d_agent_goal < 0.13) else -d_agent_goal**2 \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def fallback(): \n    return -1"
+    },
+    {
+        "prompt": "A drone is inspecting in balcony. It must avoid colliding with the sliding door. Agent's state, goal's state and sliding door's state are accessible. Write a reward function in Python.",
+        "chosen": "def reward(s_agent, s_sliding_door, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_sliding_door = calculate_distance_min(s_agent, s_sliding_door) \n    penalty_collision = -23 if (d_agent_sliding_door < 0.55) else 13 \n    reward_reaching_goal = 20 if (d_agent_goal < 0.13) else -d_agent_goal**2 \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def alt(): \n    return 42"
+    },
+    {
+        "prompt": "A drone is inspecting in balcony. It must avoid colliding with the door track rail. Agent's state, goal's state and door track rail's state are accessible. Write a reward function in Python.",
+        "chosen": "def reward(s_agent, s_door_track, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_door_track = calculate_distance_min(s_agent, s_door_track) \n    penalty_collision = -23 if (d_agent_door_track < 0.55) else 13 \n    reward_reaching_goal = 20 if (d_agent_goal < 0.13) else -d_agent_goal**2 \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def get_answer(s_goal): \n    return goal.position"
+    },
+    {
+        "prompt": "A drone is inspecting in balcony. It must avoid colliding with the storage box. Agent's state, goal's state and storage box's state are accessible. Write a reward function in Python.",
+        "chosen": "def reward(s_agent, s_storage_box, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_storage_box = calculate_distance_min(s_agent, s_storage_box) \n    penalty_collision = -23 if (d_agent_storage_box < 0.55) else 13 \n    reward_reaching_goal = 20 if (d_agent_goal < 0.13) else -d_agent_goal**2 \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def calculate(): \n    return 1"
+    },
+    {
+        "prompt": "A drone is inspecting in balcony. It must avoid colliding with the string lights pole. Agent's state, goal's state and string lights pole's state are accessible. Write a reward function in Python.",
+        "chosen": "def reward(s_agent, s_string_lights_pole, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_string_lights_pole = calculate_distance_min(s_agent, s_string_lights_pole) \n    penalty_collision = -23 if (d_agent_string_lights_pole < 0.55) else 13 \n    reward_reaching_goal = 20 if (d_agent_goal < 0.13) else -d_agent_goal**2 \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def reward_env(): \n   punshiment = 100\n   return punshiment \n    def obstacles(): \n    price = 10\n    return price"
+    },
+    {
+        "prompt": "A drone is inspecting in balcony. It must avoid colliding with the awning support. Agent's state, goal's state and awning support's state are accessible. Write a reward function in Python.",
+        "chosen": "def reward(s_agent, s_awning_support, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_awning_support = calculate_distance_min(s_agent, s_awning_support) \n    penalty_collision = -23 if (d_agent_awning_support < 0.55) else 13 \n    reward_reaching_goal = 20 if (d_agent_goal < 0.13) else -d_agent_goal**2 \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def reward_env(): \n   punshiment = 100\n   return punshiment \n    def obstacles(): \n    price = 10\n    return price"
+    },
+    {
+        "prompt": "A drone is inspecting in balcony. It must avoid colliding with the privacy screen panel. Agent's state, goal's state and privacy screen panel's state are accessible. Write a reward function in Python.",
+        "chosen": "def reward(s_agent, s_privacy_panel, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_privacy_panel = calculate_distance_min(s_agent, s_privacy_panel) \n    penalty_collision = -23 if (d_agent_privacy_panel < 0.55) else 13 \n    reward_reaching_goal = 20 if (d_agent_goal < 0.13) else -d_agent_goal**2 \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def nothing(): \n    pass"
+    },
+    {
+        "prompt": "A drone is inspecting in balcony. It must avoid colliding with the shoe rack. Agent's state, goal's state and shoe rack's state are accessible. Write a reward function in Python.",
+        "chosen": "def reward(s_agent, s_shoe_rack, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_shoe_rack = calculate_distance_min(s_agent, s_shoe_rack) \n    penalty_collision = -23 if (d_agent_shoe_rack < 0.55) else 13 \n    reward_reaching_goal = 20 if (d_agent_goal < 0.13) else -d_agent_goal**2 \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def calculate(): \n    return 1"
+    },
+    {
+        "prompt": "A drone is inspecting in balcony. It must avoid colliding with the hose reel. Agent's state, goal's state and hose reel's state are accessible. Write a reward function in Python.",
+        "chosen": "def reward(s_agent, s_hose_reel, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_hose_reel = calculate_distance_min(s_agent, s_hose_reel) \n    penalty_collision = -23 if (d_agent_hose_reel < 0.55) else 13 \n    reward_reaching_goal = 20 if (d_agent_goal < 0.13) else -d_agent_goal**2 \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def reward_env(): \n   punshiment = 100\n   return punshiment \n    def obstacles(): \n    price = 10\n    return price"
+    },
+    {
+        "prompt": "A drone is inspecting in balcony. It must avoid colliding with the mop bucket. Agent's state, goal's state and mop bucket's state are accessible. Write a reward function in Python.",
+        "chosen": "def reward(s_agent, s_mop_bucket, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_mop_bucket = calculate_distance_min(s_agent, s_mop_bucket) \n    penalty_collision = -23 if (d_agent_mop_bucket < 0.55) else 13 \n    reward_reaching_goal = 20 if (d_agent_goal < 0.13) else -d_agent_goal**2 \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def calculate(): \n    return 1"
+    },
+    {
+        "prompt": "A drone is inspecting in balcony. It must avoid colliding with the wind chime. Agent's state, goal's state and wind chime's state are accessible. Write a reward function in Python.",
+        "chosen": "def reward(s_agent, s_wind_chime, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_wind_chime = calculate_distance_min(s_agent, s_wind_chime) \n    penalty_collision = -23 if (d_agent_wind_chime < 0.55) else 13 \n    reward_reaching_goal = 20 if (d_agent_goal < 0.13) else -d_agent_goal**2 \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def reward_env(): \n   punshiment = 100\n   return punshiment \n    def obstacles(): \n    price = 10\n    return price"
+    },
+    {
+        "prompt": "A drone is inspecting in balcony. It must avoid colliding with the bird feeder pole. Agent's state, goal's state and bird feeder pole's state are accessible. Write a reward function in Python.",
+        "chosen": "def reward(s_agent, s_bird_feeder_pole, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_bird_feeder_pole = calculate_distance_min(s_agent, s_bird_feeder_pole) \n    penalty_collision = -23 if (d_agent_bird_feeder_pole < 0.55) else 13 \n    reward_reaching_goal = 20 if (d_agent_goal < 0.13) else -d_agent_goal**2 \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def reward_to_balcony(): \n    if goal == 'true': \n    return 10 \n    else: \n    return -10"
+    },
+    {
+        "prompt": "A drone is inspecting in balcony. It must avoid colliding with the satellite dish. Agent's state, goal's state and satellite dish's state are accessible. Write a reward function in Python.",
+        "chosen": "def reward(s_agent, s_satellite_dish, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_satellite_dish = calculate_distance_min(s_agent, s_satellite_dish) \n    penalty_collision = -23 if (d_agent_satellite_dish < 0.55) else 13 \n    reward_reaching_goal = 20 if (d_agent_goal < 0.13) else -d_agent_goal**2 \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def reward_to_balcony(): \n    if goal == 'true': \n    return 10 \n    else: \n    return -10"
+    },
+    {
+        "prompt": "A drone is inspecting in balcony. It must avoid colliding with the electric grill cart. Agent's state, goal's state and electric grill cart's state are accessible. Write a reward function in Python.",
+        "chosen": "def reward(s_agent, s_grill_cart, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_grill_cart = calculate_distance_min(s_agent, s_grill_cart) \n    penalty_collision = -23 if (d_agent_grill_cart < 0.55) else 13 \n    reward_reaching_goal = 20 if (d_agent_goal < 0.13) else -d_agent_goal**2 \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def reward_env(): \n   punshiment = 100\n   return punshiment \n    def obstacles(): \n    price = 10\n    return price"
+    },
+    {
+        "prompt": "Scenario: A drone is navigating Balcony. Goal: It must avoid colliding with Balcony's balcony railing, planter box and hanging flower pot. Assumptions: The Agent's state, goal's state and the multiple obstacles: balcony railing, planter box, and hanging flower pot are available. Instruction: Implement a reward function in Python.",
+        "chosen": "def reward(s_agent, s_multiple_obstacles, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_multiple_obstacles_min = calculate_distance_min(s_agent, s_multiple_obstacles) \n    penalty_collision = -20 if (d_agent_multiple_obstacles_min < 0.55) else 10 \n    reward_reaching_goal = 23 if (d_agent_goal < 0.13) else -d_agent_goal**2 \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def rejected_fn(): \n    return 0"
+    },
+    {
+        "prompt": "Scenario: A drone is navigating Balcony. Goal: It must avoid colliding with Balcony's bistro table and outdoor chair. Assumptions: The Agent's state, goal's state and the multiple obstacles: bistro table, and outdoor chair are available. Instruction: Implement a reward function in Python.",
+        "chosen": "def reward(s_agent, s_multiple_obstacles, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_multiple_obstacles_min = calculate_distance_min(s_agent, s_multiple_obstacles) \n    penalty_collision = -20 if (d_agent_multiple_obstacles_min < 0.55) else 10 \n    reward_reaching_goal = 23 if (d_agent_goal < 0.13) else -d_agent_goal**2 \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def rejected_fn(): \n    return 0"
+    },
+    {
+        "prompt": "Scenario: A drone is navigating Balcony. Goal: It must avoid colliding with Balcony's AC condenser unit, sliding door and door track rail. Assumptions: The Agent's state, goal's state and the multiple obstacles: AC condenser unit, sliding door, and door track rail are available. Instruction: Implement a reward function in Python.",
+        "chosen": "def reward(s_agent, s_multiple_obstacles, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_multiple_obstacles_min = calculate_distance_min(s_agent, s_multiple_obstacles) \n    penalty_collision = -20 if (d_agent_multiple_obstacles_min < 0.55) else 10 \n    reward_reaching_goal = 23 if (d_agent_goal < 0.13) else -d_agent_goal**2 \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def reward_to_balcony(): \n    if goal == 'true': \n    return 10 \n    else: \n    return -10"
+    },
+    {
+        "prompt": "Scenario: A drone is navigating Balcony. Goal: It must avoid colliding with Balcony's storage box and hose reel. Assumptions: The Agent's state, goal's state and the multiple obstacles: storage box, and hose reel are available. Instruction: Implement a reward function in Python.",
+        "chosen": "def reward(s_agent, s_multiple_obstacles, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_multiple_obstacles_min = calculate_distance_min(s_agent, s_multiple_obstacles) \n    penalty_collision = -20 if (d_agent_multiple_obstacles_min < 0.55) else 10 \n    reward_reaching_goal = 23 if (d_agent_goal < 0.13) else -d_agent_goal**2 \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def nothing(): \n    pass"
+    },
+    {
+        "prompt": "Scenario: A drone inspecting in mill. \n  Goal: It must avoid colliding with the grain silo base.  \n Assumptions: Agent's state, target's state and grain silo base's state are accessible. Write a reward function in Python.",
+        "chosen": "def reward(s_agent, s_grain_silo, s_target): \n    d_agent_target = calculate_distance(s_agent, s_target) \n    d_agent_grain_silo = calculate_distance_min(s_agent, s_grain_silo) \n    penalty_collision = -25 if (d_agent_grain_silo < 0.6) else 15 \n    reward_reaching_target = 30 if (d_agent_target < 0.3) else -d_agent_target**2 \n    return penalty_collision + reward_reaching_target",
+        "rejected": "def reward_to_balcony(): \n    if goal == 'true': \n    return 10 \n    else: \n    return -10"
+    },
+    {
+        "prompt": "Scenario: A drone inspecting in mill. \n  Goal: It must avoid colliding with the bucket elevator.  \n Assumptions: Agent's state, target's state and bucket elevator's state are accessible. Write a reward function in Python.",
+        "chosen": "def reward(s_agent, s_bucket_elevator, s_target): \n    d_agent_target = calculate_distance(s_agent, s_target) \n    d_agent_bucket_elevator = calculate_distance_min(s_agent, s_bucket_elevator) \n    penalty_collision = -25 if (d_agent_bucket_elevator < 0.6) else 15 \n    reward_reaching_target = 30 if (d_agent_target < 0.3) else -d_agent_target**2 \n    return penalty_collision + reward_reaching_target",
+        "rejected": "def calculate(): \n    return 1"
+    },
+    {
+        "prompt": "Scenario: A drone inspecting in mill. \n  Goal: It must avoid colliding with the screw conveyor.  \n Assumptions: Agent's state, target's state and screw conveyor's state are accessible. Write a reward function in Python.",
+        "chosen": "def reward(s_agent, s_screw_conveyor, s_target): \n    d_agent_target = calculate_distance(s_agent, s_target) \n    d_agent_screw_conveyor = calculate_distance_min(s_agent, s_screw_conveyor) \n    penalty_collision = -25 if (d_agent_screw_conveyor < 0.6) else 15 \n    reward_reaching_target = 30 if (d_agent_target < 0.3) else -d_agent_target**2 \n    return penalty_collision + reward_reaching_target",
+        "rejected": "def get_answer(s_goal): \n    return goal.position"
+    },
+    {
+        "prompt": "Scenario: A drone inspecting in mill. \n  Goal: It must avoid colliding with the belt conveyor head pulley.  \n Assumptions: Agent's state, target's state and belt conveyor head pulley's state are accessible. Write a reward function in Python.",
+        "chosen": "def reward(s_agent, s_head_pulley, s_target): \n    d_agent_target = calculate_distance(s_agent, s_target) \n    d_agent_head_pulley = calculate_distance_min(s_agent, s_head_pulley) \n    penalty_collision = -25 if (d_agent_head_pulley < 0.6) else 15 \n    reward_reaching_target = 30 if (d_agent_target < 0.3) else -d_agent_target**2 \n    return penalty_collision + reward_reaching_target",
+        "rejected": "def calculate(): \n    return 1"
+    },
+    {
+        "prompt": "Scenario: A drone inspecting in mill. \n  Goal: It must avoid colliding with the bagging station.  \n Assumptions: Agent's state, target's state and bagging station's state are accessible. Write a reward function in Python.",
+        "chosen": "def reward(s_agent, s_bagging_station, s_target): \n    d_agent_target = calculate_distance(s_agent, s_target) \n    d_agent_bagging_station = calculate_distance_min(s_agent, s_bagging_station) \n    penalty_collision = -25 if (d_agent_bagging_station < 0.6) else 15 \n    reward_reaching_target = 30 if (d_agent_target < 0.3) else -d_agent_target**2 \n    return penalty_collision + reward_reaching_target",
+        "rejected": "def reward_object(): \n   punshiment = 100\n   return punshiment \n    def price(): \n    price = 10\n    return price"
+    },
+    {
+        "prompt": "Scenario: A drone inspecting in mill. \n  Goal: It must avoid colliding with the palletizer.  \n Assumptions: Agent's state, target's state and palletizer's state are accessible. Write a reward function in Python.",
+        "chosen": "def reward(s_agent, s_palletizer, s_target): \n    d_agent_target = calculate_distance(s_agent, s_target) \n    d_agent_palletizer = calculate_distance_min(s_agent, s_palletizer) \n    penalty_collision = -25 if (d_agent_palletizer < 0.6) else 15 \n    reward_reaching_target = 30 if (d_agent_target < 0.3) else -d_agent_target**2 \n    return penalty_collision + reward_reaching_target",
+        "rejected": "def calculate(): \n    return 1"
+    },
+    {
+        "prompt": "Scenario: A drone inspecting in mill. \n  Goal: It must avoid colliding with the forklift parking bay.  \n Assumptions: Agent's state, target's state and forklift parking bay's state are accessible. Write a reward function in Python.",
+        "chosen": "def reward(s_agent, s_forklift_bay, s_target): \n    d_agent_target = calculate_distance(s_agent, s_target) \n    d_agent_forklift_bay = calculate_distance_min(s_agent, s_forklift_bay) \n    penalty_collision = -25 if (d_agent_forklift_bay < 0.6) else 15 \n    reward_reaching_target = 30 if (d_agent_target < 0.3) else -d_agent_target**2 \n    return penalty_collision + reward_reaching_target",
+        "rejected": "def fallback(): \n    return -1"
+    },
+    {
+        "prompt": "Scenario: A drone inspecting in mill. \n  Goal: It must avoid colliding with the loading dock door.  \n Assumptions: Agent's state, target's state and loading dock door's state are accessible. Write a reward function in Python.",
+        "chosen": "def reward(s_agent, s_dock_door, s_target): \n    d_agent_target = calculate_distance(s_agent, s_target) \n    d_agent_dock_door = calculate_distance_min(s_agent, s_dock_door) \n    penalty_collision = -25 if (d_agent_dock_door < 0.6) else 15 \n    reward_reaching_target = 30 if (d_agent_target < 0.3) else -d_agent_target**2 \n    return penalty_collision + reward_reaching_target",
+        "rejected": "def reward_to_mill(): \n    if goal == 'true': \n    return 10 \n    else: \n    return -10"
+    },
+    {
+        "prompt": "Scenario: A drone inspecting in mill. \n  Goal: It must avoid colliding with the dust collector.  \n Assumptions: Agent's state, target's state and dust collector's state are accessible. Write a reward function in Python.",
+        "chosen": "def reward(s_agent, s_dust_collector, s_target): \n    d_agent_target = calculate_distance(s_agent, s_target) \n    d_agent_dust_collector = calculate_distance_min(s_agent, s_dust_collector) \n    penalty_collision = -25 if (d_agent_dust_collector < 0.6) else 15 \n    reward_reaching_target = 30 if (d_agent_target < 0.3) else -d_agent_target**2 \n    return penalty_collision + reward_reaching_target",
+        "rejected": "def reward_to_mill(): \n    if goal == 'true': \n    return 10 \n    else: \n    return -10"
+    },
+    {
+        "prompt": "Scenario: A drone inspecting in mill. \n  Goal: It must avoid colliding with the cyclone separator.  \n Assumptions: Agent's state, target's state and cyclone separator's state are accessible. Write a reward function in Python.",
+        "chosen": "def reward(s_agent, s_cyclone_separator, s_target): \n    d_agent_target = calculate_distance(s_agent, s_target) \n    d_agent_cyclone_separator = calculate_distance_min(s_agent, s_cyclone_separator) \n    penalty_collision = -25 if (d_agent_cyclone_separator < 0.6) else 15 \n    reward_reaching_target = 30 if (d_agent_target < 0.3) else -d_agent_target**2 \n    return penalty_collision + reward_reaching_target",
+        "rejected": "def get_answer(s_goal): \n    return goal.position"
+    },
+    {
+        "prompt": "Scenario: A drone inspecting in mill. \n  Goal: It must avoid colliding with the roller mill.  \n Assumptions: Agent's state, target's state and roller mill's state are accessible. Write a reward function in Python.",
+        "chosen": "def reward(s_agent, s_roller_mill, s_target): \n    d_agent_target = calculate_distance(s_agent, s_target) \n    d_agent_roller_mill = calculate_distance_min(s_agent, s_roller_mill) \n    penalty_collision = -25 if (d_agent_roller_mill < 0.6) else 15 \n    reward_reaching_target = 30 if (d_agent_target < 0.3) else -d_agent_target**2 \n    return penalty_collision + reward_reaching_target",
+        "rejected": "def reward_to_mill(): \n    if goal == 'true': \n    return 10 \n    else: \n    return -10"
+    },
+    {
+        "prompt": "Scenario: A drone inspecting in mill. \n  Goal: It must avoid colliding with the hammer mill.  \n Assumptions: Agent's state, target's state and hammer mill's state are accessible. Write a reward function in Python.",
+        "chosen": "def reward(s_agent, s_hammer_mill, s_target): \n    d_agent_target = calculate_distance(s_agent, s_target) \n    d_agent_hammer_mill = calculate_distance_min(s_agent, s_hammer_mill) \n    penalty_collision = -25 if (d_agent_hammer_mill < 0.6) else 15 \n    reward_reaching_target = 30 if (d_agent_target < 0.3) else -d_agent_target**2 \n    return penalty_collision + reward_reaching_target",
+        "rejected": "def get_answer(s_goal): \n    return goal.position"
+    },
+    {
+        "prompt": "Scenario: A drone inspecting in mill. \n  Goal: It must avoid colliding with the mixing blender.  \n Assumptions: Agent's state, target's state and mixing blender's state are accessible. Write a reward function in Python.",
+        "chosen": "def reward(s_agent, s_mixer, s_target): \n    d_agent_target = calculate_distance(s_agent, s_target) \n    d_agent_mixer = calculate_distance_min(s_agent, s_mixer) \n    penalty_collision = -25 if (d_agent_mixer < 0.6) else 15 \n    reward_reaching_target = 30 if (d_agent_target < 0.3) else -d_agent_target**2 \n    return penalty_collision + reward_reaching_target",
+        "rejected": "def rejected_fn(): \n    return 0"
+    },
+    {
+        "prompt": "Scenario: A drone inspecting in mill. \n  Goal: It must avoid colliding with the weigh hopper.  \n Assumptions: Agent's state, target's state and weigh hopper's state are accessible. Write a reward function in Python.",
+        "chosen": "def reward(s_agent, s_weigh_hopper, s_target): \n    d_agent_target = calculate_distance(s_agent, s_target) \n    d_agent_weigh_hopper = calculate_distance_min(s_agent, s_weigh_hopper) \n    penalty_collision = -25 if (d_agent_weigh_hopper < 0.6) else 15 \n    reward_reaching_target = 30 if (d_agent_target < 0.3) else -d_agent_target**2 \n    return penalty_collision + reward_reaching_target",
+        "rejected": "def calculate(): \n    return 1"
+    },
+    {
+        "prompt": "Scenario: A drone inspecting in mill. \n  Goal: It must avoid colliding with the rotary airlock valve.  \n Assumptions: Agent's state, target's state and rotary airlock valve's state are accessible. Write a reward function in Python.",
+        "chosen": "def reward(s_agent, s_rotary_valve, s_target): \n    d_agent_target = calculate_distance(s_agent, s_target) \n    d_agent_rotary_valve = calculate_distance_min(s_agent, s_rotary_valve) \n    penalty_collision = -25 if (d_agent_rotary_valve < 0.6) else 15 \n    reward_reaching_target = 30 if (d_agent_target < 0.3) else -d_agent_target**2 \n    return penalty_collision + reward_reaching_target",
+        "rejected": "def nothing(): \n    pass"
+    },
+    {
+        "prompt": "Scenario: A drone inspecting in mill. \n  Goal: It must avoid colliding with the airlock door.  \n Assumptions: Agent's state, target's state and airlock door's state are accessible. Write a reward function in Python.",
+        "chosen": "def reward(s_agent, s_airlock_door, s_target): \n    d_agent_target = calculate_distance(s_agent, s_target) \n    d_agent_airlock_door = calculate_distance_min(s_agent, s_airlock_door) \n    penalty_collision = -25 if (d_agent_airlock_door < 0.6) else 15 \n    reward_reaching_target = 30 if (d_agent_target < 0.3) else -d_agent_target**2 \n    return penalty_collision + reward_reaching_target",
+        "rejected": "def reward_env(): \n   punshiment = 100\n   return punshiment \n    def obstacles(): \n    price = 10\n    return price"
+    },
+    {
+        "prompt": "Scenario: A drone inspecting in mill. \n  Goal: It must avoid colliding with the bag filter housing.  \n Assumptions: Agent's state, target's state and bag filter housing's state are accessible. Write a reward function in Python.",
+        "chosen": "def reward(s_agent, s_bag_filter, s_target): \n    d_agent_target = calculate_distance(s_agent, s_target) \n    d_agent_bag_filter = calculate_distance_min(s_agent, s_bag_filter) \n    penalty_collision = -25 if (d_agent_bag_filter < 0.6) else 15 \n    reward_reaching_target = 30 if (d_agent_target < 0.3) else -d_agent_target**2 \n    return penalty_collision + reward_reaching_target",
+        "rejected": "def reward_env(): \n   punshiment = 100\n   return punshiment \n    def obstacles(): \n    price = 10\n    return price"
+    },
+    {
+        "prompt": "Scenario: A drone inspecting in mill. \n  Goal: It must avoid colliding with the control panel.  \n Assumptions: Agent's state, target's state and control panel's state are accessible. Write a reward function in Python.",
+        "chosen": "def reward(s_agent, s_control_panel, s_target): \n    d_agent_target = calculate_distance(s_agent, s_target) \n    d_agent_control_panel = calculate_distance_min(s_agent, s_control_panel) \n    penalty_collision = -25 if (d_agent_control_panel < 0.6) else 15 \n    reward_reaching_target = 30 if (d_agent_target < 0.3) else -d_agent_target**2 \n    return penalty_collision + reward_reaching_target",
+        "rejected": "def get_answer(s_goal): \n    return goal.position"
+    },
+    {
+        "prompt": "Scenario: A drone inspecting in mill. \n  Goal: It must avoid colliding with the mezzanine railing.  \n Assumptions: Agent's state, target's state and mezzanine railing's state are accessible. Write a reward function in Python.",
+        "chosen": "def reward(s_agent, s_mezzanine_rail, s_target): \n    d_agent_target = calculate_distance(s_agent, s_target) \n    d_agent_mezzanine_rail = calculate_distance_min(s_agent, s_mezzanine_rail) \n    penalty_collision = -25 if (d_agent_mezzanine_rail < 0.6) else 15 \n    reward_reaching_target = 30 if (d_agent_target < 0.3) else -d_agent_target**2 \n    return penalty_collision + reward_reaching_target",
+        "rejected": "def fallback(): \n    return -1"
+    },
+    {
+        "prompt": "Scenario: A drone inspecting in mill. \n  Goal: It must avoid colliding with the stair tower.  \n Assumptions: Agent's state, target's state and stair tower's state are accessible. Write a reward function in Python.",
+        "chosen": "def reward(s_agent, s_stair_tower, s_target): \n    d_agent_target = calculate_distance(s_agent, s_target) \n    d_agent_stair_tower = calculate_distance_min(s_agent, s_stair_tower) \n    penalty_collision = -25 if (d_agent_stair_tower < 0.6) else 15 \n    reward_reaching_target = 30 if (d_agent_target < 0.3) else -d_agent_target**2 \n    return penalty_collision + reward_reaching_target",
+        "rejected": "def reward_env(): \n   punshiment = 100\n   return punshiment \n    def obstacles(): \n    price = 10\n    return price"
+    },
+    {
+        "prompt": "Scenario: A drone inspecting in mill. \n  Goal: It must avoid colliding with the grain chute.  \n Assumptions: Agent's state, target's state and grain chute's state are accessible. Write a reward function in Python.",
+        "chosen": "def reward(s_agent, s_grain_chute, s_target): \n    d_agent_target = calculate_distance(s_agent, s_target) \n    d_agent_grain_chute = calculate_distance_min(s_agent, s_grain_chute) \n    penalty_collision = -25 if (d_agent_grain_chute < 0.6) else 15 \n    reward_reaching_target = 30 if (d_agent_target < 0.3) else -d_agent_target**2 \n    return penalty_collision + reward_reaching_target",
+        "rejected": "def reward_to_mill(): \n    if goal == 'true': \n    return 10 \n    else: \n    return -10"
+    },
+    {
+        "prompt": "Scenario: A drone is navigating Mill. Goal: It must avoid colliding with Mill's roller mill, screw conveyor and cyclone separator. Assumptions: The Agent's state, target's state and the multiple obstacles: roller mill, screw conveyor, and cyclone separator are available. Instruction: Implement a reward function in Python.",
+        "chosen": "def reward(s_agent, s_multiple_obstacles, s_target): \n    d_agent_target = calculate_distance(s_agent, s_target) \n    d_agent_multiple_obstacles_min = calculate_distance_min(s_agent, s_multiple_obstacles) \n    penalty_collision = -20 if (d_agent_multiple_obstacles_min < 0.6) else 10 \n    reward_reaching_target = 25 if (d_agent_target < 0.3) else -d_agent_target**2 \n    return penalty_collision + reward_reaching_target",
+        "rejected": "def fallback(): \n    return -1"
+    },
+    {
+        "prompt": "Scenario: A drone is navigating Mill. Goal: It must avoid colliding with Mill's bagging station and palletizer. Assumptions: The Agent's state, target's state and the multiple obstacles: bagging station, and palletizer are available. Instruction: Implement a reward function in Python.",
+        "chosen": "def reward(s_agent, s_multiple_obstacles, s_target): \n    d_agent_target = calculate_distance(s_agent, s_target) \n    d_agent_multiple_obstacles_min = calculate_distance_min(s_agent, s_multiple_obstacles) \n    penalty_collision = -20 if (d_agent_multiple_obstacles_min < 0.6) else 10 \n    reward_reaching_target = 25 if (d_agent_target < 0.3) else -d_agent_target**2 \n    return penalty_collision + reward_reaching_target",
+        "rejected": "def rejected_fn(): \n    return 0"
+    },
+    {
+        "prompt": "Scenario: A drone is navigating Mill. Goal: It must avoid colliding with Mill's bucket elevator, belt conveyor head pulley and grain chute. Assumptions: The Agent's state, target's state and the multiple obstacles: bucket elevator, belt conveyor head pulley, and grain chute are available. Instruction: Implement a reward function in Python.",
+        "chosen": "def reward(s_agent, s_multiple_obstacles, s_target): \n    d_agent_target = calculate_distance(s_agent, s_target) \n    d_agent_multiple_obstacles_min = calculate_distance_min(s_agent, s_multiple_obstacles) \n    penalty_collision = -20 if (d_agent_multiple_obstacles_min < 0.6) else 10 \n    reward_reaching_target = 25 if (d_agent_target < 0.3) else -d_agent_target**2 \n    return penalty_collision + reward_reaching_target",
+        "rejected": "def nothing(): \n    pass"
+    },
+    {
+        "prompt": "Scenario: A drone is navigating Mill. Goal: It must avoid colliding with Mill's loading dock door and forklift parking bay. Assumptions: The Agent's state, target's state and the multiple obstacles: loading dock door, and forklift parking bay are available. Instruction: Implement a reward function in Python.",
+        "chosen": "def reward(s_agent, s_multiple_obstacles, s_target): \n    d_agent_target = calculate_distance(s_agent, s_target) \n    d_agent_multiple_obstacles_min = calculate_distance_min(s_agent, s_multiple_obstacles) \n    penalty_collision = -20 if (d_agent_multiple_obstacles_min < 0.6) else 10 \n    reward_reaching_target = 25 if (d_agent_target < 0.3) else -d_agent_target**2 \n    return penalty_collision + reward_reaching_target",
+        "rejected": "def get_answer(s_goal): \n    return goal.position"
+    },
+    {
+        "prompt": "A drone is inspecting in treehouse. It must avoid colliding with the rope ladder. Agent's state, goal's state and rope ladder's state are accessible. Write a reward function in Python.",
+        "chosen": "def reward(s_agent, s_rope_ladder, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_rope_ladder = calculate_distance_min(s_agent, s_rope_ladder) \n    penalty_collision = -25 if (d_agent_rope_ladder < 0.5) else 15 \n    reward_reaching_goal = 30 if (d_agent_goal < 0.12) else -d_agent_goal*5 \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def rejected_fn(): \n    return 0"
+    },
+    {
+        "prompt": "A drone is inspecting in treehouse. It must avoid colliding with the trapdoor hatch. Agent's state, goal's state and trapdoor hatch's state are accessible. Write a reward function in Python.",
+        "chosen": "def reward(s_agent, s_trapdoor_hatch, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_trapdoor_hatch = calculate_distance_min(s_agent, s_trapdoor_hatch) \n    penalty_collision = -25 if (d_agent_trapdoor_hatch < 0.5) else 15 \n    reward_reaching_goal = 30 if (d_agent_goal < 0.12) else -d_agent_goal*5 \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def rejected_fn(): \n    return 0"
+    },
+    {
+        "prompt": "A drone is inspecting in treehouse. It must avoid colliding with the wooden railing. Agent's state, goal's state and wooden railing's state are accessible. Write a reward function in Python.",
+        "chosen": "def reward(s_agent, s_wooden_railing, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_wooden_railing = calculate_distance_min(s_agent, s_wooden_railing) \n    penalty_collision = -25 if (d_agent_wooden_railing < 0.5) else 15 \n    reward_reaching_goal = 30 if (d_agent_goal < 0.12) else -d_agent_goal*5 \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def nothing(): \n    pass"
+    },
+    {
+        "prompt": "A drone is inspecting in treehouse. It must avoid colliding with the support beam. Agent's state, goal's state and support beam's state are accessible. Write a reward function in Python.",
+        "chosen": "def reward(s_agent, s_support_beam, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_support_beam = calculate_distance_min(s_agent, s_support_beam) \n    penalty_collision = -25 if (d_agent_support_beam < 0.5) else 15 \n    reward_reaching_goal = 30 if (d_agent_goal < 0.12) else -d_agent_goal*5 \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def calculate(): \n    return 1"
+    },
+    {
+        "prompt": "A drone is inspecting in treehouse. It must avoid colliding with the pulley bucket. Agent's state, goal's state and pulley bucket's state are accessible. Write a reward function in Python.",
+        "chosen": "def reward(s_agent, s_pulley_bucket, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_pulley_bucket = calculate_distance_min(s_agent, s_pulley_bucket) \n    penalty_collision = -25 if (d_agent_pulley_bucket < 0.5) else 15 \n    reward_reaching_goal = 30 if (d_agent_goal < 0.12) else -d_agent_goal*5 \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def reward_object(): \n   punshiment = 100\n   return punshiment \n    def price(): \n    price = 10\n    return price"
+    },
+    {
+        "prompt": "A drone is inspecting in treehouse. It must avoid colliding with the zipline anchor. Agent's state, goal's state and zipline anchor's state are accessible. Write a reward function in Python.",
+        "chosen": "def reward(s_agent, s_zipline_anchor, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_zipline_anchor = calculate_distance_min(s_agent, s_zipline_anchor) \n    penalty_collision = -25 if (d_agent_zipline_anchor < 0.5) else 15 \n    reward_reaching_goal = 30 if (d_agent_goal < 0.12) else -d_agent_goal*5 \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def reward_to_treehouse(): \n    if goal == 'true': \n    return 10 \n    else: \n    return -10"
+    },
+    {
+        "prompt": "A drone is inspecting in treehouse. It must avoid colliding with the suspension bridge plank. Agent's state, goal's state and suspension bridge plank's state are accessible. Write a reward function in Python.",
+        "chosen": "def reward(s_agent, s_bridge_plank, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_bridge_plank = calculate_distance_min(s_agent, s_bridge_plank) \n    penalty_collision = -25 if (d_agent_bridge_plank < 0.5) else 15 \n    reward_reaching_goal = 30 if (d_agent_goal < 0.12) else -d_agent_goal*5 \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def nothing(): \n    pass"
+    },
+    {
+        "prompt": "A drone is inspecting in treehouse. It must avoid colliding with the safety net post. Agent's state, goal's state and safety net post's state are accessible. Write a reward function in Python.",
+        "chosen": "def reward(s_agent, s_safety_net_post, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_safety_net_post = calculate_distance_min(s_agent, s_safety_net_post) \n    penalty_collision = -25 if (d_agent_safety_net_post < 0.5) else 15 \n    reward_reaching_goal = 30 if (d_agent_goal < 0.12) else -d_agent_goal*5 \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def reward_env(): \n   punshiment = 100\n   return punshiment \n    def obstacles(): \n    price = 10\n    return price"
+    },
+    {
+        "prompt": "A drone is inspecting in treehouse. It must avoid colliding with the observation deck edge. Agent's state, goal's state and observation deck edge's state are accessible. Write a reward function in Python.",
+        "chosen": "def reward(s_agent, s_deck_edge, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_deck_edge = calculate_distance_min(s_agent, s_deck_edge) \n    penalty_collision = -25 if (d_agent_deck_edge < 0.5) else 15 \n    reward_reaching_goal = 30 if (d_agent_goal < 0.12) else -d_agent_goal*5 \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def rejected_fn(): \n    return 0"
+    },
+    {
+        "prompt": "A drone is inspecting in treehouse. It must avoid colliding with the lantern hook. Agent's state, goal's state and lantern hook's state are accessible. Write a reward function in Python.",
+        "chosen": "def reward(s_agent, s_lantern_hook, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_lantern_hook = calculate_distance_min(s_agent, s_lantern_hook) \n    penalty_collision = -25 if (d_agent_lantern_hook < 0.5) else 15 \n    reward_reaching_goal = 30 if (d_agent_goal < 0.12) else -d_agent_goal*5 \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def calculate(): \n    return 1"
+    },
+    {
+        "prompt": "A drone is inspecting in treehouse. It must avoid colliding with the telescope tripod. Agent's state, goal's state and telescope tripod's state are accessible. Write a reward function in Python.",
+        "chosen": "def reward(s_agent, s_telescope_tripod, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_telescope_tripod = calculate_distance_min(s_agent, s_telescope_tripod) \n    penalty_collision = -25 if (d_agent_telescope_tripod < 0.5) else 15 \n    reward_reaching_goal = 30 if (d_agent_goal < 0.12) else -d_agent_goal*5 \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def reward_object(): \n   punshiment = 100\n   return punshiment \n    def price(): \n    price = 10\n    return price"
+    },
+    {
+        "prompt": "A drone is inspecting in treehouse. It must avoid colliding with the storage chest. Agent's state, goal's state and storage chest's state are accessible. Write a reward function in Python.",
+        "chosen": "def reward(s_agent, s_storage_chest, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_storage_chest = calculate_distance_min(s_agent, s_storage_chest) \n    penalty_collision = -25 if (d_agent_storage_chest < 0.5) else 15 \n    reward_reaching_goal = 30 if (d_agent_goal < 0.12) else -d_agent_goal*5 \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def rejected_fn(): \n    return 0"
+    },
+    {
+        "prompt": "A drone is inspecting in treehouse. It must avoid colliding with the rain barrel. Agent's state, goal's state and rain barrel's state are accessible. Write a reward function in Python.",
+        "chosen": "def reward(s_agent, s_rain_barrel, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_rain_barrel = calculate_distance_min(s_agent, s_rain_barrel) \n    penalty_collision = -25 if (d_agent_rain_barrel < 0.5) else 15 \n    reward_reaching_goal = 30 if (d_agent_goal < 0.12) else -d_agent_goal*5 \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def alt(): \n    return 42"
+    },
+    {
+        "prompt": "A drone is inspecting in treehouse. It must avoid colliding with the solar panel mount. Agent's state, goal's state and solar panel mount's state are accessible. Write a reward function in Python.",
+        "chosen": "def reward(s_agent, s_solar_panel_mount, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_solar_panel_mount = calculate_distance_min(s_agent, s_solar_panel_mount) \n    penalty_collision = -25 if (d_agent_solar_panel_mount < 0.5) else 15 \n    reward_reaching_goal = 30 if (d_agent_goal < 0.12) else -d_agent_goal*5 \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def calculate(): \n    return 1"
+    },
+    {
+        "prompt": "A drone is inspecting in treehouse. It must avoid colliding with the weather vane pole. Agent's state, goal's state and weather vane pole's state are accessible. Write a reward function in Python.",
+        "chosen": "def reward(s_agent, s_weather_vane_pole, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_weather_vane_pole = calculate_distance_min(s_agent, s_weather_vane_pole) \n    penalty_collision = -25 if (d_agent_weather_vane_pole < 0.5) else 15 \n    reward_reaching_goal = 30 if (d_agent_goal < 0.12) else -d_agent_goal*5 \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def fallback(): \n    return -1"
+    },
+    {
+        "prompt": "A drone is inspecting in treehouse. It must avoid colliding with the hammock stand. Agent's state, goal's state and hammock stand's state are accessible. Write a reward function in Python.",
+        "chosen": "def reward(s_agent, s_hammock_stand, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_hammock_stand = calculate_distance_min(s_agent, s_hammock_stand) \n    penalty_collision = -25 if (d_agent_hammock_stand < 0.5) else 15 \n    reward_reaching_goal = 30 if (d_agent_goal < 0.12) else -d_agent_goal*5 \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def reward_env(): \n   punshiment = 100\n   return punshiment \n    def obstacles(): \n    price = 10\n    return price"
+    },
+    {
+        "prompt": "A drone is inspecting in treehouse. It must avoid colliding with the planter box. Agent's state, goal's state and planter box's state are accessible. Write a reward function in Python.",
+        "chosen": "def reward(s_agent, s_planter_box, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_planter_box = calculate_distance_min(s_agent, s_planter_box) \n    penalty_collision = -25 if (d_agent_planter_box < 0.5) else 15 \n    reward_reaching_goal = 30 if (d_agent_goal < 0.12) else -d_agent_goal*5 \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def get_answer(s_goal): \n    return goal.position"
+    },
+    {
+        "prompt": "A drone is inspecting in treehouse. It must avoid colliding with the bird feeder pole. Agent's state, goal's state and bird feeder pole's state are accessible. Write a reward function in Python.",
+        "chosen": "def reward(s_agent, s_bird_feeder_pole, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_bird_feeder_pole = calculate_distance_min(s_agent, s_bird_feeder_pole) \n    penalty_collision = -25 if (d_agent_bird_feeder_pole < 0.5) else 15 \n    reward_reaching_goal = 30 if (d_agent_goal < 0.12) else -d_agent_goal*5 \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def nothing(): \n    pass"
+    },
+    {
+        "prompt": "A drone is inspecting in treehouse. It must avoid colliding with the wind chime. Agent's state, goal's state and wind chime's state are accessible. Write a reward function in Python.",
+        "chosen": "def reward(s_agent, s_wind_chime, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_wind_chime = calculate_distance_min(s_agent, s_wind_chime) \n    penalty_collision = -25 if (d_agent_wind_chime < 0.5) else 15 \n    reward_reaching_goal = 30 if (d_agent_goal < 0.12) else -d_agent_goal*5 \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def reward_object(): \n   punshiment = 100\n   return punshiment \n    def price(): \n    price = 10\n    return price"
+    },
+    {
+        "prompt": "A drone is inspecting in treehouse. It must avoid colliding with the branch stump. Agent's state, goal's state and branch stump's state are accessible. Write a reward function in Python.",
+        "chosen": "def reward(s_agent, s_branch_stump, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_branch_stump = calculate_distance_min(s_agent, s_branch_stump) \n    penalty_collision = -25 if (d_agent_branch_stump < 0.5) else 15 \n    reward_reaching_goal = 30 if (d_agent_goal < 0.12) else -d_agent_goal*5 \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def get_answer(s_goal): \n    return goal.position"
+    },
+    {
+        "prompt": "A drone is inspecting in treehouse. It must avoid colliding with the rope swing. Agent's state, goal's state and rope swing's state are accessible. Write a reward function in Python.",
+        "chosen": "def reward(s_agent, s_rope_swing, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_rope_swing = calculate_distance_min(s_agent, s_rope_swing) \n    penalty_collision = -25 if (d_agent_rope_swing < 0.5) else 15 \n    reward_reaching_goal = 30 if (d_agent_goal < 0.12) else -d_agent_goal*5 \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def fallback(): \n    return -1"
+    },
+    {
+        "prompt": "Scenario: A drone is navigating Treehouse. Goal: It must avoid colliding with Treehouse's rope ladder and trapdoor hatch. Assumptions: The states of the drone, rope ladder, and trapdoor hatch are available. Instruction: Implement a reward function in Python.",
+        "chosen": "def reward(s_agent, s_multiple_obstacles, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_multiple_obstacles_min = calculate_distance_min(s_agent, s_multiple_obstacles) \n    penalty_collision = -20 if (d_agent_multiple_obstacles_min < 0.5) else 10 \n    reward_reaching_goal = 25 if (d_agent_goal < 0.12) else -d_agent_goal*5 \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def reward_object(): \n   punshiment = 100\n   return punshiment \n    def price(): \n    price = 10\n    return price"
+    },
+    {
+        "prompt": "Scenario: A drone is navigating Treehouse. Goal: It must avoid colliding with Treehouse's support beam, wooden railing and suspension bridge plank. Assumptions: The states of the drone, support beam, wooden railing, and suspension bridge plank are available. Instruction: Implement a reward function in Python.",
+        "chosen": "def reward(s_agent, s_multiple_obstacles, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_multiple_obstacles_min = calculate_distance_min(s_agent, s_multiple_obstacles) \n    penalty_collision = -20 if (d_agent_multiple_obstacles_min < 0.5) else 10 \n    reward_reaching_goal = 25 if (d_agent_goal < 0.12) else -d_agent_goal*5 \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def reward_object(): \n   punshiment = 100\n   return punshiment \n    def price(): \n    price = 10\n    return price"
+    },
+    {
+        "prompt": "Scenario: A drone is navigating Treehouse. Goal: It must avoid colliding with Treehouse's pulley bucket, zipline anchor and safety net post. Assumptions: The states of the drone, pulley bucket, zipline anchor, and safety net post are available. Instruction: Implement a reward function in Python.",
+        "chosen": "def reward(s_agent, s_multiple_obstacles, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_multiple_obstacles_min = calculate_distance_min(s_agent, s_multiple_obstacles) \n    penalty_collision = -20 if (d_agent_multiple_obstacles_min < 0.5) else 10 \n    reward_reaching_goal = 25 if (d_agent_goal < 0.12) else -d_agent_goal*5 \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def reward_object(): \n   punshiment = 100\n   return punshiment \n    def price(): \n    price = 10\n    return price"
+    },
+    {
+        "prompt": "Scenario: A drone is navigating Treehouse. Goal: It must avoid colliding with Treehouse's lantern hook and telescope tripod. Assumptions: The states of the drone, lantern hook, and telescope tripod are available. Instruction: Implement a reward function in Python.",
+        "chosen": "def reward(s_agent, s_multiple_obstacles, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_multiple_obstacles_min = calculate_distance_min(s_agent, s_multiple_obstacles) \n    penalty_collision = -20 if (d_agent_multiple_obstacles_min < 0.5) else 10 \n    reward_reaching_goal = 25 if (d_agent_goal < 0.12) else -d_agent_goal*5 \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def reward_to_treehouse(): \n    if goal == 'true': \n    return 10 \n    else: \n    return -10"
+    },
+    {
+        "prompt": "A drone is flying in pottery room. It must avoid bumping with the pottery wheel. Agent's state, goal's state and pottery wheel's state are accessible. Write a reward function in Python.",
+        "chosen": "def reward(s_agent, s_pottery_wheel, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_pottery_wheel = calculate_distance_min(s_agent, s_pottery_wheel) \n    penalty_collision = -29 if (d_agent_pottery_wheel < 0.57) else 19 \n    reward_reaching_goal = 39 if (d_agent_goal < 0.17) else -d_agent_goal**2 \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def reward_object(): \n   punshiment = 100\n   return punshiment \n    def price(): \n    price = 10\n    return price"
+    },
+    {
+        "prompt": "A drone is flying in pottery room. It must avoid bumping with the kiln door. Agent's state, goal's state and kiln door's state are accessible. Write a reward function in Python.",
+        "chosen": "def reward(s_agent, s_kiln_door, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_kiln_door = calculate_distance_min(s_agent, s_kiln_door) \n    penalty_collision = -29 if (d_agent_kiln_door < 0.57) else 19 \n    reward_reaching_goal = 39 if (d_agent_goal < 0.17) else -d_agent_goal**2 \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def reward_env(): \n   punshiment = 100\n   return punshiment \n    def obstacles(): \n    price = 10\n    return price"
+    },
+    {
+        "prompt": "A drone is flying in pottery room. It must avoid bumping with the drying rack. Agent's state, goal's state and drying rack's state are accessible. Write a reward function in Python.",
+        "chosen": "def reward(s_agent, s_drying_rack, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_drying_rack = calculate_distance_min(s_agent, s_drying_rack) \n    penalty_collision = -29 if (d_agent_drying_rack < 0.57) else 19 \n    reward_reaching_goal = 39 if (d_agent_goal < 0.17) else -d_agent_goal**2 \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def get_answer(s_goal): \n    return goal.position"
+    },
+    {
+        "prompt": "A drone is flying in pottery room. It must avoid bumping with the glaze station. Agent's state, goal's state and glaze station's state are accessible. Write a reward function in Python.",
+        "chosen": "def reward(s_agent, s_glaze_station, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_glaze_station = calculate_distance_min(s_agent, s_glaze_station) \n    penalty_collision = -29 if (d_agent_glaze_station < 0.57) else 19 \n    reward_reaching_goal = 39 if (d_agent_goal < 0.17) else -d_agent_goal**2 \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def rejected_fn(): \n    return 0"
+    },
+    {
+        "prompt": "A drone is flying in pottery room. It must avoid bumping with the pug mill. Agent's state, goal's state and pug mill's state are accessible. Write a reward function in Python.",
+        "chosen": "def reward(s_agent, s_pug_mill, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_pug_mill = calculate_distance_min(s_agent, s_pug_mill) \n    penalty_collision = -29 if (d_agent_pug_mill < 0.57) else 19 \n    reward_reaching_goal = 39 if (d_agent_goal < 0.17) else -d_agent_goal**2 \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def alt(): \n    return 42"
+    },
+    {
+        "prompt": "A drone is flying in pottery room. It must avoid bumping with the wedging table. Agent's state, goal's state and wedging table's state are accessible. Write a reward function in Python.",
+        "chosen": "def reward(s_agent, s_wedging_table, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_wedging_table = calculate_distance_min(s_agent, s_wedging_table) \n    penalty_collision = -29 if (d_agent_wedging_table < 0.57) else 19 \n    reward_reaching_goal = 39 if (d_agent_goal < 0.17) else -d_agent_goal**2 \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def reward_to_pottery(): \n    if goal == 'true': \n    return 10 \n    else: \n    return -10"
+    },
+    {
+        "prompt": "A drone is flying in pottery room. It must avoid bumping with the clay reclaim bin. Agent's state, goal's state and clay reclaim bin's state are accessible. Write a reward function in Python.",
+        "chosen": "def reward(s_agent, s_reclaim_bin, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_reclaim_bin = calculate_distance_min(s_agent, s_reclaim_bin) \n    penalty_collision = -29 if (d_agent_reclaim_bin < 0.57) else 19 \n    reward_reaching_goal = 39 if (d_agent_goal < 0.17) else -d_agent_goal**2 \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def reward_to_pottery(): \n    if goal == 'true': \n    return 10 \n    else: \n    return -10"
+    },
+    {
+        "prompt": "A drone is flying in pottery room. It must avoid bumping with the bat rack. Agent's state, goal's state and bat rack's state are accessible. Write a reward function in Python.",
+        "chosen": "def reward(s_agent, s_bat_rack, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_bat_rack = calculate_distance_min(s_agent, s_bat_rack) \n    penalty_collision = -29 if (d_agent_bat_rack < 0.57) else 19 \n    reward_reaching_goal = 39 if (d_agent_goal < 0.17) else -d_agent_goal**2 \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def nothing(): \n    pass"
+    },
+    {
+        "prompt": "A drone is flying in pottery room. It must avoid bumping with the tool pegboard. Agent's state, goal's state and tool pegboard's state are accessible. Write a reward function in Python.",
+        "chosen": "def reward(s_agent, s_tool_pegboard, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_tool_pegboard = calculate_distance_min(s_agent, s_tool_pegboard) \n    penalty_collision = -29 if (d_agent_tool_pegboard < 0.57) else 19 \n    reward_reaching_goal = 39 if (d_agent_goal < 0.17) else -d_agent_goal**2 \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def reward_env(): \n   punshiment = 100\n   return punshiment \n    def obstacles(): \n    price = 10\n    return price"
+    },
+    {
+        "prompt": "A drone is flying in pottery room. It must avoid bumping with the bucket of slip. Agent's state, goal's state and bucket of slip's state are accessible. Write a reward function in Python.",
+        "chosen": "def reward(s_agent, s_slip_bucket, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_slip_bucket = calculate_distance_min(s_agent, s_slip_bucket) \n    penalty_collision = -29 if (d_agent_slip_bucket < 0.57) else 19 \n    reward_reaching_goal = 39 if (d_agent_goal < 0.17) else -d_agent_goal**2 \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def get_answer(s_goal): \n    return goal.position"
+    },
+    {
+        "prompt": "A drone is flying in pottery room. It must avoid bumping with the mop bucket. Agent's state, goal's state and mop bucket's state are accessible. Write a reward function in Python.",
+        "chosen": "def reward(s_agent, s_mop_bucket, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_mop_bucket = calculate_distance_min(s_agent, s_mop_bucket) \n    penalty_collision = -29 if (d_agent_mop_bucket < 0.57) else 19 \n    reward_reaching_goal = 39 if (d_agent_goal < 0.17) else -d_agent_goal**2 \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def nothing(): \n    pass"
+    },
+    {
+        "prompt": "A drone is flying in pottery room. It must avoid bumping with the utility sink. Agent's state, goal's state and utility sink's state are accessible. Write a reward function in Python.",
+        "chosen": "def reward(s_agent, s_utility_sink, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_utility_sink = calculate_distance_min(s_agent, s_utility_sink) \n    penalty_collision = -29 if (d_agent_utility_sink < 0.57) else 19 \n    reward_reaching_goal = 39 if (d_agent_goal < 0.17) else -d_agent_goal**2 \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def reward_to_pottery(): \n    if goal == 'true': \n    return 10 \n    else: \n    return -10"
+    },
+    {
+        "prompt": "A drone is flying in pottery room. It must avoid bumping with the hose reel. Agent's state, goal's state and hose reel's state are accessible. Write a reward function in Python.",
+        "chosen": "def reward(s_agent, s_hose_reel, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_hose_reel = calculate_distance_min(s_agent, s_hose_reel) \n    penalty_collision = -29 if (d_agent_hose_reel < 0.57) else 19 \n    reward_reaching_goal = 39 if (d_agent_goal < 0.17) else -d_agent_goal**2 \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def nothing(): \n    pass"
+    },
+    {
+        "prompt": "A drone is flying in pottery room. It must avoid bumping with the ventilation hood. Agent's state, goal's state and ventilation hood's state are accessible. Write a reward function in Python.",
+        "chosen": "def reward(s_agent, s_vent_hood, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_vent_hood = calculate_distance_min(s_agent, s_vent_hood) \n    penalty_collision = -29 if (d_agent_vent_hood < 0.57) else 19 \n    reward_reaching_goal = 39 if (d_agent_goal < 0.17) else -d_agent_goal**2 \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def calculate(): \n    return 1"
+    },
+    {
+        "prompt": "A drone is flying in pottery room. It must avoid bumping with the glaze chemicals cabinet. Agent's state, goal's state and glaze chemicals cabinet's state are accessible. Write a reward function in Python.",
+        "chosen": "def reward(s_agent, s_glaze_cabinet, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_glaze_cabinet = calculate_distance_min(s_agent, s_glaze_cabinet) \n    penalty_collision = -29 if (d_agent_glaze_cabinet < 0.57) else 19 \n    reward_reaching_goal = 39 if (d_agent_goal < 0.17) else -d_agent_goal**2 \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def rejected_fn(): \n    return 0"
+    },
+    {
+        "prompt": "A drone is flying in pottery room. It must avoid bumping with the rolling stool. Agent's state, goal's state and rolling stool's state are accessible. Write a reward function in Python.",
+        "chosen": "def reward(s_agent, s_rolling_stool, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_rolling_stool = calculate_distance_min(s_agent, s_rolling_stool) \n    penalty_collision = -29 if (d_agent_rolling_stool < 0.57) else 19 \n    reward_reaching_goal = 39 if (d_agent_goal < 0.17) else -d_agent_goal**2 \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def alt(): \n    return 42"
+    },
+    {
+        "prompt": "A drone is flying in pottery room. It must avoid bumping with the worktable. Agent's state, goal's state and worktable's state are accessible. Write a reward function in Python.",
+        "chosen": "def reward(s_agent, s_worktable, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_worktable = calculate_distance_min(s_agent, s_worktable) \n    penalty_collision = -29 if (d_agent_worktable < 0.57) else 19 \n    reward_reaching_goal = 39 if (d_agent_goal < 0.17) else -d_agent_goal**2 \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def reward_env(): \n   punshiment = 100\n   return punshiment \n    def obstacles(): \n    price = 10\n    return price"
+    },
+    {
+        "prompt": "A drone is flying in pottery room. It must avoid bumping with the shelving unit. Agent's state, goal's state and shelving unit's state are accessible. Write a reward function in Python.",
+        "chosen": "def reward(s_agent, s_shelving_unit, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_shelving_unit = calculate_distance_min(s_agent, s_shelving_unit) \n    penalty_collision = -29 if (d_agent_shelving_unit < 0.57) else 19 \n    reward_reaching_goal = 39 if (d_agent_goal < 0.17) else -d_agent_goal**2 \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def get_answer(s_goal): \n    return goal.position"
+    },
+    {
+        "prompt": "A drone is flying in pottery room. It must avoid bumping with the apron rack. Agent's state, goal's state and apron rack's state are accessible. Write a reward function in Python.",
+        "chosen": "def reward(s_agent, s_apron_rack, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_apron_rack = calculate_distance_min(s_agent, s_apron_rack) \n    penalty_collision = -29 if (d_agent_apron_rack < 0.57) else 19 \n    reward_reaching_goal = 39 if (d_agent_goal < 0.17) else -d_agent_goal**2 \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def calculate(): \n    return 1"
+    },
+    {
+        "prompt": "A drone is flying in pottery room. It must avoid bumping with the clay bag stack. Agent's state, goal's state and clay bag stack's state are accessible. Write a reward function in Python.",
+        "chosen": "def reward(s_agent, s_clay_bag_stack, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_clay_bag_stack = calculate_distance_min(s_agent, s_clay_bag_stack) \n    penalty_collision = -29 if (d_agent_clay_bag_stack < 0.57) else 19 \n    reward_reaching_goal = 39 if (d_agent_goal < 0.17) else -d_agent_goal**2 \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def get_answer(s_goal): \n    return goal.position"
+    },
+    {
+        "prompt": "A drone is flying in pottery room. It must avoid bumping with the scale stand. Agent's state, goal's state and scale stand's state are accessible. Write a reward function in Python.",
+        "chosen": "def reward(s_agent, s_scale_stand, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_scale_stand = calculate_distance_min(s_agent, s_scale_stand) \n    penalty_collision = -29 if (d_agent_scale_stand < 0.57) else 19 \n    reward_reaching_goal = 39 if (d_agent_goal < 0.17) else -d_agent_goal**2 \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def alt(): \n    return 42"
+    },
+    {
+        "prompt": "Scenario: A drone is navigating Pottery Room. Goal: It must avoid bumping with Pottery Room's pottery wheel, rolling stool and bucket of slip. Assumptions: The Agent's state, goal's state and the states of multiple obstacles: pottery wheel, rolling stool, and bucket of slip are available. Instruction: Implement a reward function in Python.",
+        "chosen": "def reward(s_agent, s_multiple_obstacles, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_multiple_obstacles_min = calculate_distance_min(s_agent, s_multiple_obstacles) \n    penalty_collision = -20 if (d_agent_multiple_obstacles_min < 0.57) else 10 \n    reward_reaching_goal = 29 if (d_agent_goal < 0.17) else -d_agent_goal**2 \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def alt(): \n    return 42"
+    },
+    {
+        "prompt": "Scenario: A drone is navigating Pottery Room. Goal: It must avoid bumping with Pottery Room's kiln door and ventilation hood. Assumptions: The Agent's state, goal's state and the states of multiple obstacles: kiln door, and ventilation hood are available. Instruction: Implement a reward function in Python.",
+        "chosen": "def reward(s_agent, s_multiple_obstacles, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_multiple_obstacles_min = calculate_distance_min(s_agent, s_multiple_obstacles) \n    penalty_collision = -20 if (d_agent_multiple_obstacles_min < 0.57) else 10 \n    reward_reaching_goal = 29 if (d_agent_goal < 0.17) else -d_agent_goal**2 \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def reward_env(): \n   punshiment = 100\n   return punshiment \n    def obstacles(): \n    price = 10\n    return price"
+    },
+    {
+        "prompt": "Scenario: A drone is navigating Pottery Room. Goal: It must avoid bumping with Pottery Room's drying rack, shelving unit and bat rack. Assumptions: The Agent's state, goal's state and the states of multiple obstacles: drying rack, shelving unit, and bat rack are available. Instruction: Implement a reward function in Python.",
+        "chosen": "def reward(s_agent, s_multiple_obstacles, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_multiple_obstacles_min = calculate_distance_min(s_agent, s_multiple_obstacles) \n    penalty_collision = -20 if (d_agent_multiple_obstacles_min < 0.57) else 10 \n    reward_reaching_goal = 29 if (d_agent_goal < 0.17) else -d_agent_goal**2 \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def alt(): \n    return 42"
+    },
+    {
+        "prompt": "Scenario: A drone is navigating Pottery Room. Goal: It must avoid bumping with Pottery Room's glaze station and glaze chemicals cabinet. Assumptions: The Agent's state, goal's state and the states of multiple obstacles: glaze station, and glaze chemicals cabinet are available. Instruction: Implement a reward function in Python.",
+        "chosen": "def reward(s_agent, s_multiple_obstacles, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_multiple_obstacles_min = calculate_distance_min(s_agent, s_multiple_obstacles) \n    penalty_collision = -20 if (d_agent_multiple_obstacles_min < 0.57) else 10 \n    reward_reaching_goal = 29 if (d_agent_goal < 0.17) else -d_agent_goal**2 \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def rejected_fn(): \n    return 0"
+    },
+    {
+        "prompt": "Mission: A drone is inspecting in climbing room. \n Conditions:  It must avoid colliding with the bouldering wall volume. \n Given: Agent's state, tagret's state and bouldering wall volume's state are accessible. Write a reward function in Python.",
+        "chosen": "def reward(s_agent, s_wall_volume, s_tagret): \n    d_agent_tagret = calculate_distance(s_agent, s_tagret) \n    d_agent_wall_volume = calculate_distance_min(s_agent, s_wall_volume) \n    penalty_collision = -28 if (d_agent_wall_volume < 0.57) else 12 \n    reward_reaching_tagret = 32 if (d_agent_tagret < 0.17) else -d_agent_tagret**2 \n    return penalty_collision + reward_reaching_tagret",
+        "rejected": "def calculate(): \n    return 1"
+    },
+    {
+        "prompt": "Mission: A drone is inspecting in climbing room. \n Conditions:  It must avoid colliding with the overhang panel. \n Given: Agent's state, tagret's state and overhang panel's state are accessible. Write a reward function in Python.",
+        "chosen": "def reward(s_agent, s_overhang_panel, s_tagret): \n    d_agent_tagret = calculate_distance(s_agent, s_tagret) \n    d_agent_overhang_panel = calculate_distance_min(s_agent, s_overhang_panel) \n    penalty_collision = -28 if (d_agent_overhang_panel < 0.57) else 12 \n    reward_reaching_tagret = 32 if (d_agent_tagret < 0.17) else -d_agent_tagret**2 \n    return penalty_collision + reward_reaching_tagret",
+        "rejected": "def reward_env(): \n   punshiment = 100\n   return punshiment \n    def obstacles(): \n    price = 10\n    return price"
+    },
+    {
+        "prompt": "Mission: A drone is inspecting in climbing room. \n Conditions:  It must avoid colliding with the top-rope anchor. \n Given: Agent's state, tagret's state and top-rope anchor's state are accessible. Write a reward function in Python.",
+        "chosen": "def reward(s_agent, s_toprope_anchor, s_tagret): \n    d_agent_tagret = calculate_distance(s_agent, s_tagret) \n    d_agent_toprope_anchor = calculate_distance_min(s_agent, s_toprope_anchor) \n    penalty_collision = -28 if (d_agent_toprope_anchor < 0.57) else 12 \n    reward_reaching_tagret = 32 if (d_agent_tagret < 0.17) else -d_agent_tagret**2 \n    return penalty_collision + reward_reaching_tagret",
+        "rejected": "def calculate(): \n    return 1"
+    },
+    {
+        "prompt": "Mission: A drone is inspecting in climbing room. \n Conditions:  It must avoid colliding with the auto-belay unit. \n Given: Agent's state, tagret's state and auto-belay unit's state are accessible. Write a reward function in Python.",
+        "chosen": "def reward(s_agent, s_autobelay_unit, s_tagret): \n    d_agent_tagret = calculate_distance(s_agent, s_tagret) \n    d_agent_autobelay_unit = calculate_distance_min(s_agent, s_autobelay_unit) \n    penalty_collision = -28 if (d_agent_autobelay_unit < 0.57) else 12 \n    reward_reaching_tagret = 32 if (d_agent_tagret < 0.17) else -d_agent_tagret**2 \n    return penalty_collision + reward_reaching_tagret",
+        "rejected": "def reward_env(): \n   punshiment = 100\n   return punshiment \n    def obstacles(): \n    price = 10\n    return price"
+    },
+    {
+        "prompt": "Mission: A drone is inspecting in climbing room. \n Conditions:  It must avoid colliding with the rope pile. \n Given: Agent's state, tagret's state and rope pile's state are accessible. Write a reward function in Python.",
+        "chosen": "def reward(s_agent, s_rope_pile, s_tagret): \n    d_agent_tagret = calculate_distance(s_agent, s_tagret) \n    d_agent_rope_pile = calculate_distance_min(s_agent, s_rope_pile) \n    penalty_collision = -28 if (d_agent_rope_pile < 0.57) else 12 \n    reward_reaching_tagret = 32 if (d_agent_tagret < 0.17) else -d_agent_tagret**2 \n    return penalty_collision + reward_reaching_tagret",
+        "rejected": "def reward_env(): \n   punshiment = 100\n   return punshiment \n    def obstacles(): \n    price = 10\n    return price"
+    },
+    {
+        "prompt": "Mission: A drone is inspecting in climbing room. \n Conditions:  It must avoid colliding with the belay gate. \n Given: Agent's state, tagret's state and belay gate's state are accessible. Write a reward function in Python.",
+        "chosen": "def reward(s_agent, s_belay_gate, s_tagret): \n    d_agent_tagret = calculate_distance(s_agent, s_tagret) \n    d_agent_belay_gate = calculate_distance_min(s_agent, s_belay_gate) \n    penalty_collision = -28 if (d_agent_belay_gate < 0.57) else 12 \n    reward_reaching_tagret = 32 if (d_agent_tagret < 0.17) else -d_agent_tagret**2 \n    return penalty_collision + reward_reaching_tagret",
+        "rejected": "def calculate(): \n    return 1"
+    },
+    {
+        "prompt": "Mission: A drone is inspecting in climbing room. \n Conditions:  It must avoid colliding with the crash pad stack. \n Given: Agent's state, tagret's state and crash pad stack's state are accessible. Write a reward function in Python.",
+        "chosen": "def reward(s_agent, s_crash_pad_stack, s_tagret): \n    d_agent_tagret = calculate_distance(s_agent, s_tagret) \n    d_agent_crash_pad_stack = calculate_distance_min(s_agent, s_crash_pad_stack) \n    penalty_collision = -28 if (d_agent_crash_pad_stack < 0.57) else 12 \n    reward_reaching_tagret = 32 if (d_agent_tagret < 0.17) else -d_agent_tagret**2 \n    return penalty_collision + reward_reaching_tagret",
+        "rejected": "def reward_object(): \n   punshiment = 100\n   return punshiment \n    def price(): \n    price = 10\n    return price"
+    },
+    {
+        "prompt": "Mission: A drone is inspecting in climbing room. \n Conditions:  It must avoid colliding with the hangboard. \n Given: Agent's state, tagret's state and hangboard's state are accessible. Write a reward function in Python.",
+        "chosen": "def reward(s_agent, s_hangboard, s_tagret): \n    d_agent_tagret = calculate_distance(s_agent, s_tagret) \n    d_agent_hangboard = calculate_distance_min(s_agent, s_hangboard) \n    penalty_collision = -28 if (d_agent_hangboard < 0.57) else 12 \n    reward_reaching_tagret = 32 if (d_agent_tagret < 0.17) else -d_agent_tagret**2 \n    return penalty_collision + reward_reaching_tagret",
+        "rejected": "def fallback(): \n    return -1"
+    },
+    {
+        "prompt": "Mission: A drone is inspecting in climbing room. \n Conditions:  It must avoid colliding with the campus board. \n Given: Agent's state, tagret's state and campus board's state are accessible. Write a reward function in Python.",
+        "chosen": "def reward(s_agent, s_campus_board, s_tagret): \n    d_agent_tagret = calculate_distance(s_agent, s_tagret) \n    d_agent_campus_board = calculate_distance_min(s_agent, s_campus_board) \n    penalty_collision = -28 if (d_agent_campus_board < 0.57) else 12 \n    reward_reaching_tagret = 32 if (d_agent_tagret < 0.17) else -d_agent_tagret**2 \n    return penalty_collision + reward_reaching_tagret",
+        "rejected": "def nothing(): \n    pass"
+    },
+    {
+        "prompt": "Mission: A drone is inspecting in climbing room. \n Conditions:  It must avoid colliding with the training rings. \n Given: Agent's state, tagret's state and training rings's state are accessible. Write a reward function in Python.",
+        "chosen": "def reward(s_agent, s_training_rings, s_tagret): \n    d_agent_tagret = calculate_distance(s_agent, s_tagret) \n    d_agent_training_rings = calculate_distance_min(s_agent, s_training_rings) \n    penalty_collision = -28 if (d_agent_training_rings < 0.57) else 12 \n    reward_reaching_tagret = 32 if (d_agent_tagret < 0.17) else -d_agent_tagret**2 \n    return penalty_collision + reward_reaching_tagret",
+        "rejected": "def get_answer(s_goal): \n    return goal.position"
+    },
+    {
+        "prompt": "Mission: A drone is inspecting in climbing room. \n Conditions:  It must avoid colliding with the pull-up bar frame. \n Given: Agent's state, tagret's state and pull-up bar frame's state are accessible. Write a reward function in Python.",
+        "chosen": "def reward(s_agent, s_pullup_frame, s_tagret): \n    d_agent_tagret = calculate_distance(s_agent, s_tagret) \n    d_agent_pullup_frame = calculate_distance_min(s_agent, s_pullup_frame) \n    penalty_collision = -28 if (d_agent_pullup_frame < 0.57) else 12 \n    reward_reaching_tagret = 32 if (d_agent_tagret < 0.17) else -d_agent_tagret**2 \n    return penalty_collision + reward_reaching_tagret",
+        "rejected": "def get_answer(s_goal): \n    return goal.position"
+    },
+    {
+        "prompt": "Mission: A drone is inspecting in climbing room. \n Conditions:  It must avoid colliding with the chalk bucket. \n Given: Agent's state, tagret's state and chalk bucket's state are accessible. Write a reward function in Python.",
+        "chosen": "def reward(s_agent, s_chalk_bucket, s_tagret): \n    d_agent_tagret = calculate_distance(s_agent, s_tagret) \n    d_agent_chalk_bucket = calculate_distance_min(s_agent, s_chalk_bucket) \n    penalty_collision = -28 if (d_agent_chalk_bucket < 0.57) else 12 \n    reward_reaching_tagret = 32 if (d_agent_tagret < 0.17) else -d_agent_tagret**2 \n    return penalty_collision + reward_reaching_tagret",
+        "rejected": "def reward_object(): \n   punshiment = 100\n   return punshiment \n    def price(): \n    price = 10\n    return price"
+    },
+    {
+        "prompt": "Mission: A drone is inspecting in climbing room. \n Conditions:  It must avoid colliding with the brush station. \n Given: Agent's state, tagret's state and brush station's state are accessible. Write a reward function in Python.",
+        "chosen": "def reward(s_agent, s_brush_station, s_tagret): \n    d_agent_tagret = calculate_distance(s_agent, s_tagret) \n    d_agent_brush_station = calculate_distance_min(s_agent, s_brush_station) \n    penalty_collision = -28 if (d_agent_brush_station < 0.57) else 12 \n    reward_reaching_tagret = 32 if (d_agent_tagret < 0.17) else -d_agent_tagret**2 \n    return penalty_collision + reward_reaching_tagret",
+        "rejected": "def nothing(): \n    pass"
+    },
+    {
+        "prompt": "Mission: A drone is inspecting in climbing room. \n Conditions:  It must avoid colliding with the holds crate. \n Given: Agent's state, tagret's state and holds crate's state are accessible. Write a reward function in Python.",
+        "chosen": "def reward(s_agent, s_holds_crate, s_tagret): \n    d_agent_tagret = calculate_distance(s_agent, s_tagret) \n    d_agent_holds_crate = calculate_distance_min(s_agent, s_holds_crate) \n    penalty_collision = -28 if (d_agent_holds_crate < 0.57) else 12 \n    reward_reaching_tagret = 32 if (d_agent_tagret < 0.17) else -d_agent_tagret**2 \n    return penalty_collision + reward_reaching_tagret",
+        "rejected": "def reward_to_climbing_room(): \n    if goal == 'true': \n    return 10 \n    else: \n    return -10"
+    },
+    {
+        "prompt": "Mission: A drone is inspecting in climbing room. \n Conditions:  It must avoid colliding with the route setting ladder. \n Given: Agent's state, tagret's state and route setting ladder's state are accessible. Write a reward function in Python.",
+        "chosen": "def reward(s_agent, s_setting_ladder, s_tagret): \n    d_agent_tagret = calculate_distance(s_agent, s_tagret) \n    d_agent_setting_ladder = calculate_distance_min(s_agent, s_setting_ladder) \n    penalty_collision = -28 if (d_agent_setting_ladder < 0.57) else 12 \n    reward_reaching_tagret = 32 if (d_agent_tagret < 0.17) else -d_agent_tagret**2 \n    return penalty_collision + reward_reaching_tagret",
+        "rejected": "def reward_to_climbing_room(): \n    if goal == 'true': \n    return 10 \n    else: \n    return -10"
+    },
+    {
+        "prompt": "Mission: A drone is inspecting in climbing room. \n Conditions:  It must avoid colliding with the first-aid cabinet. \n Given: Agent's state, tagret's state and first-aid cabinet's state are accessible. Write a reward function in Python.",
+        "chosen": "def reward(s_agent, s_first_aid_cabinet, s_tagret): \n    d_agent_tagret = calculate_distance(s_agent, s_tagret) \n    d_agent_first_aid_cabinet = calculate_distance_min(s_agent, s_first_aid_cabinet) \n    penalty_collision = -28 if (d_agent_first_aid_cabinet < 0.57) else 12 \n    reward_reaching_tagret = 32 if (d_agent_tagret < 0.17) else -d_agent_tagret**2 \n    return penalty_collision + reward_reaching_tagret",
+        "rejected": "def rejected_fn(): \n    return 0"
+    },
+    {
+        "prompt": "Mission: A drone is inspecting in climbing room. \n Conditions:  It must avoid colliding with the water dispenser. \n Given: Agent's state, tagret's state and water dispenser's state are accessible. Write a reward function in Python.",
+        "chosen": "def reward(s_agent, s_water_dispenser, s_tagret): \n    d_agent_tagret = calculate_distance(s_agent, s_tagret) \n    d_agent_water_dispenser = calculate_distance_min(s_agent, s_water_dispenser) \n    penalty_collision = -28 if (d_agent_water_dispenser < 0.57) else 12 \n    reward_reaching_tagret = 32 if (d_agent_tagret < 0.17) else -d_agent_tagret**2 \n    return penalty_collision + reward_reaching_tagret",
+        "rejected": "def reward_to_climbing_room(): \n    if goal == 'true': \n    return 10 \n    else: \n    return -10"
+    },
+    {
+        "prompt": "Mission: A drone is inspecting in climbing room. \n Conditions:  It must avoid colliding with the shoe rack. \n Given: Agent's state, tagret's state and shoe rack's state are accessible. Write a reward function in Python.",
+        "chosen": "def reward(s_agent, s_shoe_rack, s_tagret): \n    d_agent_tagret = calculate_distance(s_agent, s_tagret) \n    d_agent_shoe_rack = calculate_distance_min(s_agent, s_shoe_rack) \n    penalty_collision = -28 if (d_agent_shoe_rack < 0.57) else 12 \n    reward_reaching_tagret = 32 if (d_agent_tagret < 0.17) else -d_agent_tagret**2 \n    return penalty_collision + reward_reaching_tagret",
+        "rejected": "def reward_env(): \n   punshiment = 100\n   return punshiment \n    def obstacles(): \n    price = 10\n    return price"
+    },
+    {
+        "prompt": "Mission: A drone is inspecting in climbing room. \n Conditions:  It must avoid colliding with the harness rack. \n Given: Agent's state, tagret's state and harness rack's state are accessible. Write a reward function in Python.",
+        "chosen": "def reward(s_agent, s_harness_rack, s_tagret): \n    d_agent_tagret = calculate_distance(s_agent, s_tagret) \n    d_agent_harness_rack = calculate_distance_min(s_agent, s_harness_rack) \n    penalty_collision = -28 if (d_agent_harness_rack < 0.57) else 12 \n    reward_reaching_tagret = 32 if (d_agent_tagret < 0.17) else -d_agent_tagret**2 \n    return penalty_collision + reward_reaching_tagret",
+        "rejected": "def reward_object(): \n   punshiment = 100\n   return punshiment \n    def price(): \n    price = 10\n    return price"
+    },
+    {
+        "prompt": "Mission: A drone is inspecting in climbing room. \n Conditions:  It must avoid colliding with the speaker stand. \n Given: Agent's state, tagret's state and speaker stand's state are accessible. Write a reward function in Python.",
+        "chosen": "def reward(s_agent, s_speaker_stand, s_tagret): \n    d_agent_tagret = calculate_distance(s_agent, s_tagret) \n    d_agent_speaker_stand = calculate_distance_min(s_agent, s_speaker_stand) \n    penalty_collision = -28 if (d_agent_speaker_stand < 0.57) else 12 \n    reward_reaching_tagret = 32 if (d_agent_tagret < 0.17) else -d_agent_tagret**2 \n    return penalty_collision + reward_reaching_tagret",
+        "rejected": "def alt(): \n    return 42"
+    },
+    {
+        "prompt": "Mission: A drone is inspecting in climbing room. \n Conditions:  It must avoid colliding with the camera tripod. \n Given: Agent's state, tagret's state and camera tripod's state are accessible. Write a reward function in Python.",
+        "chosen": "def reward(s_agent, s_camera_tripod, s_tagret): \n    d_agent_tagret = calculate_distance(s_agent, s_tagret) \n    d_agent_camera_tripod = calculate_distance_min(s_agent, s_camera_tripod) \n    penalty_collision = -28 if (d_agent_camera_tripod < 0.57) else 12 \n    reward_reaching_tagret = 32 if (d_agent_tagret < 0.17) else -d_agent_tagret**2 \n    return penalty_collision + reward_reaching_tagret",
+        "rejected": "def reward_env(): \n   punshiment = 100\n   return punshiment \n    def obstacles(): \n    price = 10\n    return price"
+    },
+    {
+        "prompt": "Scenario: A drone is navigating Climbing Room. Goal: It must avoid colliding with Climbing Room's top-rope anchor, auto-belay unit and belay gate. Assumptions: The Agent's state, tagret's state and the states of multiple obstacles: top-rope anchor, auto-belay unit, and belay gate are available. Instruction: Implement a reward function in Python.",
+        "chosen": "def reward(s_agent, s_multiple_obstacles, s_tagret): \n    d_agent_tagret = calculate_distance(s_agent, s_tagret) \n    d_agent_multiple_obstacles_min = calculate_distance_min(s_agent, s_multiple_obstacles) \n    penalty_collision = -28 if (d_agent_multiple_obstacles_min < 0.57) else 12 \n    reward_reaching_tagret = 32 if (d_agent_tagret < 0.17) else -d_agent_tagret**2 \n    return penalty_collision + reward_reaching_tagret",
+        "rejected": "def calculate(): \n    return 1"
+    },
+    {
+        "prompt": "Scenario: A drone is navigating Climbing Room. Goal: It must avoid colliding with Climbing Room's bouldering wall volume and overhang panel. Assumptions: The Agent's state, tagret's state and the states of multiple obstacles: bouldering wall volume, and overhang panel are available. Instruction: Implement a reward function in Python.",
+        "chosen": "def reward(s_agent, s_multiple_obstacles, s_tagret): \n    d_agent_tagret = calculate_distance(s_agent, s_tagret) \n    d_agent_multiple_obstacles_min = calculate_distance_min(s_agent, s_multiple_obstacles) \n    penalty_collision = -28 if (d_agent_multiple_obstacles_min < 0.57) else 12 \n    reward_reaching_tagret = 32 if (d_agent_tagret < 0.17) else -d_agent_tagret**2 \n    return penalty_collision + reward_reaching_tagret",
+        "rejected": "def fallback(): \n    return -1"
+    },
+    {
+        "prompt": "Scenario: A drone is navigating Climbing Room. Goal: It must avoid colliding with Climbing Room's crash pad stack, route setting ladder and holds crate. Assumptions: The Agent's state, tagret's state and the states of multiple obstacles: crash pad stack, route setting ladder, and holds crate are available. Instruction: Implement a reward function in Python.",
+        "chosen": "def reward(s_agent, s_multiple_obstacles, s_tagret): \n    d_agent_tagret = calculate_distance(s_agent, s_tagret) \n    d_agent_multiple_obstacles_min = calculate_distance_min(s_agent, s_multiple_obstacles) \n    penalty_collision = -28 if (d_agent_multiple_obstacles_min < 0.57) else 12 \n    reward_reaching_tagret = 32 if (d_agent_tagret < 0.17) else -d_agent_tagret**2 \n    return penalty_collision + reward_reaching_tagret",
+        "rejected": "def reward_object(): \n   punshiment = 100\n   return punshiment \n    def price(): \n    price = 10\n    return price"
+    },
+    {
+        "prompt": "Scenario: A drone is navigating Climbing Room. Goal: It must avoid colliding with Climbing Room's rope pile and shoe rack. Assumptions: The Agent's state, tagret's state and the states of multiple obstacles: rope pile, and shoe rack are available. Instruction: Implement a reward function in Python.",
+        "chosen": "def reward(s_agent, s_multiple_obstacles, s_tagret): \n    d_agent_tagret = calculate_distance(s_agent, s_tagret) \n    d_agent_multiple_obstacles_min = calculate_distance_min(s_agent, s_multiple_obstacles) \n    penalty_collision = -28 if (d_agent_multiple_obstacles_min < 0.57) else 12 \n    reward_reaching_tagret = 32 if (d_agent_tagret < 0.17) else -d_agent_tagret**2 \n    return penalty_collision + reward_reaching_tagret",
+        "rejected": "def reward_object(): \n   punshiment = 100\n   return punshiment \n    def price(): \n    price = 10\n    return price"
+    },
+    {
+        "prompt": "Scenario: A drone is inspecting in museum gallery. Goal: It must colliding with the sculpture pedestal. Given: Agent's state, goal's state and sculpture pedestal's state are accessible. Write a reward function in Python.",
+        "chosen": "def reward(s_agent, s_sculpture_pedestal, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_sculpture_pedestal = calculate_distance_min(s_agent, s_sculpture_pedestal) \n    penalty_collision = -26 if (d_agent_sculpture_pedestal < 0.53) else 13 \n    reward_reaching_goal = 33 if (d_agent_goal < 0.16) else -d_agent_goal \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def reward_to_museum(): \n    if goal == 'true': \n    return 10 \n    else: \n    return -10"
+    },
+    {
+        "prompt": "Scenario: A drone is inspecting in museum gallery. Goal: It must colliding with the glass display case. Given: Agent's state, goal's state and glass display case's state are accessible. Write a reward function in Python.",
+        "chosen": "def reward(s_agent, s_display_case, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_display_case = calculate_distance_min(s_agent, s_display_case) \n    penalty_collision = -26 if (d_agent_display_case < 0.53) else 13 \n    reward_reaching_goal = 33 if (d_agent_goal < 0.16) else -d_agent_goal \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def reward_object(): \n   punshiment = 100\n   return punshiment \n    def price(): \n    price = 10\n    return price"
+    },
+    {
+        "prompt": "Scenario: A drone is inspecting in museum gallery. Goal: It must colliding with the painting frame. Given: Agent's state, goal's state and painting frame's state are accessible. Write a reward function in Python.",
+        "chosen": "def reward(s_agent, s_painting_frame, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_painting_frame = calculate_distance_min(s_agent, s_painting_frame) \n    penalty_collision = -26 if (d_agent_painting_frame < 0.53) else 13 \n    reward_reaching_goal = 33 if (d_agent_goal < 0.16) else -d_agent_goal \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def reward_object(): \n   punshiment = 100\n   return punshiment \n    def price(): \n    price = 10\n    return price"
+    },
+    {
+        "prompt": "Scenario: A drone is inspecting in museum gallery. Goal: It must colliding with the stanchion rope. Given: Agent's state, goal's state and stanchion rope's state are accessible. Write a reward function in Python.",
+        "chosen": "def reward(s_agent, s_stanchion_rope, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_stanchion_rope = calculate_distance_min(s_agent, s_stanchion_rope) \n    penalty_collision = -26 if (d_agent_stanchion_rope < 0.53) else 13 \n    reward_reaching_goal = 33 if (d_agent_goal < 0.16) else -d_agent_goal \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def alt(): \n    return 42"
+    },
+    {
+        "prompt": "Scenario: A drone is inspecting in museum gallery. Goal: It must colliding with the info placard stand. Given: Agent's state, goal's state and info placard stand's state are accessible. Write a reward function in Python.",
+        "chosen": "def reward(s_agent, s_placard_stand, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_placard_stand = calculate_distance_min(s_agent, s_placard_stand) \n    penalty_collision = -26 if (d_agent_placard_stand < 0.53) else 13 \n    reward_reaching_goal = 33 if (d_agent_goal < 0.16) else -d_agent_goal \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def rejected_fn(): \n    return 0"
+    },
+    {
+        "prompt": "Scenario: A drone is inspecting in museum gallery. Goal: It must colliding with the gallery bench. Given: Agent's state, goal's state and gallery bench's state are accessible. Write a reward function in Python.",
+        "chosen": "def reward(s_agent, s_gallery_bench, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_gallery_bench = calculate_distance_min(s_agent, s_gallery_bench) \n    penalty_collision = -26 if (d_agent_gallery_bench < 0.53) else 13 \n    reward_reaching_goal = 33 if (d_agent_goal < 0.16) else -d_agent_goal \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def reward_env(): \n   punshiment = 100\n   return punshiment \n    def obstacles(): \n    price = 10\n    return price"
+    },
+    {
+        "prompt": "Scenario: A drone is inspecting in museum gallery. Goal: It must colliding with the audio guide stand. Given: Agent's state, goal's state and audio guide stand's state are accessible. Write a reward function in Python.",
+        "chosen": "def reward(s_agent, s_audio_guide_stand, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_audio_guide_stand = calculate_distance_min(s_agent, s_audio_guide_stand) \n    penalty_collision = -26 if (d_agent_audio_guide_stand < 0.53) else 13 \n    reward_reaching_goal = 33 if (d_agent_goal < 0.16) else -d_agent_goal \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def reward_object(): \n   punshiment = 100\n   return punshiment \n    def price(): \n    price = 10\n    return price"
+    },
+    {
+        "prompt": "Scenario: A drone is inspecting in museum gallery. Goal: It must colliding with the spotlight stand. Given: Agent's state, goal's state and spotlight stand's state are accessible. Write a reward function in Python.",
+        "chosen": "def reward(s_agent, s_spotlight_stand, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_spotlight_stand = calculate_distance_min(s_agent, s_spotlight_stand) \n    penalty_collision = -26 if (d_agent_spotlight_stand < 0.53) else 13 \n    reward_reaching_goal = 33 if (d_agent_goal < 0.16) else -d_agent_goal \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def reward_object(): \n   punshiment = 100\n   return punshiment \n    def price(): \n    price = 10\n    return price"
+    },
+    {
+        "prompt": "Scenario: A drone is inspecting in museum gallery. Goal: It must colliding with the partition wall. Given: Agent's state, goal's state and partition wall's state are accessible. Write a reward function in Python.",
+        "chosen": "def reward(s_agent, s_partition_wall, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_partition_wall = calculate_distance_min(s_agent, s_partition_wall) \n    penalty_collision = -26 if (d_agent_partition_wall < 0.53) else 13 \n    reward_reaching_goal = 33 if (d_agent_goal < 0.16) else -d_agent_goal \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def alt(): \n    return 42"
+    },
+    {
+        "prompt": "Scenario: A drone is inspecting in museum gallery. Goal: It must colliding with the gift shop shelf. Given: Agent's state, goal's state and gift shop shelf's state are accessible. Write a reward function in Python.",
+        "chosen": "def reward(s_agent, s_gift_shop_shelf, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_gift_shop_shelf = calculate_distance_min(s_agent, s_gift_shop_shelf) \n    penalty_collision = -26 if (d_agent_gift_shop_shelf < 0.53) else 13 \n    reward_reaching_goal = 33 if (d_agent_goal < 0.16) else -d_agent_goal \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def reward_object(): \n   punshiment = 100\n   return punshiment \n    def price(): \n    price = 10\n    return price"
+    },
+    {
+        "prompt": "Scenario: A drone is inspecting in museum gallery. Goal: It must colliding with the ticket scanner. Given: Agent's state, goal's state and ticket scanner's state are accessible. Write a reward function in Python.",
+        "chosen": "def reward(s_agent, s_ticket_scanner, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_ticket_scanner = calculate_distance_min(s_agent, s_ticket_scanner) \n    penalty_collision = -26 if (d_agent_ticket_scanner < 0.53) else 13 \n    reward_reaching_goal = 33 if (d_agent_goal < 0.16) else -d_agent_goal \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def nothing(): \n    pass"
+    },
+    {
+        "prompt": "Scenario: A drone is inspecting in museum gallery. Goal: It must colliding with the cloakroom rack. Given: Agent's state, goal's state and cloakroom rack's state are accessible. Write a reward function in Python.",
+        "chosen": "def reward(s_agent, s_cloakroom_rack, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_cloakroom_rack = calculate_distance_min(s_agent, s_cloakroom_rack) \n    penalty_collision = -26 if (d_agent_cloakroom_rack < 0.53) else 13 \n    reward_reaching_goal = 33 if (d_agent_goal < 0.16) else -d_agent_goal \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def rejected_fn(): \n    return 0"
+    },
+    {
+        "prompt": "Scenario: A drone is inspecting in museum gallery. Goal: It must colliding with the elevator door. Given: Agent's state, goal's state and elevator door's state are accessible. Write a reward function in Python.",
+        "chosen": "def reward(s_agent, s_elevator_door, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_elevator_door = calculate_distance_min(s_agent, s_elevator_door) \n    penalty_collision = -26 if (d_agent_elevator_door < 0.53) else 13 \n    reward_reaching_goal = 33 if (d_agent_goal < 0.16) else -d_agent_goal \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def reward_to_museum(): \n    if goal == 'true': \n    return 10 \n    else: \n    return -10"
+    },
+    {
+        "prompt": "Scenario: A drone is inspecting in museum gallery. Goal: It must colliding with the stair rail. Given: Agent's state, goal's state and stair rail's state are accessible. Write a reward function in Python.",
+        "chosen": "def reward(s_agent, s_stair_rail, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_stair_rail = calculate_distance_min(s_agent, s_stair_rail) \n    penalty_collision = -26 if (d_agent_stair_rail < 0.53) else 13 \n    reward_reaching_goal = 33 if (d_agent_goal < 0.16) else -d_agent_goal \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def get_answer(s_goal): \n    return goal.position"
+    },
+    {
+        "prompt": "Scenario: A drone is inspecting in museum gallery. Goal: It must colliding with the fire extinguisher cabinet. Given: Agent's state, goal's state and fire extinguisher cabinet's state are accessible. Write a reward function in Python.",
+        "chosen": "def reward(s_agent, s_fire_ext_cabinet, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_fire_ext_cabinet = calculate_distance_min(s_agent, s_fire_ext_cabinet) \n    penalty_collision = -26 if (d_agent_fire_ext_cabinet < 0.53) else 13 \n    reward_reaching_goal = 33 if (d_agent_goal < 0.16) else -d_agent_goal \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def reward_env(): \n   punshiment = 100\n   return punshiment \n    def obstacles(): \n    price = 10\n    return price"
+    },
+    {
+        "prompt": "Scenario: A drone is inspecting in museum gallery. Goal: It must colliding with the exit sign. Given: Agent's state, goal's state and exit sign's state are accessible. Write a reward function in Python.",
+        "chosen": "def reward(s_agent, s_exit_sign, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_exit_sign = calculate_distance_min(s_agent, s_exit_sign) \n    penalty_collision = -26 if (d_agent_exit_sign < 0.53) else 13 \n    reward_reaching_goal = 33 if (d_agent_goal < 0.16) else -d_agent_goal \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def fallback(): \n    return -1"
+    },
+    {
+        "prompt": "Scenario: A drone is inspecting in museum gallery. Goal: It must colliding with the security camera pole. Given: Agent's state, goal's state and security camera pole's state are accessible. Write a reward function in Python.",
+        "chosen": "def reward(s_agent, s_camera_pole, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_camera_pole = calculate_distance_min(s_agent, s_camera_pole) \n    penalty_collision = -26 if (d_agent_camera_pole < 0.53) else 13 \n    reward_reaching_goal = 33 if (d_agent_goal < 0.16) else -d_agent_goal \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def fallback(): \n    return -1"
+    },
+    {
+        "prompt": "Scenario: A drone is inspecting in museum gallery. Goal: It must colliding with the velvet rope post. Given: Agent's state, goal's state and velvet rope post's state are accessible. Write a reward function in Python.",
+        "chosen": "def reward(s_agent, s_velvet_rope_post, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_velvet_rope_post = calculate_distance_min(s_agent, s_velvet_rope_post) \n    penalty_collision = -26 if (d_agent_velvet_rope_post < 0.53) else 13 \n    reward_reaching_goal = 33 if (d_agent_goal < 0.16) else -d_agent_goal \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def reward_env(): \n   punshiment = 100\n   return punshiment \n    def obstacles(): \n    price = 10\n    return price"
+    },
+    {
+        "prompt": "Scenario: A drone is inspecting in museum gallery. Goal: It must colliding with the artifact crate. Given: Agent's state, goal's state and artifact crate's state are accessible. Write a reward function in Python.",
+        "chosen": "def reward(s_agent, s_artifact_crate, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_artifact_crate = calculate_distance_min(s_agent, s_artifact_crate) \n    penalty_collision = -26 if (d_agent_artifact_crate < 0.53) else 13 \n    reward_reaching_goal = 33 if (d_agent_goal < 0.16) else -d_agent_goal \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def reward_object(): \n   punshiment = 100\n   return punshiment \n    def price(): \n    price = 10\n    return price"
+    },
+    {
+        "prompt": "Scenario: A drone is inspecting in museum gallery. Goal: It must colliding with the temporary wall. Given: Agent's state, goal's state and temporary wall's state are accessible. Write a reward function in Python.",
+        "chosen": "def reward(s_agent, s_temporary_wall, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_temporary_wall = calculate_distance_min(s_agent, s_temporary_wall) \n    penalty_collision = -26 if (d_agent_temporary_wall < 0.53) else 13 \n    reward_reaching_goal = 33 if (d_agent_goal < 0.16) else -d_agent_goal \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def alt(): \n    return 42"
+    },
+    {
+        "prompt": "Scenario: A drone is inspecting in museum gallery. Goal: It must colliding with the projector stand. Given: Agent's state, goal's state and projector stand's state are accessible. Write a reward function in Python.",
+        "chosen": "def reward(s_agent, s_projector_stand, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_projector_stand = calculate_distance_min(s_agent, s_projector_stand) \n    penalty_collision = -26 if (d_agent_projector_stand < 0.53) else 13 \n    reward_reaching_goal = 33 if (d_agent_goal < 0.16) else -d_agent_goal \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def nothing(): \n    pass"
+    },
+    {
+        "prompt": "Scenario: A drone is navigating Museum Gallery. Goal: It must avoid colliding with Museum Gallery's glass display case, stanchion rope and gallery bench. Assumptions: The Agent's state, goal's state and the states of the drone, glass display case, stanchion rope, and gallery bench are available. Instruction: Implement a reward function in Python.",
+        "chosen": "def reward(s_agent, s_multiple_obstacles, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_multiple_obstacles_min = calculate_distance_min(s_agent, s_multiple_obstacles) \n    penalty_collision = -26 if (d_agent_multiple_obstacles_min < 0.53) else 13 \n    reward_reaching_goal = 33 if (d_agent_goal < 0.16) else -d_agent_goal \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def reward_to_museum(): \n    if goal == 'true': \n    return 10 \n    else: \n    return -10"
+    },
+    {
+        "prompt": "Scenario: A drone is navigating Museum Gallery. Goal: It must avoid colliding with Museum Gallery's sculpture pedestal and partition wall. Assumptions: The Agent's state, goal's state and the states of the drone, sculpture pedestal, and partition wall are available. Instruction: Implement a reward function in Python.",
+        "chosen": "def reward(s_agent, s_multiple_obstacles, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_multiple_obstacles_min = calculate_distance_min(s_agent, s_multiple_obstacles) \n    penalty_collision = -26 if (d_agent_multiple_obstacles_min < 0.53) else 13 \n    reward_reaching_goal = 33 if (d_agent_goal < 0.16) else -d_agent_goal \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def rejected_fn(): \n    return 0"
+    },
+    {
+        "prompt": "Scenario: A drone is navigating Museum Gallery. Goal: It must avoid colliding with Museum Gallery's ticket scanner and cloakroom rack. Assumptions: The Agent's state, goal's state and the states of the drone, ticket scanner, and cloakroom rack are available. Instruction: Implement a reward function in Python.",
+        "chosen": "def reward(s_agent, s_multiple_obstacles, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_multiple_obstacles_min = calculate_distance_min(s_agent, s_multiple_obstacles) \n    penalty_collision = -26 if (d_agent_multiple_obstacles_min < 0.53) else 13 \n    reward_reaching_goal = 33 if (d_agent_goal < 0.16) else -d_agent_goal \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def nothing(): \n    pass"
+    },
+    {
+        "prompt": "Scenario: A drone is navigating Museum Gallery. Goal: It must avoid colliding with Museum Gallery's spotlight stand and temporary wall. Assumptions: The Agent's state, goal's state and the states of the drone, spotlight stand, and temporary wall are available. Instruction: Implement a reward function in Python.",
+        "chosen": "def reward(s_agent, s_multiple_obstacles, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_multiple_obstacles_min = calculate_distance_min(s_agent, s_multiple_obstacles) \n    penalty_collision = -26 if (d_agent_multiple_obstacles_min < 0.53) else 13 \n    reward_reaching_goal = 33 if (d_agent_goal < 0.16) else -d_agent_goal \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def fallback(): \n    return -1"
+    },
+    {
+        "prompt": "Scenario: A drone is inspecting in store. Goal: It must colliding with the checkout counter. Given: Agent's state, goal's state and checkout counter's state are accessible. Write a reward function in Python.",
+        "chosen": "def reward(s_agent, s_checkout_counter, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_checkout_counter = calculate_distance_min(s_agent, s_checkout_counter) \n    penalty_collision = -26 if (d_agent_checkout_counter < 0.53) else 13 \n    reward_reaching_goal = 33 if (d_agent_goal < 0.16) else -d_agent_goal \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def alt(): \n    return 42"
+    },
+    {
+        "prompt": "Scenario: A drone is inspecting in store. Goal: It must colliding with the self-checkout kiosk. Given: Agent's state, goal's state and self-checkout kiosk's state are accessible. Write a reward function in Python.",
+        "chosen": "def reward(s_agent, s_self_checkout_kiosk, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_self_checkout_kiosk = calculate_distance_min(s_agent, s_self_checkout_kiosk) \n    penalty_collision = -26 if (d_agent_self_checkout_kiosk < 0.53) else 13 \n    reward_reaching_goal = 33 if (d_agent_goal < 0.16) else -d_agent_goal \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def rejected_fn(): \n    return 0"
+    },
+    {
+        "prompt": "Scenario: A drone is inspecting in store. Goal: It must colliding with the queue stanchion. Given: Agent's state, goal's state and queue stanchion's state are accessible. Write a reward function in Python.",
+        "chosen": "def reward(s_agent, s_queue_stanchion, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_queue_stanchion = calculate_distance_min(s_agent, s_queue_stanchion) \n    penalty_collision = -26 if (d_agent_queue_stanchion < 0.53) else 13 \n    reward_reaching_goal = 33 if (d_agent_goal < 0.16) else -d_agent_goal \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def nothing(): \n    pass"
+    },
+    {
+        "prompt": "Scenario: A drone is inspecting in store. Goal: It must colliding with the freezer aisle door. Given: Agent's state, goal's state and freezer aisle door's state are accessible. Write a reward function in Python.",
+        "chosen": "def reward(s_agent, s_freezer_door, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_freezer_door = calculate_distance_min(s_agent, s_freezer_door) \n    penalty_collision = -26 if (d_agent_freezer_door < 0.53) else 13 \n    reward_reaching_goal = 33 if (d_agent_goal < 0.16) else -d_agent_goal \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def reward_to_store(): \n    if goal == 'true': \n    return 10 \n    else: \n    return -10"
+    },
+    {
+        "prompt": "Scenario: A drone is inspecting in store. Goal: It must colliding with the produce display table. Given: Agent's state, goal's state and produce display table's state are accessible. Write a reward function in Python.",
+        "chosen": "def reward(s_agent, s_produce_table, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_produce_table = calculate_distance_min(s_agent, s_produce_table) \n    penalty_collision = -26 if (d_agent_produce_table < 0.53) else 13 \n    reward_reaching_goal = 33 if (d_agent_goal < 0.16) else -d_agent_goal \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def reward_object(): \n   punshiment = 100\n   return punshiment \n    def price(): \n    price = 10\n    return price"
+    },
+    {
+        "prompt": "Scenario: A drone is inspecting in store. Goal: It must colliding with the endcap display. Given: Agent's state, goal's state and endcap display's state are accessible. Write a reward function in Python.",
+        "chosen": "def reward(s_agent, s_endcap, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_endcap = calculate_distance_min(s_agent, s_endcap) \n    penalty_collision = -26 if (d_agent_endcap < 0.53) else 13 \n    reward_reaching_goal = 33 if (d_agent_goal < 0.16) else -d_agent_goal \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def calculate(): \n    return 1"
+    },
+    {
+        "prompt": "Scenario: A drone is inspecting in store. Goal: It must colliding with the shopping cart corral. Given: Agent's state, goal's state and shopping cart corral's state are accessible. Write a reward function in Python.",
+        "chosen": "def reward(s_agent, s_cart_corral, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_cart_corral = calculate_distance_min(s_agent, s_cart_corral) \n    penalty_collision = -26 if (d_agent_cart_corral < 0.53) else 13 \n    reward_reaching_goal = 33 if (d_agent_goal < 0.16) else -d_agent_goal \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def reward_object(): \n   punshiment = 100\n   return punshiment \n    def price(): \n    price = 10\n    return price"
+    },
+    {
+        "prompt": "Scenario: A drone is inspecting in store. Goal: It must colliding with the bakery rack. Given: Agent's state, goal's state and bakery rack's state are accessible. Write a reward function in Python.",
+        "chosen": "def reward(s_agent, s_bakery_rack, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_bakery_rack = calculate_distance_min(s_agent, s_bakery_rack) \n    penalty_collision = -26 if (d_agent_bakery_rack < 0.53) else 13 \n    reward_reaching_goal = 33 if (d_agent_goal < 0.16) else -d_agent_goal \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def calculate(): \n    return 1"
+    },
+    {
+        "prompt": "Scenario: A drone is inspecting in store. Goal: It must colliding with the deli counter. Given: Agent's state, goal's state and deli counter's state are accessible. Write a reward function in Python.",
+        "chosen": "def reward(s_agent, s_deli_counter, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_deli_counter = calculate_distance_min(s_agent, s_deli_counter) \n    penalty_collision = -26 if (d_agent_deli_counter < 0.53) else 13 \n    reward_reaching_goal = 33 if (d_agent_goal < 0.16) else -d_agent_goal \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def reward_to_store(): \n    if goal == 'true': \n    return 10 \n    else: \n    return -10"
+    },
+    {
+        "prompt": "Scenario: A drone is inspecting in store. Goal: It must colliding with the scale station. Given: Agent's state, goal's state and scale station's state are accessible. Write a reward function in Python.",
+        "chosen": "def reward(s_agent, s_scale_station, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_scale_station = calculate_distance_min(s_agent, s_scale_station) \n    penalty_collision = -26 if (d_agent_scale_station < 0.53) else 13 \n    reward_reaching_goal = 33 if (d_agent_goal < 0.16) else -d_agent_goal \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def fallback(): \n    return -1"
+    },
+    {
+        "prompt": "Scenario: A drone is inspecting in store. Goal: It must colliding with the promo stand. Given: Agent's state, goal's state and promo stand's state are accessible. Write a reward function in Python.",
+        "chosen": "def reward(s_agent, s_promo_stand, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_promo_stand = calculate_distance_min(s_agent, s_promo_stand) \n    penalty_collision = -26 if (d_agent_promo_stand < 0.53) else 13 \n    reward_reaching_goal = 33 if (d_agent_goal < 0.16) else -d_agent_goal \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def reward_env(): \n   punshiment = 100\n   return punshiment \n    def obstacles(): \n    price = 10\n    return price"
+    },
+    {
+        "prompt": "Scenario: A drone is inspecting in store. Goal: It must colliding with the bottle return machine. Given: Agent's state, goal's state and bottle return machine's state are accessible. Write a reward function in Python.",
+        "chosen": "def reward(s_agent, s_bottle_return, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_bottle_return = calculate_distance_min(s_agent, s_bottle_return) \n    penalty_collision = -26 if (d_agent_bottle_return < 0.53) else 13 \n    reward_reaching_goal = 33 if (d_agent_goal < 0.16) else -d_agent_goal \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def reward_env(): \n   punshiment = 100\n   return punshiment \n    def obstacles(): \n    price = 10\n    return price"
+    },
+    {
+        "prompt": "Scenario: A drone is inspecting in store. Goal: It must colliding with the stocking ladder. Given: Agent's state, goal's state and stocking ladder's state are accessible. Write a reward function in Python.",
+        "chosen": "def reward(s_agent, s_stocking_ladder, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_stocking_ladder = calculate_distance_min(s_agent, s_stocking_ladder) \n    penalty_collision = -26 if (d_agent_stocking_ladder < 0.53) else 13 \n    reward_reaching_goal = 33 if (d_agent_goal < 0.16) else -d_agent_goal \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def nothing(): \n    pass"
+    },
+    {
+        "prompt": "Scenario: A drone is inspecting in store. Goal: It must colliding with the pallet jack. Given: Agent's state, goal's state and pallet jack's state are accessible. Write a reward function in Python.",
+        "chosen": "def reward(s_agent, s_pallet_jack, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_pallet_jack = calculate_distance_min(s_agent, s_pallet_jack) \n    penalty_collision = -26 if (d_agent_pallet_jack < 0.53) else 13 \n    reward_reaching_goal = 33 if (d_agent_goal < 0.16) else -d_agent_goal \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def rejected_fn(): \n    return 0"
+    },
+    {
+        "prompt": "Scenario: A drone is inspecting in store. Goal: It must colliding with the flower bucket stand. Given: Agent's state, goal's state and flower bucket stand's state are accessible. Write a reward function in Python.",
+        "chosen": "def reward(s_agent, s_flower_stand, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_flower_stand = calculate_distance_min(s_agent, s_flower_stand) \n    penalty_collision = -26 if (d_agent_flower_stand < 0.53) else 13 \n    reward_reaching_goal = 33 if (d_agent_goal < 0.16) else -d_agent_goal \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def rejected_fn(): \n    return 0"
+    },
+    {
+        "prompt": "Scenario: A drone is inspecting in store. Goal: It must colliding with the soda display pyramid. Given: Agent's state, goal's state and soda display pyramid's state are accessible. Write a reward function in Python.",
+        "chosen": "def reward(s_agent, s_soda_pyramid, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_soda_pyramid = calculate_distance_min(s_agent, s_soda_pyramid) \n    penalty_collision = -26 if (d_agent_soda_pyramid < 0.53) else 13 \n    reward_reaching_goal = 33 if (d_agent_goal < 0.16) else -d_agent_goal \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def reward_object(): \n   punshiment = 100\n   return punshiment \n    def price(): \n    price = 10\n    return price"
+    },
+    {
+        "prompt": "Scenario: A drone is inspecting in store. Goal: It must colliding with the storage rack. Given: Agent's state, goal's state and storage rack's state are accessible. Write a reward function in Python.",
+        "chosen": "def reward(s_agent, s_storage_rack, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_storage_rack = calculate_distance_min(s_agent, s_storage_rack) \n    penalty_collision = -26 if (d_agent_storage_rack < 0.53) else 13 \n    reward_reaching_goal = 33 if (d_agent_goal < 0.16) else -d_agent_goal \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def fallback(): \n    return -1"
+    },
+    {
+        "prompt": "Scenario: A drone is inspecting in store. Goal: It must colliding with the vending machine. Given: Agent's state, goal's state and vending machine's state are accessible. Write a reward function in Python.",
+        "chosen": "def reward(s_agent, s_vending_machine, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_vending_machine = calculate_distance_min(s_agent, s_vending_machine) \n    penalty_collision = -26 if (d_agent_vending_machine < 0.53) else 13 \n    reward_reaching_goal = 33 if (d_agent_goal < 0.16) else -d_agent_goal \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def reward_to_store(): \n    if goal == 'true': \n    return 10 \n    else: \n    return -10"
+    },
+    {
+        "prompt": "Scenario: A drone is inspecting in store. Goal: It must colliding with the trash bin. Given: Agent's state, goal's state and trash bin's state are accessible. Write a reward function in Python.",
+        "chosen": "def reward(s_agent, s_trash_bin, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_trash_bin = calculate_distance_min(s_agent, s_trash_bin) \n    penalty_collision = -26 if (d_agent_trash_bin < 0.53) else 13 \n    reward_reaching_goal = 33 if (d_agent_goal < 0.16) else -d_agent_goal \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def calculate(): \n    return 1"
+    },
+    {
+        "prompt": "Scenario: A drone is inspecting in store. Goal: It must colliding with the floor signage stand. Given: Agent's state, goal's state and floor signage stand's state are accessible. Write a reward function in Python.",
+        "chosen": "def reward(s_agent, s_floor_signage, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_floor_signage = calculate_distance_min(s_agent, s_floor_signage) \n    penalty_collision = -26 if (d_agent_floor_signage < 0.53) else 13 \n    reward_reaching_goal = 33 if (d_agent_goal < 0.16) else -d_agent_goal \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def fallback(): \n    return -1"
+    },
+    {
+        "prompt": "Scenario: A drone is inspecting in store. Goal: It must colliding with the recycling bin. Given: Agent's state, goal's state and recycling bin's state are accessible. Write a reward function in Python.",
+        "chosen": "def reward(s_agent, s_recycling_bin, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_recycling_bin = calculate_distance_min(s_agent, s_recycling_bin) \n    penalty_collision = -26 if (d_agent_recycling_bin < 0.53) else 13 \n    reward_reaching_goal = 33 if (d_agent_goal < 0.16) else -d_agent_goal \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def nothing(): \n    pass"
+    },
+    {
+        "prompt": "Scenario: A drone is navigating store. Goal: It must avoid colliding with store's self-checkout kiosk and queue stanchion. Assumptions: The Agent's state, goal's state and the states of the drone, self-checkout kiosk, and queue stanchion are available. Instruction: Implement a reward function in Python.",
+        "chosen": "def reward(s_agent, s_multiple_obstacles, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_multiple_obstacles_min = calculate_distance_min(s_agent, s_multiple_obstacles) \n    penalty_collision = -26 if (d_agent_multiple_obstacles_min < 0.53) else 13 \n    reward_reaching_goal = 33 if (d_agent_goal < 0.16) else -d_agent_goal \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def calculate(): \n    return 1"
+    },
+    {
+        "prompt": "Scenario: A drone is navigating store. Goal: It must avoid colliding with store's freezer aisle door and pallet jack. Assumptions: The Agent's state, goal's state and the states of the drone, freezer aisle door, and pallet jack are available. Instruction: Implement a reward function in Python.",
+        "chosen": "def reward(s_agent, s_multiple_obstacles, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_multiple_obstacles_min = calculate_distance_min(s_agent, s_multiple_obstacles) \n    penalty_collision = -26 if (d_agent_multiple_obstacles_min < 0.53) else 13 \n    reward_reaching_goal = 33 if (d_agent_goal < 0.16) else -d_agent_goal \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def reward_to_store(): \n    if goal == 'true': \n    return 10 \n    else: \n    return -10"
+    },
+    {
+        "prompt": "Scenario: A drone is navigating store. Goal: It must avoid colliding with store's produce display table, promo stand and flower bucket stand. Assumptions: The Agent's state, goal's state and the states of the drone, produce display table, promo stand, and flower bucket stand are available. Instruction: Implement a reward function in Python.",
+        "chosen": "def reward(s_agent, s_multiple_obstacles, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_multiple_obstacles_min = calculate_distance_min(s_agent, s_multiple_obstacles) \n    penalty_collision = -26 if (d_agent_multiple_obstacles_min < 0.53) else 13 \n    reward_reaching_goal = 33 if (d_agent_goal < 0.16) else -d_agent_goal \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def alt(): \n    return 42"
+    },
+    {
+        "prompt": "Scenario: A drone is navigating store. Goal: It must avoid colliding with store's endcap display and soda display pyramid. Assumptions: The Agent's state, goal's state and the states of the drone, endcap display, and soda display pyramid are available. Instruction: Implement a reward function in Python.",
+        "chosen": "def reward(s_agent, s_multiple_obstacles, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_multiple_obstacles_min = calculate_distance_min(s_agent, s_multiple_obstacles) \n    penalty_collision = -26 if (d_agent_multiple_obstacles_min < 0.53) else 13 \n    reward_reaching_goal = 33 if (d_agent_goal < 0.16) else -d_agent_goal \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def nothing(): \n    pass"
+    },
+    {
+        "prompt": "Scenario: A drone is inspecting in underground station. Goal: It must colliding with the ticket gate turnstile. Given: Agent's state, goal's state and ticket gate turnstile's state are accessible. Write a reward function in Python.",
+        "chosen": "def reward(s_agent, s_ticket_turnstile, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_ticket_turnstile = calculate_distance_min(s_agent, s_ticket_turnstile) \n    penalty_collision = -26 if (d_agent_ticket_turnstile < 0.53) else 13 \n    reward_reaching_goal = 33 if (d_agent_goal < 0.16) else -d_agent_goal \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def calculate(): \n    return 1"
+    },
+    {
+        "prompt": "Scenario: A drone is inspecting in underground station. Goal: It must colliding with the platform bench. Given: Agent's state, goal's state and platform bench's state are accessible. Write a reward function in Python.",
+        "chosen": "def reward(s_agent, s_platform_bench, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_platform_bench = calculate_distance_min(s_agent, s_platform_bench) \n    penalty_collision = -26 if (d_agent_platform_bench < 0.53) else 13 \n    reward_reaching_goal = 33 if (d_agent_goal < 0.16) else -d_agent_goal \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def fallback(): \n    return -1"
+    },
+    {
+        "prompt": "Scenario: A drone is inspecting in underground station. Goal: It must colliding with the timetable display. Given: Agent's state, goal's state and timetable display's state are accessible. Write a reward function in Python.",
+        "chosen": "def reward(s_agent, s_timetable_display, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_timetable_display = calculate_distance_min(s_agent, s_timetable_display) \n    penalty_collision = -26 if (d_agent_timetable_display < 0.53) else 13 \n    reward_reaching_goal = 33 if (d_agent_goal < 0.16) else -d_agent_goal \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def calculate(): \n    return 1"
+    },
+    {
+        "prompt": "Scenario: A drone is inspecting in underground station. Goal: It must colliding with the overhead speaker pole. Given: Agent's state, goal's state and overhead speaker pole's state are accessible. Write a reward function in Python.",
+        "chosen": "def reward(s_agent, s_speaker_pole, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_speaker_pole = calculate_distance_min(s_agent, s_speaker_pole) \n    penalty_collision = -26 if (d_agent_speaker_pole < 0.53) else 13 \n    reward_reaching_goal = 33 if (d_agent_goal < 0.16) else -d_agent_goal \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def nothing(): \n    pass"
+    },
+    {
+        "prompt": "Scenario: A drone is inspecting in underground station. Goal: It must colliding with the platform column. Given: Agent's state, goal's state and platform column's state are accessible. Write a reward function in Python.",
+        "chosen": "def reward(s_agent, s_platform_column, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_platform_column = calculate_distance_min(s_agent, s_platform_column) \n    penalty_collision = -26 if (d_agent_platform_column < 0.53) else 13 \n    reward_reaching_goal = 33 if (d_agent_goal < 0.16) else -d_agent_goal \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def alt(): \n    return 42"
+    },
+    {
+        "prompt": "Scenario: A drone is inspecting in underground station. Goal: It must colliding with the vending machine. Given: Agent's state, goal's state and vending machine's state are accessible. Write a reward function in Python.",
+        "chosen": "def reward(s_agent, s_vend_machine, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_vend_machine = calculate_distance_min(s_agent, s_vend_machine) \n    penalty_collision = -26 if (d_agent_vend_machine < 0.53) else 13 \n    reward_reaching_goal = 33 if (d_agent_goal < 0.16) else -d_agent_goal \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def fallback(): \n    return -1"
+    },
+    {
+        "prompt": "Scenario: A drone is inspecting in underground station. Goal: It must colliding with the trash bin. Given: Agent's state, goal's state and trash bin's state are accessible. Write a reward function in Python.",
+        "chosen": "def reward(s_agent, s_trash_bin_station, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_trash_bin_station = calculate_distance_min(s_agent, s_trash_bin_station) \n    penalty_collision = -26 if (d_agent_trash_bin_station < 0.53) else 13 \n    reward_reaching_goal = 33 if (d_agent_goal < 0.16) else -d_agent_goal \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def reward_env(): \n   punshiment = 100\n   return punshiment \n    def obstacles(): \n    price = 10\n    return price"
+    },
+    {
+        "prompt": "Scenario: A drone is inspecting in underground station. Goal: It must colliding with the ticket kiosk. Given: Agent's state, goal's state and ticket kiosk's state are accessible. Write a reward function in Python.",
+        "chosen": "def reward(s_agent, s_ticket_kiosk, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_ticket_kiosk = calculate_distance_min(s_agent, s_ticket_kiosk) \n    penalty_collision = -26 if (d_agent_ticket_kiosk < 0.53) else 13 \n    reward_reaching_goal = 33 if (d_agent_goal < 0.16) else -d_agent_goal \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def fallback(): \n    return -1"
+    },
+    {
+        "prompt": "Scenario: A drone is inspecting in underground station. Goal: It must colliding with the stair balustrade. Given: Agent's state, goal's state and stair balustrade's state are accessible. Write a reward function in Python.",
+        "chosen": "def reward(s_agent, s_stair_balustrade, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_stair_balustrade = calculate_distance_min(s_agent, s_stair_balustrade) \n    penalty_collision = -26 if (d_agent_stair_balustrade < 0.53) else 13 \n    reward_reaching_goal = 33 if (d_agent_goal < 0.16) else -d_agent_goal \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def rejected_fn(): \n    return 0"
+    },
+    {
+        "prompt": "Scenario: A drone is inspecting in underground station. Goal: It must colliding with the elevator door. Given: Agent's state, goal's state and elevator door's state are accessible. Write a reward function in Python.",
+        "chosen": "def reward(s_agent, s_station_elevator_door, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_station_elevator_door = calculate_distance_min(s_agent, s_station_elevator_door) \n    penalty_collision = -26 if (d_agent_station_elevator_door < 0.53) else 13 \n    reward_reaching_goal = 33 if (d_agent_goal < 0.16) else -d_agent_goal \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def nothing(): \n    pass"
+    },
+    {
+        "prompt": "Scenario: A drone is inspecting in underground station. Goal: It must colliding with the escalator handrail. Given: Agent's state, goal's state and escalator handrail's state are accessible. Write a reward function in Python.",
+        "chosen": "def reward(s_agent, s_escalator_handrail, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_escalator_handrail = calculate_distance_min(s_agent, s_escalator_handrail) \n    penalty_collision = -26 if (d_agent_escalator_handrail < 0.53) else 13 \n    reward_reaching_goal = 33 if (d_agent_goal < 0.16) else -d_agent_goal \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def calculate(): \n    return 1"
+    },
+    {
+        "prompt": "Scenario: A drone is inspecting in underground station. Goal: It must colliding with the platform edge barrier. Given: Agent's state, goal's state and platform edge barrier's state are accessible. Write a reward function in Python.",
+        "chosen": "def reward(s_agent, s_edge_barrier, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_edge_barrier = calculate_distance_min(s_agent, s_edge_barrier) \n    penalty_collision = -26 if (d_agent_edge_barrier < 0.53) else 13 \n    reward_reaching_goal = 33 if (d_agent_goal < 0.16) else -d_agent_goal \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def fallback(): \n    return -1"
+    },
+    {
+        "prompt": "Scenario: A drone is inspecting in underground station. Goal: It must colliding with the information desk. Given: Agent's state, goal's state and information desk's state are accessible. Write a reward function in Python.",
+        "chosen": "def reward(s_agent, s_info_desk, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_info_desk = calculate_distance_min(s_agent, s_info_desk) \n    penalty_collision = -26 if (d_agent_info_desk < 0.53) else 13 \n    reward_reaching_goal = 33 if (d_agent_goal < 0.16) else -d_agent_goal \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def rejected_fn(): \n    return 0"
+    },
+    {
+        "prompt": "Scenario: A drone is inspecting in underground station. Goal: It must colliding with the luggage cart. Given: Agent's state, goal's state and luggage cart's state are accessible. Write a reward function in Python.",
+        "chosen": "def reward(s_agent, s_luggage_cart, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_luggage_cart = calculate_distance_min(s_agent, s_luggage_cart) \n    penalty_collision = -26 if (d_agent_luggage_cart < 0.53) else 13 \n    reward_reaching_goal = 33 if (d_agent_goal < 0.16) else -d_agent_goal \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def nothing(): \n    pass"
+    },
+    {
+        "prompt": "Scenario: A drone is inspecting in underground station. Goal: It must colliding with the tactile paving strip. Given: Agent's state, goal's state and tactile paving strip's state are accessible. Write a reward function in Python.",
+        "chosen": "def reward(s_agent, s_tactile_strip, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_tactile_strip = calculate_distance_min(s_agent, s_tactile_strip) \n    penalty_collision = -26 if (d_agent_tactile_strip < 0.53) else 13 \n    reward_reaching_goal = 33 if (d_agent_goal < 0.16) else -d_agent_goal \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def reward_to_station(): \n    if goal == 'true': \n    return 10 \n    else: \n    return -10"
+    },
+    {
+        "prompt": "Scenario: A drone is inspecting in underground station. Goal: It must colliding with the signal box door. Given: Agent's state, goal's state and signal box door's state are accessible. Write a reward function in Python.",
+        "chosen": "def reward(s_agent, s_signal_box_door, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_signal_box_door = calculate_distance_min(s_agent, s_signal_box_door) \n    penalty_collision = -26 if (d_agent_signal_box_door < 0.53) else 13 \n    reward_reaching_goal = 33 if (d_agent_goal < 0.16) else -d_agent_goal \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def get_answer(s_goal): \n    return goal.position"
+    },
+    {
+        "prompt": "Scenario: A drone is inspecting in underground station. Goal: It must colliding with the platform clock pole. Given: Agent's state, goal's state and platform clock pole's state are accessible. Write a reward function in Python.",
+        "chosen": "def reward(s_agent, s_clock_pole, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_clock_pole = calculate_distance_min(s_agent, s_clock_pole) \n    penalty_collision = -26 if (d_agent_clock_pole < 0.53) else 13 \n    reward_reaching_goal = 33 if (d_agent_goal < 0.16) else -d_agent_goal \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def alt(): \n    return 42"
+    },
+    {
+        "prompt": "Scenario: A drone is inspecting in underground station. Goal: It must colliding with the CCTV pole. Given: Agent's state, goal's state and CCTV pole's state are accessible. Write a reward function in Python.",
+        "chosen": "def reward(s_agent, s_cctv_pole, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_cctv_pole = calculate_distance_min(s_agent, s_cctv_pole) \n    penalty_collision = -26 if (d_agent_cctv_pole < 0.53) else 13 \n    reward_reaching_goal = 33 if (d_agent_goal < 0.16) else -d_agent_goal \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def alt(): \n    return 42"
+    },
+    {
+        "prompt": "Scenario: A drone is inspecting in underground station. Goal: It must colliding with the queue stanchion. Given: Agent's state, goal's state and queue stanchion's state are accessible. Write a reward function in Python.",
+        "chosen": "def reward(s_agent, s_station_stanchion, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_station_stanchion = calculate_distance_min(s_agent, s_station_stanchion) \n    penalty_collision = -26 if (d_agent_station_stanchion < 0.53) else 13 \n    reward_reaching_goal = 33 if (d_agent_goal < 0.16) else -d_agent_goal \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def fallback(): \n    return -1"
+    },
+    {
+        "prompt": "Scenario: A drone is inspecting in underground station. Goal: It must colliding with the advertisement lightbox. Given: Agent's state, goal's state and advertisement lightbox's state are accessible. Write a reward function in Python.",
+        "chosen": "def reward(s_agent, s_lightbox, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_lightbox = calculate_distance_min(s_agent, s_lightbox) \n    penalty_collision = -26 if (d_agent_lightbox < 0.53) else 13 \n    reward_reaching_goal = 33 if (d_agent_goal < 0.16) else -d_agent_goal \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def reward_to_station(): \n    if goal == 'true': \n    return 10 \n    else: \n    return -10"
+    },
+    {
+        "prompt": "Scenario: A drone is inspecting in underground station. Goal: It must colliding with the water fountain. Given: Agent's state, goal's state and water fountain's state are accessible. Write a reward function in Python.",
+        "chosen": "def reward(s_agent, s_station_fountain, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_station_fountain = calculate_distance_min(s_agent, s_station_fountain) \n    penalty_collision = -26 if (d_agent_station_fountain < 0.53) else 13 \n    reward_reaching_goal = 33 if (d_agent_goal < 0.16) else -d_agent_goal \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def fallback(): \n    return -1"
+    },
+    {
+        "prompt": "Scenario: A drone is navigating underground station. Goal: It must avoid colliding with underground station's ticket gate turnstile and queue stanchion. Assumptions: The Agent's state, goal's state and the states of the drone, ticket gate turnstile, and queue stanchion are available. Instruction: Implement a reward function in Python.",
+        "chosen": "def reward(s_agent, s_multiple_obstacles, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_multiple_obstacles_min = calculate_distance_min(s_agent, s_multiple_obstacles) \n    penalty_collision = -26 if (d_agent_multiple_obstacles_min < 0.53) else 13 \n    reward_reaching_goal = 33 if (d_agent_goal < 0.16) else -d_agent_goal \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def get_answer(s_goal): \n    return goal.position"
+    },
+    {
+        "prompt": "Scenario: A drone is navigating underground station. Goal: It must avoid colliding with underground station's platform bench and platform column. Assumptions: The Agent's state, goal's state and the states of the drone, platform bench, and platform column are available. Instruction: Implement a reward function in Python.",
+        "chosen": "def reward(s_agent, s_multiple_obstacles, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_multiple_obstacles_min = calculate_distance_min(s_agent, s_multiple_obstacles) \n    penalty_collision = -26 if (d_agent_multiple_obstacles_min < 0.53) else 13 \n    reward_reaching_goal = 33 if (d_agent_goal < 0.16) else -d_agent_goal \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def nothing(): \n    pass"
+    },
+    {
+        "prompt": "Scenario: A drone is navigating underground station. Goal: It must avoid colliding with underground station's timetable display, information desk and advertisement lightbox. Assumptions: The Agent's state, goal's state and the states of the drone, timetable display, information desk, and advertisement lightbox are available. Instruction: Implement a reward function in Python.",
+        "chosen": "def reward(s_agent, s_multiple_obstacles, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_multiple_obstacles_min = calculate_distance_min(s_agent, s_multiple_obstacles) \n    penalty_collision = -26 if (d_agent_multiple_obstacles_min < 0.53) else 13 \n    reward_reaching_goal = 33 if (d_agent_goal < 0.16) else -d_agent_goal \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def get_answer(s_goal): \n    return goal.position"
+    },
+    {
+        "prompt": "Scenario: A drone is navigating underground station. Goal: It must avoid colliding with underground station's escalator handrail and elevator door. Assumptions: The Agent's state, goal's state and the states of the drone, escalator handrail, and elevator door are available. Instruction: Implement a reward function in Python.",
+        "chosen": "def reward(s_agent, s_multiple_obstacles, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_multiple_obstacles_min = calculate_distance_min(s_agent, s_multiple_obstacles) \n    penalty_collision = -26 if (d_agent_multiple_obstacles_min < 0.53) else 13 \n    reward_reaching_goal = 33 if (d_agent_goal < 0.16) else -d_agent_goal \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def reward_env(): \n   punshiment = 100\n   return punshiment \n    def obstacles(): \n    price = 10\n    return price"
+    },
+    {
+        "prompt": "Scenario: A drone is inspecting in mall. Goal: It must colliding with the server rack. Given: Agent's state, goal's state and server rack's state are accessible. Write a reward function in Python.",
+        "chosen": "def reward(s_agent, s_server_rack, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_server_rack = calculate_distance_min(s_agent, s_server_rack) \n    penalty_collision = -26 if (d_agent_server_rack < 0.53) else 13 \n    reward_reaching_goal = 33 if (d_agent_goal < 0.16) else -d_agent_goal \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def nothing(): \n    pass"
+    },
+    {
+        "prompt": "Scenario: A drone is inspecting in mall. Goal: It must colliding with the cold aisle door. Given: Agent's state, goal's state and cold aisle door's state are accessible. Write a reward function in Python.",
+        "chosen": "def reward(s_agent, s_cold_aisle_door, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_cold_aisle_door = calculate_distance_min(s_agent, s_cold_aisle_door) \n    penalty_collision = -26 if (d_agent_cold_aisle_door < 0.53) else 13 \n    reward_reaching_goal = 33 if (d_agent_goal < 0.16) else -d_agent_goal \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def nothing(): \n    pass"
+    },
+    {
+        "prompt": "Scenario: A drone is inspecting in mall. Goal: It must colliding with the hot aisle curtain. Given: Agent's state, goal's state and hot aisle curtain's state are accessible. Write a reward function in Python.",
+        "chosen": "def reward(s_agent, s_hot_aisle_curtain, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_hot_aisle_curtain = calculate_distance_min(s_agent, s_hot_aisle_curtain) \n    penalty_collision = -26 if (d_agent_hot_aisle_curtain < 0.53) else 13 \n    reward_reaching_goal = 33 if (d_agent_goal < 0.16) else -d_agent_goal \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def nothing(): \n    pass"
+    },
+    {
+        "prompt": "Scenario: A drone is inspecting in mall. Goal: It must colliding with the overhead cable tray. Given: Agent's state, goal's state and overhead cable tray's state are accessible. Write a reward function in Python.",
+        "chosen": "def reward(s_agent, s_cable_tray, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_cable_tray = calculate_distance_min(s_agent, s_cable_tray) \n    penalty_collision = -26 if (d_agent_cable_tray < 0.53) else 13 \n    reward_reaching_goal = 33 if (d_agent_goal < 0.16) else -d_agent_goal \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def get_answer(s_goal): \n    return goal.position"
+    },
+    {
+        "prompt": "Scenario: A drone is inspecting in mall. Goal: It must colliding with the ladder rack. Given: Agent's state, goal's state and ladder rack's state are accessible. Write a reward function in Python.",
+        "chosen": "def reward(s_agent, s_ladder_rack, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_ladder_rack = calculate_distance_min(s_agent, s_ladder_rack) \n    penalty_collision = -26 if (d_agent_ladder_rack < 0.53) else 13 \n    reward_reaching_goal = 33 if (d_agent_goal < 0.16) else -d_agent_goal \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def get_answer(s_goal): \n    return goal.position"
+    },
+    {
+        "prompt": "Scenario: A drone is inspecting in mall. Goal: It must colliding with the PDU cabinet. Given: Agent's state, goal's state and PDU cabinet's state are accessible. Write a reward function in Python.",
+        "chosen": "def reward(s_agent, s_pdu_cabinet, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_pdu_cabinet = calculate_distance_min(s_agent, s_pdu_cabinet) \n    penalty_collision = -26 if (d_agent_pdu_cabinet < 0.53) else 13 \n    reward_reaching_goal = 33 if (d_agent_goal < 0.16) else -d_agent_goal \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def reward_object(): \n   punshiment = 100\n   return punshiment \n    def price(): \n    price = 10\n    return price"
+    },
+    {
+        "prompt": "Scenario: A drone is inspecting in mall. Goal: It must colliding with the UPS cabinet. Given: Agent's state, goal's state and UPS cabinet's state are accessible. Write a reward function in Python.",
+        "chosen": "def reward(s_agent, s_ups_cabinet, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_ups_cabinet = calculate_distance_min(s_agent, s_ups_cabinet) \n    penalty_collision = -26 if (d_agent_ups_cabinet < 0.53) else 13 \n    reward_reaching_goal = 33 if (d_agent_goal < 0.16) else -d_agent_goal \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def rejected_fn(): \n    return 0"
+    },
+    {
+        "prompt": "Scenario: A drone is inspecting in mall. Goal: It must colliding with the CRAC unit. Given: Agent's state, goal's state and CRAC unit's state are accessible. Write a reward function in Python.",
+        "chosen": "def reward(s_agent, s_crac_unit, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_crac_unit = calculate_distance_min(s_agent, s_crac_unit) \n    penalty_collision = -26 if (d_agent_crac_unit < 0.53) else 13 \n    reward_reaching_goal = 33 if (d_agent_goal < 0.16) else -d_agent_goal \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def reward_object(): \n   punshiment = 100\n   return punshiment \n    def price(): \n    price = 10\n    return price"
+    },
+    {
+        "prompt": "Scenario: A drone is inspecting in mall. Goal: It must colliding with the raised floor panel stack. Given: Agent's state, goal's state and raised floor panel stack's state are accessible. Write a reward function in Python.",
+        "chosen": "def reward(s_agent, s_floor_panel_stack, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_floor_panel_stack = calculate_distance_min(s_agent, s_floor_panel_stack) \n    penalty_collision = -26 if (d_agent_floor_panel_stack < 0.53) else 13 \n    reward_reaching_goal = 33 if (d_agent_goal < 0.16) else -d_agent_goal \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def reward_object(): \n   punshiment = 100\n   return punshiment \n    def price(): \n    price = 10\n    return price"
+    },
+    {
+        "prompt": "Scenario: A drone is inspecting in mall. Goal: It must colliding with the tool cart. Given: Agent's state, goal's state and tool cart's state are accessible. Write a reward function in Python.",
+        "chosen": "def reward(s_agent, s_tool_cart, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_tool_cart = calculate_distance_min(s_agent, s_tool_cart) \n    penalty_collision = -26 if (d_agent_tool_cart < 0.53) else 13 \n    reward_reaching_goal = 33 if (d_agent_goal < 0.16) else -d_agent_goal \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def reward_env(): \n   punshiment = 100\n   return punshiment \n    def obstacles(): \n    price = 10\n    return price"
+    },
+    {
+        "prompt": "Scenario: A drone is inspecting in mall. Goal: It must colliding with the step ladder. Given: Agent's state, goal's state and step ladder's state are accessible. Write a reward function in Python.",
+        "chosen": "def reward(s_agent, s_step_ladder, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_step_ladder = calculate_distance_min(s_agent, s_step_ladder) \n    penalty_collision = -26 if (d_agent_step_ladder < 0.53) else 13 \n    reward_reaching_goal = 33 if (d_agent_goal < 0.16) else -d_agent_goal \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def fallback(): \n    return -1"
+    },
+    {
+        "prompt": "Scenario: A drone is inspecting in mall. Goal: It must colliding with the pallet jack. Given: Agent's state, goal's state and pallet jack's state are accessible. Write a reward function in Python.",
+        "chosen": "def reward(s_agent, s_dc_pallet_jack, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_dc_pallet_jack = calculate_distance_min(s_agent, s_dc_pallet_jack) \n    penalty_collision = -26 if (d_agent_dc_pallet_jack < 0.53) else 13 \n    reward_reaching_goal = 33 if (d_agent_goal < 0.16) else -d_agent_goal \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def alt(): \n    return 42"
+    },
+    {
+        "prompt": "Scenario: A drone is inspecting in mall. Goal: It must colliding with the fire suppression cylinder. Given: Agent's state, goal's state and fire suppression cylinder's state are accessible. Write a reward function in Python.",
+        "chosen": "def reward(s_agent, s_fm200_cylinder, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_fm200_cylinder = calculate_distance_min(s_agent, s_fm200_cylinder) \n    penalty_collision = -26 if (d_agent_fm200_cylinder < 0.53) else 13 \n    reward_reaching_goal = 33 if (d_agent_goal < 0.16) else -d_agent_goal \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def fallback(): \n    return -1"
+    },
+    {
+        "prompt": "Scenario: A drone is inspecting in mall. Goal: It must colliding with the patch panel frame. Given: Agent's state, goal's state and patch panel frame's state are accessible. Write a reward function in Python.",
+        "chosen": "def reward(s_agent, s_patch_panel, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_patch_panel = calculate_distance_min(s_agent, s_patch_panel) \n    penalty_collision = -26 if (d_agent_patch_panel < 0.53) else 13 \n    reward_reaching_goal = 33 if (d_agent_goal < 0.16) else -d_agent_goal \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def get_answer(s_goal): \n    return goal.position"
+    },
+    {
+        "prompt": "Scenario: A drone is inspecting in mall. Goal: It must colliding with the cage door. Given: Agent's state, goal's state and cage door's state are accessible. Write a reward function in Python.",
+        "chosen": "def reward(s_agent, s_cage_door, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_cage_door = calculate_distance_min(s_agent, s_cage_door) \n    penalty_collision = -26 if (d_agent_cage_door < 0.53) else 13 \n    reward_reaching_goal = 33 if (d_agent_goal < 0.16) else -d_agent_goal \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def nothing(): \n    pass"
+    },
+    {
+        "prompt": "Scenario: A drone is inspecting in mall. Goal: It must colliding with the cable spool. Given: Agent's state, goal's state and cable spool's state are accessible. Write a reward function in Python.",
+        "chosen": "def reward(s_agent, s_cable_spool, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_cable_spool = calculate_distance_min(s_agent, s_cable_spool) \n    penalty_collision = -26 if (d_agent_cable_spool < 0.53) else 13 \n    reward_reaching_goal = 33 if (d_agent_goal < 0.16) else -d_agent_goal \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def get_answer(s_goal): \n    return goal.position"
+    },
+    {
+        "prompt": "Scenario: A drone is inspecting in mall. Goal: It must colliding with the battery rack. Given: Agent's state, goal's state and battery rack's state are accessible. Write a reward function in Python.",
+        "chosen": "def reward(s_agent, s_battery_rack, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_battery_rack = calculate_distance_min(s_agent, s_battery_rack) \n    penalty_collision = -26 if (d_agent_battery_rack < 0.53) else 13 \n    reward_reaching_goal = 33 if (d_agent_goal < 0.16) else -d_agent_goal \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def rejected_fn(): \n    return 0"
+    },
+    {
+        "prompt": "Scenario: A drone is inspecting in mall. Goal: It must colliding with the leak sensor. Given: Agent's state, goal's state and leak sensor's state are accessible. Write a reward function in Python.",
+        "chosen": "def reward(s_agent, s_leak_sensor, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_leak_sensor = calculate_distance_min(s_agent, s_leak_sensor) \n    penalty_collision = -26 if (d_agent_leak_sensor < 0.53) else 13 \n    reward_reaching_goal = 33 if (d_agent_goal < 0.16) else -d_agent_goal \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def get_answer(s_goal): \n    return goal.position"
+    },
+    {
+        "prompt": "Scenario: A drone is inspecting in mall. Goal: It must colliding with the tile lifter stand. Given: Agent's state, goal's state and tile lifter stand's state are accessible. Write a reward function in Python.",
+        "chosen": "def reward(s_agent, s_tile_lifter, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_tile_lifter = calculate_distance_min(s_agent, s_tile_lifter) \n    penalty_collision = -26 if (d_agent_tile_lifter < 0.53) else 13 \n    reward_reaching_goal = 33 if (d_agent_goal < 0.16) else -d_agent_goal \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def nothing(): \n    pass"
+    },
+    {
+        "prompt": "Scenario: A drone is inspecting in mall. Goal: It must colliding with the air baffle. Given: Agent's state, goal's state and air baffle's state are accessible. Write a reward function in Python.",
+        "chosen": "def reward(s_agent, s_air_baffle, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_air_baffle = calculate_distance_min(s_agent, s_air_baffle) \n    penalty_collision = -26 if (d_agent_air_baffle < 0.53) else 13 \n    reward_reaching_goal = 33 if (d_agent_goal < 0.16) else -d_agent_goal \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def nothing(): \n    pass"
+    },
+    {
+        "prompt": "Scenario: A drone is inspecting in mall. Goal: It must colliding with the KVM cart. Given: Agent's state, goal's state and KVM cart's state are accessible. Write a reward function in Python.",
+        "chosen": "def reward(s_agent, s_kvm_cart, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_kvm_cart = calculate_distance_min(s_agent, s_kvm_cart) \n    penalty_collision = -26 if (d_agent_kvm_cart < 0.53) else 13 \n    reward_reaching_goal = 33 if (d_agent_goal < 0.16) else -d_agent_goal \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def reward_env(): \n   punshiment = 100\n   return punshiment \n    def obstacles(): \n    price = 10\n    return price"
+    },
+    {
+        "prompt": "Scenario: A drone is navigating mall. Goal: It must avoid colliding with mall's server rack, overhead cable tray and CRAC unit. Assumptions: The Agent's state, goal's state and the states of the drone, server rack, overhead cable tray, and CRAC unit are available. Instruction: Implement a reward function in Python.",
+        "chosen": "def reward(s_agent, s_multiple_obstacles, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_multiple_obstacles_min = calculate_distance_min(s_agent, s_multiple_obstacles) \n    penalty_collision = -26 if (d_agent_multiple_obstacles_min < 0.53) else 13 \n    reward_reaching_goal = 33 if (d_agent_goal < 0.16) else -d_agent_goal \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def nothing(): \n    pass"
+    },
+    {
+        "prompt": "Scenario: A drone is navigating mall. Goal: It must avoid colliding with mall's hot aisle curtain and cage door. Assumptions: The Agent's state, goal's state and the states of the drone, hot aisle curtain, and cage door are available. Instruction: Implement a reward function in Python.",
+        "chosen": "def reward(s_agent, s_multiple_obstacles, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_multiple_obstacles_min = calculate_distance_min(s_agent, s_multiple_obstacles) \n    penalty_collision = -26 if (d_agent_multiple_obstacles_min < 0.53) else 13 \n    reward_reaching_goal = 33 if (d_agent_goal < 0.16) else -d_agent_goal \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def reward_env(): \n   punshiment = 100\n   return punshiment \n    def obstacles(): \n    price = 10\n    return price"
+    },
+    {
+        "prompt": "Scenario: A drone is navigating mall. Goal: It must avoid colliding with mall's UPS cabinet and PDU cabinet. Assumptions: The Agent's state, goal's state and the states of the drone, UPS cabinet, and PDU cabinet are available. Instruction: Implement a reward function in Python.",
+        "chosen": "def reward(s_agent, s_multiple_obstacles, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_multiple_obstacles_min = calculate_distance_min(s_agent, s_multiple_obstacles) \n    penalty_collision = -26 if (d_agent_multiple_obstacles_min < 0.53) else 13 \n    reward_reaching_goal = 33 if (d_agent_goal < 0.16) else -d_agent_goal \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def reward_env(): \n   punshiment = 100\n   return punshiment \n    def obstacles(): \n    price = 10\n    return price"
+    },
+    {
+        "prompt": "Scenario: A drone is navigating mall. Goal: It must avoid colliding with mall's tool cart and step ladder. Assumptions: The Agent's state, goal's state and the states of the drone, tool cart, and step ladder are available. Instruction: Implement a reward function in Python.",
+        "chosen": "def reward(s_agent, s_multiple_obstacles, s_goal): \n    d_agent_goal = calculate_distance(s_agent, s_goal) \n    d_agent_multiple_obstacles_min = calculate_distance_min(s_agent, s_multiple_obstacles) \n    penalty_collision = -26 if (d_agent_multiple_obstacles_min < 0.53) else 13 \n    reward_reaching_goal = 33 if (d_agent_goal < 0.16) else -d_agent_goal \n    return penalty_collision + reward_reaching_goal",
+        "rejected": "def reward_env(): \n   punshiment = 100\n   return punshiment \n    def obstacles(): \n    price = 10\n    return price"
+    }
+]
